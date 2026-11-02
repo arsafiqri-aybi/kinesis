@@ -1,0 +1,47 @@
+source	relation	target	condition	meaning	location
+Equality	defines comparison for	State	A specified equivalence criterion	Different labels need not mean different physical states	Core/State.md
+Identity	connects referents across	History	Tracking of a system or material part is intended	Persistence of referent differs from constancy of state	Core/State.md
+Configuration	is not always sufficient for	Dynamical State	Evolution requires further variables	Position alone need not determine future evolution	Core/State.md
+Equivalence	forms	Quotient	Reflexive symmetric transitive relation	Class membership is mathematical; physical interpretation needs justification	Core/State.md
+Coarse-graining	can erase	Difference	Map is noninjective	A constant reduced description does not imply full constancy	Core/State.md
+Observables	can distinguish	States	A separating family is specified	Equal values of one observable do not establish state equality	Core/State.md
+Global Phase	is redundant for	Pure State Ray	Normalized vectors in standard quantum mechanics	Vector change by global phase need not change the pure state	Core/State.md
+Particle Labels	do not guarantee	Individual Identity	Identical quantum particles	Classical label tracking is not a universal ontology	Core/State.md
+Temporal Order	does not determine	Duration	No metric or clock structure is supplied	Order-preserving relabeling can change numerical intervals	Core/Time.md
+Partial Order	specializes to	Total Order	Every pair is comparable	Total comparability is an additional assumption	Core/Time.md
+Reparameterization	preserves	Ordered Trace	Increasing bijection of domains	Constancy is preserved but parameter rates can change	Core/Time.md
+Differential Parameter	supports	Local Rate	Differentiability and required nonzero derivatives	Rates transform by the chain rule	Core/Time.md
+Clock	operationalizes	Duration	Physical measurement model is specified	A unit definition does not settle time ontology	Core/Time.md
+Lorentz Transformation	changes	Distant Simultaneity	Events are spatially separated and boost is appropriate	One global simultaneity is not universal	Core/Time.md
+Causal Relation	can define	Partial Order	Appropriate causal conditions exclude closed causal curves	Global antisymmetry is conditional	Core/Time.md
+Timelike Worldline	supports	Proper Time	Lorentzian geometry and time orientation	Duration is associated with the path	Core/Time.md
+Null Worldline	precludes regular use of	Proper Time Parameter	Proper interval is zero	An alternative parameter is needed	Core/Time.md
+Topological Structure	supports	Continuity	Domain and codomain topologies are specified	A positive distance metric is not required	Core/Change.md
+Metric Structure	supports	Distance	Metric axioms hold	Numerical coordinates alone do not define distance	Core/Space.md
+Affine Structure	supports	Displacement Vector	Two points of one affine space are compared	No distinguished origin is needed	Core/Space.md
+Configuration	includes	Orientation	The system is an extended body and orientation is relevant	A stationary center does not imply no rotation	Core/Space.md
+Internal Distances	fail to distinguish	Global Rigid Motion	Only internal pair distances are retained	Translation and rotation relative to environment can remain unobserved	Core/Space.md
+Spatial Configuration	specializes	State Description	Spatial arrangement is selected	Evolution in abstract state space is not automatically spatial motion	Core/Space.md
+Field Variation	does not establish	Material Transport	Only time variation at fixed position is known	Amplitude change and translation can differ	Core/Space.md
+Uniform Density	does not exclude	Current	Additional state information permits flow	One distribution may be stationary while current is nonzero	Core/Change.md
+Reference	defines comparison across	Spatial Contexts	Comparing positions or arrangements across time	Reference may be relational rather than an external body	Core/Reference.md
+Fixed Injective Map	preserves	Constancy	Transformation is independent of time	This concerns equality structure rather than all geometry	Core/Reference.md
+Time-dependent Frame	changes	Coordinate Rate	Moving origin or basis	Extra derivative terms must be included	Core/Reference.md
+Coordinate Change	must be distinguished from	Physical Transformation	Same event or state is redescribed	Coordinate invariance does not erase physical relational differences	Core/Reference.md
+Symmetry	preserves	Specified Structure	A transformation class and structure are named	Symmetry does not always imply gauge redundancy	Core/Reference.md
+Spatial Relation	supports	Spatial Motion	Relation is compared using temporal structure and a reference	Generic change is not enough to define spatial motion	Core/Change.md
+History	contains more information than	Endpoint Pair	Intermediate values are not fixed by further assumptions	Equal endpoints need not imply rest	Core/Change.md
+Continuous Map	preserves	Connected Image	Domain is connected	A continuous map to a discrete codomain is constant	Core/Change.md
+Differentiability	implies	Continuity	Standard differential structures	The converse fails	Core/Change.md
+Zero Instantaneous Velocity	does not imply	Rest on Interval	Velocity vanishes at one instant only	The example q=t^3 changes near zero	Core/Change.md
+Zero Derivative Everywhere	implies	Constancy	Differentiable map on a connected real interval	Almost-everywhere vanishing alone is insufficient	Core/Change.md
+Metric	supports	Curve Length	Supremum over ordered partitions	Length can exceed endpoint distance and can be infinite	Core/Change.md
+Kinematics	is constrained by	Dynamics	A physical law is added	Description alone does not determine allowed histories	Core/Change.md
+Observation Map	can identify	Motion Property	Property is constant across the compatible-history set	Full history uniqueness is not always required	Core/Evidence.md
+Sampling	can erase	Intermediate Change	No sufficient frequency or dynamical constraints	Smooth histories can share every recorded sample	Core/Evidence.md
+Projection	can erase	Depth	Perspective or another noninjective projection	Image coordinates alone need not determine spatial history	Core/Evidence.md
+Unlabeled Observation	can erase	Identity Correspondence	Alternative label matchings give identical positions	Additional assumptions may distinguish them	Core/Evidence.md
+Brightness Constancy	provides	Optical Flow Constraint	Differentiable image and conserved local intensity	One scalar equation does not determine both velocity components	Core/Evidence.md
+Stimulus	contributes evidence for	Perceived Motion	Experimental conditions and observer response are specified	Percept and physical source are not definitionally identical	Core/Evidence.md
+Measurement Uncertainty	differs from	Structural Nonidentifiability	Precision and uniqueness are assessed separately	More precise data need not resolve a noninjective mapping	Core/Evidence.md
+

@@ -1,0 +1,45 @@
+id	claim	status	conditions	sources	location	basis
+C01	State identity and equality of state must be distinguished	conceptual synthesis	Framework specifies referents and equality	S01;S02	Core/State.md	Conceptual distinction with examples
+C02	Configuration need not be a dynamically sufficient state	established in framework	Classical mechanics with momentum or velocity variables	S02;S22	Core/State.md	Different histories share an instantaneous position
+C03	An equivalence relation forms equivalence classes	mathematical definition	Reflexivity symmetry transitivity	S01	Core/State.md	Standard relation structure
+C04	A noninjective reduction can hide change	direct mathematical result	Map is fixed and noninjective	direct	Core/State.md	Function composition argument
+C05	A separating observable family can distinguish different states	mathematical definition	Classical function-valued observables in specified model	direct	Core/State.md	Definition and contrapositive
+C06	Global phase does not distinguish normalized pure states	established in framework	Standard quantum pure-state description	S09	Core/State.md	Ray equivalence
+C07	Labels of identical quantum particles do not provide classical individual tracking by themselves	established in framework	Standard identical-particle formalism	S12	Core/State.md	Exchange structure
+C08	Order alone does not determine duration	direct mathematical result	Only order relation is retained	S01;direct	Core/Time.md	Order-preserving numerical examples
+C09	Increasing bijective reparameterization preserves constancy and order of traversal	direct mathematical result	Domain bijection and increasing order	direct	Core/Time.md	Composition and inverse
+C10	Parameter rate transforms by chain rule	mathematical result	Differentiable maps; regular inverse requires nonzero derivative	direct	Core/Time.md	Displayed chain rule
+C11	Distant simultaneity is not invariant under all inertial boosts	established in framework	Special relativity	S05	Core/Time.md	Lorentz time transformation
+C12	Causal order is a partial order only under appropriate causal conditions	framework qualification	Closed causal curves excluded as required	S05;S06	Core/Time.md	Antisymmetry requires a causal restriction
+C13	Proper time is path dependent and applies as a regular parameter to timelike curves	established in framework	Lorentzian geometry; null case excluded	S06	Core/Time.md	Proper-time integral
+C14	The SI second uses a fixed cesium transition frequency	official definition	Unperturbed ground-state hyperfine transition of cesium-133	S16	Core/Time.md	Official metrology definition
+C15	Relational quantum clock descriptions are possible models	conceptual model	Conditions and limitations of Page-Wootters proposal	S19	Core/Time.md	Proposal rather than settled universal ontology
+C16	An origin is needed for a position vector but not an affine displacement	mathematical distinction	Affine Euclidean model	direct	Core/Space.md	Common translation cancels
+C17	Configurations may include orientation rather than only a center position	established in framework	Rigid body with suitable material distinctions	S03	Core/Space.md	SO(3) representation with symmetry caveat
+C18	Internal distances do not distinguish global translations and rotations	direct mathematical result	Euclidean isometries and only internal pair distances	direct	Core/Space.md	Distance invariance
+C19	Temporal field variation alone does not establish material transport	direct mathematical counterexample	Scalar-field models in one dimension	direct	Core/Space.md	Translated profile versus amplitude modulation
+C20	The SI metre uses a fixed vacuum light speed	official definition	SI second is specified	S17	Core/Space.md	Official metrology definition
+C21	Causal-set discreteness is a research proposal rather than established microscopic fact	research proposal	Locally finite partial-order model	S20	Core/Space.md	Scope of source abstract
+C22	Fixed injective relabeling preserves constancy	direct mathematical result	No explicit time dependence	direct	Core/Reference.md	Injectivity proof
+C23	Moving coordinate systems contribute additional coordinate-velocity terms	direct mathematical result	Differentiable R(t) and b(t)	direct	Core/Reference.md	Product rule
+C24	Zero acceleration is preserved among Galilean inertial frames	established in framework	Constant rotation and constant relative boost	S04;direct	Core/Reference.md	Second derivative of transformation
+C25	Symmetry does not automatically identify transformed physical states as gauge equivalent	conceptual distinction	Preserved structure and theory are specified	S03;S04	Core/Reference.md	Active passive and redundant transformations distinguished
+C26	Equal endpoints do not imply a constant history	direct mathematical counterexample	T=[0,1]	direct	Core/Change.md	q0=0 versus q1=t(1-t)
+C27	Continuous maps from a connected domain to a discrete codomain are constant	mathematical result	Nonempty connected domain; discrete topology	S07;direct	Core/Change.md	Connected image argument
+C28	Continuity does not imply differentiability	mathematical result	Standard real analysis	direct	Core/Change.md	Absolute-value example
+C29	Brownian paths are almost surely nowhere differentiable	mathematical theorem	Standard Brownian continuous version	S08	Core/Change.md	Lawler theorem 2.6.1
+C30	Zero velocity at one instant does not imply rest on an interval	direct mathematical counterexample	Differentiable scalar curve	direct	Core/Change.md	q=t^3 at zero
+C31	An everywhere zero derivative implies constancy on an interval	mathematical theorem	Differentiable finite-dimensional curve on connected interval	direct	Core/Change.md	Mean value theorem componentwise
+C32	Curve length is at least endpoint distance	direct mathematical result	Metric length defined by partition supremum	direct	Core/Change.md	Triangle inequality
+C33	A stationary quantum position density can coexist with nonzero probability current	established example with direct calculation	Free particle on a periodic ring; n nonzero	S10;S11;direct	Core/Change.md	Normalized plane-wave state substituted into current
+C34	A motion property is identifiable only if it agrees across compatible histories	mathematical characterization	Specified admissible history class and observation operator	direct	Core/Evidence.md	Two incompatible property values establish ambiguity
+C35	Uniform position samples can coincide for a resting and a smooth moving history	direct mathematical counterexample	No adequate frequency restriction	direct	Core/Evidence.md	Sinusoidal alias example
+C36	Sampling reconstruction requires a constrained function class	mathematical theorem with scope	Band limit and appropriate ideal sampling assumptions	S15	Core/Evidence.md	Shannon theorem 1; finite arbitrary data excluded
+C37	Unlabeled positions can fail to determine identity correspondence	direct mathematical counterexample	Classical labels are unobserved	direct	Core/Evidence.md	Crossing and returning labeled histories
+C38	Perspective projection does not determine depth from one image position	direct mathematical result	Ideal pinhole model with z nonzero	direct	Core/Evidence.md	Scale family maps to same image point
+C39	The local brightness-constancy constraint does not determine two velocity components	mathematical model result	Differentiable brightness and brightness constancy	S13;direct	Core/Evidence.md	One scalar constraint
+C40	Coherent perceived pattern motion depends on specified stimulus conditions	empirical result	Conditions of Adelson-Movshon experiments	S14	Core/Evidence.md	Results distinguished from proposed neuronal explanation
+C41	Attention can affect apparent motion for particular stimuli	empirical result	Alternating-feature stimuli in cited experiment	S21	Core/Evidence.md	Abstract-level result; no universal mechanism claim
+C42	Measurement uncertainty and structural nonidentifiability differ	conceptual synthesis	Measurement value versus uniqueness of compatible histories	S18;direct	Core/Evidence.md	Separate mathematical and metrological questions
+C43	Six core files are an organizational synthesis rather than universal axioms	architectural synthesis	Defined scope of this library	synthesis	Structure/Architecture.md	Counterexample review and economy of organization
+

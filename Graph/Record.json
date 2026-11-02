@@ -1,0 +1,23 @@
+{
+  "model_id": "82335519-2e1f-4e3c-929c-7960208bc108",
+  "revision": 2,
+  "hash": "7992e7e74ea544bcb68fc439eab035cc5dd87e30006bb77e7da3cab93428b7fb",
+  "view": {
+    "context": "documentation"
+  },
+  "github_status": "Approved for public publication",
+  "validation": {
+    "result_id": "01365100-f414-4076-9e90-2c7e0de3b4d7",
+    "model_id": "82335519-2e1f-4e3c-929c-7960208bc108",
+    "revision": 2,
+    "inputHash": "acb68dc7d5b248c871d79ffadcf5d804225a5f9fb248fe5727a2b981aeac5728",
+    "profile": "graph-shapes-v1",
+    "conforms": true,
+    "observedConforms": true,
+    "violations": [],
+    "contradictions": [],
+    "complete": true,
+    "meaning": "Nonrecursive constraints on recorded values in the selected view, not full SHACL or OWL consistency."
+  },
+  "repository": "https://github.com/arsafiqri-aybi/kinesis"
+}
