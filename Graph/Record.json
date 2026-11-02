@@ -1,23 +1,42 @@
 {
-  "model_id": "82335519-2e1f-4e3c-929c-7960208bc108",
-  "revision": 2,
-  "hash": "7992e7e74ea544bcb68fc439eab035cc5dd87e30006bb77e7da3cab93428b7fb",
-  "view": {
-    "context": "documentation"
-  },
-  "github_status": "Approved for public publication",
-  "validation": {
-    "result_id": "01365100-f414-4076-9e90-2c7e0de3b4d7",
+  "edition": "English repository edition",
+  "language": "en",
+  "date": "2026-11-02",
+  "repository": "https://github.com/arsafiqri-aybi/kinesis",
+  "upstream": {
     "model_id": "82335519-2e1f-4e3c-929c-7960208bc108",
     "revision": 2,
-    "inputHash": "acb68dc7d5b248c871d79ffadcf5d804225a5f9fb248fe5727a2b981aeac5728",
-    "profile": "graph-shapes-v1",
-    "conforms": true,
-    "observedConforms": true,
-    "violations": [],
-    "contradictions": [],
-    "complete": true,
-    "meaning": "Nonrecursive constraints on recorded values in the selected view, not full SHACL or OWL consistency."
+    "hash": "7992e7e74ea544bcb68fc439eab035cc5dd87e30006bb77e7da3cab93428b7fb",
+    "view": {
+      "context": "documentation"
+    },
+    "validation": {
+      "result_id": "01365100-f414-4076-9e90-2c7e0de3b4d7",
+      "model_id": "82335519-2e1f-4e3c-929c-7960208bc108",
+      "revision": 2,
+      "inputHash": "acb68dc7d5b248c871d79ffadcf5d804225a5f9fb248fe5727a2b981aeac5728",
+      "profile": "graph-shapes-v1",
+      "conforms": true,
+      "observedConforms": true,
+      "violations": [],
+      "contradictions": [],
+      "complete": true,
+      "meaning": "Nonrecursive constraints on recorded values in the selected view, not full SHACL or OWL consistency."
+    }
   },
-  "repository": "https://github.com/arsafiqri-aybi/kinesis"
+  "derivation": {
+    "kind": "Translated derivative of the upstream export",
+    "source_version": "2-en",
+    "stable_identifiers": true,
+    "hosted_model_updated": false,
+    "upstream_validation_applies_to": "Original upstream revision only"
+  },
+  "local_checks": {
+    "entities": 498,
+    "claims": 1448,
+    "sources": 28,
+    "anchored_records": 1446,
+    "utf16_anchors_rebuilt": true
+  },
+  "model_sha256": "977fb09a14a1ad68ea5d1de3ea25b091c557821e8a203922de176aa227c25759"
 }

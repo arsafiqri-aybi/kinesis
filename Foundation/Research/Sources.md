@@ -1,193 +1,193 @@
 # Sources
 
-## Jenis dan batas sumber
+## Source types and limits
 
-Sumber diperiksa melalui materi penulis, repositori universitas, penerbit artikel penelitian, dan lembaga metrologi resmi pada **2 November 2026**.
+Sources were checked through authors' material, university repositories, research publishers, and official metrology institutions on **2 November 2026**.
 
-Artikel penelitian dipakai untuk hasil atau proposal spesifik. Catatan kuliah dan naskah penulis dipakai untuk definisi dan struktur mapan; kedudukannya berbeda dari artikel penemuan pertama. Dokumen resmi dipakai untuk definisi metrologis.
+Research articles support specific findings or proposals. Lecture notes and authors' manuscripts support established definitions and structures; they are distinct from first-discovery papers. Official documents supply metrological definitions.
 
-Yang diperiksa adalah bagian yang disebutkan, bukan klaim pembacaan seluruh halaman setiap buku. Tidak ada salinan buku atau artikel penuh dalam arsip. Persamaan dan contoh berlabel “hasil langsung” atau “analisis matematis” merupakan penurunan yang disajikan dalam berkas, bukan kutipan teorema Motion baru dari sumber.
+Only the indicated portions were checked; this does not claim every page of every book was read. The archive contains no complete books or articles. Equations and examples labelled “immediate result” or “mathematical analysis” are derivations presented here, not quotations of new Motion theorems from sources.
 
-Sumber yang memuat banyak aplikasi tidak memperluas cakupan inti: hanya bagian relevan dengan fondasi yang digunakan.
+Sources containing many applications do not expand the core: only foundationally relevant portions are used.
 
 ### S01
 
 Eric Lehman, F. Thomson Leighton, Albert R. Meyer. **Mathematics for Computer Science**. MIT, 2015.
 
-[Naskah resmi](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf).
+[Official manuscript](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf).
 
-Jenis: materi ilmiah penulis. Bagian: relasi ekuivalensi dan Bab 9 tentang orde, khususnya definisi 9.6.12–9.6.14. Digunakan untuk struktur relasi, bukan untuk menyimpulkan bahwa semua urutan matematis merupakan waktu.
+Type: authors' scientific material. Portions: equivalence relations and Chapter 9 on orders, especially definitions 9.6.12–9.6.14. Supports relational structure, not the claim that every mathematical order is time.
 
 ### S02
 
 David Tong. **Classical Dynamics: The Lagrangian Formalism**.
 
-[Bab penulis](https://davidtong.org/teaching/classical-dynamics/dynhtml/S2).
+[Author's chapter](https://davidtong.org/teaching/classical-dynamics/dynhtml/S2).
 
-Jenis: catatan kuliah penulis. Bagian: §2.1 tentang konfigurasi, kendala, dan koordinat umum. Pembedaan eksplisit dengan ruang fase juga dirujukkan ke S22.
+Type: author's lecture notes. Portion: §2.1 on configuration, constraints, and generalized coordinates. The explicit distinction from phase space also uses S22.
 
 ### S03
 
 David Tong. **Classical Dynamics: The Motion of Rigid Bodies**.
 
-[Bab penulis](https://davidtong.org/teaching/classical-dynamics/dynhtml/S3).
+[Author's chapter](https://davidtong.org/teaching/classical-dynamics/dynhtml/S3).
 
-Jenis: catatan kuliah penulis. Bagian: §3.1, kinematika dan \(SO(3)\). Digunakan untuk menunjukkan bahwa konfigurasi dapat mencakup orientasi dan bahwa komposisi rotasi mempunyai struktur sendiri.
+Type: author's lecture notes. Portion: §3.1, kinematics and \(SO(3)\). Supports configuration including orientation and the structure of rotation composition.
 
 ### S04
 
 David Tong. **Classical Dynamics: Newton's Laws of Motion**.
 
-[Bab penulis](https://davidtong.org/teaching/classical-dynamics/dynhtml/S1).
+[Author's chapter](https://davidtong.org/teaching/classical-dynamics/dynhtml/S1).
 
-Jenis: catatan kuliah penulis. Bagian: §1.2 tentang kerangka inersial dan transformasi Galilei. Tidak digunakan untuk klaim bahwa semua persamaan gaya otomatis memiliki solusi global tunggal.
+Type: author's lecture notes. Portion: §1.2 on inertial frames and Galilean transformations. Does not establish automatic unique global solutions for every force equation.
 
 ### S05
 
 David Tong. **Dynamics and Relativity: Special Relativity**.
 
-[Bab penulis](https://davidtong.org/pdfs/teaching/dynamics-and-relativity/dynrel7.pdf).
+[Author's chapter](https://davidtong.org/pdfs/teaching/dynamics-and-relativity/dynrel7.pdf).
 
-Jenis: catatan kuliah penulis. Bagian: §7.2.1–7.2.2 tentang keserentakan dan kausalitas; geometri ruang-waktu. Digunakan untuk membatasi klaim waktu universal, bukan sekadar keterlambatan penerimaan sinyal.
+Type: author's lecture notes. Portions: §7.2.1–7.2.2 on simultaneity and causality; spacetime geometry. Limits universal-time claims, beyond mere signal-reception delay.
 
 ### S06
 
-David Tong. **General Relativity**. Cambridge, catatan Michaelmas 2019.
+David Tong. **General Relativity**. Cambridge, Michaelmas 2019 notes.
 
-[Naskah penulis](https://www.damtp.cam.ac.uk/user/tong/gr/gr.pdf).
+[Author's manuscript](https://www.damtp.cam.ac.uk/user/tong/gr/gr.pdf).
 
-Jenis: catatan kuliah penulis. Bagian: §1.2, waktu proper dan reparameterisasi; Bab 2–3 tentang manifold serta metrik Lorentzian. Digunakan secara terbatas untuk membedakan parameter, geometri, dan kurva fisik.
+Type: author's lecture notes. Portions: §1.2, proper time and reparametrization; Chapters 2–3 on manifolds and Lorentzian metrics. Used narrowly to distinguish parameters, geometry, and physical curves.
 
 ### S07
 
 Alex Pieloch. **Topology — Spring 2025**. MIT.
 
-[Catatan resmi](https://math.mit.edu/~pieloch/teaching/18.901-spring-2025/18.901-spring-2025-Lecture-Notes.pdf).
+[Official notes](https://math.mit.edu/~pieloch/teaching/18.901-spring-2025/18.901-spring-2025-Lecture-Notes.pdf).
 
-Jenis: catatan kuliah penulis. Bagian: §1.3–1.5 tentang ruang metrik, hasil bagi, kontinuitas, dan keterhubungan. Lemma 1.5.11 mendasari pembatasan citra kontinu domain terhubung.
+Type: author's lecture notes. Portions: §1.3–1.5 on metric spaces, quotients, continuity, and connectedness. Lemma 1.5.11 supports the restriction on continuous images of connected domains.
 
 ### S08
 
-Gregory F. Lawler. **Stochastic Calculus: An Introduction with Applications**. Naskah 2014, revisi 15 Februari 2023.
+Gregory F. Lawler. **Stochastic Calculus: An Introduction with Applications**. 2014 manuscript, revised 15 February 2023.
 
-[Naskah penulis](https://www.math.uchicago.edu/~lawler/finbook.pdf).
+[Author's manuscript](https://www.math.uchicago.edu/~lawler/finbook.pdf).
 
-Jenis: naskah ilmiah penulis. Bagian: §2.6, khususnya Teorema 2.6.1 tentang ketakterdiferensialan lintasan Brownian hampir pasti. Digunakan sebagai batas antara kontinuitas dan diferensiabilitas.
+Type: author's scientific manuscript. Portion: §2.6, especially Theorem 2.6.1 on almost-sure nowhere differentiability of Brownian paths. Distinguishes continuity from differentiability.
 
 ### S09
 
 Barton Zwiebach. **Quantum Physics II: Lecture Notes 1**. MIT, 2013.
 
-[Catatan resmi](https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/61bc31b8d8bf0680c322733910a71aa0_MIT8_05F13_Chap_01.pdf).
+[Official notes](https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/61bc31b8d8bf0680c322733910a71aa0_MIT8_05F13_Chap_01.pdf).
 
-Jenis: catatan kuliah penulis. Bagian: persamaan 1.15–1.16 tentang kesetaraan fungsi gelombang dan pembahasan keadaan stasioner. Digunakan untuk membedakan fase global dari perubahan keadaan murni fisik.
+Type: author's lecture notes. Portions: equations 1.15–1.16 on wavefunction equivalence and stationary states. Distinguishes global phase from physical pure-state change.
 
 ### S10
 
 Barton Zwiebach. **Quantum Physics I: Lecture Note 6**. MIT, 2016.
 
-[Catatan resmi](https://www.ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/d87c768c4e1181fde8d4366112169719_MIT8_04S16_LecNotes6.pdf).
+[Official notes](https://www.ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/d87c768c4e1181fde8d4366112169719_MIT8_04S16_LecNotes6.pdf).
 
-Jenis: catatan kuliah penulis. Bagian: densitas probabilitas, arus probabilitas, dan persamaan kontinuitas. Bentuk arus yang dipakai di Change terbatas pada Hamiltonian yang disebutkan.
+Type: author's lecture notes. Portions: probability density, probability current, continuity equation. The current formula in Change is restricted to its stated Hamiltonian.
 
 ### S11
 
 Barton Zwiebach. **Quantum Physics I: Lecture Note 10**. MIT, 2016.
 
-[Catatan resmi](https://www.ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/01b09433137651bedbbfe4f039b0c5be_MIT8_04S16_LecNotes10.pdf).
+[Official notes](https://www.ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/01b09433137651bedbbfe4f039b0c5be_MIT8_04S16_LecNotes10.pdf).
 
-Jenis: catatan kuliah penulis. Bagian: keadaan stasioner dan partikel bebas pada lingkaran. Arus keadaan pada lingkaran dalam Change dihitung langsung menggunakan definisi S10; tidak diklaim sebagai kutipan dari S11.
+Type: author's lecture notes. Portions: stationary states and a free particle on a circle. Change calculates the circle-state current directly from S10's definition; it is not attributed as a quotation from S11.
 
 ### S12
 
 Richard Fitzpatrick. **Identical Particles**. University of Texas at Austin.
 
-[Materi penulis](https://farside.ph.utexas.edu/teaching/qmech/Quantum/node60.html).
+[Author's material](https://farside.ph.utexas.edu/teaching/qmech/Quantum/node60.html).
 
-Jenis: materi ilmiah penulis. Bagian: pertukaran label serta simetri fungsi gelombang dalam pembahasan standar partikel identik. Digunakan untuk membatasi pembacaan label sebagai identitas individu klasik.
+Type: author's scientific material. Portions: label exchange and wavefunction symmetry in standard identical-particle theory. Limits the interpretation of labels as classical individual identities.
 
 ### S13
 
-Berthold K. P. Horn dan Brian G. Schunck. **Determining Optical Flow**. *Artificial Intelligence* 17, 185–203, 1981. DOI: **10.1016/0004-3702(81)90024-2**.
+Berthold K. P. Horn and Brian G. Schunck. **Determining Optical Flow**. *Artificial Intelligence* 17, 185–203, 1981. DOI: **10.1016/0004-3702(81)90024-2**.
 
-[Salinan artikel universitas](https://www.sci.utah.edu/~gerig/CS6320-S2013/Materials/Horn-Schunck-1981-orig-article.pdf).
+[University article copy](https://www.sci.utah.edu/~gerig/CS6320-S2013/Materials/Horn-Schunck-1981-orig-article.pdf).
 
-Jenis: artikel penelitian primer. Bagian: pembatasan lokal dan persamaan perubahan intensitas. Tidak digunakan untuk memasukkan algoritma estimasi optical flow ke inti.
+Type: primary research article. Portions: local constraints and intensity-change equation. Does not introduce optical-flow estimation algorithms into the core.
 
 ### S14
 
-Edward H. Adelson dan J. Anthony Movshon. **Phenomenal Coherence of Moving Visual Patterns**. *Nature* 300, 523–525, 1982. DOI: **10.1038/300523a0**.
+Edward H. Adelson and J. Anthony Movshon. **Phenomenal Coherence of Moving Visual Patterns**. *Nature* 300, 523–525, 1982. DOI: **10.1038/300523a0**.
 
-[Salinan artikel dari situs penulis](https://www.cns.nyu.edu/~tony/Publications/adelson-movshon-1982.pdf).
+[Article copy on author's site](https://www.cns.nyu.edu/~tony/Publications/adelson-movshon-1982.pdf).
 
-Jenis: artikel penelitian primer. Bagian: abstrak, kondisi koherensi, dan hasil eksperimen. Hasil empiris dibedakan dari hipotesis mekanisme pemrosesan.
+Type: primary research article. Portions: abstract, coherence conditions, experimental results. Empirical findings are distinguished from processing-mechanism hypotheses.
 
 ### S15
 
 Claude E. Shannon. **Communication in the Presence of Noise**. *Proceedings of the IRE* 37, 10–21, 1949. DOI: **10.1109/JRPROC.1949.232969**.
 
-[Salinan cetak ulang 1998 di universitas](https://www.math.unl.edu/~bdeng1/Teaching/math943/Topics/Genetics/Shannon1949.pdf).
+[University copy of 1998 reprint](https://www.math.unl.edu/~bdeng1/Teaching/math943/Topics/Genetics/Shannon1949.pdf).
 
-Jenis: artikel penelitian primer, diakses melalui cetak ulang *Proceedings of the IEEE* 86, 447–457. Bagian: Teorema 1 tentang fungsi berbatas frekuensi. Batasan kelas sinyal tetap bagian esensial klaim.
+Type: primary research article, accessed through the *Proceedings of the IEEE* 86, 447–457 reprint. Portion: Theorem 1 on bandlimited functions. Signal-class restrictions remain essential.
 
 ### S16
 
 Bureau International des Poids et Mesures. **SI Base Unit: Second**.
 
-[Definisi resmi](https://www.bipm.org/en/si-base-units/second).
+[Official definition](https://www.bipm.org/en/si-base-units/second).
 
-Jenis: dokumen lembaga resmi. Digunakan untuk definisi satuan detik; tidak untuk teori hakikat waktu.
+Type: official institutional document. Supports the second's unit definition, not a theory of time's nature.
 
 ### S17
 
 Bureau International des Poids et Mesures. **SI Base Unit: Metre**.
 
-[Definisi resmi](https://www.bipm.org/en/si-base-units/metre).
+[Official definition](https://www.bipm.org/en/si-base-units/metre).
 
-Jenis: dokumen lembaga resmi. Digunakan untuk definisi satuan panjang melalui nilai tetap kecepatan cahaya dalam vakum.
+Type: official institutional document. Supports length-unit definition through fixed vacuum light speed.
 
 ### S18
 
-Joint Committee for Guides in Metrology. **International Vocabulary of Metrology — Basic and General Concepts and Associated Terms**, edisi ketiga. JCGM 200:2012.
+Joint Committee for Guides in Metrology. **International Vocabulary of Metrology — Basic and General Concepts and Associated Terms**, third edition. JCGM 200:2012.
 
-[Dokumen resmi](https://www.bipm.org/documents/20126/2071204/JCGM_200_2012.pdf). [Halaman penerbit](https://www.bipm.org/en/doi/10.59161/jcgm200-2012).
+[Official document](https://www.bipm.org/documents/20126/2071204/JCGM_200_2012.pdf). [Publisher page](https://www.bipm.org/en/doi/10.59161/jcgm200-2012).
 
-Jenis: dokumen resmi. Bagian: 2.3 measurand, 2.9 hasil pengukuran, 2.26 ketidakpastian. Istilah metrologi dibedakan dari ketidakunikan riwayat secara matematis.
+Type: official document. Portions: 2.3 measurand, 2.9 measurement result, 2.26 uncertainty. Metrological terms are distinguished from mathematical history nonuniqueness.
 
 ### S19
 
-Don N. Page dan William K. Wootters. **Evolution without Evolution: Dynamics Described by Stationary Observables**. *Physical Review D* 27, 2885–2892, 1983. DOI: **10.1103/PhysRevD.27.2885**.
+Don N. Page and William K. Wootters. **Evolution without Evolution: Dynamics Described by Stationary Observables**. *Physical Review D* 27, 2885–2892, 1983. DOI: **10.1103/PhysRevD.27.2885**.
 
-[Artikel penerbit](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.27.2885). [Teks penerbit](https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevD.27.2885/fulltext).
+[Publisher article](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.27.2885). [Publisher text](https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevD.27.2885/fulltext).
 
-Jenis: artikel penelitian primer. Bagian: gagasan probabilitas bersyarat dan pembahasan sistem stasioner. Status penggunaan: model konseptual, bukan kepastian ontologis tentang waktu.
+Type: primary research article. Portions: conditional-probability approach and stationary-system discussion. Used as a conceptual model, not ontological certainty about time.
 
 ### S20
 
 Luca Bombelli, Joohan Lee, David Meyer, Rafael D. Sorkin. **Space-time as a Causal Set**. *Physical Review Letters* 59, 521–524, 1987. DOI: **10.1103/PhysRevLett.59.521**.
 
-[Artikel penerbit](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.59.521).
+[Publisher article](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.59.521).
 
-Jenis: artikel penelitian primer. Bagian diperiksa: abstrak dan rumusan proposal. Status penggunaan: contoh program ruang-waktu diskret yang diteliti, bukan bukti empiris kediskretan.
+Type: primary research article. Examined portions: abstract and proposal formulation. An example of researched discrete-spacetime programmes, not empirical proof of discreteness.
 
 ### S21
 
-Zhong-Lin Lu dan George Sperling. **Attention-generated Apparent Motion**. *Nature* 377, 237–239, 1995. DOI: **10.1038/377237a0**.
+Zhong-Lin Lu and George Sperling. **Attention-generated Apparent Motion**. *Nature* 377, 237–239, 1995. DOI: **10.1038/377237a0**.
 
-[Artikel penerbit](https://www.nature.com/articles/377237a0). [Abstrak artikel](https://pubmed.ncbi.nlm.nih.gov/7675109/).
+[Publisher article](https://www.nature.com/articles/377237a0). [Article abstract](https://pubmed.ncbi.nlm.nih.gov/7675109/).
 
-Jenis: artikel penelitian primer. Bagian diperiksa: abstrak dan hasil pokok yang dijelaskan di sana. Klaim dibatasi pada pengaruh perhatian dalam stimulus eksperimen tertentu; tidak mengadopsi seluruh model tiga sistem sebagai kebenaran universal.
+Type: primary research article. Examined portions: abstract and its principal finding. Limited to attention effects in particular experimental stimuli; does not adopt the entire three-system model as universal truth.
 
 ### S22
 
 David Tong. **Classical Dynamics: The Hamiltonian Formalism**.
 
-[Bab penulis](https://davidtong.org/teaching/classical-dynamics/dynhtml/S4).
+[Author's chapter](https://davidtong.org/teaching/classical-dynamics/dynhtml/S4).
 
-Jenis: catatan kuliah penulis. Bagian: §4.1, khususnya perbedaan konfigurasi \(q\) dan keadaan fase \((q,p)\). Klaim prediksi tetap memerlukan syarat ketunggalan evolusi, bukan hanya ketersediaan koordinat fase.
+Type: author's lecture notes. Portion: §4.1, especially configuration \(q\) versus phase state \((q,p)\). Prediction still requires unique evolution, not merely available phase coordinates.
 
-## Jejak klaim
+## Claim trace
 
-[Claims.tsv](Claims.tsv) menghubungkan klaim penting dengan status, asumsi, sumber, dan berkas. Jejak ini bersifat selektif: pernyataan elementer dan penurunan yang dibuktikan langsung tidak diperlakukan sebagai temuan yang perlu diatribusikan kepada satu penulis.
+[Claims.tsv](Claims.tsv) links important claims to status, assumptions, sources, and files. This is selective: elementary statements and directly proved derivations are not treated as discoveries attributable to one author.
 
-Keputusan mengelompokkan isi menjadi enam simpul adalah sintesis arsitektur, bukan hasil yang diambil dari satu buku atau artikel di atas.
+Grouping content into six nodes is architectural synthesis, not a result taken from any single source above.

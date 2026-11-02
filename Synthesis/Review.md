@@ -1,78 +1,78 @@
 # Review
 
-Tanggal pemeriksaan: **2 November 2026**.
+Review date: **2 November 2026**.
 
-## Apa yang diperiksa
+## What was examined
 
-Pemeriksaan mencakup pembacaan ulang seluruh enam fondasi serta berkas struktur, sumber, relasi, klaim, glosarium, pertanyaan, dan evaluasi awal. Seluruh 16 berkas sumber memiliki hash yang sama dengan salinan yang diambil sebelum pengorganisasian ulang.
+Review included all six foundations and their structure, sources, relations, claims, glossary, questions, and initial assessment. At the synthesis stage, all 16 source files matched the pre-reorganization snapshot hashes. This repository edition subsequently translates the prose into English; Origins records both identities.
 
-Sintesis dinilai dari argumennya: apakah kesimpulan mengikuti premis yang ditulis, apakah istilah tetap bermakna sama, dan apakah contoh penyangkal mematahkan generalisasi yang terlalu kuat.
+Arguments were evaluated for whether conclusions follow stated premises, terms retain their meanings, and counterexamples defeat excessive generalizations.
 
-Hasil P01–P13 bukan 13 postulat baru. Sebagiannya merupakan penerapan hasil elementer yang sama pada konteks berbeda. Penanda terpisah membantu menelusuri perbedaan premis dan arti kesimpulan.
+P01–P13 are not 13 new postulates. Several apply the same elementary result in different contexts; separate identifiers trace differing premises and meanings.
 
-## Pemisahan hasil dari sumber
+## Separation of results from sources
 
-Foundation dipindahkan bersama ke satu subfolder tanpa perubahan isi. Identitas berkas dipertahankan, sedangkan pemetaan lokasi dan hash dicatat dalam [Origins.tsv](Origins.tsv).
+At the original synthesis stage, Foundation was moved into one subfolder without content changes. [Origins.tsv](Origins.tsv) now records the original snapshot and English-edition identities and their locations.
 
-Hasil baru berada di Synthesis. Rujukan tambahan ditelusuri di Sources dan jejak premis di Trace. Tidak ada penajaman di bawah yang disisipkan diam-diam ke berkas fondasi.
+New results remain in Synthesis. Sources records additional references; Trace records premises. The refinements below remain separate from the foundation; translating the edition does not silently add them to its scientific claims.
 
-## Penajaman terhadap pembacaan sumber awal
+## Refinements of the original source reading
 
-| Temuan | Sumber awal | Penajaman sintesis | Status |
+| Finding | Original source | Synthesis refinement | Status |
 | --- | --- | --- | --- |
-| Pemetaan tidak injektif belum menjamin ada riwayat bergerak yang diizinkan di dalam serat | State, “Kesetaraan dan informasi yang dipertahankan” | Reduction menambahkan kelas riwayat dan contoh domain terhubung menuju keadaan diskret | Penajaman lingkup, bukan pembatalan pernyataan “dapat menyembunyikan” |
-| Kesetaraan fase global sesaat belum menentukan bentuk persamaan evolusi setelah fase berubah terhadap waktu | State dan Change, keadaan murni kuantum | P13 menurunkan suku generator tambahan | Konsekuensi tambahan dengan premis Schrödinger |
-| Ketetapan posisi sampel tidak cukup; tetapi data ujung yang berbeda dapat cukup untuk satu sifat | Evidence, keteridentifikasian dan sampling | P06 membedakan deteksi sifat dari rekonstruksi; P08 menambah batas galat | Pendalaman penalaran |
-| Urutan parsial memerlukan penjelasan lebih lanjut untuk istilah “berubah” | Time, struktur urutan | P03 membatasi kesimpulan pada pasangan sebanding dan kelas perbandingan | Pembatasan konseptual |
-| “Stasioner” dapat menunjuk beberapa objek | Change dan Glossary | P10–P12 membedakan observabel, densitas, arus, hukum statistik, dan realisasi | Pemisahan makna |
+| Noninjectivity does not guarantee an admissible moving history within a fibre | State, “Equivalence and retained information” | Reduction adds history classes and a connected-domain/discrete-state example | Scope refinement, not rejection of “can hide” |
+| Instantaneous global-phase equivalence does not fix the evolution equation after time-dependent phase changes | State and Change, quantum pure states | P13 derives an additional generator term | Added consequence under Schrödinger premises |
+| Constant samples are insufficient, but different endpoints can establish a property | Evidence, identifiability and sampling | P06 separates property detection from reconstruction; P08 adds errors | Deeper reasoning |
+| Partial orders need clarification of “changing” | Time, order structure | P03 restricts conclusions to comparable pairs and comparison classes | Conceptual qualification |
+| “Stationary” can refer to several objects | Change and Glossary | P10–P12 separate observables, densities, currents, statistical laws, realizations | Meaning separation |
 
-Pemeriksaan ini tidak menghasilkan dasar untuk mengubah fondasi secara diam-diam. Penajaman tersebut disimpan sebagai hasil yang bisa diperiksa tersendiri.
+This review did not justify silently changing the foundations. Refinements remain independently examinable results.
 
-## Uji penyangkal dan kondisi yang dipertahankan
+## Counterexamples and retained conditions
 
-| Uji | Kesalahan yang dicegah | Hasil |
+| Test | Error prevented | Result |
 | --- | --- | --- |
-| \(q=t,\ x'=x-t\), dengan aturan pembanding ikut berubah | Koordinat nol dianggap menghapus gerak relatif lama | P01 mempertahankan riwayat pembanding |
-| \(x'=x^3\) dan \(t=\lambda^3\) | Bijeksi dianggap cukup untuk melestarikan nolnya turunan | P02 memerlukan regularitas |
-| Dua konteks tak sebanding | Perbedaan nilai dianggap otomatis perubahan temporal satu benda | P03 membatasi inferensi |
-| \(C(x,y)=x,\ T(x,y)=(-y,x)\) | Transformasi dianggap selalu dapat dilakukan setelah informasi dihapus | P05 gagal tepat ketika serat tidak dipertahankan |
-| Partikel bebas dengan posisi sama, momentum berbeda | Determinisme lengkap dianggap memberi prediksi posisi dari posisi saja | Evolusi tereduksi tidak tertutup pada kelas tersebut |
-| Data ujung \((0,1)\) dibandingkan \((0,0)\) | Deteksi gerak disamakan dengan rekonstruksi atau dengan perbedaan ujung saja | P06–P07 membedakan sifat dan kuantifikasinya |
-| Data bising dengan batas galat deterministik | Simpangan baku dianggap jaminan mutlak gerakan | P08 menyebut premis batas yang sebenarnya |
-| Kurva tenda dan sinus di antara sampel | Batas laju positif dianggap menghilangkan semua gerakan tersembunyi | P09 membatasi amplitudo tanpa membuktikan diam |
-| Arus sirkulasi dan dua komponen berlawanan | Divergensi nol atau arus gabungan nol dianggap diam semua bagian | P11 mempertahankan perbedaan |
-| Fase acak seragam pada osilasi | Statistik stasioner dianggap lintasan individual tetap | P12 membuktikan distribusi bersama tetap dan riwayat tidak konstan |
-| Fase kuantum bergantung waktu | Persamaan lama dianggap otomatis tetap berlaku tanpa transformasi generator | P13 memberi tanda suku tambahan yang konsisten |
+| \(q=t,\ x'=x-t\), with transformed comparison rule | Zero coordinates erase original relative motion | P01 preserves the comparison history |
+| \(x'=x^3\), \(t=\lambda^3\) | Bijections suffice to preserve zero derivatives | P02 requires regularity |
+| Incomparable contexts | Different values automatically imply one object's temporal change | P03 limits inference |
+| \(C(x,y)=x,\ T(x,y)=(-y,x)\) | Transformations always remain possible after discarding information | P05 fails precisely when fibres are not preserved |
+| Equal-position free particles with different momenta | Full determinism predicts position from position alone | Reduced evolution is not closed on that class |
+| Endpoint data \((0,1)\) versus \((0,0)\) | Motion detection equals reconstruction or merely endpoint difference | P06–P07 distinguish properties and quantification |
+| Noisy data with deterministic error bounds | Standard deviation guarantees motion absolutely | P08 states actual bound premises |
+| Tent curves and intersample sinusoids | Positive rate bounds eliminate all hidden motion | P09 bounds amplitude without proving rest |
+| Circulating and opposing-component currents | Zero divergence or total current means every part rests | P11 retains the distinctions |
+| Uniform-phase oscillation | Stationary statistics imply fixed individual paths | P12 proves fixed joint laws with nonconstant histories |
+| Time-dependent quantum phase | Original equation holds without generator transformation | P13 gives the consistent extra-term sign |
 
-## Pembuktian dan pemeriksaan tambahan
+## Proofs and additional checks
 
-Bukti umum ditulis dalam dokumen hasil, bukan disimpulkan dari jumlah contoh yang lulus. Pemeriksaan tambahan dilakukan untuk mendeteksi kesalahan aljabar atau kondisi pada contoh:
+General proofs appear in result documents; they are not inferred from counts of passing examples. Additional checks targeted algebra and example conditions:
 
-| Pemeriksaan | Cakupan hingga yang diperiksa |
+| Check | Finite scope examined |
 | --- | --- |
-| Faktorisasi P04 | 162 pasangan pemetaan pada domain tiga elemen, termasuk ketunggalan fungsi faktor |
-| Pewarisan operasi P05 | 162 kasus operasi dan reduksi pada domain tiga elemen |
-| Penyederhanaan data P07 | 1.728 kombinasi pemetaan dan predikat |
-| Ketetapan orde parsial P03 | 19 orde parsial berlabel pada tiga elemen; 152 penugasan nilai |
-| Ketaksamaan P08 | 1.000 kasus poligonal satu dimensi dengan aritmetika rasional eksak |
-| Batas ekskursi P09 | 21 posisi pada contoh yang mencapai batas puncak |
-| Pergeseran fase P12 | 44 permutasi fase seragam diskret sebagai pemeriksaan ilustrasi |
-| Generator fase P13 | Lima evaluasi kompleks untuk tanda suku \(-\hbar\dot\theta\) |
+| P04 factorization | 162 map pairs on a three-element domain, including unique factor functions |
+| P05 operation descent | 162 operations and reductions on a three-element domain |
+| P07 data simplification | 1,728 map–predicate combinations |
+| P03 partial-order constancy | 19 labelled three-element partial orders; 152 value assignments |
+| P08 inequality | 1,000 one-dimensional polygonal cases using exact rationals |
+| P09 excursion bound | 21 positions on a peak-bound-attaining example |
+| P12 phase shifts | 44 discrete uniform-phase permutations as illustrations |
+| P13 phase generator | Five complex evaluations of the \(-\hbar\dot\theta\) sign |
 
-Pemeriksaan hingga itu sesuai dengan hasil tertulis. Ia bukan pembuktian semua domain, pembuktian probabilitas kontinu melalui sampel diskret, atau bukti keberlakuan model di alam.
+These finite checks agreed with the statements. They do not prove all domains, continuous probabilities from discrete samples, or physical applicability.
 
-Saat pemeriksaan, contoh P07 diperjelas agar predikat “ujung berbeda” tidak disamakan dengan “pernah bergerak”. Pemisahan ini diperlukan karena riwayat yang kembali mempunyai ujung sama tetapi tetap tidak konstan.
+During review P07's example was clarified to separate “different endpoints” from “ever moved”: returning histories have equal endpoints but remain nonconstant.
 
-## Penilaian terhadap jenis klaim
+## Claim-type assessment
 
-P01–P10 sebagian besar merupakan hasil tentang fungsi, urutan, diferensiasi, dan metrik dengan premis yang disebutkan. P11 membutuhkan persamaan konservasi. P12 merupakan contoh probabilistik yang diasumsikan. P13 membutuhkan persamaan evolusi kuantum.
+P01–P10 mainly concern functions, orders, differentiation, and metrics under stated premises. P11 needs conservation; P12 assumes a probabilistic example; P13 needs quantum evolution.
 
-Tidak ada hasil empiris baru. Temuan persepsi dan batas teori kuantum atau relativitas tetap mengikuti domain sumber yang diwarisi. Kesamaan bentuk konservasi massa dan probabilitas tidak dijadikan bukti bahwa besaran tersebut identik.
+No new empirical results are claimed. Perception findings and quantum or relativistic limits retain their inherited source domains. Shared mass/probability conservation forms do not establish identical quantities.
 
-## Pemeriksaan artefak dan batas evaluasi
+## Artifact checks and evaluation limits
 
-Tautan lokal, jangkar hasil, rujukan sumber, tabel jejak, dan pasangan pembatas rumus diperiksa. Foundation/Checksums.tsv tetap cocok dengan isi Foundation. Checksums proyek dan arsip memeriksa kesamaan byte, bukan kebenaran ilmu.
+Local links, result anchors, source references, trace tables, and formula delimiters were checked. Foundation/Checksums.tsv is regenerated for this English edition. Project checksums assess byte equality, not scientific truth.
 
-Pemeriksaan bersifat internal; tidak ada peer review independen, proof assistant, atau tinjauan sistematis seluruh literatur. Ketidakmampuan menyatukan semua fondasi menjadi satu ontologi tidak ditafsirkan sebagai bukti bahwa penyatuan selamanya mustahil.
+Review is internal, without independent peer review, proof assistants, or systematic coverage of all literature. Failure to unify the foundations into one ontology does not prove permanent impossibility.
 
-Kesimpulan yang dipertahankan adalah tersedianya struktur penalaran bersyarat yang lebih kuat daripada daftar hubungan awal: kriteria kecukupan bersama, konsekuensi geometris dari bukti, serta pembatasan ketetapan dan reduksi yang dapat ditelusuri. Minimalitas universal dan hukum baru tentang seluruh Motion tidak diklaim.
+The retained result is a conditional reasoning structure stronger than the initial relation list: shared sufficiency criteria, geometric consequences of evidence, and traceable limits on stationarity and reduction. Universal minimality and new laws of all Motion are not claimed.

@@ -1,37 +1,37 @@
 # Reference
 
-## Acuan perbandingan
+## References for comparison
 
-Gerakan spasial memerlukan cara membandingkan susunan pada konteks temporal berbeda. Acuan menyatakan aturan perbandingan tersebut. Ia dapat berupa benda, lingkungan, relasi antarsubsistem, jaringan jam dan penggaris ideal, atau struktur geometris yang ditentukan teori.
+Spatial motion requires comparing arrangements across temporal contexts. A reference specifies the comparison rule. It may be an object, environment, relation among subsystems, network of ideal clocks and rulers, or theoretical geometric structure.
 
-Acuan tidak sama dengan pengamat sadar. Koordinat juga tidak sama dengan acuan fisik: banyak sistem koordinat dapat digunakan untuk acuan yang sama.
+A reference is not a conscious observer. Coordinates also differ from physical references: many coordinate systems can describe the same reference.
 
-**Sintesis konseptual.** Empat pertanyaan harus dibedakan:
+**Conceptual synthesis.** Four questions must be distinguished:
 
-| Pertanyaan | Contoh jenis perubahan |
+| Question | Example of change |
 | --- | --- |
-| Apakah sistem berubah terhadap acuan tertentu? | Gerakan relatif |
-| Apakah acuannya diganti? | Kerangka ikut bergerak |
-| Apakah label untuk keadaan yang sama diganti? | Pergantian koordinat |
-| Apakah beberapa keadaan digabung? | Pengurangan informasi atau identifikasi kesetaraan |
+| Does the system change relative to a particular reference? | Relative motion |
+| Is the reference changed? | A moving frame |
+| Are labels for the same state changed? | Coordinate change |
+| Are several states grouped together? | Information reduction or equivalence identification |
 
-Tanpa pemisahan ini, perubahan angka dapat salah dibaca sebagai perubahan fisik, atau gerakan fisik dianggap hilang hanya karena koordinatnya dibuat tetap.
+Without these distinctions, numerical changes can be mistaken for physical changes, or physical motion dismissed because coordinates are held fixed.
 
-## Membandingkan lintas konteks
+## Comparison across contexts
 
-Dalam model yang memiliki ruang konfigurasi \(Q_t\) pada tiap waktu, perbandingan dapat diwakili oleh pemetaan \(F_t:Q_t\to Q_R\) menuju ruang pembanding bersama:
+In a model with configuration spaces \(Q_t\) at each time, comparison can be represented by maps \(F_t:Q_t\to Q_R\) into a shared comparison space:
 
 \[
 q_R(t)=F_t(q_t).
 \]
 
-Konstruksi ini menyatakan secara eksplisit apa yang dianggap “tempat yang sama” atau “susunan yang sama”. Ia merupakan representasi bersyarat, bukan definisi yang dipaksakan pada seluruh teori.
+This explicitly states what counts as the “same place” or “same arrangement”. It is a conditional representation, not a definition imposed on every theory.
 
-Jika semua \(Q_t\) sudah disajikan sebagai satu \(Q\), sebagian aturan perbandingan telah tersembunyi dalam penyajian itu. Menulis \(q(t_1)=q(t_2)\) tetap mengandaikan makna kesamaan lintas waktu.
+If all \(Q_t\) are already presented as one \(Q\), that presentation hides part of the comparison rule. Writing \(q(t_1)=q(t_2)\) still presupposes cross-time equality.
 
-## Pergantian label yang mempertahankan perubahan
+## Relabellings that preserve change
 
-Misalkan \(f:Q\to Q'\) injektif dan tidak bergantung waktu. Maka:
+Let \(f:Q\to Q'\) be injective and time-independent. Then:
 
 \[
 q(t_1)=q(t_2)
@@ -39,67 +39,67 @@ q(t_1)=q(t_2)
 f(q(t_1))=f(q(t_2)).
 \]
 
-**Bukti langsung.** Arah ke kanan mengikuti sifat fungsi; arah sebaliknya mengikuti keinjektifan. Dengan demikian, riwayat konstan tetap konstan dan riwayat tidak konstan tetap tidak konstan.
+**Direct proof.** The forward direction follows from functionality; the reverse follows from injectivity. Constant histories therefore remain constant, and nonconstant histories remain nonconstant.
 
-Sifat yang lebih kuat memerlukan syarat lebih kuat. Mempertahankan kontinuitas dua arah memerlukan kesesuaian topologi, misalnya homeomorfisme. Mempertahankan struktur diferensial memerlukan transformasi yang sesuai, misalnya difeomorfisme. Bijeksi sembarang hanya mempertahankan kesamaan elemen, bukan seluruh struktur geometri. [S07](../Research/Sources.md#s07)
+Stronger properties require stronger conditions. Preserving continuity in both directions requires topological compatibility, for example a homeomorphism. Preserving differential structure requires a suitable transformation, for example a diffeomorphism. An arbitrary bijection preserves element equality, not all geometric structure. [S07](../Research/Sources.md#s07)
 
-Jika \(f\) tidak injektif, riwayat yang berubah dapat dipetakan menjadi tetap. Ini berbeda dari perubahan koordinat yang hanya mengganti label tanpa kehilangan informasi.
+If \(f\) is not injective, a changing history can map to a constant one. This differs from a coordinate change that merely relabels without losing information.
 
-## Acuan yang bergantung waktu
+## Time-dependent references
 
-Dalam ruang Euclidean dengan waktu bersama, ambil posisi \(\mathbf r(t)\) dan asal bergerak \(\mathbf z(t)\). Koordinat terhadap asal tersebut:
+In Euclidean space with shared time, take a position \(\mathbf r(t)\) and moving origin \(\mathbf z(t)\). Coordinates relative to that origin are:
 
 \[
 \mathbf r'(t)=\mathbf r(t)-\mathbf z(t).
 \]
 
-Jika \(\mathbf z(t)=\mathbf r(t)\), maka \(\mathbf r'(t)=0\). Ini menyatakan sistem diam terhadap asal yang mengikutinya, bukan bahwa seluruh hubungan fisik geraknya menghilang.
+If \(\mathbf z(t)=\mathbf r(t)\), then \(\mathbf r'(t)=0\). The system is at rest relative to an origin following it; this does not eliminate every physical relation involved in its motion.
 
-Untuk rotasi sumbu dan translasi yang bergantung waktu:
+For time-dependent axis rotations and translations:
 
 \[
 \mathbf r'=R(t)\mathbf r+\mathbf b(t),
 \]
 
-aturan rantai memberi:
+the chain rule gives:
 
 \[
 \dot{\mathbf r}'=
 R\dot{\mathbf r}+\dot R\,\mathbf r+\dot{\mathbf b}.
 \]
 
-Suku tambahan menunjukkan bahwa laju koordinat dapat berasal dari perubahan basis atau asal. Setiap klaim “kecepatan sama” perlu menyebut jenis transformasi dan besaran yang dibandingkan.
+The additional terms show that coordinate rates can arise from changing bases or origins. Any “equal velocity” claim must specify the transformation and compared quantity.
 
-## Relativitas bukan penghapusan semua perbedaan fisik
+## Relativity does not erase every physical distinction
 
-**Mapan dalam mekanika klasik.** Kerangka inersial berkaitan dengan perilaku partikel bebas. Di antara transformasi Galilei, dengan rotasi tetap \(R\) dan kecepatan relatif tetap \(\mathbf u\), salah satu konvensinya:
+**Established in classical mechanics.** Inertial frames are related to free-particle behaviour. For Galilean transformations with fixed rotation \(R\) and constant relative velocity \(\mathbf u\), one convention is:
 
 \[
 t'=t,\qquad
 \mathbf r'=R\mathbf r-\mathbf u t+\mathbf b.
 \]
 
-Maka \(\mathbf v'=R\mathbf v-\mathbf u\), sedangkan \(\mathbf a'=R\mathbf a\). Ketetapan posisi bergantung kerangka; nol atau tidaknya percepatan dipertahankan di antara kerangka inersial tersebut. [S04](../Research/Sources.md#s04)
+Then \(\mathbf v'=R\mathbf v-\mathbf u\), while \(\mathbf a'=R\mathbf a\). Position constancy depends on the frame; whether acceleration is zero is preserved between these inertial frames. [S04](../Research/Sources.md#s04)
 
-Mengizinkan koordinat arbitrer tidak menjadikan semua kerangka inersial. Struktur hukum dan suku tambahan juga harus ditransformasikan.
+Allowing arbitrary coordinates does not make every frame inertial. Laws and additional terms must also be transformed.
 
-Dalam relativitas, nilai kecepatan lokal suatu benda diperoleh relatif terhadap pengamat timelike setempat. Pengamat yang berbeda dapat memperoleh kecepatan berbeda pada kejadian sama. Namun, setelah pengamat dan benda ditentukan, relasi itu tidak bergantung pada nama koordinat.
+In relativity, an object's local velocity is measured relative to a local timelike observer. Different observers can obtain different velocities at the same event. Once observer and object are specified, however, the relation is independent of coordinate names.
 
-Percepatan proper merupakan contoh perbedaan fisik yang tidak dihapus hanya dengan membuat koordinat benda tetap. Demikian pula, lintasan null tidak mempunyai kerangka diam fisik seperti benda timelike. Pernyataan “semua gerakan sepenuhnya pilihan koordinat” karena itu terlalu kuat. [S05](../Research/Sources.md#s05), [S06](../Research/Sources.md#s06)
+Proper acceleration is a physical distinction not erased by keeping an object's coordinates fixed. A null path also has no physical rest frame like a timelike object. “All motion is entirely a coordinate choice” is therefore too strong. [S05](../Research/Sources.md#s05), [S06](../Research/Sources.md#s06)
 
-## Simetri, invariansi, dan redundansi
+## Symmetry, invariance, and redundancy
 
-**Definisi matematis.** Transformasi simetri mempertahankan struktur yang disebutkan. Struktur itu dapat berupa jarak, relasi, atau bentuk hukum. “Simetri” selalu membutuhkan penjelasan tentang apa yang dipertahankan.
+**Mathematical definition.** A symmetry transformation preserves a specified structure, such as distances, relations, or the form of laws. “Symmetry” always requires identifying what is preserved.
 
-Tiga penggunaan perlu dipisahkan:
+Three uses must be separated:
 
-1. **Transformasi pasif:** mengubah representasi deskripsi.
-2. **Transformasi aktif:** membandingkan susunan fisik yang ditransformasikan terhadap struktur acuan.
-3. **Redundansi gauge:** beberapa representasi diperlakukan menyatakan keadaan fisik sama dalam teori yang bersangkutan.
+1. **Passive transformation:** changes a description's representation.
+2. **Active transformation:** compares a transformed physical arrangement with reference structures.
+3. **Gauge redundancy:** multiple representations express the same physical state in the theory concerned.
 
-Tidak setiap simetri aktif merupakan redundansi. Memutar benda terhadap lingkungan dapat menghasilkan keadaan yang berbeda walaupun hukum alam memiliki simetri rotasi.
+Not every active symmetry is redundancy. Rotating an object relative to its environment can produce a different state even when natural laws have rotational symmetry.
 
-Urutan transformasi juga mempunyai struktur. Dua translasi tetap di ruang vektor komutatif:
+Transformation order also has structure. Two fixed translations in a vector space commute:
 
 \[
 T_{\mathbf a}T_{\mathbf b}
@@ -107,20 +107,20 @@ T_{\mathbf a}T_{\mathbf b}
 =T_{\mathbf b}T_{\mathbf a}.
 \]
 
-Sebaliknya, rotasi tiga dimensi umumnya tidak komutatif. Ini sifat komposisi transformasi tertentu, bukan prinsip bahwa “gerakan selalu komutatif” atau “gerakan selalu tidak komutatif”. [S03](../Research/Sources.md#s03)
+In contrast, three-dimensional rotations generally do not commute. This concerns composition of particular transformations, not a principle that “motion always commutes” or “motion never commutes”. [S03](../Research/Sources.md#s03)
 
-Sifat matematis hanya diwariskan jika jenis transformasi dan struktur yang relevan memang dipakai.
+Mathematical properties transfer only when the relevant transformations and structures are actually used.
 
-## Relasi internal dan gerakan keseluruhan
+## Internal relations and overall motion
 
-Jika seluruh posisi sistem ditranslasi dengan vektor sama, semua selisih posisi internal tetap. Jika seluruh konfigurasi dirotasi bersama, semua jarak internal tetap. Deskripsi yang hanya menyimpan jarak internal tidak dapat membedakan transformasi tersebut.
+Translating every system position by the same vector preserves internal position differences. Rotating an entire configuration together preserves internal distances. A description retaining only internal distances cannot distinguish these transformations.
 
-**Batas inferensi.** Ketidakmampuan deskripsi internal membedakan dua konfigurasi tidak membuktikan bahwa tidak ada perbedaan terhadap lingkungan, orientasi, atau struktur inersial. Menghapus transformasi global melalui ruang hasil bagi merupakan pilihan yang memerlukan alasan sesuai teori.
+**Inferential limit.** Failure of an internal description to distinguish configurations does not prove absence of differences relative to an environment, orientation, or inertial structure. Removing global transformations through a quotient space requires justification within the theory.
 
-Dalam beberapa pendekatan relasional, struktur hubungan diberi kedudukan lebih dasar daripada posisi terhadap latar. Arti “lebih dasar” di sini berkaitan dengan konstruksi teori, bukan hasil universal yang dapat diputuskan dari contoh translasi saja.
+Some relational approaches treat relational structure as more basic than background-relative positions. Here “more basic” concerns theory construction, not a universal result settled by a translation example.
 
-## Kedudukan fundamental
+## Fundamental role
 
-Peran elementer Reference adalah menjaga agar perbandingan bermakna dan tidak tertukar dengan penggantian representasi. Acuan tertentu, kelompok transformasi tertentu, dan klaim tentang struktur absolut atau relasional bergantung pada kerangka.
+Reference keeps comparisons meaningful and distinct from representational changes. Particular references, transformation groups, and claims about absolute or relational structures depend on the framework.
 
-Invariansi koordinat merupakan konsistensi deskripsi. Ia belum menjadi bukti kecukupan model, keberadaan fisik semua objeknya, atau kebenaran inferensi dari data. Persoalan terakhir dibahas dalam [Evidence](Evidence.md).
+Coordinate invariance establishes descriptive consistency, not model adequacy, physical existence of all model objects, or valid inference from data. The last issue is discussed in [Evidence](Evidence.md).

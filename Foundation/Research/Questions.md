@@ -1,46 +1,46 @@
 # Questions
 
-## Persoalan terbuka dan perbedaan tingkat
+## Open questions and differences of level
 
-Daftar ini membedakan pertanyaan ilmiah yang belum terselesaikan dari pertanyaan yang jawabannya berubah setelah kerangka dipilih. Tidak semua ketidaksepakatan adalah kekurangan data; sebagian merupakan perbedaan definisi atau struktur teori.
+This list distinguishes unresolved scientific questions from questions whose answers change with the chosen framework. Disagreement need not indicate missing data; it can reflect different definitions or theoretical structures.
 
-| Persoalan | Yang sudah dapat dinyatakan | Yang belum boleh disimpulkan |
+| Question | What can be stated | What cannot yet be concluded |
 | --- | --- | --- |
-| Apakah waktu fundamental? | Formulasi yang menggunakan waktu eksternal dan formulasi relasional tersedia | Satu ontologi waktu telah terbukti universal |
-| Apakah ruang-waktu kontinu? | Model kontinu berhasil dalam domain teori yang menggunakannya; model diskret diteliti | Kontinuitas atau kediskretan mikroskopis telah diputuskan oleh notasi |
-| Apakah setiap sistem memiliki lintasan posisi? | Model partikel klasik menggunakannya; kuantum standar tidak mewajibkannya sebagai postulat universal | Semua interpretasi kuantum melarang atau mewajibkan lintasan |
-| Apakah identitas individu fundamental? | Pelabelan berguna dalam model tertentu; partikel identik membatasi pembacaan klasik | Seluruh persoalan identitas selesai melalui pertukaran label |
-| Apakah ruang hanya hubungan? | Relasi dapat menghilangkan informasi tertentu dari deskripsi berlatar | Tidak ada struktur ruang-waktu atau inersial yang mempunyai arti fisik |
-| Apakah persepsi gerak dapat direduksi ke satu operasi? | Ambiguitas dan pengaruh kondisi stimulus terbukti dalam eksperimen tertentu | Satu persamaan lokal menerangkan seluruh pengalaman gerak |
+| Is time fundamental? | External-time and relational formulations exist | One universally proved ontology of time |
+| Is spacetime continuous? | Continuous models succeed in their theoretical domains; discrete models are researched | Notation settles microscopic continuity or discreteness |
+| Does every system have a position trajectory? | Classical particle models use one; standard quantum theory does not require it universally | Every quantum interpretation forbids or requires trajectories |
+| Is individual identity fundamental? | Labels help in particular models; identical particles limit classical readings | Label exchange settles every identity question |
+| Is space only relations? | Relational descriptions can discard information present in background descriptions | No spacetime or inertial structure has physical meaning |
+| Can motion perception reduce to one operation? | Specific experiments establish ambiguity and stimulus dependence | One local equation explains all motion experience |
 
-## Waktu relasional
+## Relational time
 
-Model Page–Wootters memperlihatkan kemungkinan merumuskan perubahan melalui korelasi dengan variabel jam. Pertanyaan selanjutnya mencakup pemilihan jam, interaksi, keterbatasan jam fisik, serta hubungan formulasi tersebut dengan prediksi yang dapat diperiksa. [S19](Sources.md#s19)
+The Page–Wootters model illustrates change formulated through correlations with clock variables. Further issues include clock choice, interaction, limitations of physical clocks, and connections with testable predictions. [S19](Sources.md#s19)
 
-Keberadaan model tidak sama dengan keberhasilan menyelesaikan masalah waktu dalam semua teori gravitasi kuantum. Dari sisi fondasi, hasil yang aman adalah bahwa parameter eksternal tidak boleh diasumsikan sebagai satu-satunya cara konseptual mengaitkan perubahan.
+A model's existence does not solve the time problem in every quantum-gravity theory. The safe foundational conclusion is that external parameters must not be assumed to be the only conceptual way of relating changes.
 
-## Kontinu dan diskret
+## Continuous and discrete
 
-Causal set merupakan contoh proposal yang mengganti latar kontinu fundamental dengan orde parsial yang lokal hingga dan meneliti bagaimana ruang-waktu kontinu dapat muncul sebagai pendekatan. [S20](Sources.md#s20)
+Causal sets exemplify proposals replacing fundamental continuous backgrounds with locally finite partial orders and investigating how continuous spacetime can arise approximately. [S20](Sources.md#s20)
 
-Pertanyaan fisiknya berbeda dari teorema bahwa pemetaan kontinu interval terhubung menuju ruang diskret harus konstan. Teorema itu memiliki asumsi topologis tertentu; teori fisik diskret dapat memakai struktur dasar yang berbeda.
+This physical question differs from the theorem that continuous maps from connected intervals into discrete spaces are constant. That theorem assumes particular topology; discrete physical theories can use different basic structures.
 
-Tidak ada satuan panjang atau waktu kecil yang dengan sendirinya membuktikan kisi ruang-waktu. Definisi satuan, batas ketelitian, dan struktur ontologis merupakan persoalan berbeda.
+No small length or time unit by itself proves a spacetime lattice. Unit definitions, precision limits, and ontological structures differ.
 
-## Makna gerakan dalam kuantum
+## Motion's meaning in quantum theory
 
-Keadaan murni, densitas posisi, arus probabilitas, hasil pengukuran, dan lintasan dalam interpretasi tertentu merupakan objek berbeda. Pertanyaan “apakah partikel bergerak?” dapat meminta penjelasan berbeda bergantung objek yang dimaksud.
+Pure states, position densities, probability currents, outcomes, and interpretation-specific trajectories are different objects. “Does the particle move?” can ask different questions depending on the intended object.
 
-Persoalan ini tidak diselesaikan dengan mengganti semua pengertian gerakan menjadi “keadaan berubah”. Keadaan stasioner dapat memiliki struktur arus; sebaliknya, perubahan fase global tidak membedakan ray fisik. [S09](Sources.md#s09), [S10](Sources.md#s10)
+Replacing every meaning of motion with “state change” does not settle this. Stationary states can carry currents, while global-phase change does not distinguish physical rays. [S09](Sources.md#s09), [S10](Sources.md#s10)
 
-## Keteridentifikasian dan pengalaman
+## Identifiability and experience
 
-Tidak semua gerakan fisik dapat ditentukan dari satu jenis data. Memperbaiki resolusi dapat membantu masalah ketelitian, tetapi tidak selalu mengatasi penghilangan informasi oleh proyeksi, sampling, atau ketidakjelasan identitas.
+One data type cannot determine every physical motion. Higher resolution can improve precision without resolving information lost through projection, sampling, or ambiguous identity.
 
-Hubungan antara pengalaman gerak dan proses perseptual juga tetap memiliki pertanyaan mekanistis. Eksperimen tertentu membatasi keluarga penjelasan; ia tidak memberi akses langsung tanpa interpretasi kepada mekanisme saraf atau ontologi dunia.
+The relationship between experienced motion and perceptual processes also leaves mechanistic questions. Specific experiments constrain explanation families; they do not give interpretation-free access to neural mechanisms or world ontology.
 
-## Status minimalitas
+## Minimality status
 
-Arsitektur enam simpul merupakan usulan pengorganisasian yang telah diuji terhadap kekeliruan dan kasus batas yang dicatat. Belum tersedia pembuktian bahwa itulah satu-satunya arsitektur atau kumpulan fondasi terkecil bagi semua teori yang mungkin.
+The six-node architecture is an organizational proposal examined against recorded errors and boundary cases. There is no proof that it is unique or the smallest foundation for all possible theories.
 
-Perubahan teori, penemuan reduksi yang sah, atau temuan bahwa dua simpul dapat digabung tanpa kehilangan kejelasan merupakan alasan ilmiah untuk merevisi susunan. Banyaknya berkas bukan ukuran kebenaran ataupun kedalaman.
+Theory changes, valid reductions, or findings that nodes can merge without losing clarity justify revision. File counts measure neither truth nor depth.

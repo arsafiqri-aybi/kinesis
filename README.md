@@ -2,91 +2,95 @@
 
 **The fundamental knowledge of motion — connected, examined, and traceable.**
 
-Kinesis adalah perpustakaan ilmiah tentang akar pengetahuan gerakan: bagaimana keadaan dibedakan, perubahan dibandingkan, riwayat dipahami, dan kesimpulan dibenarkan oleh bukti.
+Kinesis is a scientific library about the roots of motion: how states are distinguished, changes compared, histories understood, and conclusions justified by evidence.
 
-Nama *kinesis* berasal dari Yunani Kuno **κίνησις**, yang berarti gerakan. Identitas keilmuan di dalam dokumen tetap menggunakan nama **Motion**.
+The name comes from Ancient Greek **κίνησις**, meaning motion. The scientific documents retain **Motion** as their subject identity.
 
 ## Explore
 
-| Lapisan | Pertanyaan | Mulai membaca |
+| Layer | Question | Start here |
 | --- | --- | --- |
-| **Foundation** | Apa yang diperlukan agar gerakan mempunyai makna? | [Arsitektur](Foundation/Structure/Architecture.md) |
-| **Synthesis** | Apa yang dapat diturunkan ketika fondasi dihubungkan? | [Ikhtisar sintesis](Synthesis/Overview.md) |
-| **Graph** | Bagaimana konsep, premis, hasil, dan sumber ditelusuri? | [Panduan peta](Graph/README.md) |
+| **Foundation** | What makes motion meaningful? | [Architecture](Foundation/Structure/Architecture.md) |
+| **Synthesis** | What follows when the foundations are connected? | [Synthesis overview](Synthesis/Overview.md) |
+| **Graph** | How can concepts, premises, results, and sources be traced? | [Map guide](Graph/README.md) |
 
 ## Foundation
 
-| Fondasi | Fokus |
+| Foundation | Focus |
 | --- | --- |
-| [State](Foundation/Core/State.md) | Keadaan, identitas, perbedaan, dan kesetaraan |
-| [Time](Foundation/Core/Time.md) | Urutan, durasi, parameter, dan waktu fisik |
-| [Space](Foundation/Core/Space.md) | Posisi, relasi spasial, konfigurasi, dan geometri |
-| [Reference](Foundation/Core/Reference.md) | Acuan, transformasi, dan invariansi |
-| [Change](Foundation/Core/Change.md) | Riwayat, kontinuitas, serta syarat pengertian laju |
-| [Evidence](Foundation/Core/Evidence.md) | Pengamatan, inferensi, keteridentifikasian, dan persepsi |
+| [State](Foundation/Core/State.md) | States, identity, distinctions, and equivalence |
+| [Time](Foundation/Core/Time.md) | Order, duration, parameters, and physical time |
+| [Space](Foundation/Core/Space.md) | Positions, spatial relations, configurations, and geometry |
+| [Reference](Foundation/Core/Reference.md) | References, transformations, and invariance |
+| [Change](Foundation/Core/Change.md) | Histories, continuity, and conditions for rates |
+| [Evidence](Foundation/Core/Evidence.md) | Observation, inference, identifiability, and perception |
 
-Keenam bagian merupakan pengorganisasian pengetahuan yang dapat direvisi. Jumlahnya tidak menyatakan enam aksioma alam atau bukti minimalitas universal.
+These six parts are a revisable organization of knowledge, not six natural axioms or a proof of universal minimality.
 
 ## Synthesis
 
-Sintesis menghasilkan argumen dengan premis, penurunan, contoh penyangkal, dan batas keberlakuan yang dinyatakan.
+The synthesis develops arguments with explicit premises, derivations, counterexamples, and limits.
 
-| Pembahasan | Hasil utama |
+| Discussion | Main results |
 | --- | --- |
-| [Comparison](Synthesis/Comparison.md) | Konsistensi perbandingan, tingkatan invariansi, dan urutan parsial |
-| [Reduction](Synthesis/Reduction.md) | Kecukupan deskripsi serta syarat operasi dan evolusi tereduksi |
-| [Evidence](Synthesis/Evidence.md) | Keteridentifikasian sifat dan batas geometris gerakan dari data |
-| [Stationarity](Synthesis/Stationarity.md) | Ketetapan keadaan, observabel, distribusi, statistik, dan arus |
-| [Limits](Synthesis/Limits.md) | Premis tambahan, jenis pembenaran, dan batas penyatuan |
+| [Comparison](Synthesis/Comparison.md) | Consistent comparison, levels of invariance, and partial orders |
+| [Reduction](Synthesis/Reduction.md) | Descriptive sufficiency and conditions for reduced operations and evolution |
+| [Evidence](Synthesis/Evidence.md) | Property identifiability and geometric motion bounds from data |
+| [Stationarity](Synthesis/Stationarity.md) | Constancy of states, observables, distributions, statistics, and currents |
+| [Limits](Synthesis/Limits.md) | Additional premises, types of justification, and limits of unification |
 
-Contoh ketergantungan pembuktian yang tercatat:
+The recorded primary proof dependencies are:
 
-~~~mermaid
+```mermaid
 flowchart TD
-    P04["P04 · Faktorisasi"] --> P05["P05 · Operasi tereduksi"]
-    P04 --> P06["P06 · Keteridentifikasian"]
-    P06 --> P07["P07 · Pengurangan data"]
-~~~
+    P04["P04 · Factorization"] --> P05["P05 · Reduced operations"]
+    P04 --> P06["P06 · Identifiability"]
+    P06 --> P07["P07 · Data reduction"]
+```
 
-Panah menunjukkan hasil yang dipakai dalam pembuktian berikutnya. Keterkaitan konseptual lainnya dicatat secara terpisah dalam [Trace.tsv](Synthesis/Trace.tsv).
+Arrows point from a result to a proof using it. Other conceptual connections are recorded separately in [Trace.tsv](Synthesis/Trace.tsv).
 
 ## Knowledge map
 
-Ekspor [Graph/Model.json](Graph/Model.json) mempertahankan:
+[Graph/Model.json](Graph/Model.json) contains:
 
-- **498 unsur** dan **1.448 catatan hubungan atau atribut**.
-- **28 dokumen sumber** beserta substansi dan jangkar versinya.
-- **186 bagian dokumen**, **43 entri klaim**, dan **45 relasi bersyarat**.
-- Enam fondasi, 13 hasil sintesis, glosarium, dan 25 catatan bibliografi.
+- **498 entities** and **1,448 relationship or attribute records**.
+- **28 source documents** with content and version-specific text anchors.
+- **186 document sections**, **43 claim entries**, and **45 conditional relations**.
+- Six foundations, 13 synthesis results, a glossary, and 25 bibliographic records.
 
-Konteks kueri Graph adalah **documentation**. Status accepted pada catatan pemetaan menyatakan representasi dokumen diterima; status ilmiah klaim sumber tetap dibedakan. Pemetaan ini tidak mengklaim verifikasi formal seluruh matematika atau kebenaran universal semua isi.
+The query context is **documentation**. An accepted mapping record means the document representation was accepted; each source claim retains its scientific status. This does not claim formal verification of all mathematics or universal truth of all content.
+
+The repository model is an English derivative of the recorded Graph export. Its source snapshots, labels, and UTF-16 anchors have been translated and checked locally. [Record.json](Graph/Record.json) distinguishes this edition from the upstream Graph revision and validation.
 
 ## Reading paths
 
-- **Memahami dasar:** [Architecture](Foundation/Structure/Architecture.md) → enam fondasi → [Boundaries](Foundation/Structure/Boundaries.md).
-- **Menelusuri penalaran:** [Overview](Synthesis/Overview.md) → pembahasan terkait → [Trace](Synthesis/Trace.tsv) → sumber.
-- **Memeriksa kualitas:** [Review Foundation](Foundation/Research/Review.md), [Review Synthesis](Synthesis/Review.md), dan [Checks Graph](Graph/Checks.md).
-- **Menjelajahi rujukan:** [Sources Foundation](Foundation/Research/Sources.md) dan [Sources Synthesis](Synthesis/Sources.md).
+- **Learn the foundations:** [Architecture](Foundation/Structure/Architecture.md) → six core files → [Boundaries](Foundation/Structure/Boundaries.md).
+- **Follow the reasoning:** [Overview](Synthesis/Overview.md) → relevant discussion → [Trace](Synthesis/Trace.tsv) → sources.
+- **Examine quality:** [Foundation Review](Foundation/Research/Review.md), [Synthesis Review](Synthesis/Review.md), and [Graph Checks](Graph/Checks.md).
+- **Explore references:** [Foundation Sources](Foundation/Research/Sources.md) and [Synthesis Sources](Synthesis/Sources.md).
 
 ## Repository
 
-| Lokasi | Isi |
+| Location | Content |
 | --- | --- |
-| Foundation/Core/ | Enam berkas pengetahuan fundamental |
-| Foundation/Structure/ | Arsitektur, batas, glosarium, dan relasi |
-| Foundation/Research/ | Sumber, jejak klaim, evaluasi, dan pertanyaan terbuka |
-| Synthesis/ | Penurunan lintas fondasi dan jejak argumentasinya |
-| Graph/ | Ekspor model, catatan revisi, dan pemeriksaan pemetaan |
-| [Checksums.tsv](Checksums.tsv) | SHA-256 berkas repositori |
+| Foundation/Core/ | Six scientific foundation documents |
+| Foundation/Structure/ | Architecture, boundaries, glossary, and relations |
+| Foundation/Research/ | Sources, claim trace, review, and open questions |
+| Synthesis/ | Cross-foundation derivations and argument traces |
+| Graph/ | Model export derivative, provenance, and mapping checks |
+| [Checksums.tsv](Checksums.tsv) | Repository file SHA-256 checksums |
 
-Isi keilmuan ditulis dalam bahasa Indonesia dengan terminologi dan notasi standar; penamaan berkas menggunakan bahasa Inggris.
+All repository prose, tables, diagrams, and embedded graph text are in English, using standard scientific terminology and notation.
 
-Foundation dipertahankan sesuai snapshot asal. [Origins.tsv](Synthesis/Origins.tsv) mencatat identitas byte sumber; README dalam Foundation tetap merupakan pengantar tahap awal.
+This edition translates the original Indonesian corpus. [Origins.tsv](Synthesis/Origins.tsv) distinguishes original source hashes from English foundation hashes. Scientific assumptions, qualifications, and proof dependencies are retained.
+
+Download the organized project with GitHub's **Code → Download ZIP**, or use the [ZIP download](https://github.com/arsafiqri-aybi/kinesis/archive/refs/heads/main.zip).
 
 ## Scientific scope
 
-Kinesis berfokus pada fondasi gerakan. Definisi, hasil matematis bersyarat, asumsi model, interpretasi, hasil empiris, dan pertanyaan terbuka mempertahankan statusnya masing-masing.
+Kinesis concerns motion's foundations. Definitions, conditional mathematical results, model assumptions, interpretations, empirical findings, and open questions retain distinct statuses.
 
-Pemeriksaan yang tersedia bersifat internal dan memiliki batas yang dijelaskan dalam catatan evaluasi. Pengetahuan dapat berkembang melalui koreksi dan penurunan yang dapat ditelusuri.
+The available reviews are internal and state their limitations. The knowledge remains open to traceable correction and further derivation.
 
-Pengembangan teori terapan, animasi, simulasi, dan implementasi teknologi berada di luar cakupan pustaka inti.
+Applied theories, animation, simulation, and technological implementation are beyond the core library's scope.

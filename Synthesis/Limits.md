@@ -1,101 +1,101 @@
 # Limits
 
-## Hubungan ilmiah mempunyai kekuatan yang berbeda
+## Scientific relations have different strengths
 
-Menghubungkan konsep tidak sama dengan menurunkan kesimpulan. Peran hubungan menentukan jenis pembenaran yang tersedia:
+Connecting concepts is not deriving conclusions. A relation's role determines its justification:
 
-| Jenis hubungan | Yang membenarkan penggunaannya | Yang tidak mengikuti sendirinya |
+| Relation type | Justification | What does not follow alone |
 | --- | --- | --- |
-| Definisional | Istilah digunakan menurut definisi yang sama | Hubungan sebab fisik |
-| Implikasi matematis | Semua premis teorema dipenuhi dalam satu struktur | Keberadaan struktur itu di alam |
-| Ketergantungan representasi | Sebuah konstruksi memerlukan struktur tertentu | Prioritas ontologis struktur tersebut |
-| Pembatasan empiris | Data, model observasi, dan domain eksperimen | Universalitas tanpa batas domain |
-| Penafsiran konseptual | Argumen yang menjelaskan suatu pembedaan | Status teorema atau temuan empiris baru |
-| Analogi bentuk | Kesamaan pola dan pemetaan yang dinyatakan | Kesamaan makna semua objek yang dipetakan |
+| Definitional | Consistent use of one definition | Physical causation |
+| Mathematical implication | All theorem premises hold in one structure | Physical existence of that structure |
+| Representational dependency | A construction needs specified structure | That structure's ontological priority |
+| Empirical constraint | Data, observation models, experimental domain | Unrestricted universality |
+| Conceptual interpretation | Arguments clarifying distinctions | A theorem or new empirical discovery |
+| Formal analogy | Explicitly shared patterns and maps | Identical meaning of all mapped objects |
 
-Peta relasi Foundation memuat beberapa jenis tersebut. Sintesis tidak menaikkan setiap relasi menjadi implikasi logis hanya karena dua istilah dihubungkan.
+Foundation's relation map includes several types. Synthesis does not promote every connection to logical implication.
 
-## Syarat penyambungan argumen
+## Conditions for composing arguments
 
-Jika \(\Gamma\Rightarrow A\) dan \(\Delta,A\Rightarrow B\), kesimpulan \(B\) dapat diturunkan dengan premis \(\Gamma\cup\Delta\), selama simbol-simbolnya mempunyai arti yang kompatibel dan premis dapat dipenuhi bersama.
+If \(\Gamma\Rightarrow A\) and \(\Delta,A\Rightarrow B\), then \(B\) follows under \(\Gamma\cup\Delta\), provided symbols have compatible meanings and premises are jointly satisfiable.
 
-Ini penalaran logis biasa. Persoalan ilmiah terletak pada kecocokan konteks, bukan hanya bentuk panah.
+This is ordinary logic. The scientific issue is contextual compatibility, not arrow shape alone.
 
-**Contoh penyambungan yang sah.** Posisi diukur dalam acuan tetap yang diketahui, galatnya benar dibatasi dalam metrik positif yang sama, dan ruas kanan P08 positif. Maka seluruh riwayat yang memenuhi premis mempunyai panjang positif dan tidak konstan.
+**Valid composition.** Positions use a known fixed reference, errors are genuinely bounded in the same positive metric, and P08's right side is positive. Every premise-satisfying history then has positive length and is nonconstant.
 
-**Contoh penyambungan yang tidak sah.** Posisi pusat tetap, lalu teorema “turunan nol di seluruh interval mengimplikasikan konstan” digunakan untuk menyatakan seluruh benda tidak bergerak. Teorema itu hanya memberikan ketetapan koordinat pusat yang dimasukkan, bukan ketetapan orientasi yang tidak diwakilinya.
+**Invalid composition.** A fixed centre position and the zero-derivative constancy theorem do not establish rest of an entire body. The theorem establishes only constancy of the represented centre coordinates, not an unrepresented orientation.
 
-**Contoh ketidakcocokan kerangka.** Keserentakan Newtonian dan keserentakan relativistik tidak dapat dipakai bergantian sebagai satu relasi global yang sama. Hubungan pendekatan memerlukan batas rezim dan aturan pemetaan; kata “waktu” yang sama tidak menyediakan keduanya.
+**Framework incompatibility.** Newtonian and relativistic simultaneity cannot alternate as one identical global relation. Approximation requires regime boundaries and mapping rules; sharing the word “time” supplies neither.
 
-## Empat pertanyaan yang tidak saling menggantikan
+## Four noninterchangeable questions
 
-1. **Apakah model memiliki kemungkinan?** Kelas \(\mathcal H_y\) harus tidak kosong untuk inferensi berbasis kompatibilitas.
-2. **Apakah sifatnya terdefinisi?** Predikat harus konsisten terhadap kesetaraan fisik yang dipakai.
-3. **Apakah data cukup membedakannya?** Predikat harus konstan pada kelas observasional yang kompatibel.
-4. **Apakah hasilnya stabil dan didukung secara empiris?** Ini memerlukan penilaian gangguan, model pengamatan, dan domain penggunaan.
+1. **Does the model admit possibilities?** Compatibility inference requires nonempty \(\mathcal H_y\).
+2. **Is the property well-defined?** Predicates must respect the chosen physical equivalence.
+3. **Do data distinguish it sufficiently?** Predicates must be constant on compatible observational classes.
+4. **Is the result stable and empirically supported?** This requires disturbances, observation models, and usage domains to be assessed.
 
-Satu persamaan yang kovarian tidak menjawab keempat pertanyaan. Sebuah teori dengan predikat terdefinisi tetap dapat tidak teridentifikasi dari data yang tersedia. Ketunggalan ideal juga tidak menjamin kestabilan invers.
+A covariant equation does not answer all four. A well-defined theoretical predicate can remain unidentifiable from available data. Ideal uniqueness does not guarantee inverse stability.
 
-## Apa yang membutuhkan premis tambahan
+## Conclusions needing additional premises
 
-| Kesimpulan yang diinginkan | Fondasi yang tersedia | Tambahan yang masih diperlukan |
+| Desired conclusion | Available foundation | Required addition |
 | --- | --- | --- |
-| Riwayat tidak konstan | Keadaan, domain, dan kesetaraan | Perbandingan yang bermakna jika konteks atau acuan berubah |
-| Perubahan merupakan gerakan spasial | Riwayat keadaan | Interpretasi posisi, orientasi, atau susunan spasial |
-| Nilai kelajuan fisik | Struktur perubahan lokal | Metrik atau norma, parameter jam, satuan, serta regularitas |
-| Evolusi tereduksi tertutup | Pemetaan reduksi | Evolusi lengkap dan pelestarian seratnya |
-| Densitas tetap memberi arus nol | Informasi densitas | Hukum konservasi dan syarat domain atau batas yang memadai |
-| Arus total nol memberi diam setiap bagian | Informasi arus gabungan | Hubungan keadaan yang meniadakan pembatalan antarkomponen |
-| Sampel membuktikan diam sepanjang selang | Rekaman diskret | Pembatasan kelas riwayat yang benar-benar menyingkirkan perubahan tersembunyi |
-| Besaran terukur menentukan keadaan | Observabel terpilih | Sifat pemisahan atau keinjektifan pada keadaan yang relevan |
-| Hukum probabilitas stasioner memberi realisasi tetap | Distribusi proses | Pembatasan jauh lebih kuat; tidak mengikuti dari stasioneritas saja |
-| Pengalaman gerak menentukan sumber fisik tunggal | Laporan persepsi | Model psikofisik, kontrol kondisi, dan kecukupan informasi sumber |
+| Nonconstant history | States, domain, equality | Meaningful comparison across changing contexts or references |
+| Change is spatial motion | State history | Position, orientation, or spatial-arrangement interpretation |
+| Physical speed value | Local change structure | Metric or norm, clock parameter, units, regularity |
+| Closed reduced evolution | Reduction map | Full evolution and fibre preservation |
+| Fixed density implies zero current | Density information | Conservation and sufficient domain or boundary conditions |
+| Zero total current implies every part rests | Aggregate current | State relations excluding component cancellation |
+| Samples establish interval rest | Discrete records | History restrictions genuinely excluding hidden change |
+| Measurements determine state | Selected observables | Separation or injectivity on relevant states |
+| Stationary probability law implies fixed realization | Process distribution | Much stronger restrictions; stationarity alone is insufficient |
+| Motion experience determines a unique source | Perceptual reports | Psychophysical model, controlled conditions, sufficient source information |
 
-Tabel ini tidak mengusulkan semua tambahan harus diadopsi. Ia menunjukkan lokasi tempat suatu penurunan akan berhenti jika premisnya belum tersedia.
+This does not recommend adopting every addition. It marks where derivation stops without a premise.
 
-## Penajaman syarat turunan nol
+## Sharpening zero-derivative conditions
 
-Foundation menggunakan dua pernyataan yang harus tetap dibedakan:
+Foundation distinguishes:
 
-- Turunan nol pada setiap titik interval, dengan diferensiabilitas yang sesuai, memberikan ketetapan melalui teorema nilai rata-rata.
-- Turunan nol hampir di mana-mana belum cukup tanpa syarat tambahan.
+- Zero derivative everywhere on an interval, with suitable differentiability, gives constancy by the mean value theorem.
+- Zero derivative almost everywhere requires additional conditions.
 
-Secara definisional, fungsi real \(q\) kontinu absolut di \([a,b]\), \(a<b\), bila untuk setiap \(\varepsilon>0\) terdapat \(\delta>0\) sehingga setiap keluarga hingga subinterval berinterior saling lepas dengan jumlah panjang kurang dari \(\delta\) mempunyai jumlah perubahan mutlak \(\sum_i|q(b_i)-q(a_i)|<\varepsilon\).
+A real function \(q\) is absolutely continuous on \([a,b]\), \(a<b\), when for every \(\varepsilon>0\) some \(\delta>0\) ensures that every finite family of subintervals with disjoint interiors and total length below \(\delta\) has total absolute change \(\sum_i|q(b_i)-q(a_i)|<\varepsilon\).
 
-Untuk fungsi tersebut berlaku:
+For such functions:
 
 \[
 q(t)=q(a)+\int_a^t q'(u)\,du.
 \]
 
-Jika \(q'=0\) hampir di mana-mana, integralnya nol sehingga \(q\) konstan. Syarat kontinuitas absolut memulihkan penurunan yang tidak sah untuk fungsi kontinu sembarang. Fungsi Cantor merupakan contoh standar fungsi kontinu tidak konstan dengan turunan nol hampir di mana-mana. [N02](Sources.md#n02)
+If \(q'=0\) almost everywhere, the integral vanishes and \(q\) is constant. Absolute continuity restores an inference invalid for arbitrary continuous functions. The Cantor function is a standard nonconstant continuous example with derivative zero almost everywhere. [N02](Sources.md#n02)
 
-Hasil ini memperlihatkan daya pengembangan fondasi tanpa menyebut semua fungsi kontinu sebagai gerakan fisik. Untuk kurva vektor berdimensi hingga, argumen berlaku per komponen.
+This develops the foundations without declaring every continuous function a physical motion. For finite-dimensional vector curves, the argument applies componentwise.
 
-## Kekeliruan dari penghapusan premis
+## Errors caused by omitting premises
 
-Dalam P05, determinisme evolusi lengkap sudah diasumsikan. Karena itu, hasil penurunannya bukan “semua gerakan deterministik”.
+P05 assumes deterministic full evolution; it does not prove universal determinism of motion.
 
-Dalam P08, batas galat adalah premis deterministik. Karena itu, hasilnya bukan “setiap rentang ketidakpastian statistik merupakan jaminan panjang”.
+P08 assumes deterministic error bounds; it does not turn every statistical uncertainty interval into a guaranteed length bound.
 
-Dalam P11, persamaan kontinuitas konservatif sudah diberikan. Jika terdapat sumber \(\sigma\), persamaannya menjadi \(\partial_t\rho+\nabla\cdot J=\sigma\). Densitas stasioner kemudian hanya memberi \(\nabla\cdot J=\sigma\), bukan otomatis nol.
+P11 assumes conservative continuity. With a source \(\sigma\), the equation becomes \(\partial_t\rho+\nabla\cdot J=\sigma\). Stationary density then implies \(\nabla\cdot J=\sigma\), not necessarily zero.
 
-Dalam P12, fase seragam merupakan asumsi yang membuat distribusi tidak berubah oleh pergeseran. Tanpa itu, kesimpulan stasioneritas tidak otomatis berlaku.
+P12 assumes uniform phase to obtain shift-invariant distributions. Without it, stationarity need not hold.
 
-## Mengapa satu kriteria formal belum menjadi satu ontologi
+## Why one formal criterion is not one ontology
 
-Faktorisasi P04 berlaku bagi banyak objek yang bukan gerakan. Ia menjelaskan kapan suatu deskripsi cukup untuk kesimpulan tertentu. Ia tidak memilih mana ruang fisik, mana waktu, apa yang ada, atau apa sebab perubahan.
+P04 applies to many non-motion objects. It explains descriptive sufficiency for a conclusion, but selects neither physical space, time, existence, nor causes of change.
 
-Perbedaan arti densitas massa dan densitas probabilitas tetap ada walaupun keduanya memenuhi bentuk persamaan konservasi. Orde parsial matematis juga tidak otomatis merupakan hubungan sebab. Kesamaan bentuk memberi alat penalaran yang dapat digunakan bersama, bukan izin memindahkan seluruh penafsiran.
+Mass density and probability density remain different despite similarly shaped conservation equations. Mathematical partial orders are not automatically causal. Shared forms supply reasoning tools, not permission to transfer entire interpretations.
 
-Tidak diturunkan bahwa enam fondasi merupakan enam unsur ontologis yang independen. Sebaliknya, tidak diturunkan pula bahwa semua fondasi dapat direduksi secara fisik menjadi konsep kesetaraan. Kriteria perbedaan tetap harus diberi makna dalam kerangka yang dipilih.
+The six foundations are not derived as six independent ontological constituents. Nor are they all physically reduced to equivalence. Distinction criteria still need framework-specific meaning.
 
-## Pertanyaan yang tetap terbuka
+## Questions remaining open
 
-Hakikat waktu, kontinuitas ruang-waktu pada skala paling dasar, serta kedudukan lintasan individual dalam interpretasi kuantum tidak diselesaikan oleh hasil tentang pemetaan.
+Time's nature, deepest-scale spacetime continuity, and individual trajectories in quantum interpretations are not settled by map theorems.
 
-Persoalan persepsi juga tidak direduksi menjadi satu aturan pengamatan. Eksperimen yang diwarisi dari Foundation membatasi penafsiran pada kondisi tertentu. Menggunakan istilah “data” yang sama untuk instrumen dan laporan pengalaman tidak menghapus kebutuhan penelitian mekanistis masing-masing.
+Perception also does not reduce to one observation rule. Inherited experiments constrain interpretations under particular conditions. Calling instrument outputs and experience reports “data” does not remove their separate mechanistic questions.
 
-Minimalitas arsitektur pun tetap merupakan persoalan terbuka. Yang dapat ditunjukkan adalah redundansi penalaran tertentu bisa diringkas melalui P04, sedangkan makna fisik dan justifikasi premis tetap beragam.
+Architectural minimality remains open. P04 can consolidate particular reasoning redundancies while physical meanings and premise justifications remain diverse.
 
-Hubungan yang dipertahankan adalah hubungan yang mempunyai argumen dengan domain jelas. Batas ini memungkinkan perkembangan lebih lanjut sambil menjaga agar kesimpulan baru tidak mewarisi premis tersembunyi.
+Retained relations have arguments with explicit domains. This boundary permits further development without passing hidden premises into new conclusions.

@@ -1,73 +1,73 @@
 # Review
 
-Tanggal pemeriksaan: **2 November 2026**.
+Review date: **2 November 2026**.
 
-## Ruang lingkup pemeriksaan
+## Review scope
 
-Pemeriksaan dilakukan terhadap isi yang sudah ditulis, bukan hanya nama simpul. Tiga sasaran utamanya adalah ketepatan konsep, keberlakuan bersyarat rumus, dan pengendalian batas fundamental–turunan.
+The review examines written content, not node names alone. Its targets are conceptual accuracy, conditional validity of formulas, and control of foundational–derived boundaries.
 
-Hasilnya merupakan pemeriksaan internal berbasis sumber dan contoh penyangkal. Ia bukan peer review independen, pembuktian dengan proof assistant, tinjauan sistematis seluruh literatur, atau verifikasi empiris baru.
+This is an internal review using sources and counterexamples. It is not independent peer review, proof-assistant verification, a systematic review of all literature, or new empirical verification.
 
-## Kasus penguji konsep
+## Conceptual test cases
 
-| Kasus | Klaim yang diuji | Keputusan isi |
+| Case | Claim tested | Content decision |
 | --- | --- | --- |
-| Benda sama, keadaan berbeda | Identitas berarti keadaan tetap | Ditolak; State membedakan referen dan keadaan |
-| Posisi sama, arah berbeda | Satu konfigurasi menentukan riwayat | Ditolak melalui \(q=\pm t\) |
-| Pemetaan tak injektif | Keluaran tetap berarti keadaan tetap | Ditolak; informasi dapat hilang |
-| Fase global kuantum | Setiap perubahan vektor adalah perubahan keadaan murni | Ditolak; ray diperhitungkan |
-| Rotasi dengan pusat tetap | Tidak berpindah pusat berarti tidak bergerak | Ditolak; orientasi termasuk konfigurasi |
-| Jarak internal benda tegar | Jarak internal tetap berarti tidak ada gerakan | Ditolak terhadap acuan eksternal |
-| Modulasi amplitudo medan | Setiap variasi temporal adalah pengangkutan | Ditolak melalui dua bentuk medan |
-| Label waktu tak linear | Urutan menentukan durasi | Ditolak; struktur metrik terpisah |
-| Keserentakan relativistik | Ada satu sekarang global untuk semua pengamat | Ditolak sebagai klaim universal |
-| Kurva null | Waktu proper bisa menjadi parameter reguler semua lintasan | Ditolak; syarat timelike dinyatakan |
-| Kurva kausal tertutup | Relasi kausal selalu orde parsial global | Dibuat bersyarat |
-| Asal yang mengikuti benda | Koordinat tetap menghapus seluruh gerakan fisik | Ditolak; perbandingan dan struktur fisik dipertahankan |
-| Simetri aktif | Semua simetri adalah redundansi gauge | Ditolak |
-| Ujung sama | Tidak ada perubahan di antara dua ujung | Ditolak melalui \(t(1-t)\) |
-| Kontinu tetapi tidak mulus | Kontinuitas menjamin kecepatan di semua titik | Ditolak; contoh nilai mutlak dan model Brownian |
-| \(q=t^3\) di nol | Kecepatan nol sesaat berarti diam pada selang | Ditolak |
-| Domain terhubung, kodomain diskret | Kontinuitas dan diskret dapat digabung tanpa konsekuensi | Implikasi konstan dibuktikan dengan syaratnya |
-| Densitas kuantum tetap, arus tidak nol | Distribusi posisi tetap menyiratkan semua arus nol | Ditolak melalui keadaan lingkaran |
-| Sampel sinus yang berimpit | Sampel tidak berubah membuktikan diam | Ditolak; syarat sampling dibedakan |
-| Titik tidak berlabel | Posisi menentukan pencocokan identitas | Ditolak melalui dua riwayat pasangan |
-| Proyeksi perspektif | Satu posisi citra menentukan kedalaman | Ditolak melalui keluarga skala |
-| Persepsi pola | Pengalaman gerak identik dengan satu komponen stimulus lokal | Ditolak sebagai penyamaan definisional |
+| Same object, different states | Identity means constant state | Rejected; State distinguishes referent and state |
+| Same position, different direction | One configuration determines history | Rejected through \(q=\pm t\) |
+| Noninjective map | Constant output means constant state | Rejected; information can be lost |
+| Quantum global phase | Every vector change changes the pure state | Rejected; rays are considered |
+| Rotation about a fixed centre | No centre displacement means no motion | Rejected; configuration includes orientation |
+| Rigid-body internal distances | Fixed internal distances mean no motion | Rejected relative to external references |
+| Field amplitude modulation | Every temporal variation is transport | Rejected through two field forms |
+| Nonlinear time labels | Order determines duration | Rejected; metric structure is separate |
+| Relativistic simultaneity | All observers share a global present | Rejected universally |
+| Null curves | Proper time regularly parametrizes every path | Rejected; timelike condition stated |
+| Closed causal curves | Causality always gives a global partial order | Made conditional |
+| Origin following the body | Fixed coordinates erase every physical motion | Rejected; comparison and physical structure retained |
+| Active symmetry | Every symmetry is gauge redundancy | Rejected |
+| Equal endpoints | No intervening change | Rejected through \(t(1-t)\) |
+| Continuous but nonsmooth | Continuity guarantees velocity everywhere | Rejected; absolute-value and Brownian examples |
+| \(q=t^3\) at zero | Instantaneous zero velocity means interval rest | Rejected |
+| Connected domain, discrete codomain | Continuity and discreteness combine without consequences | Conditional constancy implication proved |
+| Fixed quantum density, nonzero current | Fixed position distribution implies zero currents | Rejected through circle state |
+| Coinciding sinusoidal samples | Unchanging samples prove rest | Rejected; sampling conditions distinguished |
+| Unlabelled points | Positions determine identity correspondence | Rejected through paired histories |
+| Perspective projection | One image position determines depth | Rejected through scale family |
+| Pattern perception | Motion experience equals one local stimulus component | Rejected as definitional identity |
 
-## Perubahan arsitektur yang dihasilkan pemeriksaan
+## Architecture changes resulting from review
 
-1. **Posisi diperluas menjadi konfigurasi dalam Space.** Tanpa ini, orientasi dan hubungan bagian sistem akan terlewat.
-2. **Kontinuitas dipertahankan dalam Change sebagai struktur bersyarat.** Ia tidak diangkat menjadi aksioma alam.
-3. **Evidence dipisahkan dari syarat keberadaan gerakan.** Pembenaran empiris tidak disamakan dengan ontologi.
-4. **State dan Reference membedakan kesetaraan dari kehilangan informasi.** Hasil pengamatan yang sama tidak otomatis berarti keadaan fisik sama.
-5. **Waktu dan ruang tetap menjadi pertanyaan yang dapat dipisahkan untuk belajar, dengan batas ruang-waktu dijelaskan.** Susunan folder tidak menyatakan pemisahan fisik universal.
-6. **Relativitas dan kuantum digunakan sebagai pemeriksa batas.** Keduanya tidak diperluas menjadi cabang pengajaran teori lengkap.
+1. **Space expands position into configuration.** Otherwise orientation and system-part relations would be missed.
+2. **Continuity remains conditional structure in Change.** It is not a natural axiom.
+3. **Evidence is separated from conditions of motion's existence.** Empirical justification differs from ontology.
+4. **State and Reference distinguish equivalence from information loss.** Equal observations do not automatically mean equal physical states.
+5. **Space and time remain separable learning questions with spacetime limits explained.** Folders do not assert universal physical separation.
+6. **Relativity and quantum theory test boundaries.** Neither becomes a complete instructional branch.
 
-## Pemeriksaan sumber dan status
+## Sources and status checks
 
-Daftar sumber memuat 22 rujukan. Definisi matematika dirujukkan pada materi ilmiah penulis, hasil persepsi pada penelitian primer, dan definisi satuan pada lembaga metrologi resmi.
+The source list contains 22 references. Mathematical definitions use authors' scientific material, perceptual findings use primary research, and unit definitions use official metrology institutions.
 
-S19 diperlakukan sebagai model konseptual. S20 diperlakukan sebagai proposal penelitian dan hanya digunakan sejauh abstraknya diperiksa. S21 digunakan pada tingkat hasil pokok dalam abstrak. Tidak ada klaim bahwa semua halaman dari semua sumber telah dibaca atau bahwa sumber lama dengan sendirinya merupakan survei perkembangan terbaru.
+S19 is treated as a conceptual model. S20 is a research proposal used only within its examined abstract. S21 supplies the abstract's principal finding. This does not claim every source page was read or that older sources survey the latest developments.
 
-Jejak selektif 43 klaim memisahkan definisi, hasil matematis, hasil empiris, asumsi, serta sintesis arsitektur. Peta 45 relasi mencantumkan kondisi dan menghindari penyamaan hubungan dengan ketergantungan universal.
+The selective 43-claim trace distinguishes definitions, mathematics, empirical results, assumptions, and architectural synthesis. The 45-relation map specifies conditions rather than universal dependencies.
 
-## Pemeriksaan matematis
+## Mathematical checks
 
-Argumen umum yang disajikan langsung meliputi pelestarian kesamaan oleh pemetaan injektif tetap, kehilangan perubahan oleh reduksi, akibat keterhubungan pada kodomain diskret, teorema nilai rata-rata untuk diam pada interval, dan ketaksamaan panjang terhadap jarak ujung.
+Direct general arguments include preservation of equality by fixed injective maps, hidden change under reduction, connectedness consequences for discrete codomains, the mean value theorem for interval rest, and the length–endpoint inequality.
 
-Tujuh pemeriksaan tambahan dengan aritmetika eksak atau evaluasi numerik mendukung contoh berikut: lintasan kembali, turunan nol sesaat, alias sampling, ambiguitas label, proyeksi perspektif, densitas kuantum stasioner dengan arus tidak nol, dan invariansi percepatan terhadap boost Galilei. Semuanya sesuai dengan rumus tertulis. Pemeriksaan nilai contoh ini bukan pengganti pembuktian umum.
+Seven additional exact-arithmetic or numerical checks support returning paths, instantaneous zero derivatives, sampling aliases, label ambiguity, perspective projection, stationary quantum density with nonzero current, and Galilean acceleration invariance. All agreed with the written formulas. Example evaluations do not replace general proofs.
 
-Kondisi khusus telah dinyatakan: \(L,m>0\) pada contoh lingkaran, parameter reguler untuk transformasi laju, konvensi metrik \((-+++)\), dan Hamiltonian tanpa potensial vektor pada rumus arus yang dipakai.
+Special conditions are explicit: \(L,m>0\) for the circle, regular parameters for rate transformations, metric convention \((-+++)\), and no vector potential in the Hamiltonian used for the current formula.
 
-## Pemeriksaan artefak
+## Artifact checks
 
-Susunan akhir memuat enam berkas inti serta berkas struktur dan penelitian. Pemeriksaan lokal mencakup kelengkapan tautan relatif dan penanda sumber, bentuk tabel TSV, konsistensi lokasi klaim, pasangan pembatas rumus, serta tidak adanya penanda isi yang belum terisi.
+The final structure includes six core files plus structural and research files. Local checks cover relative links and source markers, TSV shape, claim locations, mathematical delimiter pairing, and absence of unfinished-content markers.
 
-Arsip mempertahankan satu akar Motion. Checksums.tsv memungkinkan perbandingan byte isi dengan salinan yang diekstrak; checksum tidak menilai kebenaran ilmiah.
+The original archive preserves one Motion root. Checksum manifests compare file bytes against extracted copies; they do not assess scientific truth. Repository manifests are regenerated for this English edition.
 
-## Batas hasil
+## Limits of the result
 
-Minimalitas universal tidak dibuktikan. Keadaan, ruang, waktu, dan identitas tidak diberi satu ontologi wajib. Masalah gravitasi kuantum, teori lengkap persepsi, dan semua teori relasional tidak diselesaikan.
+Universal minimality is not proved. State, space, time, and identity receive no mandatory ontology. Quantum gravity, complete perception theory, and every relational approach remain unresolved.
 
-Kesimpulan pemeriksaan adalah bahwa struktur ini layak sebagai fondasi terarah dengan isi yang saling konsisten dalam batas yang disebutkan. Keputusan untuk merevisi simpul tetap terbuka jika ditemukan reduksi yang sah atau ketidakcocokan ilmiah baru.
+The review supports this structure as a focused foundation with mutually consistent content within stated limits. Valid reductions or new scientific inconsistencies remain grounds for revision.

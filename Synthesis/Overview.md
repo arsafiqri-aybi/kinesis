@@ -1,75 +1,75 @@
 # Overview
 
-## Dari perbedaan ke kesimpulan tentang gerakan
+## From distinctions to conclusions about motion
 
-Suatu deskripsi gerakan menghubungkan keadaan yang dibedakan, konteks temporal, susunan spasial, dan cara membandingkannya. Suatu pengetahuan tentang gerakan menambahkan hubungan dengan bukti. Menghubungkan unsur tersebut menghasilkan persoalan yang lebih tajam daripada pertanyaan apakah “sesuatu berubah”.
+A motion description connects distinguished states, temporal contexts, spatial arrangements, and comparison rules. Knowledge of motion adds evidence relations. Connecting these structures sharpens the question beyond whether “something changes”.
 
-Pertanyaan awalnya adalah: **perbedaan mana yang sedang dipertahankan, terhadap pembanding apa, dan kesimpulan mana yang tetap dapat dibenarkan dari informasi yang tersedia?**
+The starting question is: **which distinctions are retained, relative to which comparison, and which conclusions remain justified by the available information?**
 
-Pernyataan ini merupakan sintesis konseptual, bukan definisi ontologis tunggal. Dalam model partikel klasik, objek yang dibandingkan dapat berupa posisi atau konfigurasi. Dalam teori kuantum, ray keadaan, densitas posisi, dan arus bukan objek yang sama. Dalam studi persepsi, pengalaman gerakan tidak identik secara definisional dengan satu riwayat benda eksternal.
+This is conceptual synthesis, not a single ontological definition. Classical particle models can compare positions or configurations. Quantum state rays, position densities, and currents are different objects. Perceptual motion experience is not definitionally identical to one external object's history.
 
-Landasan perbedaannya terdapat dalam [State](../Foundation/Core/State.md), [Space](../Foundation/Core/Space.md), dan [Evidence](../Foundation/Core/Evidence.md). Sintesis berikut mengembangkan konsekuensinya dengan argumen yang dapat diperiksa.
+[State](../Foundation/Core/State.md), [Space](../Foundation/Core/Space.md), and [Evidence](../Foundation/Core/Evidence.md) establish these distinctions. This synthesis develops their consequences through examinable arguments.
 
-## Tiga syarat yang saling membatasi
+## Three mutually constraining conditions
 
-| Syarat | Persoalan ilmiah | Konsekuensi |
+| Condition | Scientific question | Consequence |
 | --- | --- | --- |
-| Konsistensi perbandingan | Apakah acuan dan keadaan ditransformasikan bersama secara benar? | Perubahan label tidak boleh mengubah pernyataan yang seharusnya sama |
-| Kecukupan deskripsi | Apakah perbedaan yang dihapus masih diperlukan untuk kesimpulan atau evolusi? | Deskripsi yang lebih sederhana belum tentu mendukung hukum atau predikat yang sama |
-| Kecukupan bukti | Apakah seluruh kemungkinan yang kompatibel dengan data menyetujui kesimpulan? | Pengetahuan tentang suatu sifat mungkin tersedia meski riwayat lengkap tidak dapat direkonstruksi |
+| Consistent comparison | Are reference and state correctly transformed together? | Relabelling must not change statements intended to remain equivalent |
+| Descriptive sufficiency | Are discarded distinctions still needed for conclusions or evolution? | Simpler descriptions need not support the same laws or predicates |
+| Evidential sufficiency | Do all data-compatible possibilities agree on the conclusion? | A property can be known without reconstructing the entire history |
 
-Ketiganya berbeda. Sebuah model dapat konsisten dalam semua koordinat tetapi tidak teridentifikasi oleh data. Sebuah observasi dapat membedakan banyak keadaan tetapi memakai acuan yang belum dikalibrasi. Sebuah reduksi dapat menyimpan posisi dengan tepat tetapi menghapus momentum yang diperlukan untuk prediksi.
+These differ. A coordinate-consistent model may remain unidentifiable from data. Observations can distinguish many states while using an uncalibrated reference. A reduction may retain position exactly while discarding momentum needed for prediction.
 
-Dengan demikian, invariansi, prediksi, dan pembenaran empiris tidak dapat saling menggantikan.
+Invariance, prediction, and empirical justification therefore cannot substitute for one another.
 
-## Struktur matematis bersama
+## Shared mathematical structure
 
-Ambil pemetaan \(C:X\to Z=C(X)\) yang menggabungkan sebagian kemungkinan dalam \(X\). Suatu besaran atau kesimpulan \(A:X\to W\) dapat dinyatakan hanya melalui \(Z\) tepat bila:
+Let \(C:X\to Z=C(X)\) merge some possibilities in \(X\). A quantity or conclusion \(A:X\to W\) is expressible through \(Z\) alone exactly when:
 
 \[
 C(x_1)=C(x_2)\ \Longrightarrow\ A(x_1)=A(x_2).
 \]
 
-Dalam kondisi itu terdapat fungsi tunggal \(\bar A:Z\to W\) dengan:
+Then there is a unique \(\bar A:Z\to W\) such that:
 
 \[
 A=\bar A\circ C.
 \]
 
-Bukti lengkap diberikan pada [P04](Reduction.md#p04). Struktur ini bukan aksioma Motion baru, melainkan hasil elementer tentang fungsi dan kelas kesetaraan.
+[P04](Reduction.md#p04) supplies the proof. This is an elementary result about functions and equivalence classes, not a new Motion axiom.
 
-Daya sintesisnya muncul dari **penggunaan yang berbeda dengan premis berbeda**:
+Its synthesizing power comes from **different uses with different premises**:
 
-- Jika \(C\) menghapus redundansi fisik, syarat itu menguji apakah sebuah predikat terdefinisi pada keadaan fisik yang dimaksud.
-- Jika \(C\) merupakan pengurangan informasi, syarat itu menguji kecukupan deskripsi untuk besaran atau operasi tertentu.
-- Jika \(C\) merupakan pemetaan pengamatan terhadap riwayat, syarat itu menguji keteridentifikasian kesimpulan.
+- If \(C\) removes physical redundancy, the condition tests whether a predicate is well-defined on the intended physical states.
+- If \(C\) reduces information, it tests descriptive sufficiency for a quantity or operation.
+- If \(C\) observes histories, it tests conclusion identifiability.
 
-Tidak ada alasan untuk menyamakan ketiga pengertian “digabung” tersebut. Kesetaraan fisik membutuhkan justifikasi teori; ketakterbedaan oleh satu pengamatan tidak cukup membuktikannya.
+These meanings of “merged” must not be equated. Physical equivalence needs theoretical justification; one observation's indistinguishability does not establish it.
 
-## Yang dihasilkan ketika fondasi dihubungkan
+## Results from connecting foundations
 
-[P01](Comparison.md#p01) menunjukkan bahwa aturan perbandingan harus berubah bersama representasi keadaan. Ini menjelaskan mengapa gerak relatif dapat tetap sama ketika koordinatnya berubah terhadap waktu.
+[P01](Comparison.md#p01) shows why comparison rules must change with state representations, explaining how relative motion survives time-dependent coordinate changes.
 
-[P02](Comparison.md#p02) memisahkan pelestarian ketidakkonstanan dari pelestarian laju. Bijeksi yang cukup untuk membedakan keadaan belum tentu cukup untuk kalkulus. [P03](Comparison.md#p03) memperlihatkan batas tambahan ketika urutan temporal hanya parsial.
+[P02](Comparison.md#p02) separates preserving nonconstancy from preserving rates. A bijection sufficient for state distinctions need not suffice for calculus. [P03](Comparison.md#p03) adds limits for partially ordered temporal domains.
 
-[P05](Reduction.md#p05) menerapkan kriteria yang sama pada transformasi dan evolusi: operasi tereduksi hanya terdefinisi jika tidak memberikan keluaran tereduksi berbeda dari keadaan yang telah digabung. Posisi saja dapat gagal membentuk keadaan prediktif bahkan ketika evolusi lengkap deterministik.
+[P05](Reduction.md#p05) applies the same criterion to transformations and evolution: a reduced operation is well-defined only if merged states do not produce different reduced outputs. Position alone can fail as a predictive state even under deterministic full evolution.
 
-[P06](Evidence.md#p06) dan [P07](Evidence.md#p07) menjelaskan mengapa mengetahui bahwa gerakan terjadi tidak mengharuskan mengetahui seluruh gerakannya, serta mengapa pemrosesan deterministik terhadap data yang sama tidak menghilangkan ambiguitas struktural.
+[P06](Evidence.md#p06) and [P07](Evidence.md#p07) explain why knowing motion occurs need not require knowing all its details, and why deterministic processing of identical data cannot resolve structural ambiguity.
 
-[P08](Evidence.md#p08) menggabungkan geometri, waktu, dan batas galat menjadi batas bawah panjang gerak. [P09](Evidence.md#p09) menunjukkan kesimpulan berbeda dari batas laju maksimum: ia membatasi besarnya gerakan tersembunyi, tanpa otomatis membuktikan diam.
+[P08](Evidence.md#p08) combines geometry, time, and error bounds into a lower bound on motion length. [P09](Evidence.md#p09) uses a maximum-rate bound to constrain hidden motion without automatically proving rest.
 
-[P10](Stationarity.md#p10) sampai [P13](Stationarity.md#p13) memisahkan ketetapan suatu observabel, ketetapan distribusi, ketetapan statistik, arus, dan perubahan representasi. Kesimpulan “diam” kehilangan makna tunggal jika objek yang dinyatakan tetap tidak disebutkan.
+[P10](Stationarity.md#p10) through [P13](Stationarity.md#p13) distinguish constant observables, distributions, statistics, currents, and changing representations. “Rest” loses a unique meaning when the allegedly constant object is unspecified.
 
-## Struktur tambahan tetap diperlukan
+## Additional structure remains necessary
 
-Kesamaan bentuk penalaran tidak menghasilkan gaya, hukum gerak, geometri fisik, jam universal, atau mekanisme persepsi. Semua itu memerlukan premis yang tidak terkandung dalam fakta bahwa suatu pemetaan dapat dibentuk.
+Shared reasoning forms do not produce forces, motion laws, physical geometry, universal clocks, or perceptual mechanisms. Those require premises beyond the existence of a map.
 
-Contohnya, kriteria untuk evolusi tereduksi baru relevan setelah evolusi lengkap diberikan. Persamaan konservasi baru menghasilkan batas arus setelah persamaan itu diasumsikan dan syarat batas ditetapkan. Batas panjang berbasis pengukuran membutuhkan satu metrik positif, acuan yang sama, serta batas galat yang benar.
+Reduced-evolution criteria matter only after full evolution is supplied. Conservation equations constrain currents only after the equation and boundary conditions are assumed. Measurement-based length bounds require a positive metric, a shared reference, and valid error bounds.
 
-Pengetahuan berkembang melalui rantai yang jelas: fondasi menyediakan struktur, premis tambahan memilih konteks, dan argumen menurunkan konsekuensi. Menghapus premis dari penulisan tidak membuat konsekuensi menjadi lebih fundamental.
+Knowledge develops through an explicit chain: foundations supply structure, added premises select context, and arguments derive consequences. Omitting premises from the statement does not make a consequence more fundamental.
 
-## Batas penyatuan
+## Limits of unification
 
-Satu pola faktorisasi membantu menyatukan **cara menilai kecukupan** tanpa mereduksi semua arti gerakan menjadi satu benda matematis. Tidak diturunkan bahwa ruang sama dengan waktu, bahwa identitas selalu individual, atau bahwa semua gerakan memiliki lintasan mulus.
+Factorization unifies **tests of sufficiency** without reducing all meanings of motion to one mathematical object. It does not derive space–time identity, universally individual identity, or universally smooth trajectories.
 
-Hasil sintesis yang dapat dipertahankan adalah adanya hubungan bersyarat yang saling menjelaskan. Yang tetap berbeda adalah makna fisik objek, kelas riwayat yang diizinkan, struktur temporal, dan jenis bukti. [Limits](Limits.md) menelaah batas tersebut, sedangkan [Trace.tsv](Trace.tsv) menghubungkan setiap hasil dengan asal dan syaratnya.
+The defensible synthesis is mutually explanatory conditional relations. Physical object meanings, admissible histories, temporal structures, and evidence types remain distinct. [Limits](Limits.md) examines these boundaries; [Trace.tsv](Trace.tsv) links each result to its origins and conditions.

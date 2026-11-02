@@ -1,83 +1,83 @@
 # Sources
 
-## Peran sumber
+## Role of sources
 
-Sumber utama sintesis adalah keseluruhan Foundation yang dipertahankan, termasuk enam berkas inti, arsitektur, glosarium, 45 relasi, 43 klaim, daftar sumber, dan pemeriksaan awal. Pengorganisasian atau banyaknya hubungan dalam berkas itu tidak diperlakukan sebagai bukti otomatis.
+The primary synthesis source is the complete Foundation: six core files, architecture, glossary, 45 relations, 43 claims, references, and initial review. Organization and relation counts are not automatic proof.
 
-Hasil P01–P13 menyajikan argumen sendiri dari premis yang dinyatakan. Hasil elementer tentang fungsi, invariansi, dan ketaksamaan tidak diklaim sebagai temuan baru dalam literatur. “Hasil sintesis” berarti hasil yang diperoleh dalam penyatuan pembahasan ini.
+P01–P13 present arguments from stated premises. Elementary function, invariance, and inequality results are not claimed as new literature discoveries. “Synthesis result” means a result obtained in this connected exposition.
 
-Tidak ada survei ulang seluruh teori gerakan. Rujukan tambahan hanya digunakan untuk memperjelas tiga celah: struktur quotient, syarat kontinuitas absolut, dan persamaan konservasi massa sebagai pembanding.
+No fresh survey of all motion theories is attempted. Additional references address only three gaps: quotient structure, absolute continuity, and mass conservation as a comparison.
 
-## Hubungan ke Foundation
+## Connections to Foundation
 
-| Sumber internal | Bagian yang dipakai | Peran dalam sintesis |
+| Internal source | Portions used | Synthesis role |
 | --- | --- | --- |
-| [State](../Foundation/Core/State.md) | Kesetaraan, reduksi, observabel, identitas | Menentukan perbedaan yang dipertahankan dan alasan penggabungan |
-| [Time](../Foundation/Core/Time.md) | Urutan, parameter, durasi, pembatasan relativistik | Menentukan apa yang dipertahankan saat waktu atau parameter dibaca ulang |
-| [Space](../Foundation/Core/Space.md) | Konfigurasi, metrik, medan, arus material | Menetapkan interpretasi spasial dan batas penggunaan geometri |
-| [Reference](../Foundation/Core/Reference.md) | Pemetaan pembanding dan transformasi | Mendukung P01–P02 serta pemeriksaan operasi tereduksi |
-| [Change](../Foundation/Core/Change.md) | Riwayat, regularitas, panjang, contoh lingkaran | Menopang batas geometris dan perbedaan jenis ketetapan |
-| [Evidence](../Foundation/Core/Evidence.md) | Kelas kompatibel, sampling, proyeksi, persepsi | Menopang faktorisasi sifat dan batas inferensi |
-| [Architecture](../Foundation/Structure/Architecture.md) dan [Boundaries](../Foundation/Structure/Boundaries.md) | Status simpul dan batas dasar–turunan | Mencegah arsitektur dibaca sebagai aksioma alam |
-| [Relations.tsv](../Foundation/Structure/Relations.tsv) dan [Claims.tsv](../Foundation/Research/Claims.tsv) | Kondisi serta jenis klaim | Titik pemeriksaan ulang, bukan sumber otoritas logis tersendiri |
-| [Questions](../Foundation/Research/Questions.md) dan [Review](../Foundation/Research/Review.md) | Persoalan terbuka dan kasus penyangkal | Membatasi perluasan klaim |
+| [State](../Foundation/Core/State.md) | Equivalence, reduction, observables, identity | Retained distinctions and reasons for merging |
+| [Time](../Foundation/Core/Time.md) | Order, parameters, duration, relativistic limits | What survives temporal or parameter reinterpretation |
+| [Space](../Foundation/Core/Space.md) | Configurations, metrics, fields, material currents | Spatial interpretation and geometric limits |
+| [Reference](../Foundation/Core/Reference.md) | Comparison maps and transformations | P01–P02 and reduced-operation checks |
+| [Change](../Foundation/Core/Change.md) | Histories, regularity, length, circle example | Geometric bounds and constancy distinctions |
+| [Evidence](../Foundation/Core/Evidence.md) | Compatible classes, sampling, projection, perception | Property factorization and inference limits |
+| [Architecture](../Foundation/Structure/Architecture.md) and [Boundaries](../Foundation/Structure/Boundaries.md) | Node status and foundational–derived limits | Prevents reading architecture as natural axioms |
+| [Relations.tsv](../Foundation/Structure/Relations.tsv) and [Claims.tsv](../Foundation/Research/Claims.tsv) | Conditions and claim types | Reassessment points, not independent logical authority |
+| [Questions](../Foundation/Research/Questions.md) and [Review](../Foundation/Research/Review.md) | Open issues and counterexamples | Limits claim expansion |
 
-## Rujukan yang diwarisi
+## Inherited references
 
-Label **F-Sxx** menunjuk label **Sxx** dalam [Sources Foundation](../Foundation/Research/Sources.md). Penambahan awalan hanya membedakan ruang penamaan; daftar sumber aslinya tidak diubah.
+**F-Sxx** refers to **Sxx** in [Foundation Sources](../Foundation/Research/Sources.md). The prefix distinguishes namespaces without changing source identities.
 
-| Label | Relevansi utama |
+| Label | Main relevance |
 | --- | --- |
-| F-S01 | Relasi ekuivalensi dan orde parsial |
-| F-S05, F-S06 | Batas acuan, struktur waktu, dan regularitas geometris |
-| F-S07 | Topologi, kontinuitas, dan keterhubungan |
-| F-S09 | Kesetaraan fase global dan keadaan stasioner kuantum |
-| F-S10, F-S11 | Arus probabilitas dan partikel pada lingkaran |
-| F-S12 | Batas penafsiran label partikel identik |
-| F-S13, F-S14, F-S21 | Batas inferensi dari stimulus dan persepsi |
-| F-S15 | Rekonstruksi bersyarat dalam kelas sinyal berbatas frekuensi |
-| F-S18 | Perbedaan ketidakpastian pengukuran dari galat yang diketahui atau dibatasi |
-| F-S19, F-S20 | Status model relasional waktu dan proposal ruang-waktu diskret |
-| F-S22 | Konfigurasi, keadaan fase, dan prediksi dinamika klasik |
+| F-S01 | Equivalence relations and partial orders |
+| F-S05, F-S06 | References, temporal structure, geometric regularity |
+| F-S07 | Topology, continuity, connectedness |
+| F-S09 | Global-phase equivalence and quantum stationary states |
+| F-S10, F-S11 | Probability currents and particles on a circle |
+| F-S12 | Limits of identical-particle label interpretations |
+| F-S13, F-S14, F-S21 | Stimulus and perception inference limits |
+| F-S15 | Conditional reconstruction in bandlimited signal classes |
+| F-S18 | Measurement uncertainty versus known or bounded errors |
+| F-S19, F-S20 | Relational-time models and discrete-spacetime proposals |
+| F-S22 | Configurations, phase states, classical prediction |
 
-Tabel tersebut menunjukkan relevansi, bukan menyatakan seluruh hasil P01–P13 dikutip dari rujukan tersebut. Bukti dan premis tambahannya tetap berada di dokumen sintesis.
+This table establishes relevance, not attribution of every result to those references. Proofs and added premises remain in synthesis documents.
 
-## Rujukan tambahan
+## Additional references
 
 ### N01
 
-Romyar Sharifi. **Point-Set Topology**, Bab 2, §2.3; khususnya Teorema 2.3.11.
+Romyar Sharifi. **Point-Set Topology**, Chapter 2, §2.3; especially Theorem 2.3.11.
 
-[Materi penulis, UCLA](https://www.math.ucla.edu/~sharifi/notes/topology-ch02.html).
+[Author's material, UCLA](https://www.math.ucla.edu/~sharifi/notes/topology-ch02.html).
 
-Jenis: catatan ilmiah penulis. Bagian diperiksa: fungsi yang konstan pada serat peta quotient serta kontinuitas fungsi turunannya. Digunakan sebagai jangkar standar bagi bentuk topologis P04. P04 pada tingkat himpunan dibuktikan langsung dalam Reduction.
+Type: author's scientific notes. Examined portion: functions constant on quotient fibres and continuity of descended functions. A standard reference for P04's topological form; the set-level proof appears directly in Reduction.
 
 ### N02
 
-John K. Hunter. **Notes on Partial Differential Equations**, revisi 18 Juni 2014. University of California, Davis. Lampiran 3.A, terutama Teorema 3.60 dan pembahasan fungsi singular.
+John K. Hunter. **Notes on Partial Differential Equations**, revised 18 June 2014. University of California, Davis. Appendix 3.A, especially Theorem 3.60 and singular functions.
 
-[Catatan penulis](https://www.math.ucdavis.edu/~hunter/pdes/pde_notes.pdf).
+[Author's notes](https://www.math.ucdavis.edu/~hunter/pdes/pde_notes.pdf).
 
-Jenis: catatan ilmiah penulis. Bagian diperiksa: hubungan kontinuitas absolut dengan teorema dasar kalkulus; fungsi Cantor sebagai pembatas generalisasi. Tidak digunakan untuk memperluas inti ke teori persamaan diferensial parsial.
+Type: author's scientific notes. Examined portion: absolute continuity and the fundamental theorem of calculus; the Cantor function limits generalizations. Does not expand the core into partial differential equations.
 
 ### N03
 
-Richard Fitzpatrick. **Mass Conservation**, materi pengajaran mekanika fluida. University of Texas at Austin.
+Richard Fitzpatrick. **Mass Conservation**, fluid-mechanics teaching material. University of Texas at Austin.
 
-[Materi penulis](https://farside.ph.utexas.edu/teaching/336L/Fluidhtml/node10.html).
+[Author's material](https://farside.ph.utexas.edu/teaching/336L/Fluidhtml/node10.html).
 
-Jenis: materi ilmiah penulis. Bagian diperiksa: hubungan densitas, kecepatan, dan persamaan kontinuitas massa. Digunakan untuk menjelaskan bahwa bentuk konservasi dalam P11 merupakan premis model dengan makna besaran tertentu.
+Type: author's scientific material. Examined portion: density, velocity, and mass continuity. Explains why P11's conservation form is a model premise with quantity-specific meaning.
 
-## Batas pembacaan dan pembuktian
+## Reading and proof limits
 
-Rujukan tambahan diperiksa pada **2 November 2026** pada bagian yang disebutkan, bukan dibaca sebagai tinjauan menyeluruh seluruh naskah.
+The indicated additional-source portions were checked on **2 November 2026**, not surveyed as entire manuscripts.
 
-Fakta empiris yang dipakai tetap berasal dari penelitian dalam Foundation. Sintesis tidak menghasilkan data eksperimen baru atau menetapkan satu mekanisme persepsi universal.
+Empirical facts remain those researched in Foundation. Synthesis produces no new experimental data and establishes no universal perceptual mechanism.
 
-P12 menggunakan definisi stasioner ketat dan contoh fase acak dengan bukti pergeseran distribusi yang disajikan lengkap. Tidak ditarik sifat tambahan seperti ergodisitas dari contoh tersebut.
+P12 uses strict stationarity and a random-phase example with a full distribution-shift proof. It infers no further property such as ergodicity.
 
-Seluruh contoh angka menggunakan besaran dinormalisasi atau satuan yang konsisten. Hubungan yang memerlukan massa, panjang, atau parameter fisik menyebut kondisi positif dan maknanya pada tempat penggunaan.
+Numerical examples use normalized quantities or consistent units. Mass, length, and physical parameters receive positivity conditions and meanings at their points of use.
 
-Jejak spesifik antara premis, hasil, fondasi, dan sumber tersedia dalam [Trace.tsv](Trace.tsv). Kolom main_dependencies hanya mencatat hasil yang dipakai dalam pembuktian utama; connections mencatat keterkaitan atau penerapan lintas hasil, yang tidak otomatis merupakan premis bukti. Sebagai contoh, P13 berkaitan dengan P01–P02, tetapi penurunannya langsung memakai persamaan Schrödinger dan aturan perkalian.
+[Trace.tsv](Trace.tsv) links premises, results, foundations, and references. main_dependencies lists only results used in primary proofs; connections lists associations or applications, not automatically proof premises. P13, for example, connects to P01–P02 but derives directly from Schrödinger evolution and the product rule.
 
-Identitas byte sumber dipertahankan melalui [Origins.tsv](Origins.tsv).
+[Origins.tsv](Origins.tsv) records original-source and English-edition byte identities.

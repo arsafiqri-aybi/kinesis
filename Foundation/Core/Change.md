@@ -1,32 +1,32 @@
 # Change
 
-## Perubahan dan gerakan
+## Change and motion
 
-**Definisi bersyarat.** Untuk domain temporal \(T\), ruang keadaan \(S\), serta aturan kesamaan yang tetap ditentukan, riwayat adalah pengaitan \(s:T\to S\). Riwayat tidak konstan bila terdapat \(t_1,t_2\in T\) sehingga \(s(t_1)\ne s(t_2)\).
+**Conditional definition.** Given a temporal domain \(T\), state space \(S\), and fixed equality rule, a history is a map \(s:T\to S\). It is nonconstant if some \(t_1,t_2\in T\) satisfy \(s(t_1)\ne s(t_2)\).
 
-Ini memberikan pengertian formal perubahan, bukan teori penyebab perubahan. Untuk menyebutnya **gerakan spasial**, bagian yang berubah harus mempunyai makna posisi, orientasi, atau susunan spasial terhadap acuan yang disebutkan.
+This formalizes change, not its causes. For **spatial motion**, the changing component must mean position, orientation, or spatial arrangement relative to a stated reference.
 
-Perubahan temperatur tidak otomatis perpindahan. Perubahan konfigurasi klasik tidak selalu mencakup seluruh evolusi keadaan kuantum. Gerakan pola, pengangkutan material, dan persepsi gerakan juga perlu dibedakan. Kata “gerakan” boleh dipakai lebih luas, asalkan perluasan maknanya dinyatakan.
+Temperature change is not automatically displacement. Classical configuration change need not encompass all quantum-state evolution. Pattern motion, material transport, and perceived motion must also be distinguished. Broader uses of “motion” are legitimate if their meaning is stated.
 
-## Riwayat tidak ditentukan oleh keadaan ujung
+## End states do not determine a history
 
-Ambil \(T=[0,1]\) dan:
+Take \(T=[0,1]\) and:
 
 \[
 q_0(t)=0,\qquad q_1(t)=t(1-t).
 \]
 
-Keduanya memiliki \(q(0)=q(1)=0\), tetapi hanya \(q_0\) konstan. Jadi kesamaan keadaan awal dan akhir tidak menyiratkan tiadanya perubahan di antara keduanya.
+Both have \(q(0)=q(1)=0\), but only \(q_0\) is constant. Equal initial and final states therefore do not imply absence of intervening change.
 
-Bahkan dua riwayat yang melewati himpunan titik sama dapat berbeda urutan atau pengulangan. Kurva geometris sebagai himpunan \(q(T)\) tidak memuat seluruh informasi riwayat berparameter.
+Even histories traversing the same point set may differ in order or repetition. The geometric image \(q(T)\) does not contain all information in a parametrized history.
 
-**Hasil langsung.** Penghapusan parameter dapat menghapus informasi kapan, seberapa cepat, dan berapa kali suatu konfigurasi dilalui. Karena itu, lintasan geometris, riwayat temporal, dan catatan pengamatan bukan objek yang identik.
+**Immediate result.** Removing the parameter can remove when, how fast, and how many times a configuration is traversed. Geometric paths, temporal histories, and observational records are therefore distinct objects.
 
-## Kontinuitas adalah struktur tambahan
+## Continuity is additional structure
 
-**Definisi matematis.** Jika \(T\) dan \(Q\) ruang topologis, \(q:T\to Q\) kontinu bila prabayang setiap himpunan terbuka di \(Q\) terbuka di \(T\). Definisi ini tidak memerlukan angka kecepatan atau satuan jarak. [S07](../Research/Sources.md#s07)
+**Mathematical definition.** For topological spaces \(T\) and \(Q\), a map \(q:T\to Q\) is continuous when the preimage of every open set in \(Q\) is open in \(T\). This requires neither numerical velocities nor distance units. [S07](../Research/Sources.md#s07)
 
-Untuk ruang metrik, kontinuitas pada \(t_0\) dapat ditulis:
+For metric spaces, continuity at \(t_0\) is:
 
 \[
 \forall\varepsilon>0\ \exists\delta>0:
@@ -35,54 +35,54 @@ d_T(t,t_0)<\delta
 d_Q(q(t),q(t_0))<\varepsilon.
 \]
 
-Pernyataan itu membatasi hubungan kedekatan. Ia tidak menetapkan bahwa semua riwayat fisik harus kontinu, bahwa waktu harus kontinu, atau bahwa kecepatan harus ada.
+This constrains proximity relations. It does not establish that all physical histories must be continuous, time must be continuous, or velocity must exist.
 
-Riwayat diskret \(q:\mathbb Z\to Q\) tetap dapat membedakan urutan konfigurasi. Kontinuitas pada domain diskret tidak memaksakan perilaku di antara label yang tidak termasuk domain.
+A discrete history \(q:\mathbb Z\to Q\) can still distinguish ordered configurations. Continuity on a discrete domain imposes no behaviour between labels outside that domain.
 
-**Hasil matematis dengan bukti.** Jika \(T\) tidak kosong dan terhubung serta \(Q\) diskret secara topologis, setiap \(q:T\to Q\) kontinu harus konstan. Citra kontinu himpunan terhubung harus terhubung; bagian terhubung ruang diskret hanya memuat paling banyak satu titik. Maka citra \(q\) satu titik.
+**Mathematical result with proof.** If \(T\) is nonempty and connected and \(Q\) topologically discrete, every continuous \(q:T\to Q\) is constant. A continuous image of a connected set is connected; a connected subset of a discrete space has at most one point. Thus the image of \(q\) is one point.
 
-Implikasinya terbatas: gabungan asumsi waktu terhubung, keadaan diskret, dan kontinuitas biasa menghalangi perubahan nonkonstan. Hasil itu tidak membuktikan alam mustahil diskret. Salah satu asumsi atau definisi kontinuitas dapat berbeda dalam teori yang dipilih.
+The implication is limited: connected time, discrete states, and ordinary continuity together exclude nonconstant change. This does not prove that nature cannot be discrete. A selected theory may change an assumption or its continuity definition.
 
-## Diferensiabilitas dan laju lokal
+## Differentiability and local rates
 
-Dalam ruang vektor dengan parameter real:
+In a vector space with a real parameter:
 
 \[
 \dot q(t_0)=
 \lim_{h\to0}\frac{q(t_0+h)-q(t_0)}{h},
 \]
 
-jika limit ada. Pada manifold mulus, turunan kurva adalah vektor singgung di titik \(q(t_0)\). Pengurangan titik manifold sembarang tidak dipakai sebagai definisi global.
+when the limit exists. On a smooth manifold, a curve's derivative is a tangent vector at \(q(t_0)\); arbitrary manifold-point subtraction is not a global definition.
 
-Turunan memerlukan lebih banyak struktur daripada sekadar perbedaan keadaan. Diferensiabilitas mengimplikasikan kontinuitas, tetapi tidak sebaliknya. Contoh elementer \(q(t)=|t|\) kontinu dan tidak terdiferensialkan di nol.
+Derivatives require more structure than state differences. Differentiability implies continuity, but not conversely. The elementary example \(q(t)=|t|\) is continuous and not differentiable at zero.
 
-Pada model Brownian standar terdapat versi dengan lintasan kontinu yang hampir pasti tidak terdiferensialkan di titik mana pun. Ini hasil model probabilitas, bukan pernyataan bahwa partikel fisik pada semua skala benar-benar memiliki lintasan Brownian ideal. [S08](../Research/Sources.md#s08)
+Standard Brownian models have versions with continuous paths that are almost surely nowhere differentiable. This is a probability-model result, not a claim that physical particles have ideal Brownian paths at every scale. [S08](../Research/Sources.md#s08)
 
-Karena itu, kecepatan klasik yang terdefinisi pada setiap saat bukan syarat universal semua pengertian gerakan.
+A classical velocity defined at every instant is therefore not universally required by every meaning of motion.
 
-## Diam pada selang dan laju nol sesaat
+## Rest on an interval and an instantaneous zero rate
 
-Dalam model konfigurasi dengan acuan tetap, diam pada selang \(I\) berarti \(q|_I\) konstan. Hal ini berbeda dari \(\dot q(t_0)=0\) pada satu saat.
+In a configuration model with fixed reference, rest on \(I\) means \(q|_I\) is constant. This differs from \(\dot q(t_0)=0\) at one instant.
 
-Ambil:
+Take:
 
 \[
 q(t)=t^3,\qquad \dot q(0)=0.
 \]
 
-Riwayat berubah pada setiap lingkungan terbuka nol walaupun laju sesaat nol. Maka nolnya kecepatan sesaat tidak cukup untuk menyatakan diam sepanjang suatu selang.
+The history changes in every open neighbourhood of zero despite its instantaneous zero rate. Zero instantaneous velocity does not establish rest throughout an interval.
 
-**Hasil matematis.** Jika \(q:I\to\mathbb R^n\) terdiferensialkan pada interval terbuka terhubung \(I\) dan \(\dot q(t)=0\) untuk semua \(t\in I\), maka \(q\) konstan di \(I\). Terapkan teorema nilai rata-rata pada setiap komponen antara dua titik interval.
+**Mathematical result.** If \(q:I\to\mathbb R^n\) is differentiable on a connected open interval \(I\) and \(\dot q(t)=0\) for every \(t\in I\), then \(q\) is constant on \(I\). Apply the mean value theorem componentwise between any two points.
 
-Syarat “terdiferensialkan pada semua titik” tidak boleh diam-diam diganti “turunan nol hampir di mana-mana”. Tanpa syarat keteraturan tambahan, seperti kontinuitas absolut untuk konteks yang sesuai, implikasinya dapat gagal.
+“Differentiable everywhere” must not silently become “derivative zero almost everywhere”. Without extra regularity, such as absolute continuity in the appropriate setting, the implication can fail.
 
-Pernyataan mengenai gerakan sesaat dengan demikian menggunakan struktur suatu riwayat atau limit di sekitar saat itu. Satu posisi terisolasi tidak menyediakan seluruh informasi tersebut.
+Instantaneous-motion statements thus use a history's structure or a limit around that instant. One isolated position does not supply this information.
 
-## Perpindahan, panjang, dan kelajuan
+## Displacement, length, and speed
 
-Dalam ruang Euclidean, perpindahan ujung \(\Delta\mathbf r=\mathbf r(b)-\mathbf r(a)\) berbeda dari panjang jalan.
+In Euclidean space, endpoint displacement \(\Delta\mathbf r=\mathbf r(b)-\mathbf r(a)\) differs from path length.
 
-Pada ruang metrik, panjang kurva dapat didefinisikan:
+In a metric space, curve length can be defined by:
 
 \[
 L(q)=\sup_{\mathcal P}
@@ -91,36 +91,36 @@ L(q)=\sup_{\mathcal P}
 a=t_0<\cdots<t_n=b.
 \]
 
-Ketaksamaan segitiga langsung memberi:
+The triangle inequality immediately gives:
 
 \[
 d(q(a),q(b))\le L(q).
 \]
 
-Kurva yang kembali ke titik awal dapat mempunyai panjang positif. Panjang juga dapat tak hingga; kontinuitas sendiri tidak menjamin panjang hingga.
+A curve returning to its start can have positive length. Length may also be infinite; continuity alone does not ensure finite length.
 
-Jika struktur dan keteraturan memadai, kelajuan dapat dikaitkan dengan norma vektor singgung. Ada pula turunan metrik:
+With sufficient structure and regularity, speed relates to a tangent vector's norm. A metric derivative is also possible:
 
 \[
 |\dot q|(t)=
 \lim_{h\to0}\frac{d(q(t+h),q(t))}{|h|},
 \]
 
-jika limit ada. Definisi ini tidak sama dengan vektor kecepatan: ia memberi besar laju tanpa arah vektor. Metrik dan parameter tetap bagian asumsi.
+when the limit exists. This differs from a velocity vector: it supplies a magnitude without vector direction. Metric and parameter remain assumptions.
 
-## Kinematika dan dinamika
+## Kinematics and dynamics
 
-Kinematika menyatakan bagaimana gerakan dideskripsikan. Dinamika membatasi riwayat melalui hukum suatu teori. Menentukan \(q(t)\) yang mungkin secara matematis belum menentukan bahwa gerakan itu terjadi, diizinkan secara fisik, atau disebabkan gaya tertentu.
+Kinematics describes motion. Dynamics restricts histories through a theory's laws. A mathematically possible \(q(t)\) does not establish that the motion occurs, is physically permitted, or results from a particular force.
 
-Dalam mekanika Newtonian, \(F=ma\) memerlukan pengertian massa, gaya, kerangka inersial, dan keteraturan yang sesuai. Ia tidak merupakan definisi gerakan. Dalam teori lain, struktur hukum dan keadaan berbeda. [S04](../Research/Sources.md#s04)
+In Newtonian mechanics, \(F=ma\) requires mass, force, inertial frames, and suitable regularity. It is not the definition of motion. Other theories have different laws and state structures. [S04](../Research/Sources.md#s04)
 
-Determinisme juga bukan akibat definisi riwayat. Sebuah riwayat dapat diketahui setelah kejadian, sementara model prediksinya stokastik. Persamaan evolusi deterministik sendiri memerlukan syarat keberadaan dan ketunggalan solusi; menuliskan persamaan tidak membuktikan semua syaratnya terpenuhi.
+Determinism does not follow from the definition of history. A history may be known retrospectively while its predictive model is stochastic. Deterministic evolution equations themselves require existence and uniqueness conditions; writing an equation does not prove those conditions hold.
 
-## Batas lintasan klasik dalam teori kuantum
+## Limits of classical trajectories in quantum theory
 
-Dalam teori kuantum standar, perubahan distribusi probabilitas dan arus probabilitas tidak boleh langsung disamakan dengan lintasan posisi pasti partikel individual.
+In standard quantum theory, evolving probability distributions and probability currents must not immediately be identified with definite individual particle trajectories.
 
-Untuk Hamiltonian bebas satu dimensi tanpa potensial vektor:
+For a free one-dimensional Hamiltonian without a vector potential:
 
 \[
 \rho=|\psi|^2,\qquad
@@ -130,9 +130,9 @@ j=\frac{\hbar}{m}\operatorname{Im}
 \partial_t\rho+\partial_xj=0.
 \]
 
-Persamaan kontinuitas menyatakan hubungan lokal antara perubahan densitas probabilitas dan arus, bukan tambahan asumsi lintasan individual. [S10](../Research/Sources.md#s10)
+The continuity equation locally relates probability-density change to current; it does not add an individual-trajectory assumption. [S10](../Research/Sources.md#s10)
 
-Pada lingkaran panjang \(L>0\) dengan massa \(m>0\), ambil keadaan ternormalisasi:
+On a circle of length \(L>0\), with mass \(m>0\), take the normalized state:
 
 \[
 \psi(x,t)=\frac1{\sqrt L}
@@ -141,12 +141,12 @@ k=\frac{2\pi n}{L},\quad n\in\mathbb Z,\quad
 \hbar\omega=\frac{\hbar^2k^2}{2m}.
 \]
 
-Substitusi langsung menghasilkan \(\rho=1/L\) tetap dan \(j=\hbar k/(mL)\), yang tidak nol jika \(n\ne0\). Keadaan ini menunjukkan bahwa densitas posisi stasioner tidak cukup untuk menyimpulkan semua besaran yang berkaitan dengan gerak nol. Konteks partikel pada lingkaran dan keadaan stasioner dibahas dalam [S11](../Research/Sources.md#s11).
+Direct substitution gives constant \(\rho=1/L\) and \(j=\hbar k/(mL)\), nonzero if \(n\ne0\). Stationary position density therefore does not imply that every motion-related quantity vanishes. The particle-on-a-circle and stationary-state context is discussed in [S11](../Research/Sources.md#s11).
 
-Dalam gambaran Schrödinger, fase global evolusi keadaan eigenenergi juga tidak mengubah ray keadaan murninya. Kesimpulan tentang “bergerak” harus menyebut apakah yang dibandingkan adalah ray, densitas posisi, arus, observabel, atau lintasan dalam interpretasi tertentu.
+In the Schrödinger picture, an energy eigenstate's global phase evolution also leaves its pure-state ray unchanged. A “moving” conclusion must identify whether it compares rays, position densities, currents, observables, or trajectories within a particular interpretation.
 
-## Kedudukan fundamental
+## Fundamental role
 
-Fondasi Change adalah riwayat perbedaan yang dibaca menurut struktur temporal, spasial, dan acuan yang jelas. Kontinuitas, laju, panjang, serta hukum evolusi ditambahkan hanya bila struktur pendukungnya tersedia.
+Change concerns histories of distinctions interpreted through explicit temporal, spatial, and reference structures. Continuity, rate, length, and evolution laws are added only with their supporting structures.
 
-Tidak ada satu uji “koordinat berubah” yang mencakup seluruh kasus tanpa menyebut kerangka. Justru kejernihan tentang apa yang berubah, terhadap apa, dalam pengertian apa, dan dengan asumsi apa merupakan inti pengertian gerakan.
+No single “coordinates change” test covers every case without a framework. Clarity about what changes, relative to what, in which sense, and under which assumptions is central to understanding motion.

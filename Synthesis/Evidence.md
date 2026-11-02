@@ -1,26 +1,26 @@
 # Evidence
 
-## Kesimpulan ditentukan terhadap kelas kemungkinan
+## Conclusions are relative to a possibility class
 
-Pengetahuan tentang gerakan tidak dimulai hanya dari data \(y\). Ia memerlukan kelas riwayat \(\mathcal H\), acuan pembanding, serta pemetaan pengamatan \(\mathcal O:\mathcal H\to Y\). Ketiganya menetapkan apa yang masih mungkin setelah data diketahui.
+Knowledge of motion requires more than data \(y\): an admissible history class \(\mathcal H\), comparison reference, and observation map \(\mathcal O:\mathcal H\to Y\) specify what remains possible after observing.
 
-Definisikan:
+Define:
 
 \[
 \mathcal H_y=\{h\in\mathcal H:\mathcal O(h)=y\}.
 \]
 
-Dalam pembahasan ini \(y\) selalu berada pada citra \(\mathcal O(\mathcal H)\), sehingga kelas kompatibelnya tidak kosong. Kelas kosong menunjukkan ketidakcocokan data dengan model, bukan bukti bahwa semua kesimpulan sekaligus benar.
+Here \(y\) always belongs to \(\mathcal O(\mathcal H)\), so its compatible class is nonempty. An empty class signals model–data incompatibility, not evidence for every conclusion simultaneously.
 
-Dasarnya adalah [Evidence Foundation](../Foundation/Core/Evidence.md), sedangkan kriteria pada tingkat fungsi dikembangkan dalam [P04](Reduction.md#p04).
+[Evidence Foundation](../Foundation/Core/Evidence.md) supplies the basis; [P04](Reduction.md#p04) develops the functional criterion.
 
 ## P06
 
-**Keteridentifikasian adalah faktorisasi sifat melalui data.**
+**Identifiability is property factorization through data.**
 
-**Premis.** Diberikan sifat \(P:\mathcal H\to W\); untuk pertanyaan ya–tidak, \(W=\{0,1\}\). Seluruh konvensi acuan dan kesetaraan sudah ditentukan.
+**Premises.** Let \(P:\mathcal H\to W\) be a property; for yes–no questions, \(W=\{0,1\}\). Reference and equivalence conventions are fixed.
 
-**Kesimpulan.** Ada fungsi tunggal \(\widehat P:\mathcal O(\mathcal H)\to W\) yang menentukan \(P(h)\) dari data untuk setiap riwayat jika dan hanya jika:
+**Conclusion.** A unique \(\widehat P:\mathcal O(\mathcal H)\to W\) determining \(P(h)\) from data for every history exists if and only if:
 
 \[
 \mathcal O(h_1)=\mathcal O(h_2)
@@ -28,69 +28,69 @@ Dasarnya adalah [Evidence Foundation](../Foundation/Core/Evidence.md), sedangkan
 P(h_1)=P(h_2).
 \]
 
-**Bukti.** Terapkan P04 dengan \(X=\mathcal H\), \(C=\mathcal O\) yang kodomainnya dibatasi ke citranya, dan \(A=P\).
+**Proof.** Apply P04 with \(X=\mathcal H\), \(C=\mathcal O\) restricted to its image, and \(A=P\).
 
-Untuk satu data tertentu, cukup bahwa \(P\) konstan pada serat \(\mathcal H_y\); ketunggalan global seluruh model tidak diperlukan.
+For one particular datum, constancy of \(P\) on \(\mathcal H_y\) suffices; global model uniqueness is unnecessary.
 
-### Mengetahui gerak tanpa merekonstruksi riwayat
+### Knowing motion without reconstructing the history
 
-Ambil kelas riwayat kontinu pada garis, acuan tetap, dan data tepat \(q(0)=0,q(1)=1\). Setiap riwayat kompatibel tidak konstan, sehingga sifat “terjadi perubahan posisi pada selang” diketahui.
+Take continuous line histories, a fixed reference, and exact data \(q(0)=0,q(1)=1\). Every compatible history is nonconstant, so position change on the interval is known.
 
-Namun \(q_1(t)=t\) dan \(q_2(t)=t^2\) memberikan data ujung sama dan riwayat berbeda. Maka informasi yang tidak cukup untuk rekonstruksi lengkap dapat cukup untuk satu kesimpulan gerak.
+Yet \(q_1(t)=t\) and \(q_2(t)=t^2\) give equal endpoint data and different histories. Information insufficient for full reconstruction can suffice for one motion conclusion.
 
-Kebalikannya, data \(q(0)=q(1)=0\) kompatibel dengan riwayat diam dan \(q(t)=t(1-t)\). Sifat yang sama tidak teridentifikasi pada kelas ini.
+Conversely, \(q(0)=q(1)=0\) admits both rest and \(q(t)=t(1-t)\). The same property is not identifiable on this class.
 
-### Dua syarat yang tidak boleh dilebur
+### Two conditions that must remain distinct
 
-Jika \(\sim_{\mathrm{phys}}\) menyatakan redundansi fisik, predikat \(P\) terlebih dahulu harus konstan pada kelasnya agar terdefinisi secara fisik. Setelah itu baru ditanyakan apakah \(P\) konstan pada serat pengamatan.
+If \(\sim_{\mathrm{phys}}\) denotes physical redundancy, \(P\) must first be constant on its classes to be physically well-defined. Only then is constancy of \(P\) on observation fibres tested.
 
-Kesetaraan fisik dan serat pengamatan bisa berbeda ukuran. Keadaan yang berbeda secara fisik dapat tidak dibedakan oleh pengamatan yang terbatas. Perbedaan data juga harus diperiksa terhadap kalibrasi dan cara representasinya sebelum disebut perbedaan fisik.
+Physical classes and observation fibres may have different sizes. Limited observation can merge physically distinct states. Data differences also require calibration and representational checks before being called physical differences.
 
-**Batas.** Hasil ini menetapkan ketunggalan pada model deterministik ideal. Ia belum menjamin kestabilan terhadap gangguan atau tersedianya cara pengukuran fisik yang tepat.
+**Limit.** This establishes uniqueness in an ideal deterministic model, not stability under disturbances or physically exact measurement procedures.
 
 ## P07
 
-**Pengurangan data tidak menambah keteridentifikasian struktural.**
+**Data reduction cannot increase structural identifiability.**
 
-**Premis.** Dua pengamatan berkaitan melalui:
+**Premises.** Observations are related by:
 
 \[
 \mathcal O_2=K\circ\mathcal O_1.
 \]
 
-Artinya data kedua hanya hasil pemrosesan deterministik data pertama yang sama, tanpa masukan tambahan.
+The second data result solely from deterministic processing of the same first data, with no additional input.
 
-**Kesimpulan.** Jika suatu sifat dapat ditentukan dari \(\mathcal O_2\), sifat itu dapat ditentukan dari \(\mathcal O_1\). Sebaliknya tidak selalu.
+**Conclusion.** A property determinable from \(\mathcal O_2\) is determinable from \(\mathcal O_1\). The converse can fail.
 
-**Bukti.** Jika \(\mathcal O_1(h_1)=\mathcal O_1(h_2)\), penerapan \(K\) menghasilkan data \(\mathcal O_2\) sama. Maka kelas yang digabung oleh \(\mathcal O_1\) tidak lebih besar daripada kelas yang digabung \(\mathcal O_2\). Setiap sifat yang konstan pada kelas lebih besar pasti konstan pada kelas lebih kecil.
+**Proof.** If \(\mathcal O_1(h_1)=\mathcal O_1(h_2)\), applying \(K\) produces equal \(\mathcal O_2\) outputs. Classes merged by \(\mathcal O_1\) are therefore no larger than those merged by \(\mathcal O_2\). Constancy on larger classes implies constancy on smaller ones.
 
-Secara langsung, bila \(P=\widehat P_2\circ\mathcal O_2\), maka:
+Directly, if \(P=\widehat P_2\circ\mathcal O_2\), then:
 
 \[
 P=(\widehat P_2\circ K)\circ\mathcal O_1.
 \]
 
-**Contoh kehilangan.** Untuk seluruh kelas riwayat pada garis, sifat \(P(h)=1\) bila \(q(0)\ne q(1)\), dan nol bila kedua posisi ujung sama, selalu dapat ditentukan dari \(\mathcal O_1(h)=(q(0),q(1))\). Jika \(K\) hanya menyimpan posisi awal, riwayat \(q(t)=t\) dan riwayat diam pada nol memberi keluaran sama tetapi nilai \(P\) berbeda. Jadi kebalikan implikasi teorema gagal.
+**Loss example.** On all line histories, let \(P(h)=1\) when \(q(0)\ne q(1)\), otherwise zero. It is always determined by \(\mathcal O_1(h)=(q(0),q(1))\). If \(K\) retains only the initial position, \(q(t)=t\) and rest at zero have identical outputs but different \(P\). The converse fails.
 
-Pada data \((0,1)\), sifat tersebut sekaligus membuktikan gerakan. Akan tetapi \(P=0\) tidak membuktikan diam karena riwayat dapat kembali ke titik awal. Sifat “ujung berbeda” tidak disamakan dengan seluruh pengertian “pernah bergerak”.
+For data \((0,1)\), this property also proves motion. But \(P=0\) does not prove rest: a history can return to its starting point. “Different endpoints” is not equivalent to “ever moved”.
 
-**Konsekuensi.** Pemrosesan ulang data yang tidak membedakan dua riwayat tidak dapat memaksa keduanya menjadi terbedakan. Model atau asumsi tambahan bisa mempersempit \(\mathcal H\), tetapi itu perubahan premis. Menambahkan sensor atau kondisi eksperimen juga bukan sekadar menerapkan \(K\) kepada data lama.
+**Consequence.** Reprocessing data that merge two histories cannot force their separation. Additional models or assumptions can narrow \(\mathcal H\), but change the premises. Adding a sensor or experimental condition is not merely applying \(K\) to old data.
 
-Hasil ini merupakan penalaran tentang pemetaan deterministik. Ia tidak diklaim sebagai pembuktian seluruh teorema informasi Shannon, optimalitas statistik, atau kinerja algoritma. Pemrosesan dapat mempermudah estimasi dan penyajian data bising; teorema ini sendiri tidak menilai kinerja suatu penaksir.
+This concerns deterministic maps, not all Shannon information theorems, statistical optimality, or algorithmic performance. Processing may improve noisy-data estimation or presentation; this theorem does not assess estimator performance.
 
 ## P08
 
-**Batas bawah panjang dari posisi dengan galat terbatas.**
+**A length lower bound from positions with bounded errors.**
 
-**Premis tambahan.** \(q:[a,b]\to Q\) merupakan kurva kontinu dalam satu ruang metrik positif \((Q,d)\), dengan acuan dan satuan konsisten. Pada waktu tepat \(a=t_0<\cdots<t_n=b\), data posisi \(y_i\in Q\) memenuhi batas deterministik:
+**Additional premises.** Let \(q:[a,b]\to Q\) be continuous in one positive metric space \((Q,d)\), with consistent reference and units. At exact times \(a=t_0<\cdots<t_n=b\), positions \(y_i\in Q\) satisfy deterministic bounds:
 
 \[
 d(y_i,q(t_i))\le\varepsilon_i,\qquad \varepsilon_i\ge0.
 \]
 
-Batas ini harus dibenarkan secara terpisah. Ia bukan otomatis interval kepastian dari suatu simpangan baku metrologis.
+These bounds need independent justification. They are not automatically certainty intervals derived from metrological standard deviations.
 
-**Kesimpulan.** Untuk panjang kurva yang didefinisikan dengan supremum partisi:
+**Conclusion.** For curve length defined by partition supremum:
 
 \[
 L(q)\ge
@@ -99,36 +99,36 @@ L(q)\ge
 \tag{4}
 \]
 
-**Bukti.** Ketaksamaan segitiga memberikan:
+**Proof.** The triangle inequality gives:
 
 \[
 d(y_i,y_{i-1})
 \le \varepsilon_i+d(q(t_i),q(t_{i-1}))+\varepsilon_{i-1}.
 \]
 
-Karena jarak tidak negatif, tiap jarak sebenarnya minimal nilai maksimum pada (4). Jumlah jarak sebenarnya pada partisi tersebut tidak melebihi supremum semua partisi, yaitu \(L(q)\).
+Nonnegativity bounds each true distance below by the maximum in (4). The partition's true-distance sum is bounded above by the supremum \(L(q)\).
 
-**Makna kesimpulan.** Jika ruas kanan positif, semua kurva yang memenuhi premis tidak konstan, walaupun kurva lengkap tetap tidak unik. Ini hubungan konkret antara geometri, ketidakpastian, dan keteridentifikasian sifat.
+**Meaning.** A positive right side makes every premise-satisfying curve nonconstant, despite nonunique full reconstruction. This connects geometry, uncertainty, and property identifiability concretely.
 
-Jika \(L(q)\) hingga dan durasi \(b-a>0\) memang durasi yang dipakai, kelajuan rata-rata berbasis panjang memenuhi batas (4) dibagi \(b-a\). Kelajuan rata-rata ini berbeda dari vektor perpindahan dibagi waktu.
+If \(L(q)\) is finite and \(b-a>0\) is the relevant duration, length-based average speed is bounded below by (4) divided by \(b-a\). This differs from displacement divided by time.
 
-**Contoh.** Data satu dimensi \(y_0=0,y_1=3,y_2=0\) dengan galat masing-masing paling besar \(1/4\) memberi \(L(q)\ge5\), walaupun data posisi awal dan akhir sama. Dengan posisi tepat, batasnya menjadi 6. Angka memakai satuan konsisten atau besaran yang dinormalisasi.
+**Example.** One-dimensional data \(y_0=0,y_1=3,y_2=0\), each with error at most \(1/4\), imply \(L(q)\ge5\), despite equal endpoint data. Exact positions give a bound of 6. Values use consistent units or normalized quantities.
 
-**Batas.** Ruas kanan nol tidak membuktikan diam. Batas ini tidak selalu tajam dan tidak menentukan penyebab, arah lengkap, atau profil kecepatan. Tidak digunakan “jarak” Lorentzian sebagai pengganti metrik positif. Jika posisi pengamatan berasal dari acuan yang bergerak, relasinya harus diubah secara konsisten lebih dahulu menurut P01.
+**Limits.** A zero right side does not prove rest. The bound need not be sharp and determines neither cause, full direction, nor velocity profile. Lorentzian “distance” is not substituted for a positive metric. Moving-reference observations first require consistent transformation under P01.
 
 ## P09
 
-**Batas laju mempersempit gerakan tersembunyi, tanpa otomatis meniadakannya.**
+**Rate bounds constrain hidden motion without necessarily excluding it.**
 
-**Premis tambahan.** Riwayat memenuhi batas Lipschitz:
+**Additional premises.** The history satisfies a Lipschitz bound:
 
 \[
 d(q(t),q(u))\le V|t-u|,\qquad V\ge0.
 \]
 
-Ini asumsi keteraturan dan batas perubahan dalam metrik yang dipilih. Ia tidak disimpulkan dari kontinuitas saja.
+This assumes regularity and bounded change in the selected metric; continuity alone does not imply it.
 
-Jika \(q(a)=q(b)=x_0\), maka:
+If \(q(a)=q(b)=x_0\), then:
 
 \[
 d(q(t),x_0)
@@ -137,27 +137,27 @@ d(q(t),x_0)
 \tag{5}
 \]
 
-**Bukti.** Terapkan batas Lipschitz terhadap ujung \(a\) dan ujung \(b\), lalu ambil batas yang lebih kecil.
+**Proof.** Apply the Lipschitz bound to endpoint \(a\) and endpoint \(b\) and take the smaller bound.
 
-Pada garis, kurva \(q(t)=x_0+V\min\{t-a,b-t\}\) mencapai batas puncak \(V(b-a)/2\). Kurva ini Lipschitz dan tidak konstan bila \(V>0\). Karena itu, dua posisi ujung sama dan batas laju positif tidak cukup membuktikan diam.
+On the line, \(q(t)=x_0+V\min\{t-a,b-t\}\) reaches height \(V(b-a)/2\). It is Lipschitz and nonconstant for \(V>0\). Equal endpoints and a positive rate bound therefore do not prove rest.
 
-Untuk sampling seragam, contoh yang bahkan mulus adalah:
+A smooth uniform-sampling example is:
 
 \[
 q(t)=A\sin(2\pi t/\Delta),\qquad
 0<|A|\le \frac{V\Delta}{2\pi}.
 \]
 
-Semua posisi pada \(t=n\Delta\) nol, tetapi riwayat berubah dan memenuhi \(|q'(t)|\le V\). Ini menghubungkan ambiguitas sampling Foundation dengan batas laju tambahan.
+All positions at \(t=n\Delta\) vanish, but the history changes with \(|q'(t)|\le V\). This connects Foundation's sampling ambiguity to an additional rate bound.
 
-**Konsekuensi lain.** Bila ada dua data tepat dengan \(d(q(a),q(b))>V(b-a)\), data dan model batas laju tidak kompatibel. Kesimpulan yang sah adalah perlunya menilai ulang salah satu premis, bukan memilih riwayat yang melanggar semuanya.
+**Further consequence.** Exact data with \(d(q(a),q(b))>V(b-a)\) contradict the bounded-rate model. A premise must be reassessed; selecting a history violating all premises is invalid.
 
-Untuk \(V=0\), batas Lipschitz sendiri memaksa riwayat konstan. Dalam hal itu ketetapan mengikuti asumsi seluruh selang, bukan dari kecukupan dua rekaman semata.
+For \(V=0\), the Lipschitz bound itself forces constancy. Constancy then follows from an interval-wide assumption, not two records alone.
 
-## Ketunggalan belum berarti kestabilan
+## Uniqueness is not stability
 
-P06 membahas apakah jawaban tunggal tersedia dari data ideal. Pertanyaan berbeda adalah apakah perubahan kecil data hanya menghasilkan perubahan kecil kesimpulan.
+P06 asks whether ideal data determine one answer. Another question is whether small data changes produce only small conclusion changes.
 
-Pemetaan injektif dapat memiliki invers yang sangat peka. Sebaliknya, reduksi tak injektif dapat tetap mempertahankan suatu sifat biner dengan andal bila seluruh kelas kompatibelnya menyetujui sifat itu.
+An injective map can have a highly sensitive inverse. Conversely, a noninjective reduction can reliably retain a binary property when all compatible histories agree on it.
 
-P08 menggunakan batas galat eksplisit untuk satu jenis pembenaran yang lebih kuat. Ia tidak mengatasi semua bentuk gangguan, ketidakpastian identitas, proyeksi, ataupun kesalahan model. Perbedaan epistemik ini mempertahankan kehati-hatian yang sudah dibangun dalam [Evidence Foundation](../Foundation/Core/Evidence.md).
+P08 uses explicit error bounds for one stronger justification. It does not resolve every disturbance, identity ambiguity, projection, or model error. These epistemic distinctions preserve the care established in [Evidence Foundation](../Foundation/Core/Evidence.md).

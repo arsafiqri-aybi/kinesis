@@ -1,63 +1,63 @@
 # Stationarity
 
-## Apa yang dinyatakan tetap?
+## What is claimed to remain constant?
 
-Kata “stasioner” dapat menunjuk ketetapan keadaan, besaran terpilih, distribusi, statistik proses, atau representasi. Sebelum menarik kesimpulan tentang gerakan, objek dan jenis kesetaraan harus disebutkan.
+“Stationary” may concern a state, selected quantity, distribution, process statistics, or representation. Motion conclusions require specifying both object and equality type.
 
-Hubungan antara [State](../Foundation/Core/State.md), [Change](../Foundation/Core/Change.md), dan [Evidence](../Foundation/Core/Evidence.md) memungkinkan beberapa implikasi dipisahkan secara tepat.
+Connections among [State](../Foundation/Core/State.md), [Change](../Foundation/Core/Change.md), and [Evidence](../Foundation/Core/Evidence.md) separate several implications precisely.
 
 ## P10
 
-**Ketetapan besaran yang diamati mengimplikasikan ketetapan keadaan hanya bila cukup membedakan.**
+**Constant observations imply a constant state only when sufficiently distinguishing.**
 
-**Premis.** \(h:T\to S\), dan \(A:S\to Z\) tidak bergantung waktu. Bila \(A\) injektif pada citra riwayat \(h(T)\), maka:
+**Premises.** Let \(h:T\to S\) and time-independent \(A:S\to Z\). If \(A\) is injective on \(h(T)\), then:
 
 \[
-A(h(t))\text{ konstan}
+A(h(t))\text{ constant}
 \quad\Longrightarrow\quad
-h(t)\text{ konstan}.
+h(t)\text{ constant}.
 \]
 
-**Bukti.** Untuk semua \(t,u\), kesamaan \(A(h(t))=A(h(u))\) dan keinjektifan pada citra memberi \(h(t)=h(u)\).
+**Proof.** For all \(t,u\), equality \(A(h(t))=A(h(u))\) and image injectivity imply \(h(t)=h(u)\).
 
-Sebaliknya, keadaan konstan selalu membuat \(A\circ h\) konstan. Untuk keluarga besaran \(A_i\), cukup bahwa keluarga itu memisahkan semua keadaan yang relevan; tidak perlu satu besaran skalar tunggal.
+Conversely, a constant state always makes \(A\circ h\) constant. For a family \(A_i\), separating relevant states suffices; one scalar quantity is unnecessary.
 
-**Batas teori.** “Keadaan” dan keinjektifan harus dinilai setelah redundansi representasi ditentukan. Dalam kuantum, fungsi yang memetakan keadaan ke distribusi hasil tidak berarti semua observabel memiliki nilai pasti klasik.
+**Theoretical limit.** State and injectivity are assessed after representational redundancy is fixed. Quantum state-to-outcome-distribution maps do not give classical definite values to all observables.
 
-**Hubungan dengan P06.** P10 adalah pemeriksaan pada lintasan keadaan terhadap besaran terpilih. P06 menilai suatu sifat pada seluruh riwayat yang kompatibel dengan data. Keduanya memakai kesetaraan keluaran, tetapi objek dan lingkup kuantifikasinya berbeda.
+**Relation to P06.** P10 examines a state path through selected quantities. P06 examines a property across all data-compatible histories. Both use equal outputs, but differ in objects and quantifier scope.
 
-Jika \(A\) bergantung waktu, keadaan tetap pun dapat menghasilkan keluaran berubah. Misalnya \(h(t)=0\) dan \(A_t(x)=x+t\). Sebaliknya, \(h(t)=t\) dengan \(A_t(x)=x-t\) memberi keluaran tetap. Perubahan pengamatan karena itu harus memisahkan perubahan sistem dari perubahan pembanding atau prosedur.
+If \(A\) depends on time, constant states can yield changing outputs: \(h(t)=0\), \(A_t(x)=x+t\). Conversely, \(h(t)=t\), \(A_t(x)=x-t\) yields constant output. Observation changes must separate system changes from changes in comparison or procedure.
 
 ## P11
 
-**Densitas stasioner membatasi divergensi arus, bukan selalu arus itu sendiri.**
+**Stationary density constrains current divergence, not necessarily current.**
 
-**Premis model tambahan.** Dalam domain dan acuan yang ditentukan, densitas \(\rho\) dan arus \(J\) cukup teratur dan memenuhi hukum konservasi tanpa sumber:
+**Additional model premises.** In a specified domain and reference, sufficiently regular density \(\rho\) and current \(J\) obey source-free conservation:
 
 \[
 \partial_t\rho+\nabla\cdot J=0.
 \tag{6}
 \]
 
-Persamaan semacam ini muncul dengan makna berbeda dalam konservasi massa dan probabilitas. Bentuk konservasi massa dibahas pada [N03](Sources.md#n03), sedangkan bentuk kuantum diwarisi dari [F-S10](../Foundation/Research/Sources.md#s10).
+Such equations have different meanings in mass and probability conservation. [N03](Sources.md#n03) discusses mass conservation; [F-S10](../Foundation/Research/Sources.md#s10) supplies the quantum form.
 
-**Kesimpulan.** Jika \(\partial_t\rho=0\), maka \(\nabla\cdot J=0\). Tidak mengikuti bahwa \(J=0\).
+**Conclusion.** If \(\partial_t\rho=0\), then \(\nabla\cdot J=0\). This does not imply \(J=0\).
 
-**Bukti dan contoh penyangkal.** Substitusi langsung ke (6) memberi divergensi nol. Pada lingkaran satu dimensi, arus konstan \(J(x)=J_0\ne0\) mempunyai \(\partial_xJ=0\) dan kompatibel dengan densitas tetap. Jadi implikasi menuju arus nol gagal.
+**Proof and counterexample.** Substitution gives zero divergence. On a one-dimensional circle, constant \(J(x)=J_0\ne0\) has \(\partial_xJ=0\) and admits constant density. Zero-current implication therefore fails.
 
-**Peran syarat batas.** Pada interval terhubung satu dimensi, \(\partial_xJ=0\) membuat \(J\) konstan terhadap \(x\) pada setiap waktu. Jika ditambah arus nol pada satu ujung untuk setiap waktu dan kontinuitas hingga batas, maka konstanta itu nol di seluruh interval. Kesimpulan arus nol kini mengikuti densitas stasioner, konservasi, dan syarat batas bersama.
+**Boundary conditions.** On a connected one-dimensional interval, \(\partial_xJ=0\) makes \(J\) constant with respect to \(x\) at each time. Adding zero current at one endpoint at every time and continuity to that boundary forces zero throughout. Zero current now follows jointly from stationary density, conservation, and the boundary condition.
 
-Kesimpulan terakhir tidak digeneralisasi ke semua domain berdimensi lebih tinggi: medan sirkulasi dapat berdivergensi nol serta memiliki fluks normal nol di batas tanpa menjadi nol di bagian dalam.
+This does not generalize to every higher-dimensional domain: circulation can have zero divergence and zero boundary-normal flux while remaining nonzero inside.
 
-### Arus total nol masih bukan diamnya setiap bagian
+### Zero total current still need not mean every part is at rest
 
-Pada lingkaran, dua komponen material homogen dapat mempunyai densitas \(\rho_0/2\), kecepatan \(+u\) dan \(-u\), dengan \(\rho_0>0,u\ne0\). Arus masing-masing adalah \(\rho_0u/2\) dan \(-\rho_0u/2\). Arus total nol, tetapi kedua komponen bergerak.
+On a circle, two homogeneous material components can have densities \(\rho_0/2\) and velocities \(+u\) and \(-u\), with \(\rho_0>0,u\ne0\). Currents \(\rho_0u/2\) and \(-\rho_0u/2\) cancel, but both components move.
 
-Ini contoh kinematis dua komponen tanpa kesimpulan tentang interaksi atau kestabilan dinamikanya. Untuk satu medium yang benar-benar dideskripsikan oleh hubungan tunggal \(J=\rho v\) dengan \(\rho>0\), \(J=0\) memang memberi \(v=0\). Hubungan konstitutif tunggal itu tidak boleh dipakai tanpa menyebut premisnya pada campuran atau arus probabilitas.
+This is a two-component kinematic example, without conclusions about interactions or dynamical stability. For a medium genuinely described by one relation \(J=\rho v\), \(\rho>0\), \(J=0\) implies \(v=0\). That single constitutive relation must not be silently applied to mixtures or probability currents.
 
-### Hubungan dengan keadaan kuantum pada lingkaran
+### Connection to quantum states on a circle
 
-Untuk model bebas pada lingkaran panjang \(L>0\):
+For a free model on a circle of length \(L>0\):
 
 \[
 \psi_n(x,t)=L^{-1/2}e^{i(k_nx-\omega_nt)},\qquad
@@ -65,52 +65,52 @@ k_n=\frac{2\pi n}{L},\quad
 \omega_n=\frac{\hbar k_n^2}{2m}.
 \]
 
-Dengan \(m>0,n\in\mathbb Z\), perhitungan dalam Foundation memberi \(|\psi_n|^2=1/L\) dan \(j_n=\hbar k_n/(mL)\). Keadaan \(n\) dan \(-n\), untuk \(n\ne0\), mempunyai densitas sama tetapi arus berlawanan.
+With \(m>0,n\in\mathbb Z\), Foundation gives \(|\psi_n|^2=1/L\) and \(j_n=\hbar k_n/(mL)\). States \(n\) and \(-n\), for \(n\ne0\), have equal densities and opposite currents.
 
-Maka densitas posisi tidak cukup membedakan keadaan tersebut; kesimpulan tentang arah arus tidak memfaktor melalui densitas saja, sesuai P04. Ini menghubungkan perhitungan kuantum dengan kriteria kecukupan deskripsi, tanpa menyatakan arus probabilitas adalah arus material klasik.
+Position density cannot distinguish them; current direction does not factor through density alone, as P04 requires. This connects the quantum calculation to descriptive sufficiency without identifying probability current with classical material current.
 
 ## P12
 
-**Statistik yang stasioner tidak mengharuskan riwayat individual konstan.**
+**Stationary statistics do not require constant individual histories.**
 
-**Premis contoh probabilistik.** Ambil \(A\ne0,\omega\ne0\), dan fase acak \(\Theta\) yang seragam pada \([0,2\pi)\). Definisikan:
+**Probabilistic example premises.** Take \(A\ne0,\omega\ne0\), and \(\Theta\) uniform on \([0,2\pi)\). Define:
 
 \[
 X(t)=A\cos(\omega t+\Theta).
 \]
 
-“Stasioner ketat” di sini berarti distribusi bersama pada setiap kumpulan waktu hingga tidak berubah setelah semua waktu digeser dengan selang sama.
+“Strictly stationary” means the joint distribution at every finite time collection is invariant under shifting all times equally.
 
-**Bukti stasioner.** Untuk waktu \(t_1,\ldots,t_n\) dan pergeseran \(s\):
+**Stationarity proof.** For \(t_1,\ldots,t_n\) and shift \(s\):
 
 \[
 (X(t_1+s),\ldots,X(t_n+s))
 =\bigl(A\cos(\omega t_i+\Theta+\omega s)\bigr)_{i=1}^n.
 \]
 
-Variabel \((\Theta+\omega s)\bmod2\pi\) tetap seragam. Maka distribusi bersama ruas kanan sama dengan distribusi pada \(t_1,\ldots,t_n\).
+The variable \((\Theta+\omega s)\bmod2\pi\) remains uniform. The joint distribution is therefore that at \(t_1,\ldots,t_n\).
 
-**Bukti riwayat tidak konstan.** Untuk fase tetap mana pun, \(t\mapsto A\cos(\omega t+\Theta)\) tidak konstan pada interval terbuka yang tidak kosong. Turunannya \(-A\omega\sin(\omega t+\Theta)\) tidak identik nol di interval tersebut.
+**Nonconstancy proof.** For every fixed phase, \(t\mapsto A\cos(\omega t+\Theta)\) is nonconstant on every nonempty open interval. Its derivative \(-A\omega\sin(\omega t+\Theta)\) is not identically zero there.
 
-**Konsekuensi.** Bahkan ketetapan seluruh distribusi bersama terhadap pergeseran waktu berbeda dari ketetapan satu realisasi. Ketetapan distribusi satu saat saja merupakan syarat yang lebih lemah lagi.
+**Consequence.** Even invariance of every joint distribution under time translation differs from constancy of one realization. Constant one-time distributions are weaker still.
 
-Fase acak seragam merupakan premis contoh, bukan sifat yang diturunkan dari enam fondasi. Tidak ditarik kesimpulan bahwa semua gerakan fisik bersifat acak, bahwa proses ini ergodik untuk setiap pilihan pengamatan waktu, atau bahwa pengamat selalu mengetahui distribusinya tepat.
+Uniform random phase is an example premise, not derived from the six foundations. This does not establish universally random motion, ergodicity under every temporal observation scheme, or exact observer knowledge of distributions.
 
 ## P13
 
-**Kesetaraan keadaan sesaat belum menjamin persamaan evolusi tetap berbentuk sama.**
+**Instantaneous state equivalence does not guarantee unchanged evolution equations.**
 
-**Premis model tambahan.** Dalam gambaran Schrödinger:
+**Additional model premises.** In the Schrödinger picture:
 
 \[
 i\hbar\partial_t\psi=H\psi,
 \]
 
-dan definisikan \(\psi'(t)=e^{i\theta(t)}\psi(t)\), dengan fase global real yang terdiferensialkan. Fungsi keadaan dan operator diasumsikan berada pada domain yang membuat diferensiasi serta operasi tertulis sah.
+define \(\psi'(t)=e^{i\theta(t)}\psi(t)\), with differentiable real global phase. States and operators have domains making these differentiations and operations valid.
 
-Pada setiap waktu, \(\psi'\) dan \(\psi\) mewakili ray keadaan murni yang sama menurut [F-S09](../Foundation/Research/Sources.md#s09).
+At each time, \(\psi'\) and \(\psi\) represent the same pure-state ray under [F-S09](../Foundation/Research/Sources.md#s09).
 
-**Penurunan.**
+**Derivation.**
 
 \[
 i\hbar\partial_t\psi'
@@ -119,14 +119,14 @@ i\hbar\partial_t\psi'
 H'=H-\hbar\dot\theta I.
 \]
 
-Di sini fase global merupakan kelipatan identitas sehingga komutasi dengan \(H\) tidak menambahkan suku lain.
+The global phase multiplies the identity, so commutation with \(H\) introduces no other terms.
 
-**Kesimpulan.** Pergantian representasi yang bergantung waktu harus diikuti transformasi generator yang sesuai. Untuk fase berubah, tidak sah begitu saja menyatakan \(\psi'\) memenuhi persamaan dengan \(H\) yang persis sama. Untuk fase konstan, suku tambahan nol.
+**Conclusion.** Time-dependent representational changes require a corresponding generator transformation. A changing phase does not justify assuming \(\psi'\) obeys exactly the same \(H\). Constant phase makes the extra term zero.
 
-Hasil ini sejalan dengan suku tambahan akibat acuan berubah dalam P01–P02, tetapi kesamaan pola diferensial tidak menyatakan basis spasial dan fase kuantum merupakan hal fisik yang sama.
+This parallels extra terms for changing references in P01–P02, but shared differential form does not identify spatial bases with quantum phase physically.
 
-## Ketetapan mempunyai beberapa tingkat
+## Several levels of constancy
 
-P10 menyatakan syarat ketika observabel tetap cukup untuk keadaan tetap. P11 menunjukkan informasi arus yang tidak ditentukan densitas serta pengaruh syarat batas. P12 membedakan hukum probabilitas dari realisasi. P13 membedakan kesetaraan ray dari konsistensi generator dalam representasi.
+P10 specifies when constant observables suffice for constant states. P11 exposes current information absent from density and boundary-condition effects. P12 separates probability laws from realizations. P13 separates ray equivalence from representational generator consistency.
 
-Tidak ada satu urutan sederhana “semakin stasioner berarti semakin diam” yang menyamakan semuanya. Kesimpulan yang tepat selalu menyebut objek, acuan, kesetaraan, dan struktur hukum yang dipakai.
+No simple “more stationary means more at rest” ordering equates these. Sound conclusions name their object, reference, equivalence, and law structure.

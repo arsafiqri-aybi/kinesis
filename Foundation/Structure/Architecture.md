@@ -1,100 +1,100 @@
 # Architecture
 
-## Kedudukan arsitektur
+## Status of the architecture
 
-Arsitektur ini memetakan syarat pengertian dan pembuktian tentang gerakan. Ia tidak mengusulkan hukum alam baru, tidak menentukan komponen perangkat lunak, dan tidak menganggap pengelompokan berkas sebagai unsur ontologis yang tidak dapat direduksi.
+This architecture maps conditions for meaningful descriptions and justification of motion. It proposes no new natural law, specifies no software components, and does not treat file groupings as irreducible ontological constituents.
 
-Temuan pengorganisasian utamanya adalah adanya dua persoalan yang berhubungan tetapi berbeda:
+Its main organizing finding is a distinction between two related questions:
 
-1. Struktur apa yang membuat suatu pernyataan tentang gerakan mempunyai arti?
-2. Bukti apa yang membenarkan pernyataan bahwa gerakan tertentu terjadi?
+1. What structures make a statement about motion meaningful?
+2. What evidence justifies claiming that a particular motion occurs?
 
-Deskripsi matematis dapat dibentuk tanpa pengamat. Pembenaran empiris memerlukan hubungan antara deskripsi, pengukuran, dan inferensi. Karena itu, Evidence dipertahankan sebagai fondasi epistemik; ia bukan penyebab keberadaan gerakan.
+A mathematical description can exist without an observer. Empirical justification requires relations among description, measurement, and inference. Evidence is therefore retained as an epistemic foundation, not a cause of motion's existence.
 
-Enam simpul merupakan **sintesis konseptual** dari struktur yang ditemukan dalam sumber dan diperiksa melalui contoh penyangkal. Tidak ada klaim bahwa “enam” merupakan jumlah minimum untuk semua kemungkinan teori.
+The six nodes are a **conceptual synthesis** of structures found in the sources and examined through counterexamples. There is no claim that six is minimal for all possible theories.
 
-## Enam simpul inti
+## Six core nodes
 
-| Simpul | Isi pokok | Alasan dipertahankan | Batasnya |
+| Node | Content | Reason for inclusion | Limit |
 | --- | --- | --- | --- |
-| [State](../Core/State.md) | Keadaan, identitas, perbedaan, kesetaraan | Tanpa kriteria perbedaan, klaim perubahan tidak terdefinisi | Tidak mengharuskan benda individual yang tetap sepanjang waktu |
-| [Time](../Core/Time.md) | Urutan, durasi, parameter, waktu fisik | Perbedaan antarbenda pada satu saat belum merupakan gerakan | Tidak mengharuskan waktu global, linear, atau kontinu untuk semua teori |
-| [Space](../Core/Space.md) | Posisi dan relasi spasial; konfigurasi | Perubahan umum perlu dibedakan dari perubahan susunan spasial | Ruang fisik tidak disamakan dengan semua ruang keadaan |
-| [Reference](../Core/Reference.md) | Aturan membandingkan; koordinat dan transformasi | Perubahan koordinat, perubahan acuan, dan perubahan fisik dapat tertukar | Tidak menyatakan semua gerakan atau semua struktur fisik hanyalah konvensi |
-| [Change](../Core/Change.md) | Riwayat dan sifat keteraturannya | Dua keadaan ujung tidak menentukan proses di antaranya | Lintasan deterministik mulus hanya salah satu model |
-| [Evidence](../Core/Evidence.md) | Pemetaan observasi, ambiguitas, persepsi | Perbedaan deskripsi tidak selalu dapat diketahui dari data tersedia | Tidak menjadi teori lengkap penglihatan atau instrumentasi |
+| [State](../Core/State.md) | States, identity, distinction, equivalence | Change is undefined without distinction criteria | Does not require enduring individual objects |
+| [Time](../Core/Time.md) | Order, duration, parameters, physical time | Differences between objects at one instant are not yet motion | Does not require global, linear, continuous time in every theory |
+| [Space](../Core/Space.md) | Positions, spatial relations, configurations | General change must be distinguished from spatial rearrangement | Physical space is not every state space |
+| [Reference](../Core/Reference.md) | Comparison rules, coordinates, transformations | Coordinate, reference, and physical changes can be confused | Does not reduce every motion or physical structure to convention |
+| [Change](../Core/Change.md) | Histories and regularity | End states do not determine the intervening process | Smooth deterministic trajectories are one model |
+| [Evidence](../Core/Evidence.md) | Observation maps, ambiguity, perception | Available data need not reveal descriptive differences | Not a complete theory of vision or instrumentation |
 
-Fondasi tersebut tidak tersusun sebagai rantai sebab. State, Time, dan Space menyediakan peran konseptual berbeda; Reference menentukan perbandingan; Change menyatukannya dalam deskripsi riwayat; Evidence membahas apa yang dapat dibenarkan dari observasi.
+These foundations do not form a causal chain. State, Time, and Space supply different conceptual roles; Reference specifies comparison; Change combines them in histories; Evidence examines observational justification.
 
-## Peta hubungan
+## Relation maps
 
-Pada diagram pertama, panah berarti **menyediakan struktur bagi**, dengan syarat yang dijelaskan di bawahnya. Diagram tidak menyatakan bahwa waktu diturunkan dari keadaan atau ruang merupakan konsekuensi waktu.
+In the first diagram, arrows mean **supplies structure for**, subject to the conditions below. They do not derive time from states or space from time.
 
 ```mermaid
 flowchart TD
-    A["State: perbedaan bermakna"] --> D["Reference: aturan perbandingan"]
-    B["Time: struktur temporal"] --> E["Change: riwayat"]
-    C["Space: susunan spasial"] --> D
+    A["State: meaningful distinctions"] --> D["Reference: comparison rules"]
+    B["Time: temporal structure"] --> E["Change: histories"]
+    C["Space: spatial arrangements"] --> D
     A --> E
     C --> E
     D --> E
 ```
 
-Panah Space menuju Change berlaku saat yang dibahas adalah gerakan spasial. Evolusi keadaan abstrak tidak selalu membutuhkan ruang fisik. Reference dapat berupa relasi internal, bukan selalu titik asal eksternal. Dalam relativitas, pemisahan Space–Time merupakan pemisahan pertanyaan untuk belajar; objek fisik dasarnya dapat berupa satu struktur ruang-waktu.
+Space supplies Change when spatial motion is concerned. Abstract state evolution need not require physical space. A reference can be an internal relation rather than an external origin. In relativity, separating Space and Time separates learning questions; the physical object may be one spacetime structure.
 
-Diagram kedua membatasi hubungan epistemik:
+The second diagram concerns epistemic relations:
 
 ```mermaid
 flowchart TD
-    H["Riwayat yang dimodelkan"] --> M["Relasi observasi"]
-    R["Acuan dan kondisi pengukuran"] --> M
+    H["Modelled histories"] --> M["Observation relation"]
+    R["Reference and measurement conditions"] --> M
     M --> D["Data"]
-    D --> I["Inferensi gerakan"]
-    A["Asumsi identitas dan keteraturan"] --> I
-    I --> P["Prediksi yang dapat diperiksa"]
+    D --> I["Motion inference"]
+    A["Identity and regularity assumptions"] --> I
+    I --> P["Testable predictions"]
     P --> D
 ```
 
-Panah balik terakhir menunjukkan perbandingan prediksi dengan data, bukan pembuktian otomatis bahwa inferensi tunggal benar. Banyak riwayat dapat menghasilkan data yang sama.
+The final return arrow compares predictions with data; it does not automatically prove a unique inference correct. Many histories can generate the same data.
 
-[Relations.tsv](Relations.tsv) memuat hubungan lebih rinci dan membedakan ketergantungan definisional, penambahan struktur, spesialisasi, batas inferensi, serta keterkaitan. Tidak semua hubungan merupakan ketergantungan langsung.
+[Relations.tsv](Relations.tsv) details definitional dependencies, added structures, specializations, inferential limits, and associations. Not every relation is a direct dependency.
 
-## Pengetahuan elementer dan struktur tambahan
+## Elementary knowledge and additional structures
 
-| Tingkat | Struktur | Pengertian yang tersedia |
+| Level | Structure | Available meaning |
 | --- | --- | --- |
-| Perbedaan | Himpunan alternatif dan kriteria kesetaraan | Sama atau berbeda |
-| Riwayat | Pengaitan alternatif dengan konteks temporal | Berubah atau tetap dalam deskripsi tertentu |
-| Gerakan spasial | Relasi atau konfigurasi spasial dan aturan perbandingan | Perubahan susunan spasial |
-| Kontinuitas | Topologi pada domain dan kodomain riwayat | Perubahan tanpa putus dalam pengertian topologis |
-| Besaran geometris | Metrik atau struktur geometris lain yang sesuai | Jarak, panjang, atau perbandingan ukuran |
-| Laju lokal | Struktur diferensial dan parameter yang memenuhi syarat | Turunan atau vektor singgung |
-| Dinamika | Hukum yang membatasi riwayat | Riwayat yang diizinkan oleh teori tertentu |
-| Pengetahuan empiris | Relasi observasi dan pembatasan ketidakpastian | Dukungan terhadap hipotesis gerakan |
+| Distinction | Alternatives and equality criteria | Same or different |
+| History | Alternatives related to temporal contexts | Changing or constant within a description |
+| Spatial motion | Spatial relations or configurations and comparison rules | Spatial rearrangement |
+| Continuity | Topologies on a history's domain and codomain | Unbroken change in a topological sense |
+| Geometric quantities | Metric or other suitable geometry | Distance, length, or size comparison |
+| Local rate | Suitable differential structure and parameter | Derivatives or tangent vectors |
+| Dynamics | Laws restricting histories | Histories allowed by a theory |
+| Empirical knowledge | Observation relations and uncertainty constraints | Support for motion hypotheses |
 
-Tabel tersebut merupakan ketergantungan **bersyarat**, bukan urutan sejarah perkembangan ilmu. Metrik tidak harus didahulukan sebelum topologi. Laju juga dapat didefinisikan dalam ruang metrik tanpa diferensiabilitas manifold melalui konstruksi yang berbeda; perbedaan itu dibahas di Change.
+These are **conditional** dependencies, not a historical development sequence. A metric need not precede topology. Rates can also be defined in metric spaces without manifold differentiability through another construction, as discussed in Change.
 
-## Hasil peninjauan kandidat awal
+## Review of initial candidates
 
-| Kandidat | Keputusan | Alasan |
+| Candidate | Decision | Reason |
 | --- | --- | --- |
-| Keberadaan | Dibahas sebagai batas ontologi dalam State | Deskripsi alternatif tidak membuktikan keberadaan fisik; bab metafisika umum tidak diperlukan |
-| Identitas dan perbedaan | Digabung dalam State | Kriteria “sama” dan “berbeda” harus dinilai bersama |
-| Relasi | Menjadi struktur lintas simpul | Relasi bukan satu jenis substansi yang cukup menjelaskan semua peran |
-| Urutan dan waktu | Digabung dalam Time dengan pembedaan tegas | Urutan tidak otomatis memberi durasi |
-| Ruang dan konfigurasi | Digabung dalam Space | Posisi tunggal tidak mencakup orientasi atau susunan sistem |
-| Kontinuitas | Ditempatkan di Change sebagai tambahan bersyarat | Gerakan tidak didefinisikan secara universal sebagai kurva mulus |
-| Simetri dan invariansi | Ditempatkan di Reference | Menjelaskan apa yang dipertahankan oleh perubahan deskripsi |
-| Pengamatan dan persepsi | Digabung dalam Evidence, tetap dibedakan | Keduanya menyangkut pembenaran, tetapi persepsi bukan instrumen tanpa interpretasi |
-| Gaya, energi, konservasi | Menjadi batas dinamika | Penting dalam teori tertentu, tidak menentukan arti dasar semua gerakan |
-| Teori kuantum dan relativitas | Menjadi pembanding lintas berkas | Diperlukan untuk menguji klaim universal; tidak diperluas menjadi buku teori lengkap |
+| Existence | Ontological limits in State | Formal alternatives do not prove physical existence; general metaphysics is unnecessary |
+| Identity and distinction | Combined in State | Criteria of sameness and difference must be assessed together |
+| Relation | Structure across nodes | Relations are not one substance explaining every role |
+| Order and time | Combined in Time, clearly distinguished | Order does not automatically supply duration |
+| Space and configuration | Combined in Space | A single position does not cover orientation or arrangements |
+| Continuity | Conditional addition in Change | Motion is not universally defined as a smooth curve |
+| Symmetry and invariance | Included in Reference | Explain what descriptive transformations preserve |
+| Observation and perception | Combined in Evidence, still distinguished | Both concern justification; perception involves interpretation |
+| Force, energy, conservation | Mark the boundary with dynamics | Important in particular theories, not definitions of every motion |
+| Quantum theory and relativity | Comparisons across files | Test universal claims without becoming full textbooks |
 
-## Pemeriksaan kelengkapan
+## Completeness checks
 
-Pengisian isi memperlihatkan bahwa berkas “posisi” saja terlalu sempit: rotasi dan konfigurasi internal akan terlewat. Isi Space karena itu memuat konfigurasi. Uraian “perubahan keadaan” saja terlalu luas: perubahan temperatur bukan otomatis perpindahan. Change membedakan perubahan umum dari gerakan spasial.
+Developing the content showed that “position” alone is too narrow: it misses rotation and internal configurations. Space therefore includes configuration. “State change” alone is too broad: temperature change is not automatically displacement. Change distinguishes general change from spatial motion.
 
-Pemeriksaan juga menuntut pemisahan antara invariansi representasi dan ketakterlihatan bagi pengamat. Keduanya dapat menghasilkan data serupa, tetapi memiliki alasan berbeda. State dan Reference menangani kesetaraan representasi; Evidence menangani keterbatasan observasi.
+Review also required separating representational invariance from observational invisibility. Both may yield similar data for different reasons. State and Reference address representational equivalence; Evidence addresses observation limits.
 
-Minimalitas yang dicapai adalah **ekonomi pengorganisasian dalam cakupan ini**: tidak ada simpul inti yang hanya berisi daftar teknik turunan; setiap simpul mengatasi kekeliruan konseptual yang berbeda. Bukti matematis bahwa tidak mungkin ada arsitektur lain yang lebih ringkas tidak tersedia dan tidak diklaim.
+The achieved minimality is **organizational economy within this scope**: no core node merely catalogues derived techniques, and each addresses a different conceptual error. There is no mathematical proof that a more compact architecture is impossible.
 
-Penilaian rinci beserta batas pemeriksaannya tersedia dalam [Review](../Research/Review.md). Dasar–turunan dan perubahan kedudukan menurut teori dijelaskan dalam [Boundaries](Boundaries.md).
+Detailed assessment and its limits appear in [Review](../Research/Review.md). Foundational–derived boundaries and theory-relative roles are explained in [Boundaries](Boundaries.md).

@@ -1,33 +1,39 @@
 # Graph
 
-Pemetaan Foundation dan Synthesis Motion dalam Graph.
+A mapping of Motion's Foundation and Synthesis.
 
-Model: **Motion**. Revisi tersimpan: **2**. Identitas dan hash tercatat dalam [Record.json](Record.json). Ekspor lengkap dari Graph tersedia dalam [Model.json](Model.json).
+The upstream **Motion** model was exported at revision **2**. [Record.json](Record.json) records its identity and validation separately from this repository's English derivative, [Model.json](Model.json).
 
-## Cakupan
+## Coverage
 
-Peta memuat 28 dokumen sumber, 186 bagian dokumen, enam fondasi, 13 hasil sintesis, 43 entri klaim, 45 relasi bersyarat, seluruh entri glosarium dan notasi, serta 25 catatan bibliografi. Totalnya 498 unsur dan 1.448 catatan hubungan atau atribut.
+The map contains 28 source documents, 186 sections, six foundations, 13 synthesis results, 43 claim entries, 45 conditional relations, all glossary and notation entries, and 25 bibliographic records: 498 entities and 1,448 relationship or attribute records in total.
 
-Isi lengkap dokumen, rumus, pembuktian, contoh penyangkal, dan pertanyaan terbuka dipertahankan dalam sources. Klaim dan relasi yang telah tercatat dipetakan tersendiri dengan syarat serta lokasi sumbernya. Ini cakupan terhadap pustaka yang tersedia, bukan klaim bahwa semua hubungan implisit dalam setiap kalimat telah ditemukan.
+Full source text, formulas, proofs, counterexamples, and open questions are retained in sources. Recorded claims and relations are separately mapped with conditions and source locations. This covers the available corpus; it does not claim discovery of every implicit relation in every sentence.
 
-## Makna hubungan
+## Relation meanings
 
-- proof_uses: hasil yang digunakan dalam pembuktian utama menurut Trace.
-- conceptual_connection: keterkaitan konseptual, bukan premis pembuktian.
-- uses_foundation: fondasi yang disebut sebagai landasan dalam Trace.
-- result_premises, result_limits, result_status: kondisi dan status hasil.
-- relation_condition, relation_meaning: batas relasi yang direifikasi.
-- claim_status, claim_conditions: status dan syarat klaim sumber.
-- document_link: tautan navigasi, bukan implikasi ilmiah.
+- proof_uses: results used in primary proofs according to Trace.
+- conceptual_connection: conceptual associations, not proof premises.
+- uses_foundation: foundations named in Trace.
+- result_premises, result_limits, result_status: result conditions and status.
+- relation_condition, relation_meaning: qualifications of reified relations.
+- claim_status, claim_conditions: source-claim status and conditions.
+- document_link: navigation links, not scientific implications.
 
-Klaim Graph berstatus accepted berarti **catatan pemetaan diterima sebagai representasi dokumen**. Itu tidak mengubah hipotesis atau proposal dalam dokumen menjadi fakta ilmiah. Kueri menggunakan view dengan context **documentation**.
+Accepted Graph records mean **the mapping is accepted as a representation of the document**. They do not promote source hypotheses or proposals into scientific facts. Queries use the **documentation** context.
 
-Tidak ada aturan Horn yang mengubah hubungan dokumenter menjadi hukum universal. Bukti matematis tetap tersedia sebagai teks dan premis terhubung; pemetaan ini tidak mengklaim Graph telah memverifikasi seluruh analisis, kuantor tak hingga, atau persamaan diferensialnya secara formal.
+No Horn rule turns documentary connections into universal laws. Mathematical proofs remain text with connected premises; the map does not formally verify all analysis, infinite quantification, or differential equations.
 
-## Sumber dan versi
+## Sources and versions
 
-Sebanyak 1.446 catatan memiliki jangkar ke versi sumber yang disimpan. Dua catatan administratif menghubungkan proyek ke dua lapisannya. Snapshot sumber diambil sebelum penambahan folder Graph, sehingga tidak memuat ekspor dirinya sendiri.
+Of the records, 1,446 have version-specific source anchors. Two administrative records connect the project to its layers. Source snapshots precede addition of Graph, avoiding self-inclusion.
 
-Catatan bibliografi merupakan rujukan yang dicatat dalam pustaka, bukan 25 artikel lengkap yang diunduh atau bukti empiris yang independen. Hubungan sitasi dan isi sumber tetap dapat diperiksa.
+Bibliographic records describe references in the corpus, not 25 downloaded full articles or independent empirical evidence. Citations and source content remain inspectable.
 
-Foundation dan Synthesis tidak diubah. Ekspor tersedia untuk peninjauan dan kelanjutan pekerjaan. Publikasi repositori publik telah disetujui pengguna.
+## English edition
+
+The repository edition translates documents, section labels, glossary definitions, trace fields, and embedded source snapshots. Stable entity identifiers and relation types are retained. Anchors are recalculated in UTF-16 against translated source versions; original offsets are not reused.
+
+Historical snapshots of the project index and checksum files remain snapshots of the pre-Graph corpus. Their English versions identify the historical context. Current file-integrity manifests are outside Model.json; snapshot manifests describe the corresponding source snapshot and do not recursively hash the graph containing them.
+
+The upstream model revision and its validation apply to the original export. Local structural and provenance checks for the translated derivative are reported separately in [Checks.md](Checks.md). Translation does not assert that the hosted Graph model has been updated.

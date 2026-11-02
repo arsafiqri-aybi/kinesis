@@ -1,23 +1,25 @@
 # Checks
 
-Pemeriksaan pemetaan Motion, 2 November 2026.
+Motion mapping and English-edition review, **2 November 2026**.
 
-## Pemeriksaan cakupan
+## Upstream mapping checks
 
-Seluruh 28 dokumen teks dari snapshot Motion dimuat sebagai sumber. Isi setiap sumber dibandingkan langsung dengan berkas asal. Semua 186 judul bagian, enam fondasi, 13 hasil, 43 entri klaim, 45 relasi, definisi glosarium, dan catatan bibliografi dipertahankan.
+The original mapping loaded all 28 text documents from the pre-Graph Motion snapshot. Source content was compared with its files. All 186 headings, six foundations, 13 results, 43 claims, 45 relations, glossary definitions, and bibliographic entries were retained.
 
-Seluruh 1.446 jangkar sumber diperiksa agar merujuk sumber yang ada dan rentang UTF-16 yang tidak kosong. Contoh jangkar versi dan kutipannya juga diperiksa melalui Graph.
+All 1,446 source anchors were checked for existing sources and nonempty UTF-16 ranges. Versioned anchor examples were also inspected through Graph.
 
-Kueri langsung Graph mengembalikan 13 hasil sintesis. Kueri ketergantungan bukti mengembalikan tepat P05→P04, P06→P04, dan P07→P06. Keterkaitan lain disimpan dengan jenis terpisah.
+Live upstream queries returned 13 synthesis results and exactly these proof dependencies: P05→P04, P06→P04, P07→P06. Other associations use distinct predicates.
 
-## Validasi Graph
+## Upstream validation
 
-Validasi graph-shapes-v1 pada konteks documentation selesai tanpa pelanggaran atau kontradiksi tercatat. Hasil pemeriksaan berada dalam Record.json.
+graph-shapes-v1 validation of the documentation context completed without recorded violations or contradictions. [Record.json](Record.json) identifies this historical result as upstream validation.
 
-Validasi ini terbatas pada representasi yang dipilih. Tidak ada klaim tentang kebenaran universal semua isi, kecukupan eksperimen, konsistensi OWL penuh, atau verifikasi formal semua pembuktian matematis.
+Its scope is the selected representation, not universal scientific truth, experimental adequacy, full OWL consistency, or formal verification of all proofs.
 
-## Pemeliharaan
+## English derivative checks
 
-Sumber Foundation dan Synthesis dipertahankan. Snapshot Graph dapat ditelusuri melalui identitas revisi serta ekspor penuh. Checksum proyek diperbarui untuk memasukkan folder Graph.
+The translated edition retains stable identifiers, source count, entity count, claim count, relation types, and proof dependencies. Source texts and mapped literals are translated together. Source versions are edition-specific and all UTF-16 anchors are rebuilt against their matching texts.
 
-Catatan ini merekam tahap pemetaan sebelum publikasi. Publikasi repositori dilakukan setelah persetujuan pengguna.
+Local checks verify source identifiers, nonempty in-range anchors, section labels, mapped trace and glossary fields, mathematical-expression preservation, relative links, and current checksum manifests. [Origins.tsv](../Synthesis/Origins.tsv) distinguishes original source hashes from current English hashes.
+
+These are local structural and editorial checks. The derivative has not been revalidated by the hosted Graph service, and the upstream validation is not presented as validation of changed bytes.

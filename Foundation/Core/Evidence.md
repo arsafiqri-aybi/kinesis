@@ -1,135 +1,135 @@
 # Evidence
 
-## Gerakan dan pengetahuan tentang gerakan
+## Motion and knowledge of motion
 
-Suatu riwayat dapat didefinisikan secara matematis tanpa pengamat. Pernyataan empiris bahwa suatu gerakan terjadi memerlukan bukti dan hubungan yang dapat dipertanggungjawabkan antara bukti tersebut dengan riwayat.
+A mathematical history can be defined without an observer. An empirical claim that motion occurs requires evidence and a defensible connection between that evidence and the history.
 
-Empat lapisan perlu dibedakan:
+Four layers must be distinguished:
 
-| Lapisan | Isi |
+| Layer | Content |
 | --- | --- |
-| Kejadian yang dimodelkan | Keadaan dan hubungan fisik yang diasumsikan |
-| Observasi | Hasil interaksi sistem dengan prosedur atau perangkat pengamatan |
-| Inferensi | Kesimpulan tentang riwayat berdasarkan data dan asumsi |
-| Persepsi | Pengalaman atau penilaian gerakan oleh sistem perseptual |
+| Modelled events | Assumed physical states and relations |
+| Observation | Results of interactions with an observational procedure or device |
+| Inference | Conclusions about histories from data and assumptions |
+| Perception | A perceptual system's experience or judgement of motion |
 
-Lapisan itu berhubungan, tetapi tidak saling identik. Kesamaan pengalaman tidak membuktikan kesamaan penyebab fisik; kesamaan satu pengukuran tidak membuktikan kesamaan seluruh keadaan.
+The layers are related but not identical. Equal experiences do not prove equal physical causes; one equal measurement does not prove equal entire states.
 
-## Relasi observasi
+## Observation relations
 
-Dalam model sederhana:
+In a simple model:
 
 \[
 y_i=H_i(s(t_i),\eta_i),
 \]
 
-dengan \(H_i\) relasi pengamatan dan \(\eta_i\) kondisi yang mencakup gangguan, kalibrasi, atau keadaan pengamat. Bentuk deterministik ini bukan syarat semua pengukuran; model dapat memberi distribusi probabilitas hasil.
+where \(H_i\) is an observation relation and \(\eta_i\) includes noise, calibration, or observer conditions. This deterministic form is not required for every measurement; a model may instead assign outcome distributions.
 
-Tidak setiap catatan berasal dari satu saat ideal. Paparan selama selang, misalnya, dapat melibatkan rata-rata:
+Not every record comes from one ideal instant. An exposure over an interval may involve an average:
 
 \[
 y_i=\frac1{\Delta}\int_{t_i}^{t_i+\Delta}
 H(s(t))\,dt.
 \]
 
-Persamaan tersebut merupakan contoh struktur observasi, bukan hukum umum instrumen. Ia memperlihatkan mengapa data yang sama dapat menggabungkan informasi beberapa saat.
+This illustrates observation structure, not a universal instrument law. It shows how one datum can combine information from several instants.
 
-Dalam metrologi, measurand adalah besaran yang hendak diukur. Hasil dan ketidakpastian pengukuran perlu dibedakan dari nilai yang tidak diketahui secara tepat. Ketidakpastian tidak identik dengan satu galat yang nilainya sudah diketahui. [S18](../Research/Sources.md#s18)
+In metrology, the measurand is the quantity intended to be measured. Measurement results and uncertainty differ from an imperfectly known value. Uncertainty is not a single error whose value is already known. [S18](../Research/Sources.md#s18)
 
-## Keteridentifikasian
+## Identifiability
 
-Misalkan \(\mathcal H\) himpunan riwayat yang diizinkan asumsi dan \(\mathcal O:\mathcal H\to Y\) pemetaan observasi. Untuk data \(y\), riwayat yang kompatibel berada dalam:
+Let \(\mathcal H\) be the histories admitted by the assumptions and \(\mathcal O:\mathcal H\to Y\) the observation map. For data \(y\), compatible histories lie in:
 
 \[
 \mathcal H_y=\{h\in\mathcal H:\mathcal O(h)=y\}.
 \]
 
-Sifat \(P\), misalnya “bergerak terhadap acuan R selama selang I”, dapat diidentifikasi dari data ideal bila semua riwayat di \(\mathcal H_y\) mempunyai nilai \(P\) sama.
+A property \(P\), such as “moving relative to R during I”, is identifiable from ideal data if every history in \(\mathcal H_y\) has the same \(P\) value.
 
-**Hasil langsung.** Jika ada \(h_1,h_2\in\mathcal H_y\) dengan \(P(h_1)\ne P(h_2)\), data itu tidak cukup menentukan \(P\). Tidak ada pengurangan gangguan numerik yang sendirian dapat memperbaiki ketidakunikan struktural ini.
+**Immediate result.** If \(h_1,h_2\in\mathcal H_y\) have \(P(h_1)\ne P(h_2)\), those data do not determine \(P\). Numerical noise reduction alone cannot resolve structural nonuniqueness.
 
-Sebaliknya, tidak semua perbedaan riwayat harus diidentifikasi untuk mengetahui satu sifat. Dua riwayat dapat berbeda detail tetapi keduanya pasti bergerak. Keteridentifikasian selalu terkait pertanyaan tertentu.
+Conversely, identifying one property need not require distinguishing every history. Histories can differ in detail while both necessarily involve motion. Identifiability is question-specific.
 
-Dalam model probabilistik, kesetaraan observasional dapat berarti distribusi data sama. Masalah ketunggalan model dibedakan dari keterbatasan jumlah sampel.
+In probabilistic models, observational equivalence can mean equal data distributions. Model uniqueness differs from finite-sample limitations.
 
-## Sampel yang sama, riwayat berbeda
+## Equal samples, different histories
 
-Ambil waktu sampel \(t_n=n\Delta\), \(\Delta>0\), dan:
+Take sample times \(t_n=n\Delta\), \(\Delta>0\), and:
 
 \[
 q_1(t)=0,\qquad
 q_2(t)=A\sin\left(\frac{2\pi t}{\Delta}\right),\quad A\ne0.
 \]
 
-Semua sampel memenuhi \(q_1(t_n)=q_2(t_n)=0\), padahal riwayat kedua tidak konstan. Maka sampel posisi yang sama tidak membuktikan diam di antara sampel, bahkan bila kedua riwayat kontinu dan mulus.
+Every sample satisfies \(q_1(t_n)=q_2(t_n)=0\), although the second history is nonconstant. Equal position samples therefore do not establish rest between samples, even for continuous smooth histories.
 
-Teorema sampling memberikan ketunggalan rekonstruksi pada kelas fungsi dengan batas frekuensi serta syarat sampling ideal yang sesuai. Teorema itu tidak menyatakan bahwa rekaman berhingga tanpa batasan model menentukan sembarang riwayat fisik. [S15](../Research/Sources.md#s15)
+Sampling theorems guarantee unique reconstruction on suitably bandlimited function classes under appropriate ideal sampling conditions. They do not claim that unrestricted finite records determine arbitrary physical histories. [S15](../Research/Sources.md#s15)
 
-Contoh sinus di atas sengaja berada di luar jaminan rekonstruksi ketika frekuensinya tidak dibatasi cukup rendah. Tidak ada pertentangan antara contoh ambiguitas dan teorema bersyarat.
+The sinusoid above deliberately falls outside reconstruction guarantees when its frequency is not bounded sufficiently low. The ambiguity example does not contradict a conditional theorem.
 
-## Identitas dan proyeksi
+## Identity and projection
 
-Untuk dua titik klasik yang labelnya tidak diamati, bandingkan:
+For two classical points with unobserved labels, compare:
 
 \[
 h_1(t)=(t,-t),\qquad
 h_2(t)=(|t|,-|t|).
 \]
 
-Pasangan terurut berbeda pada sebagian waktu. Namun, himpunan posisi tidak berlabel sama: \(\{t,-t\}=\{|t|,-|t|\}\). Data semacam itu tidak menentukan apakah label melewati satu sama lain atau kembali.
+The ordered pairs differ at some times, but their unlabelled position sets agree: \(\{t,-t\}=\{|t|,-|t|\}\). Such data do not determine whether labels cross or turn back.
 
-Asumsi tentang keteraturan kecepatan, interaksi, atau penandaan material dapat membatasi pilihan. Pembatasan itu harus disebutkan sebagai tambahan, bukan sebagai informasi yang sudah terkandung dalam posisi tak berlabel. Contoh ini bersifat klasik; ia bukan model pertukaran partikel kuantum.
+Assumptions about velocity regularity, interactions, or material markings can restrict the alternatives. They are additional constraints, not information already in unlabelled positions. This is a classical example, not a quantum-particle exchange model.
 
-Proyeksi juga menghapus informasi. Dalam kamera perspektif ideal:
+Projection also discards information. In an ideal perspective camera:
 
 \[
 (u,v)=\left(f\frac{x}{z},f\frac{y}{z}\right),\quad z\ne0.
 \]
 
-Mengalikan \((x,y,z)\) dengan faktor positif sama mempertahankan \((u,v)\). Satu posisi citra karena itu tidak menentukan kedalaman secara tunggal. Riwayat citra pun memerlukan informasi tambahan untuk memisahkan gerak objek, acuan kamera, dan perubahan struktur tiga dimensi.
+Multiplying \((x,y,z)\) by the same positive factor preserves \((u,v)\). One image position therefore does not uniquely determine depth. Even image histories require additional information to separate object motion, camera reference, and changing three-dimensional structure.
 
-## Perubahan stimulus dan gerakan pola
+## Stimulus change and pattern motion
 
-Untuk intensitas citra \(I(x,y,t)\) yang diasumsikan tetap sepanjang lintasan pola terdiferensialkan, aturan rantai memberi:
+For image intensity \(I(x,y,t)\) assumed constant along a differentiable pattern path, the chain rule gives:
 
 \[
 I_xu+I_yv+I_t=0.
 \]
 
-Ini satu persamaan dengan dua komponen gerak \((u,v)\). Di lokasi dengan gradien spasial bukan nol, hanya proyeksi tertentu yang dibatasi. Keterbatasan lokal ini merupakan inti aperture problem dalam model tersebut. [S13](../Research/Sources.md#s13)
+This is one equation for two motion components \((u,v)\). At a nonzero spatial gradient, only a particular projection is constrained. This local limitation is the model's aperture problem. [S13](../Research/Sources.md#s13)
 
-Penurunan persamaan bergantung pada asumsi ketetapan intensitas sepanjang pola. Perubahan pencahayaan, penghalangan, atau perubahan pola dapat menggagalkan asumsi. Penggunaan contoh ini hanya menjelaskan batas informasi lokal; tidak diperlukan algoritma estimasi tertentu.
+The derivation assumes constant intensity along the pattern. Illumination changes, occlusion, or pattern changes may violate it. This example explains a local information limit without requiring an estimation algorithm.
 
-## Persepsi gerakan
+## Motion perception
 
-**Hasil empiris dalam kondisi tertentu.** Eksperimen Adelson dan Movshon memperlihatkan ambiguitas arah pada grating yang dilihat melalui aperture serta perubahan koherensi perseptual ketika dua grating digabung. Koherensi dipengaruhi sifat stimulus seperti kontras dan frekuensi spasial. [S14](../Research/Sources.md#s14)
+**Empirical result under particular conditions.** Adelson and Movshon showed directional ambiguity for gratings viewed through apertures and changes in perceptual coherence when two gratings are combined. Coherence depends on stimulus properties such as contrast and spatial frequency. [S14](../Research/Sources.md#s14)
 
-Hasil tersebut membatasi penyamaan gerakan yang dipersepsikan dengan satu komponen stimulus lokal. Pemilihan satu penjelasan neuronal lengkap tetap memerlukan bukti lebih lanjut; uraian mekanisme yang diajukan suatu penelitian tidak otomatis menjadi definisi semua persepsi gerakan.
+These findings constrain identification of perceived motion with a single local stimulus component. A complete neuronal explanation needs further evidence; a study's proposed mechanism is not automatically a definition of all motion perception.
 
-Pada eksperimen lain, perhatian dapat memengaruhi gerakan tampak yang dilaporkan dari stimulus tertentu. Temuan ini mendukung pembedaan antara pola stimulus dan interpretasi gerak; ia tidak berarti semua gerakan perseptual diciptakan bebas oleh perhatian. [S21](../Research/Sources.md#s21)
+Other experiments show attention influencing reported apparent motion for particular stimuli. This supports distinguishing stimulus patterns from motion interpretation, not the claim that attention freely creates all perceived motion. [S21](../Research/Sources.md#s21)
 
-Gerakan fisik dan pengalaman gerakan karena itu memiliki hubungan ilmiah yang perlu diselidiki, bukan identitas definisional yang dapat diasumsikan sejak awal.
+Physical motion and experienced motion thus have a scientific relationship to investigate, rather than a definitional identity to assume.
 
-## Ketidakpastian dan ketidakunikan
+## Uncertainty and nonuniqueness
 
-Ketidakpastian nilai dan ketidakunikan penjelasan merupakan masalah berbeda. Data sangat presisi tetap dapat kompatibel dengan banyak riwayat jika pemetaan observasi tidak injektif. Sebaliknya, model yang teridentifikasi secara ideal dapat sulit diestimasi dari data bising.
+Value uncertainty and explanatory nonuniqueness differ. Highly precise data can remain compatible with many histories when observation is noninjective. Conversely, an ideally identifiable model can be hard to estimate from noisy data.
 
-**Contoh matematis.** Bila posisi pada dua waktu masing-masing memiliki galat terbatas \(|e_i|\le\varepsilon\), selisih posisi terbagi selang waktu \(\Delta t\) memiliki kontribusi galat paling besar:
+**Mathematical example.** If positions at two times have bounded errors \(|e_i|\le\varepsilon\), their difference divided by interval \(\Delta t\) has an error contribution bounded by:
 
 \[
 \left|\frac{e_2-e_1}{\Delta t}\right|
 \le\frac{2\varepsilon}{|\Delta t|}.
 \]
 
-Kesimpulan ini mengasumsikan waktu diketahui tepat dan model galat batas tersebut benar. Ia tidak merupakan rumus umum ketidakpastian kecepatan. Namun, ia memperlihatkan mengapa laju hasil diferensiasi dapat lebih sensitif daripada pengamatan posisi.
+This assumes exact times and the stated bounded-error model. It is not a universal velocity-uncertainty formula, but shows why differentiation-derived rates can be more sensitive than positions.
 
-## Kedudukan fundamental
+## Fundamental role
 
-Evidence menyediakan dasar epistemik untuk membedakan:
+Evidence supplies an epistemic basis for distinguishing:
 
-- Apa yang diamati.
-- Apa yang mengikuti secara matematis.
-- Apa yang disimpulkan menggunakan asumsi model.
-- Apa yang tetap tidak dapat dibedakan oleh data tersedia.
+- What is observed.
+- What follows mathematically.
+- What is inferred using model assumptions.
+- What available data still cannot distinguish.
 
-Tidak teramatinya perubahan tidak dengan sendirinya membuktikan tidak adanya gerakan. Teramatinya perubahan juga tidak dengan sendirinya menetapkan satu identitas, acuan, atau mekanisme gerak. Kekuatan kesimpulan ditentukan oleh relasi observasi dan kelas kemungkinan yang memang diuji.
+Unobserved change does not itself establish absence of motion. Observed change does not itself establish a unique identity, reference, or mechanism. Inferential strength depends on the observation relation and the possibility class actually tested.

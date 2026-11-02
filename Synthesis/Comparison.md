@@ -1,65 +1,65 @@
 # Comparison
 
-## Perbandingan mendahului klaim ketetapan
+## Comparison precedes constancy claims
 
-Menyatakan konfigurasi pada dua waktu “sama” memerlukan aturan menghubungkan konteks tersebut. Angka koordinat yang sama belum cukup, sebab asal atau basis dapat berubah. Sebaliknya, angka berbeda belum menetapkan perubahan fisik bila labelnya diganti.
+Calling configurations at two times “equal” requires a rule connecting those contexts. Equal coordinates alone are insufficient if origins or bases change. Different coordinates do not establish physical change if labels change.
 
-[Reference](../Foundation/Core/Reference.md) menyajikan konfigurasi \(q_t\in Q_t\) dan pemetaan pembanding \(F_t:Q_t\to Q_R\). [State](../Foundation/Core/State.md) menetapkan peran kesetaraan; [Time](../Foundation/Core/Time.md) membedakan waktu dan parameter. Hubungannya menghasilkan syarat konsistensi berikut.
+[Reference](../Foundation/Core/Reference.md) presents \(q_t\in Q_t\) and comparison maps \(F_t:Q_t\to Q_R\). [State](../Foundation/Core/State.md) establishes equality's role; [Time](../Foundation/Core/Time.md) distinguishes time from parameters. Together they yield the following consistency condition.
 
 ## P01
 
-**Kovariansi aturan perbandingan.**
+**Covariance of comparison rules.**
 
-**Premis.** Untuk setiap \(t\), diberikan bijeksi representasi \(f_t:Q_t\to Q'_t\), konfigurasi \(q_t\), dan aturan pembanding \(F_t\). Semua pemetaan berlaku pada bagian domain yang dibicarakan. Definisikan:
+**Premises.** For each \(t\), let \(f_t:Q_t\to Q'_t\) be a representational bijection, \(q_t\) a configuration, and \(F_t\) a comparison rule. All maps apply on the domains considered. Define:
 
 \[
 q'_t=f_t(q_t),\qquad F'_t=F_t\circ f_t^{-1}.
 \]
 
-**Kesimpulan.**
+**Conclusion.**
 
 \[
 F'_t(q'_t)=F_t(q_t).
 \]
 
-**Bukti.** Substitusi memberi \(F_t(f_t^{-1}(f_t(q_t)))=F_t(q_t)\). Karena riwayat hasil perbandingan identik pada setiap konteks, ketetapan, perbedaan ujung, dan sifat lain dari riwayat pembanding itu tetap sama.
+**Proof.** Substitution gives \(F_t(f_t^{-1}(f_t(q_t)))=F_t(q_t)\). Identical comparison histories at every context preserve constancy, endpoint differences, and other properties of that history.
 
-Ini hasil aljabar pemetaan. Kontinuitas atau diferensiabilitas belum diperlukan. Jika sifat tersebut juga hendak dipertahankan dalam koordinat, transformasi harus cocok dengan struktur tambahan itu.
+This is map algebra requiring neither continuity nor differentiability. Preserving those properties in coordinates additionally requires compatible transformations.
 
-**Contoh.** Pada garis dengan waktu bersama, posisi benda \(q(t)=t\) dan acuan tetap mempunyai \(F_t(x)=x\). Ganti koordinat menjadi \(x'=x-t\). Koordinat benda kini \(q'(t)=0\), tetapi aturan pembanding yang sama menjadi \(F'_t(x')=x'+t\). Maka \(F'_t(q'(t))=t\): pernyataan terhadap acuan semula tetap menunjukkan perubahan.
+**Example.** On a line with shared time, take \(q(t)=t\) and fixed-reference \(F_t(x)=x\). Change coordinates to \(x'=x-t\). The object's coordinates become \(q'(t)=0\), but the same comparison rule becomes \(F'_t(x')=x'+t\). Thus \(F'_t(q'(t))=t\): change relative to the original reference remains.
 
-Jika setelah pergantian koordinat digunakan \(G'_t(x')=x'\), yang dibandingkan sudah berbeda: acuan baru mengikuti asal bergerak. Hasil yang tetap bukan kontradiksi P01 karena aturan pembanding fisiknya telah berubah.
+Using \(G'_t(x')=x'\) after this coordinate change instead selects a different comparison: a reference following the moving origin. Its constant result does not contradict P01 because the physical comparison rule changed.
 
-**Konsekuensi konseptual.** Predikat gerakan relatif berkaitan dengan keadaan **bersama acuan dan aturan perbandingan**, bukan semata dengan perubahan angka koordinat objek. Ini tidak menyatakan bahwa setiap keluarga \(F_t\) dapat diwujudkan menjadi alat fisik atau bahwa satu pembanding global tersedia dalam semua ruang-waktu.
+**Conceptual consequence.** Relative-motion predicates concern the state **together with its reference and comparison rules**, rather than object coordinates alone. This does not make every \(F_t\) family physically realizable or guarantee a global comparison in every spacetime.
 
 ## P02
 
-**Pelestarian sifat memerlukan struktur yang sesuai.**
+**Preserving a property requires compatible structure.**
 
-Misalkan \(h:T\to Q\), \(f:Q\to Q'\) tidak bergantung waktu, dan \(\phi:T'\to T\). Riwayat baru adalah:
+Let \(h:T\to Q\), with time-independent \(f:Q\to Q'\) and \(\phi:T'\to T\). The transformed history is:
 
 \[
 \widetilde h=f\circ h\circ\phi.
 \]
 
-| Sifat yang dibicarakan | Syarat cukup untuk pelestarian dua arah |
+| Property | Sufficient conditions for two-way preservation |
 | --- | --- |
-| Konstan atau tidak konstan | \(f\) injektif pada citra yang relevan dan \(\phi\) surjektif ke domain riwayat |
-| Urutan penelusuran | Ditambah struktur urutan dan \(\phi\) bijektif meningkat |
-| Kontinuitas | Homeomorfisme pada ruang dan domain yang relevan |
-| Keberadaan struktur turunan yang setara | Difeomorfisme yang sesuai pada ruang dan parameter |
-| Nolnya vektor turunan pada titik bersesuaian | Turunan \(Df\) injektif dan \(\phi'\ne0\), beserta keterdiferensialan |
-| Panjang kurva bernilai sama | Misalnya \(f\) isometri dan reparameterisasi interval bijektif meningkat |
+| Constancy or nonconstancy | \(f\) injective on the relevant image and \(\phi\) surjective onto the history domain |
+| Traversal order | Additional order structure and increasing bijective \(\phi\) |
+| Continuity | Homeomorphisms of relevant spaces and domains |
+| Equivalent derivative structure | Suitable diffeomorphisms of spaces and parameters |
+| Zero derivative vector at corresponding points | Injective \(Df\), \(\phi'\ne0\), and differentiability |
+| Equal curve length | For example, isometric \(f\) and increasing bijective interval reparametrization |
 
-Homeomorfisme adalah bijeksi kontinu dengan invers kontinu. Difeomorfisme adalah bijeksi mulus dengan invers mulus pada struktur yang dibandingkan; syarat lokal pada titik dapat lebih lemah bila hanya satu turunan yang dibicarakan.
+A homeomorphism is a continuous bijection with continuous inverse. A diffeomorphism is a smooth bijection with smooth inverse on the compared structures; weaker local conditions may suffice for one derivative.
 
-Baris-baris itu bukan satu rantai syarat yang selalu wajib seluruhnya. Isometri, misalnya, merupakan syarat cukup yang lebih kuat daripada yang diperlukan untuk satu kurva tertentu.
+These rows are not a chain of jointly necessary conditions. Isometry, for example, is sufficient but stronger than required for one particular curve.
 
-**Bukti ketetapan.** Jika \(h\) konstan, komposisi tetap konstan. Sebaliknya, bila \(f(h(\phi(u)))\) konstan, keinjektifan \(f\) memberi ketetapan \(h(\phi(u))\). Kesurjektifan \(\phi\) menjangkau semua nilai \(h(t)\); karena itu \(h\) konstan.
+**Constancy proof.** Composition preserves a constant \(h\). Conversely, constancy of \(f(h(\phi(u)))\) and injectivity of \(f\) imply constancy of \(h(\phi(u))\). Surjectivity of \(\phi\) reaches every \(h(t)\), so \(h\) is constant.
 
-Kesurjektifan penting. Jika pengamatan hanya mencakup subselang tempat benda diam, ketetapan subselang tidak menyatakan riwayat lengkap konstan.
+Surjectivity matters. Observing only a resting subinterval does not establish constancy of the entire history.
 
-**Bukti untuk turunan.** Pada koordinat mulus:
+**Derivative proof.** In smooth coordinates:
 
 \[
 \frac{d\widetilde h}{d\lambda}
@@ -67,41 +67,41 @@ Kesurjektifan penting. Jika pengamatan hanya mencakup subselang tempat benda dia
 \left(\frac{dh}{dt}\bigg|_{t=\phi(\lambda)}\right)\phi'(\lambda).
 \]
 
-Jika \(\phi'\ne0\) dan \(Df\) injektif, ruas kanan nol tepat bila \(dh/dt=0\) pada titik bersesuaian. Ini tidak menyamakan nilai numerik kelajuan; norma dan satuan dapat ikut berubah.
+With \(\phi'\ne0\) and injective \(Df\), the right side vanishes exactly when \(dh/dt=0\) at the corresponding point. Numerical speeds need not agree; norms and units may change too.
 
-**Bukti panjang.** Untuk isometri, tiap jarak pada penjumlahan partisi tetap sama. Reparameterisasi interval bijektif meningkat memasangkan partisi kedua domain. Supremum semua penjumlahan karena itu sama.
+**Length proof.** An isometry preserves every partition-sum distance. Increasing bijective interval reparametrization pairs partitions between domains. Their suprema are therefore equal.
 
-**Contoh penyangkal yang menyatukan Time dan Reference.** Ambil \(h(t)=t\).
+**Counterexamples connecting Time and Reference.** Take \(h(t)=t\).
 
-- Pemetaan koordinat \(f(x)=x^3\) bijektif dan homeomorfik di garis, tetapi inversnya tidak terdiferensialkan di nol. Riwayat \(f(h(t))=t^3\) memiliki turunan nol di nol, sedangkan \(h'(0)=1\).
-- Reparameterisasi \(t=\lambda^3\) juga bijektif meningkat, tetapi \(\phi'(0)=0\). Riwayat baru \(\lambda^3\) mempunyai laju nol di nol tanpa menjadi konstan pada suatu selang.
+- The coordinate map \(f(x)=x^3\) is a bijection and homeomorphism of the line, but its inverse is not differentiable at zero. The history \(f(h(t))=t^3\) has zero derivative at zero, while \(h'(0)=1\).
+- The reparametrization \(t=\lambda^3\) is also an increasing bijection, but \(\phi'(0)=0\). The transformed history \(\lambda^3\) has zero rate at zero without interval constancy.
 
-Kedua contoh mempertahankan ketidakkonstanan dan kontinuitas. Keduanya gagal mempertahankan kriteria laju nol karena syarat regularitas tidak dipenuhi. Koordinat kubik bukan chart mulus yang kompatibel di nol untuk struktur diferensial standar garis.
+Both preserve nonconstancy and continuity. Both fail to preserve zero-rate criteria because regularity conditions fail. Cubic coordinates are not a compatible smooth chart at zero for the line's standard differential structure.
 
-**Batas fisik.** Penggantian parameter formal tidak membuktikan bahwa sebuah jam fisik dapat melaksanakan pembacaan tersebut dengan seluruh sifat yang diminta. Penilaian itu memerlukan model jam. Dasar konsep diferensial dan waktu fisik dirujukkan pada [F-S06](../Foundation/Research/Sources.md#s06) dan struktur topologi pada [F-S07](../Foundation/Research/Sources.md#s07).
+**Physical limit.** Formal reparametrization does not prove a physical clock can realize those readings with every requested property. That needs a clock model. Differential and physical-time concepts use [F-S06](../Foundation/Research/Sources.md#s06), and topology uses [F-S07](../Foundation/Research/Sources.md#s07).
 
 ## P03
 
-**Ketetapan pada urutan parsial tidak sama dengan perbandingan semua pasangan.**
+**Constancy on a partial order differs from comparing every pair.**
 
-**Premis.** \(T\) dilengkapi orde parsial \(\preceq\), \(Q\) mempunyai kesamaan biasa, dan \(h:T\to Q\). Anggap \(h(t)=h(u)\) setiap kali \(t\) dan \(u\) dapat dibandingkan.
+**Premises.** Let \(T\) have partial order \(\preceq\), \(Q\) ordinary equality, and \(h:T\to Q\). Assume \(h(t)=h(u)\) whenever \(t\) and \(u\) are comparable.
 
-Bentuk relasi \(t\approx u\) bila terdapat urutan hingga \(t=t_0,\ldots,t_n=u\) dengan setiap pasangan bertetangga dapat dibandingkan dalam salah satu arah.
+Define \(t\approx u\) when a finite sequence \(t=t_0,\ldots,t_n=u\) connects them with each neighbouring pair comparable in either direction.
 
-**Kesimpulan.** \(h\) konstan pada setiap kelas \(\approx\). Jika hanya ada satu kelas, \(h\) konstan di seluruh \(T\).
+**Conclusion.** \(h\) is constant on each \(\approx\)-class. With only one class, \(h\) is constant on all \(T\).
 
-**Bukti.** Kesamaan berlaku pada tiap langkah. Transitifnya kesamaan memberikan \(h(t_0)=h(t_n)\). Relasi \(\approx\) refleksif, simetris melalui pembalikan urutan, dan transitif melalui penyambungan urutan, sehingga benar membentuk kelas.
+**Proof.** Each step gives equality; transitivity yields \(h(t_0)=h(t_n)\). The relation is reflexive, symmetric by sequence reversal, and transitive by concatenation, so \(\approx\) forms equivalence classes.
 
-**Batas.** Bila ada dua komponen yang tidak dihubungkan oleh urutan seperti itu, nilai pada keduanya dapat berbeda tanpa melanggar premis.
+**Limit.** Two components lacking such a connecting sequence can have different values without violating the premise.
 
-Contoh paling kecil adalah dua elemen tidak sebanding \(a,b\) dengan \(h(a)=0,h(b)=1\). Ketidakkonstanan sebagai fungsi ada, tetapi belum ada perubahan yang terurut dari \(a\) menuju \(b\). Sebaliknya, pada bentuk bercabang \(a\preceq b\) dan \(a\preceq c\), premis memaksa ketiga nilai sama melalui \(a\), walaupun \(b,c\) tidak sebanding.
+The smallest example is incomparable \(a,b\) with \(h(a)=0,h(b)=1\). The function is nonconstant without an ordered change from \(a\) to \(b\). Conversely, a branching order \(a\preceq b\), \(a\preceq c\) forces all three values equal through \(a\), even if \(b,c\) are incomparable.
 
-**Makna ilmiah.** Untuk domain parsial, penggunaan “ada dua nilai berbeda” sebagai perubahan temporal membutuhkan penjelasan konteks perbandingan. Pada penugasan nilai medan ke kejadian, dua nilai berbeda di lokasi spacelike tidak otomatis menggambarkan satu benda yang berpindah.
+**Scientific meaning.** For partial domains, interpreting “two different values exist” as temporal change requires a comparison context. Different field values at spacelike events do not automatically describe one moving object.
 
-Hasil ini matematis. Ia tidak membuktikan bahwa relasi kausal selalu orde parsial, bahwa seluruh kejadian dapat diletakkan pada satu riwayat benda, atau bahwa identitas material muncul dari orde. Pembatasan kausal dan waktu proper tetap mengikuti [Time](../Foundation/Core/Time.md).
+This mathematical result does not establish that causality is always a partial order, every event lies on one object's history, or material identity emerges from order. Causal and proper-time limits remain those of [Time](../Foundation/Core/Time.md).
 
-## Yang dapat disederhanakan
+## What can be simplified
 
-Koordinat, parameter, dan pengelompokan keadaan dapat sama-sama dipandang sebagai pemetaan, tetapi sifat yang harus dipertahankan berbeda. Penjelasan tidak memerlukan enam jenis substansi yang terpisah; ia memerlukan pembedaan tugas matematis dan fisik yang dilakukan masing-masing struktur.
+Coordinates, parameters, and state groupings can all be maps, but preserve different properties. Explanation does not require six separate substances; it requires distinguishing each structure's mathematical and physical tasks.
 
-P01 menjelaskan konsistensi perbandingan. P02 menetapkan syarat pelestarian sifat. P03 membatasi penafsiran temporal ketika urutannya tidak total. Ketiganya tidak menurunkan geometri atau dinamika fisik dari sekadar keberadaan fungsi.
+P01 establishes comparison consistency, P02 property-preservation conditions, and P03 temporal limits for nontotal orders. None derives physical geometry or dynamics from functions alone.
