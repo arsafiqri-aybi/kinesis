@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "rule_files": [
+    "Rules.json",
+    "Rules-Voice.json",
+    "Rules-Character.json",
+    "Rules-Social.json",
+    "Rules-Support.json"
+  ],
+  "contracts_file": "Contracts.json",
+  "activation": {
+    "social-story-editing": [
+      "G01",
+      "G03",
+      "G06"
+    ],
+    "social-animated-captions": [
+      "G01",
+      "G02",
+      "G04",
+      "G06"
+    ],
+    "social-kinetic-typography": [
+      "G01",
+      "G03",
+      "G04",
+      "G05"
+    ],
+    "social-motion-broll": [
+      "G01",
+      "G03",
+      "G05",
+      "G09"
+    ],
+    "social-graphics-ui": [
+      "G03",
+      "G04",
+      "G06",
+      "G07"
+    ],
+    "social-character-editorial": [
+      "G01",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G08"
+    ],
+    "social-subject-effects": [
+      "G04",
+      "G06",
+      "G07"
+    ],
+    "social-camera-transitions": [
+      "G01",
+      "G04",
+      "G05",
+      "G07"
+    ],
+    "social-look-grading": [
+      "G03",
+      "G04",
+      "G07",
+      "G09"
+    ],
+    "social-audio-editorial": [
+      "G01",
+      "G02",
+      "G06",
+      "G08"
+    ],
+    "social-social-vfx": [
+      "G03",
+      "G05",
+      "G07",
+      "G09"
+    ],
+    "social-adaptive-layout": [
+      "G04",
+      "G05",
+      "G10"
+    ],
+    "social-opening-ending": [
+      "G01",
+      "G03",
+      "G04",
+      "G08"
+    ],
+    "social-production-editorial": [
+      "G01",
+      "G06",
+      "G08",
+      "G09",
+      "G10"
+    ]
+  },
+  "scope": "Expert social-media editing and coded 2D/2.5D/3D visuals; feature-film VFX is not a separate production domain."
+}

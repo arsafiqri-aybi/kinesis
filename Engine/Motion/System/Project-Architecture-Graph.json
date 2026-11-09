@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "overlay_on": "Engine/Motion/System/Graph-Integrated.json",
+  "motor": "Engine/Kinesis/Motor-System.md",
+  "nodes": [
+    {
+      "id": "motor:kinesis",
+      "kind": "motor",
+      "name": "Kinesis Motor",
+      "owner": "Engine/Kinesis/Motor-System.md"
+    },
+    {
+      "id": "project:design",
+      "kind": "project_system",
+      "name": "Per-project Design System"
+    },
+    {
+      "id": "project:recipes",
+      "kind": "project_system",
+      "name": "Project Recipe Registry"
+    },
+    {
+      "id": "project:assets",
+      "kind": "project_system",
+      "name": "Project Asset and Reference Manifest"
+    },
+    {
+      "id": "project:profiles",
+      "kind": "project_system",
+      "name": "Placement Profiles"
+    },
+    {
+      "id": "project:quality",
+      "kind": "project_system",
+      "name": "Project Quality Policy"
+    },
+    {
+      "id": "episode:editorial",
+      "kind": "episode_state",
+      "name": "Episode Script and Editorial Plan"
+    },
+    {
+      "id": "episode:timeline",
+      "kind": "episode_state",
+      "name": "Episode Time Map"
+    },
+    {
+      "id": "episode:render",
+      "kind": "episode_state",
+      "name": "Rendered Media Variants"
+    },
+    {
+      "id": "episode:evidence",
+      "kind": "episode_state",
+      "name": "Episode Review Evidence"
+    },
+    {
+      "id": "qa:intelligence",
+      "kind": "cross_cutting",
+      "name": "Quality Intelligence"
+    }
+  ],
+  "edges": [
+    {
+      "source": "motor:kinesis",
+      "target": "project:design",
+      "relation": "coordinates",
+      "condition": "When activating project",
+      "payload": "Project ID and approved version"
+    },
+    {
+      "source": "motor:kinesis",
+      "target": "social-story-editing",
+      "relation": "routes",
+      "condition": "When a social-video request enters",
+      "payload": "Audience and message"
+    },
+    {
+      "source": "project:design",
+      "target": "logic:reference",
+      "relation": "constrains",
+      "condition": "When defining visual style",
+      "payload": "Approved reference roles"
+    },
+    {
+      "source": "project:design",
+      "target": "G03",
+      "relation": "instantiates",
+      "condition": "When creating styleframes",
+      "payload": "Project identity and sources"
+    },
+    {
+      "source": "project:design",
+      "target": "project:recipes",
+      "relation": "constrains",
+      "condition": "When choosing repeated patterns",
+      "payload": "Design tokens and motion grammar"
+    },
+    {
+      "source": "project:assets",
+      "target": "G06",
+      "relation": "instantiates",
+      "condition": "When using project files",
+      "payload": "Asset IDs, hashes, and rights"
+    },
+    {
+      "source": "project:profiles",
+      "target": "G10",
+      "relation": "instantiates",
+      "condition": "When producing placement variants",
+      "payload": "Verified profile status"
+    },
+    {
+      "source": "project:quality",
+      "target": "G04",
+      "relation": "constrains",
+      "condition": "When placing critical content",
+      "payload": "Protected subregions and overflow policy"
+    },
+    {
+      "source": "project:quality",
+      "target": "qa:intelligence",
+      "relation": "configures",
+      "condition": "When checking an episode",
+      "payload": "Project-specific gates and exceptions"
+    },
+    {
+      "source": "project:recipes",
+      "target": "social-graphics-ui",
+      "relation": "configures",
+      "condition": "When using cards or brand icons",
+      "payload": "Recipe ID and parameters"
+    },
+    {
+      "source": "project:recipes",
+      "target": "social-animated-captions",
+      "relation": "configures",
+      "condition": "When using animated subtitles",
+      "payload": "Caption recipe and text cues"
+    },
+    {
+      "source": "project:recipes",
+      "target": "social-character-editorial",
+      "relation": "configures",
+      "condition": "When using character inserts",
+      "payload": "Character identity and action cues"
+    },
+    {
+      "source": "project:recipes",
+      "target": "social-motion-broll",
+      "relation": "configures",
+      "condition": "When using original cutaways",
+      "payload": "Narrative intent and visual references"
+    },
+    {
+      "source": "episode:editorial",
+      "target": "G01",
+      "relation": "instantiates",
+      "condition": "When assembling cuts",
+      "payload": "Source/output ranges"
+    },
+    {
+      "source": "episode:editorial",
+      "target": "episode:timeline",
+      "relation": "schedules",
+      "condition": "When cues and beats are approved",
+      "payload": "Shot and cue ranges"
+    },
+    {
+      "source": "episode:timeline",
+      "target": "G02",
+      "relation": "synchronizes",
+      "condition": "When speech drives visuals",
+      "payload": "Word timing and speaker IDs"
+    },
+    {
+      "source": "episode:timeline",
+      "target": "G05",
+      "relation": "constrains",
+      "condition": "When animating scenes",
+      "payload": "Local time and camera cues"
+    },
+    {
+      "source": "episode:timeline",
+      "target": "G08",
+      "relation": "synchronizes",
+      "condition": "When adding audio",
+      "payload": "Audio cue map"
+    },
+    {
+      "source": "episode:timeline",
+      "target": "G09",
+      "relation": "hands_off",
+      "condition": "When rendering variants",
+      "payload": "Frame ranges and build signature"
+    },
+    {
+      "source": "G09",
+      "target": "episode:render",
+      "relation": "produces",
+      "condition": "When output actually encoded",
+      "payload": "Paths and codec evidence"
+    },
+    {
+      "source": "episode:render",
+      "target": "qa:intelligence",
+      "relation": "observed_by",
+      "condition": "When checking actual encoded media",
+      "payload": "Frame and playback evidence"
+    },
+    {
+      "source": "qa:intelligence",
+      "target": "episode:evidence",
+      "relation": "records",
+      "condition": "After inspection",
+      "payload": "Pass/fail/stale/unverified by gate"
+    },
+    {
+      "source": "episode:evidence",
+      "target": "motor:kinesis",
+      "relation": "feedback",
+      "condition": "When issues or new reusable patterns arise",
+      "payload": "Affected owner, range and next decision"
+    },
+    {
+      "source": "qa:intelligence",
+      "target": "logic:evidence",
+      "relation": "uses",
+      "condition": "When checking perception and facts",
+      "payload": "Observed vs intended deviations"
+    },
+    {
+      "source": "project:profiles",
+      "target": "social-adaptive-layout",
+      "relation": "configures",
+      "condition": "When placement changes",
+      "payload": "Viewport and UI profile"
+    },
+    {
+      "source": "episode:evidence",
+      "target": "project:design",
+      "relation": "proposes_revision",
+      "condition": "When a recurring stylistic issue is confirmed",
+      "payload": "Reviewed project-level correction"
+    },
+    {
+      "source": "episode:evidence",
+      "target": "G10",
+      "relation": "rechecks",
+      "condition": "When a profile variant fails",
+      "payload": "Placement evidence to invalidate"
+    },
+    {
+      "source": "episode:evidence",
+      "target": "project:recipes",
+      "relation": "proposes_promotion",
+      "condition": "When a new reusable effect is proven",
+      "payload": "Candidate recipe and version"
+    },
+    {
+      "source": "motor:kinesis",
+      "target": "qa:intelligence",
+      "relation": "activates",
+      "condition": "When production or revisions require review",
+      "payload": "Intent and actual output scope"
+    }
+  ],
+  "extension_contract": {
+    "inherit_base_nodes": true,
+    "never_copy_global_expertise": true,
+    "edge_conditions_required": true,
+    "edge_payload_required": true
+  }
+}

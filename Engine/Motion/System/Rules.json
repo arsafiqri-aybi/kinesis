@@ -1,0 +1,1892 @@
+{
+  "schema_version": 1,
+  "name": "Motion",
+  "purpose": "Reference-led procedural visuals and animation for social video",
+  "shared": [
+    {
+      "id": "intent",
+      "name": "Intent and attention",
+      "decision": "Select detail, pace and hierarchy from the message, audience and viewing context.",
+      "mechanism": "A single dominant event at a time can make the intended reading easier to follow.",
+      "tradeoff": "Excessive simplification can remove needed meaning.",
+      "verification": "Watch once without explanation; record what was noticed and understood.",
+      "evidence": "Authored operational heuristic; validate in the active project."
+    },
+    {
+      "id": "reference",
+      "name": "Reference contract",
+      "decision": "Record which reference governs silhouette, layout, palette, surface and lighting; separate observations from guesses.",
+      "mechanism": "Explicit targets make comparison and revision actionable.",
+      "tradeoff": "Conflicting references can imply incompatible cameras or materials.",
+      "verification": "Compare the render and references at equal crop and size; name each deviation.",
+      "evidence": "Authored operational heuristic; validate in the active project."
+    },
+    {
+      "id": "geometry",
+      "name": "Geometry and coordinates",
+      "decision": "Declare units, origin, axes, projection and transform order before constructing related objects.",
+      "mechanism": "Consistent coordinates preserve intended relationships across renderers and motion.",
+      "tradeoff": "Changing coordinate conventions can invert axes or alter pivots.",
+      "verification": "Render axis markers and test known points before final framing.",
+      "evidence": "Authored operational heuristic; validate in the active project."
+    },
+    {
+      "id": "perception",
+      "name": "Perceptual hierarchy",
+      "decision": "Allocate contrast, scale, spacing and dwell time to the intended focal subject.",
+      "mechanism": "Controlled competition between elements can preserve visual hierarchy.",
+      "tradeoff": "Texture, highlights and movement may attract more attention than the message.",
+      "verification": "Inspect at phone size, in grayscale and during the busiest moment.",
+      "evidence": "Authored operational heuristic; validate in the active project."
+    },
+    {
+      "id": "time",
+      "name": "Time and continuity",
+      "decision": "Use explicit frame indices and a rational frame rate; define shot intervals as half-open ranges.",
+      "mechanism": "A common timebase prevents timing drift and duplicate boundary frames.",
+      "tradeoff": "Mixing milliseconds, seconds and frame indices produces offsets.",
+      "verification": "Evaluate frames immediately before, at and after a boundary and check duration.",
+      "evidence": "Authored operational heuristic; validate in the active project."
+    },
+    {
+      "id": "determinism",
+      "name": "Deterministic state",
+      "decision": "Make scene state a function of project parameters, exact time and seed; checkpoint any simulation.",
+      "mechanism": "Re-rendering a frame out of order should preserve its pixels under a fixed environment.",
+      "tradeoff": "Hidden clock reads, load races and global random state break replay.",
+      "verification": "Render the same times in a different order and compare pixels or documented tolerances.",
+      "evidence": "Authored operational heuristic; validate in the active project."
+    },
+    {
+      "id": "continuity",
+      "name": "Identity and continuity",
+      "decision": "Track object identity, correspondence, screen direction and visibility between visual states.",
+      "mechanism": "Preserving chosen invariants can make changes legible as one evolving object or idea.",
+      "tradeoff": "Smooth interpolation can still produce a semantically wrong transition.",
+      "verification": "Inspect silhouette, topology and identity through the entire interval.",
+      "evidence": "Authored operational heuristic; validate in the active project."
+    },
+    {
+      "id": "sampling",
+      "name": "Spatial and temporal sampling",
+      "decision": "Match feature size and motion speed to final resolution and frame rate; prefilter when needed.",
+      "mechanism": "Adequate sampling reduces jagged edges, shimmer and temporal aliasing.",
+      "tradeoff": "More samples increase render cost and blur can obscure small text.",
+      "verification": "Inspect fast edges and fine patterns in the encoded clip at actual playback speed.",
+      "evidence": "Authored operational heuristic; validate in the active project."
+    },
+    {
+      "id": "color",
+      "name": "Color and alpha contract",
+      "decision": "Declare working and output color spaces, transfer functions, alpha convention and any view transform.",
+      "mechanism": "Consistent conversion preserves expected appearance across compositing and delivery.",
+      "tradeoff": "Applying a transform twice or tagging unconverted data can alter appearance.",
+      "verification": "Compare known patches, gradients and transparent edges through the full pipeline.",
+      "evidence": "Authored operational heuristic; validate in the active project."
+    },
+    {
+      "id": "budget",
+      "name": "Measured resource budget",
+      "decision": "Measure representative frames before committing to resolution, samples or simulation density.",
+      "mechanism": "Measured cost supports achievable rendering without guessing hardware capacity.",
+      "tradeoff": "A simple frame may underestimate peak complexity or memory.",
+      "verification": "Benchmark the most expensive expected frame and a short representative segment.",
+      "evidence": "Authored operational heuristic; validate in the active project."
+    },
+    {
+      "id": "evidence",
+      "name": "Observation and revision",
+      "decision": "Pair each decision with an expected result, a concrete check and a revision trigger.",
+      "mechanism": "Observable disagreements can guide useful corrections instead of arbitrary changes.",
+      "tradeoff": "Metrics can miss semantic meaning and visual character.",
+      "verification": "Record the actual observation, affected decision and chosen correction.",
+      "evidence": "Authored operational heuristic; validate in the active project."
+    },
+    {
+      "id": "provenance",
+      "name": "Source and dependency provenance",
+      "decision": "Record reference roles and origins, font files, runtime versions, seeds and external dependencies.",
+      "mechanism": "Known inputs make rebuilds, substitutions and asset boundaries explicit.",
+      "tradeoff": "An unavailable font or hidden image texture can change the result.",
+      "verification": "Rebuild from the recorded inputs; audit image loads and font substitutions.",
+      "evidence": "Authored operational heuristic; validate in the active project."
+    }
+  ],
+  "specializations": [
+    {
+      "id": "creative-brief",
+      "name": "Creative Brief",
+      "domain": "Visual Development",
+      "division": "Purpose and references",
+      "inputs": "Message, audience, duration, destination and constraints",
+      "decision": "Turn the request into a visible outcome and a short list of visual priorities; retain unresolved choices explicitly.",
+      "mechanism": "A bounded purpose can guide both image selection and scene construction.",
+      "tradeoff": "Too many equal priorities weaken the focal message.",
+      "verification": "Describe the intended takeaway in one sentence and test the planned opening against it.",
+      "output": "Project purpose and acceptance criteria",
+      "shared": [
+        "intent",
+        "reference",
+        "provenance"
+      ],
+      "sources": [
+        "SVG",
+        "CANVAS"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "reference-curation",
+      "name": "Reference Curation",
+      "domain": "Visual Development",
+      "division": "Purpose and references",
+      "inputs": "Candidate images and intended visual priorities",
+      "decision": "Label each image by its role: composition, silhouette, surface, palette, lighting or mood; resolve conflicts before reconstruction.",
+      "mechanism": "Role-specific references provide usable targets without requiring one image to answer every question.",
+      "tradeoff": "Mixing lenses, light directions or styles blindly can create an incoherent scene.",
+      "verification": "Identify the governing reference for every major visual property and list conflicting cues.",
+      "output": "Reference manifest with roles and observations",
+      "shared": [
+        "intent",
+        "reference",
+        "provenance"
+      ],
+      "sources": [
+        "SVG",
+        "CANVAS"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "visual-direction",
+      "name": "Visual Direction",
+      "domain": "Visual Development",
+      "division": "Purpose and references",
+      "inputs": "Brief and role-labelled references",
+      "decision": "Define a coherent visual grammar for proportions, type, palette, edge treatment, surface detail and camera; compare alternatives as stills.",
+      "mechanism": "Shared visual rules can make separately built scenes feel related.",
+      "tradeoff": "A rigid style rule can prevent an important scene from communicating clearly.",
+      "verification": "Place representative frames side by side and inspect hierarchy and consistency.",
+      "output": "Visual system and permitted variation",
+      "shared": [
+        "intent",
+        "reference",
+        "provenance"
+      ],
+      "sources": [
+        "SVG",
+        "CANVAS"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "storyboard",
+      "name": "Storyboard",
+      "domain": "Visual Development",
+      "division": "Sequence design",
+      "inputs": "Message structure and visual system",
+      "decision": "Map each beat to a shot, its visible action and the reason for its transition; choose duration from reading and action needs.",
+      "mechanism": "An explicit sequence can expose missing information before expensive rendering.",
+      "tradeoff": "Attractive individual shots may fail to form a readable sequence.",
+      "verification": "Walk through the boards without narration and identify gaps or redundant beats.",
+      "output": "Shot list and provisional beat timing",
+      "shared": [
+        "intent",
+        "reference",
+        "continuity",
+        "time"
+      ],
+      "sources": [
+        "ANIM"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "styleframes",
+      "name": "Styleframes",
+      "domain": "Visual Development",
+      "division": "Sequence design",
+      "inputs": "Shot list and reference targets",
+      "decision": "Resolve key stills for appearance; include motion extremes and transition boundaries when they alter composition.",
+      "mechanism": "Defined visual endpoints make reconstruction and motion decisions reviewable.",
+      "tradeoff": "Perfect endpoints do not guarantee good intermediate shapes or movement.",
+      "verification": "Compare start, key event and end frames; flag properties that must remain invariant.",
+      "output": "Selected visual targets and invariants",
+      "shared": [
+        "intent",
+        "reference",
+        "continuity",
+        "time"
+      ],
+      "sources": [
+        "ANIM"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "shot-continuity",
+      "name": "Shot Continuity",
+      "domain": "Visual Development",
+      "division": "Sequence design",
+      "inputs": "Adjacent styleframes and object identities",
+      "decision": "Track screen direction, scale, anchor positions, palette and visual motifs across shots; mark deliberate breaks.",
+      "mechanism": "Selected continuity cues can help viewers connect changes across edits.",
+      "tradeoff": "Preserving every cue may make scenes repetitive.",
+      "verification": "Inspect consecutive frames at each cut and follow the intended subject.",
+      "output": "Continuity constraints and transition handoff",
+      "shared": [
+        "intent",
+        "reference",
+        "continuity",
+        "time"
+      ],
+      "sources": [
+        "ANIM"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "shape-decomposition",
+      "name": "Shape Decomposition",
+      "domain": "Reference Reconstruction",
+      "division": "Image interpretation",
+      "inputs": "Reference image, crop and focal objects",
+      "decision": "Separate silhouette, internal contours, negative space and occlusion into editable primitives or meshes; prioritize large relationships.",
+      "mechanism": "Reconstructing silhouette and proportion first can reduce wasted detail work.",
+      "tradeoff": "Premature tracing of tiny details can preserve pixels while missing structure.",
+      "verification": "Compare flat silhouette masks at matched scale before adding shading.",
+      "output": "Object hierarchy, shape measurements and construction plan",
+      "shared": [
+        "reference",
+        "geometry",
+        "evidence"
+      ],
+      "sources": [
+        "SVG",
+        "COLOR"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "spatial-inference",
+      "name": "Spatial Inference",
+      "domain": "Reference Reconstruction",
+      "division": "Image interpretation",
+      "inputs": "Perspective cues, overlaps and visible faces",
+      "decision": "Infer a plausible camera and depth layout; record alternate explanations when one image cannot determine hidden geometry.",
+      "mechanism": "Consistent perspective can reproduce visible depth with economical geometry.",
+      "tradeoff": "A single image does not uniquely reveal camera, depth or hidden surfaces.",
+      "verification": "Overlay projected edges and test the requested camera move for exposed gaps.",
+      "output": "Camera hypothesis, depth arrangement and uncertainty notes",
+      "shared": [
+        "reference",
+        "geometry",
+        "evidence"
+      ],
+      "sources": [
+        "SVG",
+        "COLOR"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "appearance-inference",
+      "name": "Appearance Inference",
+      "domain": "Reference Reconstruction",
+      "division": "Image interpretation",
+      "inputs": "Highlights, shadows, gradients and surface cues",
+      "decision": "Separate likely material response from illumination and painted detail; test simple material-light combinations.",
+      "mechanism": "Separating causes makes later movement and relighting more coherent.",
+      "tradeoff": "A baked highlight can be mistaken for a physically moving reflection.",
+      "verification": "Rotate a light or camera in a probe render and inspect whether surface cues behave plausibly.",
+      "output": "Material and lighting hypotheses with confidence notes",
+      "shared": [
+        "reference",
+        "geometry",
+        "evidence"
+      ],
+      "sources": [
+        "SVG",
+        "COLOR"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "reconstruction-planning",
+      "name": "Reconstruction Planning",
+      "domain": "Reference Reconstruction",
+      "division": "Reconstruction strategy",
+      "inputs": "Decomposition, shot movement and hardware observations",
+      "decision": "Choose vector, layered 2.5D, analytic shading or full 3D per object based on required views; define any allowed imported assets.",
+      "mechanism": "Representation matched to visible behavior can reduce cost while preserving the target.",
+      "tradeoff": "A shortcut may fail when motion exposes a side absent from the reference.",
+      "verification": "Test the widest planned view and audit every image load against the declared procedural scope.",
+      "output": "Representation plan and procedural asset boundary",
+      "shared": [
+        "reference",
+        "budget",
+        "provenance",
+        "evidence"
+      ],
+      "sources": [
+        "CANVAS",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "reference-matching",
+      "name": "Reference Matching",
+      "domain": "Reference Reconstruction",
+      "division": "Reconstruction strategy",
+      "inputs": "Target styleframe and rendered candidate",
+      "decision": "Compare equal-size, equal-crop images; diagnose silhouette, layout, value, color and material separately; fix dominant deviations first.",
+      "mechanism": "Structured comparison can make revisions more attributable.",
+      "tradeoff": "Pixel error can penalize harmless differences and ignore meaning.",
+      "verification": "Record one visible mismatch, its likely cause and the result of changing that cause.",
+      "output": "Ranked reconstruction revisions",
+      "shared": [
+        "reference",
+        "budget",
+        "provenance",
+        "evidence"
+      ],
+      "sources": [
+        "CANVAS",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "ambiguity-resolution",
+      "name": "Ambiguity Resolution",
+      "domain": "Reference Reconstruction",
+      "division": "Reconstruction strategy",
+      "inputs": "Unobserved regions and competing visual interpretations",
+      "decision": "Mark observed, inferred and invented properties; build the simplest plausible hidden structure needed by the shot.",
+      "mechanism": "Explicit uncertainty can prevent unsupported detail from dominating reconstruction.",
+      "tradeoff": "Excessively literal reconstruction can block useful creative interpretation.",
+      "verification": "Inspect every newly revealed region and check it against the agreed creative freedom.",
+      "output": "Chosen interpretation and unresolved reference limits",
+      "shared": [
+        "reference",
+        "budget",
+        "provenance",
+        "evidence"
+      ],
+      "sources": [
+        "CANVAS",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "curve-geometry",
+      "name": "Curve Geometry",
+      "domain": "Visual Construction",
+      "division": "Geometry",
+      "inputs": "Silhouettes, handles, stroke targets and scale",
+      "decision": "Construct paths with controlled tangents and joins; choose tessellation from output scale and curvature.",
+      "mechanism": "Smooth curvature and stable stroke treatment can preserve intended contours.",
+      "tradeoff": "Too few samples facet curves; too many increase cost without visible benefit.",
+      "verification": "Inspect inflections, corners and stroke joins at final size and during scaling.",
+      "output": "Reusable curve constructors and path parameters",
+      "shared": [
+        "geometry",
+        "reference",
+        "sampling"
+      ],
+      "sources": [
+        "SVG",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "planar-geometry",
+      "name": "Planar Geometry",
+      "domain": "Visual Construction",
+      "division": "Geometry",
+      "inputs": "Shape outlines, holes, overlaps and fill rules",
+      "decision": "Build filled regions and negative spaces using explicit winding and boolean operations; retain separate semantic parts.",
+      "mechanism": "Explicit topology can keep fills and cutouts consistent across edits.",
+      "tradeoff": "Self-intersections and inconsistent winding can invert holes or create artifacts.",
+      "verification": "Render flat masks and inspect holes, overlaps and extreme parameter values.",
+      "output": "Editable 2D shape definitions",
+      "shared": [
+        "geometry",
+        "reference",
+        "sampling"
+      ],
+      "sources": [
+        "SVG",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "procedural-modeling",
+      "name": "Procedural Modeling",
+      "domain": "Visual Construction",
+      "division": "Geometry",
+      "inputs": "Required views, silhouette and object dimensions",
+      "decision": "Generate meshes, sweeps, profiles and bevels from parameters; use actual volume where camera movement demands it.",
+      "mechanism": "Parametric volume supports coherent changes across viewpoints.",
+      "tradeoff": "Bad normals, topology or unnecessary subdivisions can degrade shading and speed.",
+      "verification": "Inspect silhouette from all planned views plus normals and the closest camera distance.",
+      "output": "Parametric 3D object construction",
+      "shared": [
+        "geometry",
+        "reference",
+        "sampling"
+      ],
+      "sources": [
+        "SVG",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "typography",
+      "name": "Typography",
+      "domain": "Visual Construction",
+      "division": "Layout and type",
+      "inputs": "Copy, font files, emphasis and available frame area",
+      "decision": "Specify shaping, font metrics, line breaks, kerning and alignment through code; lock font availability before layout.",
+      "mechanism": "Stable text geometry supports predictable composition and animation anchors.",
+      "tradeoff": "Substituted fonts or unsupported scripts can invalidate measured layout.",
+      "verification": "Render actual copy with target fonts; inspect glyphs, line breaks and clipping at phone size.",
+      "output": "Text layout and font manifest",
+      "shared": [
+        "geometry",
+        "perception",
+        "reference"
+      ],
+      "sources": [
+        "SVG",
+        "CANVAS"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "composition",
+      "name": "Composition",
+      "domain": "Visual Construction",
+      "division": "Layout and type",
+      "inputs": "Subject hierarchy, frame ratio and projected bounds",
+      "decision": "Balance focal weight, alignment, negative space and grouping; evaluate composition at motion extremes as well as stills.",
+      "mechanism": "A controlled hierarchy can keep the message visible while objects change.",
+      "tradeoff": "A balanced still can become crowded during movement.",
+      "verification": "Inspect silhouettes and text bounds at the busiest and most expanded states.",
+      "output": "Layout constraints and composition anchors",
+      "shared": [
+        "geometry",
+        "perception",
+        "reference"
+      ],
+      "sources": [
+        "SVG",
+        "CANVAS"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "depth-layering",
+      "name": "Depth Layering",
+      "domain": "Visual Construction",
+      "division": "Layout and type",
+      "inputs": "Scene layers, intended depth and camera movement",
+      "decision": "Assign depth, overlap and parallax deliberately; preserve ordering and reveal regions during camera moves.",
+      "mechanism": "Relative displacement and occlusion can suggest volume without full geometry.",
+      "tradeoff": "Flat cards may reveal edges or contradictory occlusions.",
+      "verification": "Preview maximum parallax and all layer crossings.",
+      "output": "Layer stack and depth parameters",
+      "shared": [
+        "geometry",
+        "perception",
+        "reference"
+      ],
+      "sources": [
+        "SVG",
+        "CANVAS"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "color-design",
+      "name": "Color Design",
+      "domain": "Visual Construction",
+      "division": "Surface and light",
+      "inputs": "Visual direction, background and material palette",
+      "decision": "Define palette roles and interpolation space; compare colors under the intended output transform.",
+      "mechanism": "Controlled value and chromatic contrast can support visual hierarchy.",
+      "tradeoff": "An appealing palette can lose separation under shading or encoding.",
+      "verification": "Inspect grayscale separation, gradients and key colors in the encoded frame.",
+      "output": "Palette parameters and color roles",
+      "shared": [
+        "color",
+        "reference",
+        "perception",
+        "sampling"
+      ],
+      "sources": [
+        "COLOR",
+        "BLENDER",
+        "WEBGL"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "materials",
+      "name": "Materials",
+      "domain": "Visual Construction",
+      "division": "Surface and light",
+      "inputs": "Surface hypothesis, geometry and lighting",
+      "decision": "Encode roughness, opacity, reflectance and other needed surface properties using the selected renderer; keep stylization explicit.",
+      "mechanism": "Material-light interaction can preserve surface identity through motion.",
+      "tradeoff": "Physically detailed materials may be expensive or visually inappropriate.",
+      "verification": "Render the material on the actual object from planned viewpoints and light angles.",
+      "output": "Parameterized material definitions",
+      "shared": [
+        "color",
+        "reference",
+        "perception",
+        "sampling"
+      ],
+      "sources": [
+        "COLOR",
+        "BLENDER",
+        "WEBGL"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "procedural-texture",
+      "name": "Procedural Texture",
+      "domain": "Visual Construction",
+      "division": "Surface and light",
+      "inputs": "Surface scale, texture role and viewing distance",
+      "decision": "Build patterns from coordinates, noise and functions with fixed seeds; choose object or world mapping to fit intended behavior.",
+      "mechanism": "Procedural patterns can retain editability and avoid dependence on reference image pixels.",
+      "tradeoff": "High-frequency patterns shimmer or slide if mapping is inconsistent.",
+      "verification": "Inspect animated closeups and distant views for swimming and aliasing.",
+      "output": "Seeded texture functions and scale settings",
+      "shared": [
+        "color",
+        "reference",
+        "perception",
+        "sampling"
+      ],
+      "sources": [
+        "COLOR",
+        "BLENDER",
+        "WEBGL"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "lighting",
+      "name": "Lighting",
+      "domain": "Visual Construction",
+      "division": "Surface and light",
+      "inputs": "Surface response, depth cues and reference light direction",
+      "decision": "Construct key, fill, rim or environment contributions as needed; separate shape-defining light from decorative highlights.",
+      "mechanism": "Deliberate light placement can reveal volume and guide attention.",
+      "tradeoff": "Too much fill flattens form; bright accents can compete with text.",
+      "verification": "Inspect silhouette, shadow direction and highlight clipping through object rotation.",
+      "output": "Lighting rig and exposure intent",
+      "shared": [
+        "color",
+        "reference",
+        "perception",
+        "sampling"
+      ],
+      "sources": [
+        "COLOR",
+        "BLENDER",
+        "WEBGL"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "camera-projection",
+      "name": "Camera Projection",
+      "domain": "Visual Construction",
+      "division": "Surface and light",
+      "inputs": "Reference framing, perspective and reveal requirements",
+      "decision": "Select orthographic or perspective projection; set framing, lens or scale, near/far limits and target explicitly.",
+      "mechanism": "A consistent camera aligns geometry with reference proportions.",
+      "tradeoff": "Lens changes alter shape appearance and projected motion.",
+      "verification": "Compare reference landmarks and inspect near-plane clipping at every planned pose.",
+      "output": "Camera model and framing parameters",
+      "shared": [
+        "color",
+        "reference",
+        "perception",
+        "sampling"
+      ],
+      "sources": [
+        "COLOR",
+        "BLENDER",
+        "WEBGL"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "compositing",
+      "name": "Compositing",
+      "domain": "Visual Construction",
+      "division": "Surface and light",
+      "inputs": "Layer outputs, masks, alpha and effect intent",
+      "decision": "Composite layers with an explicit alpha convention and color space; keep blur, glow and grading as adjustable operations.",
+      "mechanism": "Controlled compositing can integrate elements while preserving editability.",
+      "tradeoff": "Premultiplication errors create fringes; excess glow hides structure.",
+      "verification": "Test transparent edges on light and dark backgrounds and compare effects enabled versus disabled.",
+      "output": "Compositing graph and effect parameters",
+      "shared": [
+        "color",
+        "reference",
+        "perception",
+        "sampling"
+      ],
+      "sources": [
+        "COLOR",
+        "BLENDER",
+        "WEBGL"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "timeline-design",
+      "name": "Timeline Design",
+      "domain": "Motion Design",
+      "division": "Time and trajectories",
+      "inputs": "Shot beats, frame rate and duration",
+      "decision": "Represent shots with exact frame ranges and evaluate local time from the global frame; define boundary ownership.",
+      "mechanism": "Explicit scheduling can avoid accidental overlaps and gaps.",
+      "tradeoff": "Floating rounding and inclusive endpoints can duplicate or omit frames.",
+      "verification": "Evaluate the first, last and adjacent boundary frames and sum shot lengths.",
+      "output": "Master timeline and local-time mapping",
+      "shared": [
+        "time",
+        "determinism",
+        "continuity"
+      ],
+      "sources": [
+        "ANIM"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "timing-and-pacing",
+      "name": "Timing and Pacing",
+      "domain": "Motion Design",
+      "division": "Time and trajectories",
+      "inputs": "Reading needs, action intent and beat structure",
+      "decision": "Allocate anticipation, action, settle and hold intervals where useful; adjust durations from playback observations.",
+      "mechanism": "Time allocated to comprehension can make a short sequence feel intentional.",
+      "tradeoff": "Uniform pacing can feel mechanical; excessive speed can hide the message.",
+      "verification": "Watch once at target speed and record missed text or unresolved actions.",
+      "output": "Event durations and hold intervals",
+      "shared": [
+        "time",
+        "determinism",
+        "continuity"
+      ],
+      "sources": [
+        "ANIM"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "easing",
+      "name": "Easing",
+      "domain": "Motion Design",
+      "division": "Time and trajectories",
+      "inputs": "Property endpoints and desired velocity behavior",
+      "decision": "Choose interpolation by movement character; inspect velocity and acceleration near endpoints and overshoot extrema.",
+      "mechanism": "Appropriate velocity change can suggest weight, precision or softness.",
+      "tradeoff": "Applying the same easing everywhere can create synchronized artificial motion.",
+      "verification": "Plot or sample the curve and watch the resulting motion in context.",
+      "output": "Parameter curves and endpoint behavior",
+      "shared": [
+        "time",
+        "determinism",
+        "continuity"
+      ],
+      "sources": [
+        "ANIM"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "transform-animation",
+      "name": "Transform Animation",
+      "domain": "Motion Design",
+      "division": "Time and trajectories",
+      "inputs": "Object hierarchy, pivots, trajectories and scale",
+      "decision": "Animate position, rotation and scale with explicit local/world spaces; choose rotation interpolation suited to the path.",
+      "mechanism": "Correct pivots and spaces preserve intended spatial relationships.",
+      "tradeoff": "Euler wrapping, parent scaling or a misplaced pivot can distort motion.",
+      "verification": "Inspect hierarchy transforms, rotation crossings and object bounds at extrema.",
+      "output": "Transform evaluators and motion paths",
+      "shared": [
+        "time",
+        "determinism",
+        "continuity"
+      ],
+      "sources": [
+        "ANIM"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "shape-morphing",
+      "name": "Shape Morphing",
+      "domain": "Motion Design",
+      "division": "Deformation and relationships",
+      "inputs": "Source and destination shapes and semantic identity",
+      "decision": "Establish point or topology correspondence; interpolate meaningful structure and inspect intermediate silhouettes.",
+      "mechanism": "Consistent correspondence can make transformation readable as one evolving object.",
+      "tradeoff": "Arbitrary vertex matching creates folds, inversion or identity loss.",
+      "verification": "Render multiple intermediate states including maximum deformation and check winding or normals.",
+      "output": "Morph correspondence and deformation rules",
+      "shared": [
+        "continuity",
+        "geometry",
+        "time",
+        "sampling"
+      ],
+      "sources": [
+        "ANIM",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "secondary-motion",
+      "name": "Secondary Motion",
+      "domain": "Motion Design",
+      "division": "Deformation and relationships",
+      "inputs": "Main action, attachment points and desired follow-through",
+      "decision": "Derive lag, spring response or overshoot from the primary action; use analytic solutions or reproducible simulation checkpoints.",
+      "mechanism": "Delayed response can suggest elasticity and connected mass.",
+      "tradeoff": "Unbounded oscillation or stateful stepping breaks stability and seeking.",
+      "verification": "Test rest, impulse, large time jumps and out-of-order frame access.",
+      "output": "Stable secondary-motion model",
+      "shared": [
+        "continuity",
+        "geometry",
+        "time",
+        "sampling"
+      ],
+      "sources": [
+        "ANIM",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "constraints-and-rigging",
+      "name": "Constraints and Rigging",
+      "domain": "Motion Design",
+      "division": "Deformation and relationships",
+      "inputs": "Object relationships, joints and permitted motion",
+      "decision": "Express attachment, look-at, distance or hierarchy constraints with explicit ownership and solve order.",
+      "mechanism": "Relationship constraints can preserve coordinated behavior during revisions.",
+      "tradeoff": "Cyclic dependencies and competing constraints cause jitter or unsolved states.",
+      "verification": "Stress the allowed motion range and inspect constraint errors.",
+      "output": "Rig relationships and evaluation order",
+      "shared": [
+        "continuity",
+        "geometry",
+        "time",
+        "sampling"
+      ],
+      "sources": [
+        "ANIM",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "particle-systems",
+      "name": "Particle Systems",
+      "domain": "Motion Design",
+      "division": "Deformation and relationships",
+      "inputs": "Emitter behavior, lifetime, distribution and scene budget",
+      "decision": "Derive particles from seed, birth time and stable identity; cap density by visible need and measured resources.",
+      "mechanism": "Deterministic particles permit consistent seeking and re-rendering.",
+      "tradeoff": "Excess density obscures the subject and raises render or memory cost.",
+      "verification": "Compare repeated frames, birth/death boundaries and peak density.",
+      "output": "Seeded particle model and lifetime rules",
+      "shared": [
+        "continuity",
+        "geometry",
+        "time",
+        "sampling"
+      ],
+      "sources": [
+        "ANIM",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "camera-motion",
+      "name": "Camera Motion",
+      "domain": "Motion Design",
+      "division": "Deformation and relationships",
+      "inputs": "Shot purpose, camera projection and subject trajectory",
+      "decision": "Design camera position and aim together; preserve readable screen-space relationships and reveal only constructed regions.",
+      "mechanism": "Purposeful framing changes can disclose depth and direct attention.",
+      "tradeoff": "Camera movement can amplify apparent speed or expose incomplete reconstruction.",
+      "verification": "Preview maximum reveal, angular changes and subject framing at target playback speed.",
+      "output": "Camera path and framing constraints",
+      "shared": [
+        "continuity",
+        "geometry",
+        "time",
+        "sampling"
+      ],
+      "sources": [
+        "ANIM",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "transitions",
+      "name": "Transitions",
+      "domain": "Motion Design",
+      "division": "Deformation and relationships",
+      "inputs": "Adjacent scene meanings, identities and cut boundaries",
+      "decision": "Choose cuts, masks, matches or transformations from the relationship between shots; coordinate outgoing and incoming states.",
+      "mechanism": "A transition linked to content can connect ideas while maintaining momentum.",
+      "tradeoff": "Decorative transitions can obscure meaning and create boundary artifacts.",
+      "verification": "Play the transition alone and in context; inspect exact boundary frames.",
+      "output": "Transition construction and overlap rules",
+      "shared": [
+        "continuity",
+        "geometry",
+        "time",
+        "sampling"
+      ],
+      "sources": [
+        "ANIM",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "editing-rhythm",
+      "name": "Editing Rhythm",
+      "domain": "Audiovisual Sequence",
+      "division": "Editing and sound",
+      "inputs": "Shot lengths, visual density and message structure",
+      "decision": "Place cuts and holds according to information changes; use contrast in duration when it supports the intended reading.",
+      "mechanism": "Deliberate temporal grouping can clarify sequence structure.",
+      "tradeoff": "Cutting only to a fixed beat can interrupt reading or action completion.",
+      "verification": "Watch with and without sound and identify where comprehension changes.",
+      "output": "Edit decision list",
+      "shared": [
+        "intent",
+        "time",
+        "continuity"
+      ],
+      "sources": [
+        "ANIM",
+        "FFMPEG"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "sound-design",
+      "name": "Sound Design",
+      "domain": "Audiovisual Sequence",
+      "division": "Editing and sound",
+      "inputs": "Intended mood, visible events and available audio sources",
+      "decision": "Assign sound roles to events, atmosphere and emphasis; record imported audio provenance separately from procedural visuals.",
+      "mechanism": "Controlled sound can reinforce event identity and perceived motion.",
+      "tradeoff": "Excess effects or loudness differences distract from the visual subject.",
+      "verification": "Listen on ordinary speakers and compare transitions, peaks and silence.",
+      "output": "Audio layers, sources and level plan",
+      "shared": [
+        "intent",
+        "time",
+        "continuity"
+      ],
+      "sources": [
+        "ANIM",
+        "FFMPEG"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "audio-synchronization",
+      "name": "Audio Synchronization",
+      "domain": "Audiovisual Sequence",
+      "division": "Editing and sound",
+      "inputs": "Audio sample rate, event times and frame timeline",
+      "decision": "Use a common rational timebase and explicit offsets; align cues to chosen visual events and preserve audio tails.",
+      "mechanism": "Explicit mapping reduces accumulated audiovisual drift.",
+      "tradeoff": "Retiming video without retiming cues or truncating tails breaks synchronization.",
+      "verification": "Check early and late cues and the last audible sample in the encoded output.",
+      "output": "Cue map and audio timing",
+      "shared": [
+        "intent",
+        "time",
+        "continuity"
+      ],
+      "sources": [
+        "ANIM",
+        "FFMPEG"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "captions-and-overlays",
+      "name": "Captions and Overlays",
+      "domain": "Audiovisual Sequence",
+      "division": "Editing and sound",
+      "inputs": "Final copy, speech timing and viewing context",
+      "decision": "Time captions to meaningful phrases; keep layout and dwell time legible within project-specific interface clearance.",
+      "mechanism": "Readable synchronized text can preserve meaning with sound off.",
+      "tradeoff": "Dense text, short holds or platform overlays can hide content.",
+      "verification": "Review at phone size with sound muted and inspect every caption change.",
+      "output": "Caption geometry and timing",
+      "shared": [
+        "intent",
+        "time",
+        "continuity"
+      ],
+      "sources": [
+        "ANIM",
+        "FFMPEG"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "scene-state",
+      "name": "Scene State",
+      "domain": "Procedural Engineering",
+      "division": "Scene architecture",
+      "inputs": "Visual constructors, motion evaluators and project parameters",
+      "decision": "Separate build(parameters), state_at(frame) and render(state); keep stable IDs and explicit dependencies.",
+      "mechanism": "Separation enables reconstruction edits without entangling time evaluation.",
+      "tradeoff": "Hidden mutations make previews depend on the order frames were visited.",
+      "verification": "Evaluate the same frame before and after distant seeks and compare output.",
+      "output": "Scene interface and dependency structure",
+      "shared": [
+        "determinism",
+        "geometry",
+        "provenance"
+      ],
+      "sources": [
+        "CANVAS",
+        "SVG",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "procedural-randomness",
+      "name": "Procedural Randomness",
+      "domain": "Procedural Engineering",
+      "division": "Scene architecture",
+      "inputs": "Variation purpose, object IDs and seed",
+      "decision": "Derive variation from explicit seeds and stable identities; separate static variation from time-varying noise.",
+      "mechanism": "Stable variation can retain visual identity while allowing controlled complexity.",
+      "tradeoff": "Global randomness changes unrelated objects after a small edit.",
+      "verification": "Reorder object creation and verify unchanged object properties remain stable.",
+      "output": "Seed strategy and deterministic noise inputs",
+      "shared": [
+        "determinism",
+        "geometry",
+        "provenance"
+      ],
+      "sources": [
+        "CANVAS",
+        "SVG",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "reproducible-build",
+      "name": "Reproducible Build",
+      "domain": "Procedural Engineering",
+      "division": "Scene architecture",
+      "inputs": "Scene code, fonts, dependency versions and configuration",
+      "decision": "Record runtime versions, inputs and render settings; resolve assets before capture and retain build metadata.",
+      "mechanism": "Known inputs support repeatable output and attributable differences.",
+      "tradeoff": "Floating dependencies, unavailable assets or hardware differences can change pixels.",
+      "verification": "Rebuild in a fresh output folder and compare declared invariants with tolerances.",
+      "output": "Build manifest and dependency lock strategy",
+      "shared": [
+        "determinism",
+        "geometry",
+        "provenance"
+      ],
+      "sources": [
+        "CANVAS",
+        "SVG",
+        "BLENDER"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "renderer-selection",
+      "name": "Renderer Selection",
+      "domain": "Procedural Engineering",
+      "division": "Execution and resources",
+      "inputs": "Representation requirements, effects and observed runtime capabilities",
+      "decision": "Choose an available renderer by required behavior and measured probe output; permit mixed renderers with explicit handoffs.",
+      "mechanism": "A fit renderer can meet the visual target without unnecessary resource cost.",
+      "tradeoff": "Installed binaries do not prove usable GPU contexts, fonts or codecs.",
+      "verification": "Render and encode a representative probe using the actual intended execution path.",
+      "output": "Renderer decision and verified capability notes",
+      "shared": [
+        "budget",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [
+        "CANVAS",
+        "WEBGL",
+        "BLENDER",
+        "FFMPEG"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "resource-budget",
+      "name": "Resource Budget",
+      "domain": "Procedural Engineering",
+      "division": "Execution and resources",
+      "inputs": "Probe frame timings, peak memory and output size",
+      "decision": "Estimate frame count and cost from representative and worst-case samples; cap concurrency and preserve completed frames.",
+      "mechanism": "Measured limits support workable resolution and effect choices.",
+      "tradeoff": "Extrapolation can miss transient simulation or memory peaks.",
+      "verification": "Render a short segment with peak complexity and compare actual cost to the estimate.",
+      "output": "Resource estimate and quality fallback choices",
+      "shared": [
+        "budget",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [
+        "CANVAS",
+        "WEBGL",
+        "BLENDER",
+        "FFMPEG"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "execution-adapter",
+      "name": "Execution Adapter",
+      "domain": "Procedural Engineering",
+      "division": "Execution and resources",
+      "inputs": "Available local, chat or remote execution tools",
+      "decision": "Bind project commands to verified tools; report absent capabilities and checkpoint frame ranges rather than inventing a service.",
+      "mechanism": "Clear execution boundaries keep instructions portable across environments.",
+      "tradeoff": "A knowledge plugin does not itself supply a renderer, GPU or persistent job queue.",
+      "verification": "Run one real build-render-encode path and record which steps actually completed.",
+      "output": "Execution commands, locations and honest capability status",
+      "shared": [
+        "budget",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [
+        "CANVAS",
+        "WEBGL",
+        "BLENDER",
+        "FFMPEG"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "frame-rendering",
+      "name": "Frame Rendering",
+      "domain": "Video Production",
+      "division": "Rendering",
+      "inputs": "Exact timeline, renderer and output configuration",
+      "decision": "Render numbered lossless frames with explicit dimensions and frame range; resume only frames belonging to the same build signature.",
+      "mechanism": "Stable frame files allow recovery and targeted revision.",
+      "tradeoff": "Stale frames from older scene settings can silently contaminate output.",
+      "verification": "Validate complete numbering, dimensions, signature and representative decoded pixels.",
+      "output": "Complete frame sequence and render manifest",
+      "shared": [
+        "time",
+        "determinism",
+        "sampling",
+        "budget"
+      ],
+      "sources": [
+        "BLENDER",
+        "FFMPEG"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "temporal-sampling",
+      "name": "Temporal Sampling",
+      "domain": "Video Production",
+      "division": "Rendering",
+      "inputs": "Motion speed, frame rate and shutter intent",
+      "decision": "Sample time consistently; add subframe integration or motion blur only when it improves the target appearance.",
+      "mechanism": "Sufficient temporal sampling can reduce strobing in fast motion.",
+      "tradeoff": "Blur can erase detail and subframes multiply render cost.",
+      "verification": "Compare fast edges, fine patterns and readable text in encoded playback.",
+      "output": "Sampling and shutter settings",
+      "shared": [
+        "time",
+        "determinism",
+        "sampling",
+        "budget"
+      ],
+      "sources": [
+        "BLENDER",
+        "FFMPEG"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "color-pipeline",
+      "name": "Color Pipeline",
+      "domain": "Video Production",
+      "division": "Encoding and delivery",
+      "inputs": "Working-space frames, alpha and delivery target",
+      "decision": "Convert pixel values and tag output consistently; choose a documented SDR path unless another target is required.",
+      "mechanism": "Explicit conversion can reduce differences between stills and video playback.",
+      "tradeoff": "Metadata tags alone do not perform a color conversion.",
+      "verification": "Decode the MP4 and compare patches and gradients with source frames under the same viewing transform.",
+      "output": "Output conversion and color metadata",
+      "shared": [
+        "color",
+        "time",
+        "provenance",
+        "evidence"
+      ],
+      "sources": [
+        "FFMPEG",
+        "COLOR"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "video-encoding",
+      "name": "Video Encoding",
+      "domain": "Video Production",
+      "division": "Encoding and delivery",
+      "inputs": "Verified frames, frame rate, audio and target format",
+      "decision": "Select an available codec and pixel format; set input frame rate explicitly, preserve dimensions and inspect output streams.",
+      "mechanism": "Correct encoding settings preserve intended duration and playback compatibility.",
+      "tradeoff": "Compression can damage thin lines, grain and gradients; audio lengths may differ.",
+      "verification": "Probe dimensions, frame count, frame rate and audio duration; fully decode the output.",
+      "output": "Validated MP4 and encode settings",
+      "shared": [
+        "color",
+        "time",
+        "provenance",
+        "evidence"
+      ],
+      "sources": [
+        "FFMPEG",
+        "COLOR"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "delivery-package",
+      "name": "Delivery Package",
+      "domain": "Video Production",
+      "division": "Encoding and delivery",
+      "inputs": "Validated video, editable source and intended audience",
+      "decision": "Provide the requested video and rebuild inputs; confirm aspect ratio and platform requirements when publication depends on them.",
+      "mechanism": "Clear deliverables support reuse and future edits.",
+      "tradeoff": "Platform interface clearance and upload rules can change.",
+      "verification": "Open the final file, inspect first and last frames and confirm the requested deliverable set.",
+      "output": "Final video, source entry point and handoff notes",
+      "shared": [
+        "color",
+        "time",
+        "provenance",
+        "evidence"
+      ],
+      "sources": [
+        "FFMPEG",
+        "COLOR"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "still-evaluation",
+      "name": "Still Evaluation",
+      "domain": "Evaluation and Revision",
+      "division": "Visual and temporal review",
+      "inputs": "Rendered styleframes and agreed references",
+      "decision": "Compare silhouette, composition, hierarchy, color and surface behavior separately; rank deviations by visual consequence.",
+      "mechanism": "Separating dimensions of appearance can make fixes more precise.",
+      "tradeoff": "Numeric similarity alone cannot establish artistic or semantic success.",
+      "verification": "Produce matched comparisons and describe each significant visible mismatch.",
+      "output": "Visual findings and reconstruction corrections",
+      "shared": [
+        "reference",
+        "perception",
+        "evidence",
+        "sampling"
+      ],
+      "sources": [
+        "CANVAS",
+        "FFMPEG"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "motion-evaluation",
+      "name": "Motion Evaluation",
+      "domain": "Evaluation and Revision",
+      "division": "Visual and temporal review",
+      "inputs": "Representative playback, extrema and transition frames",
+      "decision": "Inspect timing, velocity, identity, collisions, continuity and camera behavior in motion as well as stills.",
+      "mechanism": "Temporal review can reveal failures invisible in isolated frames.",
+      "tradeoff": "A contact sheet cannot establish smoothness or correct audiovisual timing.",
+      "verification": "Watch a real clip at target speed and inspect suspect intervals frame by frame.",
+      "output": "Motion findings and timing corrections",
+      "shared": [
+        "reference",
+        "perception",
+        "evidence",
+        "sampling"
+      ],
+      "sources": [
+        "CANVAS",
+        "FFMPEG"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "mobile-legibility",
+      "name": "Mobile Legibility",
+      "domain": "Evaluation and Revision",
+      "division": "Visual and temporal review",
+      "inputs": "Encoded video, small viewing size and interface clearance",
+      "decision": "Inspect text, contrast, fine detail and focal subject at plausible phone display size; use project-specific safe regions.",
+      "mechanism": "Small-size review can reveal losses hidden by a large preview.",
+      "tradeoff": "Fixed universal safe-area claims can fail on different app layouts.",
+      "verification": "View a reduced playback and simulated interface mask; record hidden or unreadable content.",
+      "output": "Legibility corrections and delivery clearance",
+      "shared": [
+        "reference",
+        "perception",
+        "evidence",
+        "sampling"
+      ],
+      "sources": [
+        "CANVAS",
+        "FFMPEG"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "change-impact",
+      "name": "Change Impact",
+      "domain": "Evaluation and Revision",
+      "division": "Change and completion",
+      "inputs": "Requested revision, ownership graph and existing evidence",
+      "decision": "Trace incoming prerequisites and outgoing conditional handoffs; invalidate affected caches, frames and downstream checks.",
+      "mechanism": "Scoped propagation can preserve consistency without rebuilding unrelated work.",
+      "tradeoff": "Treating every related subject as a dependency produces unnecessary rework.",
+      "verification": "Revise one parameter and verify the affected owners, outputs and validation records change together.",
+      "output": "Revision scope and invalidated evidence",
+      "shared": [
+        "evidence",
+        "provenance",
+        "continuity"
+      ],
+      "sources": [
+        "FFMPEG"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    },
+    {
+      "id": "quality-gates",
+      "name": "Quality Gates",
+      "domain": "Evaluation and Revision",
+      "division": "Change and completion",
+      "inputs": "Acceptance criteria and observed output evidence",
+      "decision": "Evaluate visual fidelity, motion, technical output and procedural provenance separately; report passed, failed or unverified status.",
+      "mechanism": "Separate gates prevent a technically valid file from being mistaken for a finished design.",
+      "tradeoff": "Completion claims can exceed actual inspected frames or runtime capabilities.",
+      "verification": "Check the delivered source and MP4 against each explicit criterion; retain unresolved observations.",
+      "output": "Completion decision and evidence record",
+      "shared": [
+        "evidence",
+        "provenance",
+        "continuity"
+      ],
+      "sources": [
+        "FFMPEG"
+      ],
+      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+    }
+  ],
+  "handoffs": [
+    {
+      "source": "creative-brief",
+      "target": "reference-curation",
+      "relation": "constrains",
+      "condition": "When selecting or generating candidate references",
+      "payload": "Message and intended audience"
+    },
+    {
+      "source": "reference-curation",
+      "target": "visual-direction",
+      "relation": "informs",
+      "condition": "When selecting a coherent visual grammar",
+      "payload": "Role-labelled references and conflicts"
+    },
+    {
+      "source": "visual-direction",
+      "target": "storyboard",
+      "relation": "constrains",
+      "condition": "When arranging visual beats",
+      "payload": "Visual rules and permitted variation"
+    },
+    {
+      "source": "storyboard",
+      "target": "styleframes",
+      "relation": "hands_off",
+      "condition": "When resolving representative shots",
+      "payload": "Shot purpose and key states"
+    },
+    {
+      "source": "styleframes",
+      "target": "shot-continuity",
+      "relation": "hands_off",
+      "condition": "When shots share identities or motifs",
+      "payload": "Selected endpoints and invariants"
+    },
+    {
+      "source": "styleframes",
+      "target": "shape-decomposition",
+      "relation": "hands_off",
+      "condition": "When reconstructing the approved target",
+      "payload": "Reference crop and dominant silhouettes"
+    },
+    {
+      "source": "shape-decomposition",
+      "target": "spatial-inference",
+      "relation": "informs",
+      "condition": "When depth must be inferred",
+      "payload": "Contours, overlap and visible faces"
+    },
+    {
+      "source": "spatial-inference",
+      "target": "appearance-inference",
+      "relation": "informs",
+      "condition": "When interpreting light and material",
+      "payload": "Camera and geometry hypotheses"
+    },
+    {
+      "source": "shape-decomposition",
+      "target": "reconstruction-planning",
+      "relation": "hands_off",
+      "condition": "When choosing object representation",
+      "payload": "Editable parts and silhouettes"
+    },
+    {
+      "source": "spatial-inference",
+      "target": "reconstruction-planning",
+      "relation": "constrains",
+      "condition": "When motion exposes new views",
+      "payload": "Required depth and reveal limits"
+    },
+    {
+      "source": "appearance-inference",
+      "target": "reconstruction-planning",
+      "relation": "informs",
+      "condition": "When choosing the shading approach",
+      "payload": "Surface and light hypotheses"
+    },
+    {
+      "source": "ambiguity-resolution",
+      "target": "reconstruction-planning",
+      "relation": "constrains",
+      "condition": "When the image leaves hidden structure uncertain",
+      "payload": "Chosen interpretation and creative latitude"
+    },
+    {
+      "source": "reconstruction-planning",
+      "target": "curve-geometry",
+      "relation": "hands_off",
+      "condition": "When an object uses paths",
+      "payload": "Contour and stroke requirements"
+    },
+    {
+      "source": "reconstruction-planning",
+      "target": "planar-geometry",
+      "relation": "hands_off",
+      "condition": "When an object uses filled regions",
+      "payload": "Topology and cutout requirements"
+    },
+    {
+      "source": "reconstruction-planning",
+      "target": "procedural-modeling",
+      "relation": "hands_off",
+      "condition": "When viewpoint changes require volume",
+      "payload": "Object dimensions and required views"
+    },
+    {
+      "source": "reconstruction-planning",
+      "target": "depth-layering",
+      "relation": "hands_off",
+      "condition": "When depth can be represented by layers",
+      "payload": "Layer representation and reveal limits"
+    },
+    {
+      "source": "reconstruction-planning",
+      "target": "renderer-selection",
+      "relation": "constrains",
+      "condition": "When selecting a production renderer",
+      "payload": "Required representation and effects"
+    },
+    {
+      "source": "reference-matching",
+      "target": "shape-decomposition",
+      "relation": "revises",
+      "condition": "When silhouette or proportion mismatches dominate",
+      "payload": "Measured shape deviations"
+    },
+    {
+      "source": "reference-matching",
+      "target": "appearance-inference",
+      "relation": "revises",
+      "condition": "When material or lighting mismatches dominate",
+      "payload": "Observed surface deviations"
+    },
+    {
+      "source": "reference-matching",
+      "target": "ambiguity-resolution",
+      "relation": "informs",
+      "condition": "When competing reconstructions fit the image",
+      "payload": "Remaining uncertainty"
+    },
+    {
+      "source": "visual-direction",
+      "target": "typography",
+      "relation": "constrains",
+      "condition": "When the sequence includes text",
+      "payload": "Type hierarchy and visual grammar"
+    },
+    {
+      "source": "typography",
+      "target": "composition",
+      "relation": "hands_off",
+      "condition": "When text occupies frame area",
+      "payload": "Measured glyph bounds and line breaks"
+    },
+    {
+      "source": "curve-geometry",
+      "target": "shape-morphing",
+      "relation": "enables",
+      "condition": "When contours must transform",
+      "payload": "Editable paths and correspondence candidates"
+    },
+    {
+      "source": "planar-geometry",
+      "target": "shape-morphing",
+      "relation": "constrains",
+      "condition": "When filled shapes transform",
+      "payload": "Winding, holes and topology"
+    },
+    {
+      "source": "procedural-modeling",
+      "target": "materials",
+      "relation": "enables",
+      "condition": "When shaded volumes are used",
+      "payload": "Geometry and surface coordinates"
+    },
+    {
+      "source": "color-design",
+      "target": "materials",
+      "relation": "constrains",
+      "condition": "When materials carry palette roles",
+      "payload": "Color targets under the output transform"
+    },
+    {
+      "source": "procedural-texture",
+      "target": "materials",
+      "relation": "hands_off",
+      "condition": "When the surface needs generated patterns",
+      "payload": "Seeded functions and mapping scale"
+    },
+    {
+      "source": "materials",
+      "target": "lighting",
+      "relation": "constrains",
+      "condition": "When highlights and shadows define form",
+      "payload": "Surface response"
+    },
+    {
+      "source": "lighting",
+      "target": "materials",
+      "relation": "revises",
+      "condition": "When the intended surface is not legible",
+      "payload": "Observed light-material interaction"
+    },
+    {
+      "source": "spatial-inference",
+      "target": "camera-projection",
+      "relation": "informs",
+      "condition": "When matching perspective",
+      "payload": "Camera hypothesis and landmarks"
+    },
+    {
+      "source": "camera-projection",
+      "target": "composition",
+      "relation": "constrains",
+      "condition": "When arranging projected objects",
+      "payload": "Screen-space bounds and perspective"
+    },
+    {
+      "source": "composition",
+      "target": "camera-motion",
+      "relation": "constrains",
+      "condition": "When framing changes over time",
+      "payload": "Focal anchors and clearance"
+    },
+    {
+      "source": "depth-layering",
+      "target": "camera-motion",
+      "relation": "constrains",
+      "condition": "When parallax reveals layer boundaries",
+      "payload": "Layer extents and depth order"
+    },
+    {
+      "source": "lighting",
+      "target": "compositing",
+      "relation": "hands_off",
+      "condition": "When combining shaded passes",
+      "payload": "Light and shadow contributions"
+    },
+    {
+      "source": "materials",
+      "target": "compositing",
+      "relation": "hands_off",
+      "condition": "When surfaces have transparency",
+      "payload": "Alpha and color conventions"
+    },
+    {
+      "source": "shot-continuity",
+      "target": "transitions",
+      "relation": "constrains",
+      "condition": "When joining adjacent shots",
+      "payload": "Identity and screen-direction invariants"
+    },
+    {
+      "source": "storyboard",
+      "target": "timeline-design",
+      "relation": "hands_off",
+      "condition": "When scheduling the sequence",
+      "payload": "Provisional beats and shot order"
+    },
+    {
+      "source": "timeline-design",
+      "target": "timing-and-pacing",
+      "relation": "constrains",
+      "condition": "When allocating event durations",
+      "payload": "Exact shot ranges"
+    },
+    {
+      "source": "timing-and-pacing",
+      "target": "easing",
+      "relation": "hands_off",
+      "condition": "When shaping movement over its duration",
+      "payload": "Action intervals and movement character"
+    },
+    {
+      "source": "easing",
+      "target": "transform-animation",
+      "relation": "hands_off",
+      "condition": "When interpolating transforms",
+      "payload": "Progress and endpoint behavior"
+    },
+    {
+      "source": "transform-animation",
+      "target": "secondary-motion",
+      "relation": "hands_off",
+      "condition": "When objects need follow-through",
+      "payload": "Primary action and attachment motion"
+    },
+    {
+      "source": "constraints-and-rigging",
+      "target": "transform-animation",
+      "relation": "constrains",
+      "condition": "When objects share a rig",
+      "payload": "Permitted motion and evaluation order"
+    },
+    {
+      "source": "shape-morphing",
+      "target": "scene-state",
+      "relation": "hands_off",
+      "condition": "When deformation is part of a shot",
+      "payload": "Deformation evaluator"
+    },
+    {
+      "source": "secondary-motion",
+      "target": "scene-state",
+      "relation": "hands_off",
+      "condition": "When secondary movement is present",
+      "payload": "Analytic response or reproducible checkpoints"
+    },
+    {
+      "source": "transform-animation",
+      "target": "scene-state",
+      "relation": "hands_off",
+      "condition": "When spatial animation is present",
+      "payload": "Transform evaluators"
+    },
+    {
+      "source": "particle-systems",
+      "target": "scene-state",
+      "relation": "hands_off",
+      "condition": "When particles are present",
+      "payload": "Seeded particle states"
+    },
+    {
+      "source": "camera-motion",
+      "target": "scene-state",
+      "relation": "hands_off",
+      "condition": "When the viewpoint moves",
+      "payload": "Camera position and aim at frame"
+    },
+    {
+      "source": "transitions",
+      "target": "timeline-design",
+      "relation": "revises",
+      "condition": "When a transition changes overlap duration",
+      "payload": "Boundary and overlap requirements"
+    },
+    {
+      "source": "editing-rhythm",
+      "target": "timing-and-pacing",
+      "relation": "revises",
+      "condition": "When sequence playback reveals reading problems",
+      "payload": "Cut and hold revisions"
+    },
+    {
+      "source": "timeline-design",
+      "target": "audio-synchronization",
+      "relation": "constrains",
+      "condition": "When audio cues are used",
+      "payload": "Global timebase and exact events"
+    },
+    {
+      "source": "sound-design",
+      "target": "audio-synchronization",
+      "relation": "hands_off",
+      "condition": "When mixing audio to picture",
+      "payload": "Audio source offsets and tails"
+    },
+    {
+      "source": "typography",
+      "target": "captions-and-overlays",
+      "relation": "enables",
+      "condition": "When readable overlays are required",
+      "payload": "Text metrics and layout rules"
+    },
+    {
+      "source": "audio-synchronization",
+      "target": "captions-and-overlays",
+      "relation": "informs",
+      "condition": "When captions follow speech",
+      "payload": "Phrase and cue timing"
+    },
+    {
+      "source": "procedural-randomness",
+      "target": "procedural-texture",
+      "relation": "constrains",
+      "condition": "When noise drives appearance",
+      "payload": "Stable seed and object identity"
+    },
+    {
+      "source": "procedural-randomness",
+      "target": "particle-systems",
+      "relation": "constrains",
+      "condition": "When stochastic emitters are used",
+      "payload": "Seeded birth and variation rules"
+    },
+    {
+      "source": "scene-state",
+      "target": "frame-rendering",
+      "relation": "enables",
+      "condition": "When rendering any requested frame",
+      "payload": "Complete deterministic scene at exact time"
+    },
+    {
+      "source": "renderer-selection",
+      "target": "execution-adapter",
+      "relation": "constrains",
+      "condition": "When binding commands to tools",
+      "payload": "Required and verified rendering capabilities"
+    },
+    {
+      "source": "execution-adapter",
+      "target": "resource-budget",
+      "relation": "informs",
+      "condition": "When estimating production feasibility",
+      "payload": "Measured runtime capabilities and limits"
+    },
+    {
+      "source": "resource-budget",
+      "target": "renderer-selection",
+      "relation": "revises",
+      "condition": "When probes exceed the resource envelope",
+      "payload": "Measured cost and acceptable simplifications"
+    },
+    {
+      "source": "reproducible-build",
+      "target": "frame-rendering",
+      "relation": "constrains",
+      "condition": "When rendering or resuming a build",
+      "payload": "Inputs and build signature"
+    },
+    {
+      "source": "timeline-design",
+      "target": "frame-rendering",
+      "relation": "constrains",
+      "condition": "When producing the sequence",
+      "payload": "Frame range and rational frame rate"
+    },
+    {
+      "source": "temporal-sampling",
+      "target": "frame-rendering",
+      "relation": "constrains",
+      "condition": "When rendering moving detail",
+      "payload": "Time samples and shutter settings"
+    },
+    {
+      "source": "compositing",
+      "target": "color-pipeline",
+      "relation": "hands_off",
+      "condition": "When preparing output frames",
+      "payload": "Working-space pixels and alpha convention"
+    },
+    {
+      "source": "color-pipeline",
+      "target": "video-encoding",
+      "relation": "constrains",
+      "condition": "When encoding delivery media",
+      "payload": "Converted pixels and matching metadata"
+    },
+    {
+      "source": "frame-rendering",
+      "target": "video-encoding",
+      "relation": "enables",
+      "condition": "When all required frames are complete",
+      "payload": "Verified numbered sequence"
+    },
+    {
+      "source": "audio-synchronization",
+      "target": "video-encoding",
+      "relation": "hands_off",
+      "condition": "When an audio track is included",
+      "payload": "Aligned audio mix and intended duration"
+    },
+    {
+      "source": "video-encoding",
+      "target": "delivery-package",
+      "relation": "enables",
+      "condition": "When technical checks pass",
+      "payload": "Validated encoded output"
+    },
+    {
+      "source": "styleframes",
+      "target": "still-evaluation",
+      "relation": "constrains",
+      "condition": "When evaluating appearance",
+      "payload": "Agreed visual targets"
+    },
+    {
+      "source": "still-evaluation",
+      "target": "reference-matching",
+      "relation": "hands_off",
+      "condition": "When the target is not met",
+      "payload": "Ranked visible deviations"
+    },
+    {
+      "source": "motion-evaluation",
+      "target": "timing-and-pacing",
+      "relation": "revises",
+      "condition": "When motion obscures the message",
+      "payload": "Observed missed actions or reading failures"
+    },
+    {
+      "source": "motion-evaluation",
+      "target": "shape-morphing",
+      "relation": "revises",
+      "condition": "When identity or topology fails in between endpoints",
+      "payload": "Failing frame interval"
+    },
+    {
+      "source": "mobile-legibility",
+      "target": "composition",
+      "relation": "revises",
+      "condition": "When phone-size playback loses hierarchy",
+      "payload": "Unreadable or occluded elements"
+    },
+    {
+      "source": "video-encoding",
+      "target": "mobile-legibility",
+      "relation": "hands_off",
+      "condition": "When reviewing the delivered appearance",
+      "payload": "Actual encoded clip"
+    },
+    {
+      "source": "change-impact",
+      "target": "reproducible-build",
+      "relation": "constrains",
+      "condition": "When a revision invalidates prior output",
+      "payload": "Affected dependencies and cache invalidation"
+    },
+    {
+      "source": "still-evaluation",
+      "target": "quality-gates",
+      "relation": "informs",
+      "condition": "When deciding visual completion",
+      "payload": "Observed reconstruction fidelity"
+    },
+    {
+      "source": "motion-evaluation",
+      "target": "quality-gates",
+      "relation": "informs",
+      "condition": "When deciding temporal completion",
+      "payload": "Playback findings"
+    },
+    {
+      "source": "mobile-legibility",
+      "target": "quality-gates",
+      "relation": "informs",
+      "condition": "When deciding social-video readiness",
+      "payload": "Phone-size findings and clearance"
+    },
+    {
+      "source": "delivery-package",
+      "target": "quality-gates",
+      "relation": "informs",
+      "condition": "When deciding deliverable completion",
+      "payload": "Final files and rebuild inputs"
+    },
+    {
+      "source": "quality-gates",
+      "target": "change-impact",
+      "relation": "revises",
+      "condition": "When any acceptance criterion fails",
+      "payload": "Failed criterion and responsible owner"
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "name": "Integration Support",
+  "specializations": [
+    {
+      "id": "media-ingest",
+      "name": "Media Ingest and Normalization",
+      "domain": "Integration Support",
+      "division": "Production contracts",
+      "inputs": "Footage/audio/image metadata, timecode, orientation, variable frame rate and source color tags",
+      "decision": "Preserve immutable originals and create explicit proxies with source-to-timeline maps; normalize only what the selected pipeline requires.",
+      "mechanism": "Explicit mappings and ownership make downstream edits attributable and reproducible.",
+      "tradeoff": "Unrecorded frame-rate conversion or rotation breaks every downstream coordinate and cue.",
+      "verification": "Compare known source frames and audio anchors against normalized media; test orientation, duration and seek behavior.",
+      "output": "Asset manifest, proxy mapping and decode capability report",
+      "shared": [
+        "time",
+        "geometry",
+        "determinism",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored operational contract; validate with actual project artifacts.",
+      "failure": "Unrecorded frame-rate conversion or rotation breaks every downstream coordinate and cue.",
+      "recovery": "Rebuild the proxy and its mapping, then invalidate dependent track/caption/edit evidence."
+    },
+    {
+      "id": "transcript-alignment",
+      "name": "Transcript and Speech Alignment",
+      "domain": "Integration Support",
+      "division": "Production contracts",
+      "inputs": "Final decoded speech, approved transcript, speaker IDs and alignment provenance",
+      "decision": "Distinguish authored phrase cues from measured word/phoneme alignment; correct transcript before emphasis and captions.",
+      "mechanism": "Explicit mappings and ownership make downstream edits attributable and reproducible.",
+      "tradeoff": "Estimated timestamps can appear plausible while drifting from spoken audio.",
+      "verification": "Listen across phrase boundaries and compare actual audio with the claimed word/phoneme evidence.",
+      "output": "Reviewed cue map with timing precision and uncertainty",
+      "shared": [
+        "time",
+        "geometry",
+        "determinism",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored operational contract; validate with actual project artifacts.",
+      "failure": "Estimated timestamps can appear plausible while drifting from spoken audio.",
+      "recovery": "Re-align changed audio ranges; propagate offsets to captions, editorial cuts and lip sync."
+    },
+    {
+      "id": "layout-collision",
+      "name": "Temporal Layout and Collision",
+      "domain": "Integration Support",
+      "division": "Production contracts",
+      "inputs": "Projected protected bounds, time intervals, placement masks and object priority",
+      "decision": "Evaluate collisions over relevant motion intervals; preserve critical text/face bounds and allow intentional decorative overflow.",
+      "mechanism": "Explicit mappings and ownership make downstream edits attributable and reproducible.",
+      "tradeoff": "Static safe-frame checks miss transient overlaps and time-dependent interface occlusion.",
+      "verification": "Inspect holds plus maximum expansion/camera extremes and the first contact between bounds.",
+      "output": "Timed layout findings and chosen priority resolutions",
+      "shared": [
+        "time",
+        "geometry",
+        "determinism",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored operational contract; validate with actual project artifacts.",
+      "failure": "Static safe-frame checks miss transient overlaps and time-dependent interface occlusion.",
+      "recovery": "Reflow, restage or cut away; invalidate only affected layout variants and their rendered ranges."
+    },
+    {
+      "id": "track-recovery",
+      "name": "Tracking Confidence and Recovery",
+      "domain": "Integration Support",
+      "division": "Production contracts",
+      "inputs": "Anchor trajectories, coordinate transforms, confidence, masks and occlusion intervals",
+      "decision": "Keep tracked coordinates in the source frame with explicit transforms to output space; mark loss of confidence and use reviewed manual anchors or gaps.",
+      "mechanism": "Explicit mappings and ownership make downstream edits attributable and reproducible.",
+      "tradeoff": "A convincing first frame can hide identity switches after occlusion.",
+      "verification": "Inspect entry, exit, re-entry and maximal perspective change against the actual filmed subject.",
+      "output": "Confidence-aware tracks, manual corrections and gap policy",
+      "shared": [
+        "time",
+        "geometry",
+        "determinism",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored operational contract; validate with actual project artifacts.",
+      "failure": "A convincing first frame can hide identity switches after occlusion.",
+      "recovery": "Stop extrapolating through uncertain ranges and change to a cut/crop if the effect cannot be stabilized."
+    },
+    {
+      "id": "editorial-retiming",
+      "name": "Editorial Retiming and Dependency Repair",
+      "domain": "Integration Support",
+      "division": "Production contracts",
+      "inputs": "Old/new shot ranges, cue precision, source maps and performance tracks",
+      "decision": "Represent time edits as explicit piecewise mappings; handle cut, stretch, hold and reverse semantics separately.",
+      "mechanism": "Explicit mappings and ownership make downstream edits attributable and reproducible.",
+      "tradeoff": "Stretching the picture alone invalidates speech, captions, contact and cached simulation.",
+      "verification": "Compare boundary-neighbor frames and speech/contact anchors before and after the edit.",
+      "output": "Time mapping and invalidation list",
+      "shared": [
+        "time",
+        "geometry",
+        "determinism",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored operational contract; validate with actual project artifacts.",
+      "failure": "Stretching the picture alone invalidates speech, captions, contact and cached simulation.",
+      "recovery": "Rebuild dependent cues or re-perform narration; preserve intelligibility rather than forcing arbitrary speed."
+    },
+    {
+      "id": "audio-restoration",
+      "name": "Dialogue Restoration and Stem Balance",
+      "domain": "Integration Support",
+      "division": "Production contracts",
+      "inputs": "Speech/noise stems, sample rate, speech priority and mix context",
+      "decision": "Apply the minimum cleanup needed; maintain intelligible consonants and compare processed/bypass speech in the real mix.",
+      "mechanism": "Explicit mappings and ownership make downstream edits attributable and reproducible.",
+      "tradeoff": "Aggressive denoising, gating or limiting can damage intelligibility and naturalness.",
+      "verification": "Listen through quiet words, breath/phrase joins and loud events; inspect clipping and start/end alignment.",
+      "output": "Reviewed dialogue stem, gain automation and processing settings",
+      "shared": [
+        "time",
+        "geometry",
+        "determinism",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored operational contract; validate with actual project artifacts.",
+      "failure": "Aggressive denoising, gating or limiting can damage intelligibility and naturalness.",
+      "recovery": "Back off the damaging process and revise competing music/SFX before intensifying cleanup."
+    },
+    {
+      "id": "component-contracts",
+      "name": "Reusable Component Contracts",
+      "domain": "Integration Support",
+      "division": "Production contracts",
+      "inputs": "Component identity/version, editable parameters, bounds, cue channels and dependency IDs",
+      "decision": "Expose stable render/time/bounds interfaces and declare allowed overrides; share one master rather than copying divergent shot implementations.",
+      "mechanism": "Explicit mappings and ownership make downstream edits attributable and reproducible.",
+      "tradeoff": "An unversioned component edit can silently change many scenes or character identities.",
+      "verification": "Render default and extreme parameter cases and verify bounds, time evaluation and dependency identity.",
+      "output": "Versioned component schema and migration/invalidation rules",
+      "shared": [
+        "time",
+        "geometry",
+        "determinism",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored operational contract; validate with actual project artifacts.",
+      "failure": "An unversioned component edit can silently change many scenes or character identities.",
+      "recovery": "Pin unaffected shots or migrate overrides explicitly; regenerate impacted frames and reviews."
+    },
+    {
+      "id": "variant-rendering",
+      "name": "Variant Rendering and Export Lineage",
+      "domain": "Integration Support",
+      "division": "Production contracts",
+      "inputs": "Master edit, placement requirements, caption language, aspect ratio and build signatures",
+      "decision": "Derive placement/language variants from one semantic edit while keeping per-variant layout and reviewed export lineage.",
+      "mechanism": "Explicit mappings and ownership make downstream edits attributable and reproducible.",
+      "tradeoff": "Blind scaling or stale caches can silently mix media from different revisions.",
+      "verification": "Check each variant signature, protected bounds, actual streams and source-to-output relationships.",
+      "output": "Variant manifest and verified export set",
+      "shared": [
+        "time",
+        "geometry",
+        "determinism",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored operational contract; validate with actual project artifacts.",
+      "failure": "Blind scaling or stale caches can silently mix media from different revisions.",
+      "recovery": "Regenerate mismatched variants and report unverified ones separately."
+    }
+  ],
+  "handoffs": [
+    {
+      "source": "social-story-editing",
+      "target": "media-ingest",
+      "relation": "hands_off",
+      "condition": "When this supporting responsibility is required",
+      "payload": "Footage/audio/image metadata, timecode, orientation, variable frame rate and source color tags"
+    },
+    {
+      "source": "media-ingest",
+      "target": "reproducible-build",
+      "relation": "hands_off",
+      "condition": "When the reviewed output is ready",
+      "payload": "Asset manifest, proxy mapping and decode capability report"
+    },
+    {
+      "source": "change-impact",
+      "target": "media-ingest",
+      "relation": "constrains",
+      "condition": "When an upstream dependency changes",
+      "payload": "Revalidate the affected mappings and reviewed outputs"
+    },
+    {
+      "source": "social-animated-captions",
+      "target": "transcript-alignment",
+      "relation": "hands_off",
+      "condition": "When this supporting responsibility is required",
+      "payload": "Final decoded speech, approved transcript, speaker IDs and alignment provenance"
+    },
+    {
+      "source": "transcript-alignment",
+      "target": "dialogue-lip-sync",
+      "relation": "hands_off",
+      "condition": "When the reviewed output is ready",
+      "payload": "Reviewed cue map with timing precision and uncertainty"
+    },
+    {
+      "source": "change-impact",
+      "target": "transcript-alignment",
+      "relation": "constrains",
+      "condition": "When an upstream dependency changes",
+      "payload": "Revalidate the affected mappings and reviewed outputs"
+    },
+    {
+      "source": "social-adaptive-layout",
+      "target": "layout-collision",
+      "relation": "hands_off",
+      "condition": "When this supporting responsibility is required",
+      "payload": "Projected protected bounds, time intervals, placement masks and object priority"
+    },
+    {
+      "source": "layout-collision",
+      "target": "composition",
+      "relation": "hands_off",
+      "condition": "When the reviewed output is ready",
+      "payload": "Timed layout findings and chosen priority resolutions"
+    },
+    {
+      "source": "change-impact",
+      "target": "layout-collision",
+      "relation": "constrains",
+      "condition": "When an upstream dependency changes",
+      "payload": "Revalidate the affected mappings and reviewed outputs"
+    },
+    {
+      "source": "social-subject-effects",
+      "target": "track-recovery",
+      "relation": "hands_off",
+      "condition": "When this supporting responsibility is required",
+      "payload": "Anchor trajectories, coordinate transforms, confidence, masks and occlusion intervals"
+    },
+    {
+      "source": "track-recovery",
+      "target": "compositing",
+      "relation": "hands_off",
+      "condition": "When the reviewed output is ready",
+      "payload": "Confidence-aware tracks, manual corrections and gap policy"
+    },
+    {
+      "source": "change-impact",
+      "target": "track-recovery",
+      "relation": "constrains",
+      "condition": "When an upstream dependency changes",
+      "payload": "Revalidate the affected mappings and reviewed outputs"
+    },
+    {
+      "source": "social-story-editing",
+      "target": "editorial-retiming",
+      "relation": "hands_off",
+      "condition": "When this supporting responsibility is required",
+      "payload": "Old/new shot ranges, cue precision, source maps and performance tracks"
+    },
+    {
+      "source": "editorial-retiming",
+      "target": "timeline-design",
+      "relation": "hands_off",
+      "condition": "When the reviewed output is ready",
+      "payload": "Time mapping and invalidation list"
+    },
+    {
+      "source": "change-impact",
+      "target": "editorial-retiming",
+      "relation": "constrains",
+      "condition": "When an upstream dependency changes",
+      "payload": "Revalidate the affected mappings and reviewed outputs"
+    },
+    {
+      "source": "social-audio-editorial",
+      "target": "audio-restoration",
+      "relation": "hands_off",
+      "condition": "When this supporting responsibility is required",
+      "payload": "Speech/noise stems, sample rate, speech priority and mix context"
+    },
+    {
+      "source": "audio-restoration",
+      "target": "sound-design",
+      "relation": "hands_off",
+      "condition": "When the reviewed output is ready",
+      "payload": "Reviewed dialogue stem, gain automation and processing settings"
+    },
+    {
+      "source": "change-impact",
+      "target": "audio-restoration",
+      "relation": "constrains",
+      "condition": "When an upstream dependency changes",
+      "payload": "Revalidate the affected mappings and reviewed outputs"
+    },
+    {
+      "source": "social-graphics-ui",
+      "target": "component-contracts",
+      "relation": "hands_off",
+      "condition": "When this supporting responsibility is required",
+      "payload": "Component identity/version, editable parameters, bounds, cue channels and dependency IDs"
+    },
+    {
+      "source": "component-contracts",
+      "target": "character-asset-system",
+      "relation": "hands_off",
+      "condition": "When the reviewed output is ready",
+      "payload": "Versioned component schema and migration/invalidation rules"
+    },
+    {
+      "source": "change-impact",
+      "target": "component-contracts",
+      "relation": "constrains",
+      "condition": "When an upstream dependency changes",
+      "payload": "Revalidate the affected mappings and reviewed outputs"
+    },
+    {
+      "source": "social-production-editorial",
+      "target": "variant-rendering",
+      "relation": "hands_off",
+      "condition": "When this supporting responsibility is required",
+      "payload": "Master edit, placement requirements, caption language, aspect ratio and build signatures"
+    },
+    {
+      "source": "variant-rendering",
+      "target": "delivery-package",
+      "relation": "hands_off",
+      "condition": "When the reviewed output is ready",
+      "payload": "Variant manifest and verified export set"
+    },
+    {
+      "source": "change-impact",
+      "target": "variant-rendering",
+      "relation": "constrains",
+      "condition": "When an upstream dependency changes",
+      "payload": "Revalidate the affected mappings and reviewed outputs"
+    }
+  ]
+}

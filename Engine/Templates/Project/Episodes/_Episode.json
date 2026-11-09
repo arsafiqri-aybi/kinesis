@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "episode_id": "_episode",
+  "project_id": "_template",
+  "project_design_version": "0.0.0",
+  "title": "Untitled episode",
+  "status": "draft",
+  "source_assets": [],
+  "script": {
+    "language": null,
+    "text": null,
+    "utterances": []
+  },
+  "timeline": {
+    "fps_num": 30,
+    "fps_den": 1,
+    "shots": []
+  },
+  "recipe_instances": [],
+  "overrides": [],
+  "variants": [],
+  "build": {
+    "status": "not_started",
+    "signature": null,
+    "rendered_files": []
+  },
+  "evidence": {
+    "structural": "unverified",
+    "visual": "unverified",
+    "motion": "unverified",
+    "audio": "unverified",
+    "mobile": "unverified",
+    "placement": "unverified",
+    "encoded_playback": "unverified",
+    "rights": "unverified"
+  },
+  "issues": [],
+  "evidence_reasons": {}
+}

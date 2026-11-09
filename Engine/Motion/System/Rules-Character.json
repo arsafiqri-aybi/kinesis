@@ -1,0 +1,455 @@
+{
+  "schema_version": 1,
+  "name": "Character Animation Extension",
+  "specializations": [
+    {
+      "id": "character-design",
+      "name": "Character Design & Identity",
+      "division": "Character development",
+      "inputs": "Approved styleframes, role, silhouette, personality cues, expression examples and allowed viewpoints",
+      "decision": "Define a canonical model sheet, shape language, proportion ratios, palette, recognizable markers and permitted variation for a character.",
+      "mechanism": "A stable character identity sheet with explicit invariants can reduce visual drift across shots and control changes.",
+      "tradeoff": "A single flattering reference hides viewpoint and occlusion uncertainty; excessive constraints can suppress expressive poses.",
+      "verification": "Compare the neutral design and at least three acting poses at intended crops, viewpoints and lighting; check landmarks, silhouette and recognizability.",
+      "output": "Character identity sheet, proportions, landmarks, permissible expression and pose range",
+      "shared": [
+        "reference",
+        "continuity",
+        "geometry",
+        "evidence"
+      ],
+      "sources": [
+        "SVG",
+        "BLENDER"
+      ],
+      "domain": "Character Animation",
+      "evidence": "Operational animation hypothesis; confirm with actual project playback and frame/pose inspection."
+    },
+    {
+      "id": "character-anatomy",
+      "name": "Character Anatomy & Construction",
+      "division": "Character development",
+      "inputs": "Character identity sheet, required action set, pose extremes, visible views and procedural boundary",
+      "decision": "Specify articulation and deformation regions for stylized or realistic bodies and choose cutout, vector path, layered 2.5D or procedural 3D construction.",
+      "mechanism": "Pose-aware segment and deformation plans can keep the visible form coherent at the required angles.",
+      "tradeoff": "Overly literal anatomical joints may limit stylization; a still photo cannot establish unseen body structure.",
+      "verification": "Render turnarounds or planned views and stress silhouette, limb proportions, topology and deformation at action extremes.",
+      "output": "Procedural anatomy map, controllable segments, joints and deformation envelope",
+      "shared": [
+        "geometry",
+        "reference",
+        "continuity",
+        "evidence"
+      ],
+      "sources": [
+        "SVG",
+        "BLENDER"
+      ],
+      "domain": "Character Animation",
+      "evidence": "Operational animation hypothesis; confirm with actual project playback and frame/pose inspection."
+    },
+    {
+      "id": "character-asset-system",
+      "name": "Character Asset System",
+      "division": "Character development",
+      "inputs": "Canonical character design, construction plan, scene requirements and versioned source parameters",
+      "decision": "Create a reusable parameterized master character with stable object/part IDs and project-specific variants separated from animation.",
+      "mechanism": "One source of character geometry and identity may prevent shot-by-shot redrawing and enable predictable revisions.",
+      "tradeoff": "Rigid sharing can break camera-specific corrective shapes; imported rigs require declared provenance and may violate a code-only boundary.",
+      "verification": "Instantiate the same master asset in two dissimilar scenes, vary pose and view, then compare identity and verify stable handles.",
+      "output": "Versioned reusable character definition, expression targets, part IDs and approved overrides",
+      "shared": [
+        "continuity",
+        "provenance",
+        "geometry",
+        "evidence"
+      ],
+      "sources": [
+        "SVG",
+        "BLENDER"
+      ],
+      "domain": "Character Animation",
+      "evidence": "Operational animation hypothesis; confirm with actual project playback and frame/pose inspection."
+    },
+    {
+      "id": "character-rigging",
+      "name": "Advanced Rigging & Skinning",
+      "division": "Performance controls",
+      "inputs": "Character anatomy, rest pose, controllable parts, joint motion limits and intended shots",
+      "decision": "Construct 2D parenting/deformation controls or 3D bones, inverse kinematics, skin weights and corrective shapes as needed; define solve order.",
+      "mechanism": "A controllable rig can coordinate multiple parts during body and facial animation without redrawing each frame.",
+      "tradeoff": "Joint flips, unstable IK, volume loss and skin collapse can emerge at extreme poses, especially with cyclic constraints.",
+      "verification": "Test reachable targets, joint limits, blend shapes, extreme bends, reverse seeking and reproducible deformations.",
+      "output": "Evaluable rig, pose interface, weight maps or deformation rules, solver constraints",
+      "shared": [
+        "geometry",
+        "time",
+        "continuity",
+        "sampling"
+      ],
+      "sources": [
+        "BLENDER",
+        "ANIM"
+      ],
+      "domain": "Character Animation",
+      "evidence": "Operational animation hypothesis; confirm with actual project playback and frame/pose inspection."
+    },
+    {
+      "id": "body-mechanics",
+      "name": "Body Mechanics & Locomotion",
+      "division": "Performance controls",
+      "inputs": "Rig, mass/scale convention, action goals, path, environment contacts and rhythm",
+      "decision": "Author balanced poses, weight transfer, gait cycles, contact timing, anticipation, follow-through and physical or stylized arcs.",
+      "mechanism": "Controlled contact and timing can make locomotion readable and convey mass, intent and momentum.",
+      "tradeoff": "Foot sliding, unstable balance, penetrations or over-mechanical cycles can make behavior implausible; stylistic exaggeration may be deliberate.",
+      "verification": "Inspect feet/contact trajectories, planted phases, center-of-mass estimates, cycle seam and full-speed playback over repeated steps.",
+      "output": "Reusable contact-aware body action with pose keyframes and cycle parameters",
+      "shared": [
+        "time",
+        "continuity",
+        "geometry",
+        "sampling"
+      ],
+      "sources": [
+        "ANIM",
+        "BLENDER"
+      ],
+      "domain": "Character Animation",
+      "evidence": "Operational animation hypothesis; confirm with actual project playback and frame/pose inspection."
+    },
+    {
+      "id": "facial-performance",
+      "name": "Facial Animation & Expressions",
+      "division": "Performance controls",
+      "inputs": "Facial construction, rig, emotional beats, eye target, design constraints and camera crop",
+      "decision": "Design expression shapes, brows, gaze, eyelids, cheek/mouth deformation, pose combinations and timing with an expressive but stable face.",
+      "mechanism": "Coordinated gaze and facial deformation can communicate attention and emotion while retaining character identity.",
+      "tradeoff": "Expression controls may conflict, clip through surfaces or lose readability at small scales; emotion cannot be proved from expression alone.",
+      "verification": "Check neutral and emotion transitions, left/right asymmetry, blink extremes, mouth-eye coordination and full-shot viewing size.",
+      "output": "Expression library, facial rig channels, emotional pose and gaze tracks",
+      "shared": [
+        "geometry",
+        "time",
+        "continuity",
+        "reference"
+      ],
+      "sources": [
+        "SVG",
+        "BLENDER"
+      ],
+      "domain": "Character Animation",
+      "evidence": "Operational animation hypothesis; confirm with actual project playback and frame/pose inspection."
+    },
+    {
+      "id": "dialogue-lip-sync",
+      "name": "Dialogue & Lip Synchronization",
+      "division": "Performance controls",
+      "inputs": "Approved dialogue, actually rendered or recorded speech, verified timing or phoneme alignment, viseme library and facial rig",
+      "decision": "Map timed phonemes or reviewed acoustic cues to mouth poses, coarticulation and holds; preserve acting expressions and dialogue performance.",
+      "mechanism": "Audio-timed visemes plus transition shaping can align recognizable mouth movement to spoken speech.",
+      "tradeoff": "Text-only timings and raw audio duration do not establish phoneme timing; visemes can clash with emotion or oversaturate the mouth.",
+      "verification": "Listen and watch encoded dialogue at normal speed; check hard consonants, open vowels, offsets, pauses, mouth closure and desynchronization over long shots.",
+      "output": "Audio-bound viseme track, timing provenance and tested lip-sync shot",
+      "shared": [
+        "time",
+        "continuity",
+        "evidence",
+        "sampling"
+      ],
+      "sources": [
+        "ANIM",
+        "FFMPEG"
+      ],
+      "domain": "Character Animation",
+      "evidence": "Operational animation hypothesis; confirm with actual project playback and frame/pose inspection."
+    },
+    {
+      "id": "character-acting",
+      "name": "Character Acting & Performance",
+      "division": "Scene performance",
+      "inputs": "Character role, scene objectives, storyboard beats, dialogue/emotion and shot/framing",
+      "decision": "Translate intent into anticipations, pose accents, gaze changes, gesture phrases, holds and action transitions; orchestrate body and facial tracks.",
+      "mechanism": "Contrast between meaningful poses and controlled timing can make a character action intelligible and motivated.",
+      "tradeoff": "Generic gestures, excessive motion, competing gestures and mismatch with spoken intent reduce clarity.",
+      "verification": "Review blocking with sound off, then full performance with sound; test poses and silhouette, emotional transition and acting continuity.",
+      "output": "Shot-based performance plan and synchronized body/face/gaze action tracks",
+      "shared": [
+        "intent",
+        "time",
+        "continuity",
+        "evidence"
+      ],
+      "sources": [
+        "ANIM",
+        "BLENDER"
+      ],
+      "domain": "Character Animation",
+      "evidence": "Operational animation hypothesis; confirm with actual project playback and frame/pose inspection."
+    },
+    {
+      "id": "character-interaction",
+      "name": "Multi-Character Interaction & Contact",
+      "division": "Scene performance",
+      "inputs": "Two or more character rigs, shared scene coordinates, props, communication beats and blocking",
+      "decision": "Coordinate eyelines, turn-taking, distance, occlusion, contact targets, prop handoffs and collision or stylized overlap rules.",
+      "mechanism": "Explicit shared constraints and interaction beats can improve spatial and social coherence between actors.",
+      "tradeoff": "Competing rig constraints, contact jitter, impossible reach, blocking ambiguity and timing collisions arise in multi-actor scenes.",
+      "verification": "Inspect interaction at entrance, touch and exit; test both camera and spatial views, occlusion, eye contact and prop ownership changes.",
+      "output": "Scene-level interaction constraints, actor tracks, handoff ownership and collision checks",
+      "shared": [
+        "continuity",
+        "geometry",
+        "time",
+        "sampling"
+      ],
+      "sources": [
+        "BLENDER",
+        "ANIM"
+      ],
+      "domain": "Character Animation",
+      "evidence": "Operational animation hypothesis; confirm with actual project playback and frame/pose inspection."
+    },
+    {
+      "id": "character-continuity",
+      "name": "Character Continuity & Performance Evaluation",
+      "division": "Scene performance",
+      "inputs": "Master character, approved styleframes, shots, rigs, animation tracks and final encoded footage",
+      "decision": "Audit recurring visual identity, acting logic, rig stability, phoneme/audio synchronization, model reuse and cross-shot geography.",
+      "mechanism": "Independent repeated checks across shot boundaries can catch character-specific errors missed by generic motion inspection.",
+      "tradeoff": "Passing still-frame tests cannot prove convincing performance; successful playback cannot prove source asset provenance.",
+      "verification": "Compare character landmarks across all shots, inspect cut frames and stress poses, play encoded clips at target speed, verify audio offset when dialogue exists.",
+      "output": "Character acceptance record and targeted correction list tied to the responsible owners",
+      "shared": [
+        "continuity",
+        "reference",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [
+        "FFMPEG",
+        "ANIM"
+      ],
+      "domain": "Character Animation",
+      "evidence": "Operational animation hypothesis; confirm with actual project playback and frame/pose inspection."
+    }
+  ],
+  "handoffs": [
+    {
+      "source": "reference-curation",
+      "target": "character-design",
+      "relation": "informs",
+      "condition": "When designing from image references",
+      "payload": "Selected shape and style cues, with uncertainty"
+    },
+    {
+      "source": "visual-direction",
+      "target": "character-design",
+      "relation": "constrains",
+      "condition": "When character belongs to an established project style",
+      "payload": "Palette, design vocabulary and variation limits"
+    },
+    {
+      "source": "character-design",
+      "target": "character-anatomy",
+      "relation": "constrains",
+      "condition": "When the visual design needs articulating",
+      "payload": "Silhouette, proportions and identity landmarks"
+    },
+    {
+      "source": "character-anatomy",
+      "target": "procedural-modeling",
+      "relation": "informs",
+      "condition": "When 3D character volume is required",
+      "payload": "Pose-aware volumetric structure and mesh requirements"
+    },
+    {
+      "source": "character-anatomy",
+      "target": "planar-geometry",
+      "relation": "informs",
+      "condition": "When drawing procedural 2D parts",
+      "payload": "Vector silhouettes and deformation segments"
+    },
+    {
+      "source": "character-anatomy",
+      "target": "character-asset-system",
+      "relation": "hands_off",
+      "condition": "When a reusable character is built",
+      "payload": "Canonical parts and articulation plan"
+    },
+    {
+      "source": "character-design",
+      "target": "character-asset-system",
+      "relation": "constrains",
+      "condition": "When creating the master character",
+      "payload": "Identity limits and controlled variations"
+    },
+    {
+      "source": "character-asset-system",
+      "target": "character-rigging",
+      "relation": "hands_off",
+      "condition": "When control channels are needed",
+      "payload": "Stable part IDs, geometry, reference/rest pose"
+    },
+    {
+      "source": "constraints-and-rigging",
+      "target": "character-rigging",
+      "relation": "informs",
+      "condition": "When extending basic rig relationships into a character controller",
+      "payload": "Constraint conventions, solve order and stability considerations"
+    },
+    {
+      "source": "character-rigging",
+      "target": "body-mechanics",
+      "relation": "enables",
+      "condition": "When a character performs body actions",
+      "payload": "Evaluable pose controls and joint limits"
+    },
+    {
+      "source": "character-rigging",
+      "target": "facial-performance",
+      "relation": "enables",
+      "condition": "When face has deformable controls",
+      "payload": "Facial rig and blendable expression channels"
+    },
+    {
+      "source": "character-rigging",
+      "target": "character-interaction",
+      "relation": "enables",
+      "condition": "When characters need constrained physical interaction",
+      "payload": "Reach and contact controls"
+    },
+    {
+      "source": "storyboard",
+      "target": "character-acting",
+      "relation": "informs",
+      "condition": "When storyboard specifies acting and scene beats",
+      "payload": "Action motivations, staging and timing expectations"
+    },
+    {
+      "source": "character-design",
+      "target": "character-acting",
+      "relation": "constrains",
+      "condition": "When acting choices could affect recognizable identity",
+      "payload": "Character personality, style and silhouette constraints"
+    },
+    {
+      "source": "body-mechanics",
+      "target": "character-acting",
+      "relation": "hands_off",
+      "condition": "When movement contributes to the performance",
+      "payload": "Walk, run, reach and weight-transfer action clips"
+    },
+    {
+      "source": "facial-performance",
+      "target": "character-acting",
+      "relation": "hands_off",
+      "condition": "When emotional expression supports acting",
+      "payload": "Face/gaze shapes and response timing"
+    },
+    {
+      "source": "ai-voice-narration",
+      "target": "dialogue-lip-sync",
+      "relation": "informs",
+      "condition": "When a spoken character track is generated through OpenAI",
+      "payload": "Actual generated speech files and approved dialogue, not inferred word timings"
+    },
+    {
+      "source": "audio-synchronization",
+      "target": "dialogue-lip-sync",
+      "relation": "constrains",
+      "condition": "When dialogue has a measured audio timeline",
+      "payload": "Verified audio placement and offsets, with phoneme alignment status"
+    },
+    {
+      "source": "facial-performance",
+      "target": "dialogue-lip-sync",
+      "relation": "enables",
+      "condition": "When dialogue animates a face",
+      "payload": "Mouth viseme controls and expression blending limits"
+    },
+    {
+      "source": "dialogue-lip-sync",
+      "target": "character-acting",
+      "relation": "hands_off",
+      "condition": "When animated speaking is part of the shot",
+      "payload": "Dialogue-aligned mouth track and reviewed pauses"
+    },
+    {
+      "source": "character-acting",
+      "target": "character-interaction",
+      "relation": "hands_off",
+      "condition": "When multiple characters perform together",
+      "payload": "Acting beats, gaze and turn-taking intents"
+    },
+    {
+      "source": "timeline-design",
+      "target": "character-acting",
+      "relation": "constrains",
+      "condition": "When integrating character acting into the edit",
+      "payload": "Shot timing, beats and timebase"
+    },
+    {
+      "source": "camera-motion",
+      "target": "character-interaction",
+      "relation": "informs",
+      "condition": "When camera staging changes the perceived relationship",
+      "payload": "Viewpoint and screen direction"
+    },
+    {
+      "source": "character-asset-system",
+      "target": "character-continuity",
+      "relation": "hands_off",
+      "condition": "When repeated character identities are evaluated",
+      "payload": "Canonical identity master, revisions and part IDs"
+    },
+    {
+      "source": "character-acting",
+      "target": "character-continuity",
+      "relation": "hands_off",
+      "condition": "When performance is reviewed",
+      "payload": "Body/face/gaze tracks, action intent and shot boundaries"
+    },
+    {
+      "source": "character-interaction",
+      "target": "character-continuity",
+      "relation": "hands_off",
+      "condition": "When contact/interaction is reviewed",
+      "payload": "Contact ownership, eyelines and actors in space"
+    },
+    {
+      "source": "dialogue-lip-sync",
+      "target": "character-continuity",
+      "relation": "hands_off",
+      "condition": "When voiced performance is reviewed",
+      "payload": "Actual spoken audio and animation cues"
+    },
+    {
+      "source": "character-continuity",
+      "target": "quality-gates",
+      "relation": "informs",
+      "condition": "When character animation is delivered",
+      "payload": "Character-specific test results, unresolved defects and verification limits"
+    },
+    {
+      "source": "character-continuity",
+      "target": "character-rigging",
+      "relation": "revises",
+      "condition": "When observed deformation or reach is broken",
+      "payload": "Failed pose IDs and constraint/skin corrections needed"
+    },
+    {
+      "source": "character-continuity",
+      "target": "character-design",
+      "relation": "revises",
+      "condition": "When recurring poses violate character identity",
+      "payload": "Cross-shot design mismatch and identity correction target"
+    },
+    {
+      "source": "character-continuity",
+      "target": "dialogue-lip-sync",
+      "relation": "revises",
+      "condition": "When observed mouth movement drifts from actual speech",
+      "payload": "Audio/video offset and viseme correction target"
+    }
+  ]
+}

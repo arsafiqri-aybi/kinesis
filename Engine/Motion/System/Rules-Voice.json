@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "name": "AI Voice Narration Extension",
+  "specializations": [
+    {
+      "id": "ai-voice-narration",
+      "name": "AI Voice Narration",
+      "domain": "Audiovisual Sequence",
+      "division": "Editing and sound",
+      "inputs": "Approved narration copy, intended audience and language, pronunciation notes, per-scene intent, desired voice character, licensed or consented voice choices, API budget, timeline and soundtrack constraints",
+      "decision": "Produce an approved, scene-linked spoken performance through the OpenAI Speech API by default; define meaningful segments, voice, language, delivery instructions and revisions separately from mixing and synchronization.",
+      "mechanism": "Segment-oriented synthesis and iterative listening can align intelligibility, narrative emphasis, pauses and character with the visual story while leaving the audio reproducible and editable.",
+      "tradeoff": "Synthetic narration can mispronounce names or shift timing, emotion and voice identity across chunks; provider access, latency and API cost also constrain production. Speech output does not guarantee word timestamps.",
+      "verification": "Listen to the entire generated voice track at actual speed, audit script coverage and pronunciation, measure the actual duration of every file, inspect segment joins, verify licensed provenance and AI disclosure, then check the combined video at beginning, middle and end.",
+      "output": "Approved narration plan, generated voice stems, segment-level duration and provenance manifest, pronunciation review and handoff cues",
+      "shared": ["intent", "time", "continuity", "evidence", "provenance"],
+      "sources": ["OPENAI-SPEECH", "OPENAI-AUDIO-API", "FFMPEG"],
+      "evidence": "OpenAI API interface verified from official documentation on 2026-11-09; creative and audibility mechanisms require project-specific listening and checks."
+    }
+  ],
+  "handoffs": [
+    {"source":"creative-brief","target":"ai-voice-narration","relation":"constrains","condition":"When a project requests spoken narration","payload":"Audience, message, language, delivery intent and disclosure requirements"},
+    {"source":"storyboard","target":"ai-voice-narration","relation":"informs","condition":"When speech follows or shapes the sequence","payload":"Scene IDs, narrative beats and intended visual emphasis"},
+    {"source":"ai-voice-narration","target":"sound-design","relation":"constrains","condition":"When narration and other sounds coexist","payload":"Approved voice stems, narrative priority, pauses and voice-forward mixing target"},
+    {"source":"ai-voice-narration","target":"audio-synchronization","relation":"hands_off","condition":"When aligning spoken words to shots and motion","payload":"Measured stem durations, ordered segment IDs, offsets and audible pauses"},
+    {"source":"ai-voice-narration","target":"captions-and-overlays","relation":"informs","condition":"When captions follow narration","payload":"Final spoken script and reviewed phrase anchors; not fabricated word timestamps"},
+    {"source":"ai-voice-narration","target":"editing-rhythm","relation":"informs","condition":"When narration guides shot pacing","payload":"Phrase-level beats, intentional silences and emphasis points"},
+    {"source":"ai-voice-narration","target":"delivery-package","relation":"informs","condition":"When synthetic speech is in the deliverable","payload":"Audio provenance, voice settings, AI disclosure and editable audio files"},
+    {"source":"ai-voice-narration","target":"quality-gates","relation":"informs","condition":"When judging a narrated video","payload":"Audibility, script accuracy, pronunciation, intelligibility and disclosure checks"},
+    {"source":"audio-synchronization","target":"ai-voice-narration","relation":"revises","condition":"When measured speech duration cannot fit approved visuals without harming comprehension","payload":"Timing conflict and segments proposed for re-performance"}
+  ]
+}

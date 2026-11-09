@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "status": "Knowledge contracts; not ten newly implemented engines",
+  "mechanisms": [
+    {
+      "id": "G01",
+      "name": "Editorial Time and Beat Map",
+      "owners": [
+        "timeline-design",
+        "editorial-retiming"
+      ],
+      "fields": "shot_id, source_range, output_range, fps_num, fps_den, cue_id, time_mapping",
+      "invalidation": "Cut/hold/retime invalidates cues, animation, simulation and affected encoded ranges."
+    },
+    {
+      "id": "G02",
+      "name": "Speech and Semantic Cues",
+      "owners": [
+        "transcript-alignment",
+        "ai-voice-narration"
+      ],
+      "fields": "utterance_id, speaker_id, exact_text, audio_asset_id, start, end, precision, alignment_source",
+      "invalidation": "Transcript edits invalidate captions/emphasis; audio replacement also invalidates word/viseme timing."
+    },
+    {
+      "id": "G03",
+      "name": "Visual Grammar and References",
+      "owners": [
+        "reference-curation",
+        "visual-direction",
+        "styleframes"
+      ],
+      "fields": "reference_id, property_role, observed_cues, inferred_regions, styleframe_id, revision",
+      "invalidation": "Changed targets invalidate affected reconstruction/style checks, not every source asset."
+    },
+    {
+      "id": "G04",
+      "name": "Layout and Priority",
+      "owners": [
+        "layout-collision",
+        "composition",
+        "mobile-legibility"
+      ],
+      "fields": "element_id, protected_subregions, priority, bounds_at_time, placement_profile_id",
+      "invalidation": "New camera, copy, font or placement invalidates time-dependent layout evidence."
+    },
+    {
+      "id": "G05",
+      "name": "Motion and Camera",
+      "owners": [
+        "transform-animation",
+        "camera-motion",
+        "easing"
+      ],
+      "fields": "object_id, local_time, transform_space, pivot, evaluator, interpolation, shutter",
+      "invalidation": "Retiming/pivot/rig changes invalidate related contact, projected bounds and sampled frames."
+    },
+    {
+      "id": "G06",
+      "name": "Assets and Components",
+      "owners": [
+        "component-contracts",
+        "media-ingest",
+        "character-asset-system"
+      ],
+      "fields": "asset_id, immutable_source, revision, source_hash, license, overrides, source_to_output_map",
+      "invalidation": "New asset versions invalidate consumers; overrides require explicit migration."
+    },
+    {
+      "id": "G07",
+      "name": "Tracking and Compositing",
+      "owners": [
+        "track-recovery",
+        "compositing"
+      ],
+      "fields": "track_id, source_coordinates, output_transform, confidence, mask_alpha, valid_intervals",
+      "invalidation": "Reframe/retime changes invalidate track projection; source replacement invalidates tracking itself."
+    },
+    {
+      "id": "G08",
+      "name": "Audio Cues and Mix",
+      "owners": [
+        "sound-design",
+        "audio-synchronization",
+        "audio-restoration"
+      ],
+      "fields": "stem_id, sample_rate, decoded_samples, cue_offsets, gain_envelope, provenance",
+      "invalidation": "Speech timing changes invalidate caption/lip-sync cues; gain edits invalidate mix review."
+    },
+    {
+      "id": "G09",
+      "name": "Scene Render and Export",
+      "owners": [
+        "scene-state",
+        "frame-rendering",
+        "video-encoding",
+        "variant-rendering"
+      ],
+      "fields": "scene_id, state_at_frame, build_signature, renderer_version, frame_range, output_variant",
+      "invalidation": "Changed dependencies invalidate matching frame caches and downstream exports."
+    },
+    {
+      "id": "G10",
+      "name": "Platform Profiles and QA",
+      "owners": [
+        "quality-gates",
+        "mobile-legibility",
+        "variant-rendering"
+      ],
+      "fields": "profile_id, platform, placement, format, ui_variant, verified_at, status, evidence_scope",
+      "invalidation": "Profile changes invalidate placement review; structural checks never certify artistic quality."
+    }
+  ]
+}

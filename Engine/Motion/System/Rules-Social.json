@@ -1,0 +1,757 @@
+{
+  "schema_version": 1,
+  "name": "Social Editorial Layer",
+  "specializations": [
+    {
+      "id": "social-story-editing",
+      "name": "Story & Editing",
+      "domain": "Social Media Editing",
+      "division": "Editorial ownership",
+      "inputs": "Convert subject matter into a coherent, engaging short-form viewing sequence. Inputs come from the shared project contracts and connected technical owners.",
+      "decision": "What must viewers understand, feel, or do at each moment? Should the shot cut, hold, replace with B-roll, or show an explanation?",
+      "mechanism": "Convert subject matter into a coherent, engaging short-form viewing sequence.",
+      "tradeoff": "A dramatic hook promises a different subject than the actual explanation.",
+      "verification": "Play the cut without explanatory commentary and record the understood message, missed beats and redundant shots.",
+      "output": "beat map, shot/cut plan, time-coded editorial decisions.",
+      "shared": [
+        "intent",
+        "reference",
+        "time",
+        "perception",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "capabilities": "message hierarchy, audience and intent, hook selection, cold opens, cut selection, talking-head/podcast edit, J/L cuts, jump cuts, visual continuity, pacing, speed ramps where editorially justified, humor timing, retention-focused reveals, chapter beats, repeated motifs, loop design.",
+      "failure": "A dramatic hook promises a different subject than the actual explanation.",
+      "recovery": "Rewrite the hook or reorder the first explanatory beat; preserve the intended claim."
+    },
+    {
+      "id": "social-animated-captions",
+      "name": "Animated Subtitles & Captions",
+      "domain": "Social Media Editing",
+      "division": "Editorial ownership",
+      "inputs": "Deliver accessible, synchronized, legible spoken content with optional expressive emphasis. Inputs come from the shared project contracts and connected technical owners.",
+      "decision": "When should words simply be readable, and when should a word or phrase be visually emphasized? Maintain semantics, spelling, timing, and mobile readability.",
+      "mechanism": "Deliver accessible, synchronized, legible spoken content with optional expressive emphasis.",
+      "tradeoff": "Captions are visually impressive but mistimed or incomplete.",
+      "verification": "Compare each phrase with the actual speech and inspect word boundaries, line breaks and speaker changes.",
+      "output": "timed caption cues and animated layout with collision constraints.",
+      "shared": [
+        "intent",
+        "reference",
+        "time",
+        "perception",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "capabilities": "transcript cleanup, speech segmentation, word-level cue timing, multi-speaker labels, word highlighting, karaoke timing, punch/scale accents, kinetic phrase captions, bilingual captions, readable line breaking, subtitle collisions and avoidance, intentional pauses.",
+      "failure": "Captions are visually impressive but mistimed or incomplete.",
+      "recovery": "Correct transcript/alignment first; then recompute emphasis, layout and render ranges."
+    },
+    {
+      "id": "social-kinetic-typography",
+      "name": "Kinetic Typography & Lyric Scenes",
+      "domain": "Social Media Editing",
+      "division": "Editorial ownership",
+      "inputs": "Turn language into visual scenes, not merely moving text. Inputs come from the shared project contracts and connected technical owners.",
+      "decision": "Is typography the primary scene or a support element? Choose only the structural complexity the shot warrants.",
+      "mechanism": "Turn language into visual scenes, not merely moving text.",
+      "tradeoff": "The metaphor or deformation destroys readability before the phrase is understood.",
+      "verification": "Inspect glyph correspondence and intermediate states at the actual reading speed.",
+      "output": "text-scene plan, references, compositional states, animation timelines.",
+      "shared": [
+        "intent",
+        "reference",
+        "time",
+        "perception",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "capabilities": "morphing glyphs, letter physics, word-to-object transformation, typography as environment, icon/text interplay, lyric sequences, metaphor-based letter behavior, 2D/2.5D/3D title choreography, audio-synchronized typographic transitions.",
+      "failure": "The metaphor or deformation destroys readability before the phrase is understood.",
+      "recovery": "Hold a readable state, simplify deformation and re-evaluate the entry/exit."
+    },
+    {
+      "id": "social-motion-broll",
+      "name": "Original Motion B-roll & Explainers",
+      "domain": "Social Media Editing",
+      "division": "Editorial ownership",
+      "inputs": "Build inserted visual sequences that replace or alternate with primary footage to explain meaning. Inputs come from the shared project contracts and connected technical owners.",
+      "decision": "A complete cutaway is preferable when adding more overlays would obstruct the subject, overload the scene, or limit explanation.",
+      "mechanism": "Build inserted visual sequences that replace or alternate with primary footage to explain meaning.",
+      "tradeoff": "The inserted shot is attractive but disconnects the speaker from the argument.",
+      "verification": "Play the cutaway in its editorial context and explain the information it adds.",
+      "output": "self-contained visual shot with start/end editorial handoffs.",
+      "shared": [
+        "intent",
+        "reference",
+        "time",
+        "perception",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "capabilities": "concept-to-scene metaphors, animated diagrams, timelines, process visualization, comparison scenes, photo collage, map/abstract visualizations, procedural illustration, object deconstruction and exploded view, cutaway sequences, information-to-scene transformation.",
+      "failure": "The inserted shot is attractive but disconnects the speaker from the argument.",
+      "recovery": "Replace the metaphor or shorten the insert; hand the revised duration to the edit."
+    },
+    {
+      "id": "social-graphics-ui",
+      "name": "Motion Graphics, Cards, Icons & UI",
+      "domain": "Social Media Editing",
+      "division": "Editorial ownership",
+      "inputs": "Supply concise context and explanations while preserving the main footage's identity. Inputs come from the shared project contracts and connected technical owners.",
+      "decision": "Which information is better shown as a momentary overlay rather than as standalone B-roll? Brand marks should be recognizable and used appropriately; do not invent product features in simulated UIs.",
+      "mechanism": "Supply concise context and explanations while preserving the main footage's identity.",
+      "tradeoff": "A card obscures the subject or a simulated UI implies an unsupported feature.",
+      "verification": "Check each information-bearing bound and factual label in actual composited frames.",
+      "output": "responsive, parameterized, reusable visual components with critical-content bounds.",
+      "shared": [
+        "intent",
+        "reference",
+        "time",
+        "perception",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "capabilities": "explain cards, lower thirds, animated logos and service icons, brand icon motion (Instagram, Facebook, ChatGPT, Claude, etc.), callouts and labels, annotated arrows/doodles, interface simulations, app/browser panels, graphs, polls, lists, notifications, CTAs, comparisons.",
+      "failure": "A card obscures the subject or a simulated UI implies an unsupported feature.",
+      "recovery": "Recompose or use a standalone insert; correct UI content before animation."
+    },
+    {
+      "id": "social-character-editorial",
+      "name": "Character & Illustration Animation",
+      "domain": "Social Media Editing",
+      "division": "Editorial ownership",
+      "inputs": "Use animated characters or illustrations to demonstrate, react, and narrate ideas. Inputs come from the shared project contracts and connected technical owners.",
+      "decision": "Does character action provide clarity, personality, or humor? Integrate with captions and speaking footage rather than competing for attention.",
+      "mechanism": "Use animated characters or illustrations to demonstrate, react, and narrate ideas.",
+      "tradeoff": "The character competes with the speaker or changes identity across cuts.",
+      "verification": "Review acting, contact, identity and captions together at target speed.",
+      "output": "character shot/insertion with rig controls, cues, framing, and review conditions. **Preserve existing character-animation work in Motion; this domain is an editorial integration point, not a replacement.**",
+      "shared": [
+        "intent",
+        "reference",
+        "time",
+        "perception",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "capabilities": "rigged pose and motion, gestures, facial expression, eye line, simple lip-sync, reaction inserts, pointer behavior, character/graphic interaction, secondary motion, illustrated scene transitions, consistent visual identity.",
+      "failure": "The character competes with the speaker or changes identity across cuts.",
+      "recovery": "Restage the reaction and reuse the canonical character; recheck affected rig/performance tracks."
+    },
+    {
+      "id": "social-subject-effects",
+      "name": "Freeze Frames, Subject Effects & Tracking",
+      "domain": "Social Media Editing",
+      "division": "Editorial ownership",
+      "inputs": "Make filmed people and objects interact with graphics in an intentional, convincing way. Inputs come from the shared project contracts and connected technical owners.",
+      "decision": "Which visible subject or object is emphasized, and does tracking hold across movement and occlusion?",
+      "mechanism": "Make filmed people and objects interact with graphics in an intentional, convincing way.",
+      "tradeoff": "A mask leaks or a tethered label jumps to the wrong object.",
+      "verification": "Scrub masks and tracked anchors across occlusion, scale change and re-entry.",
+      "output": "keyed/tracked shot with stable masks and subject-safe placement.",
+      "shared": [
+        "intent",
+        "reference",
+        "time",
+        "perception",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "capabilities": "freeze-frame captures, snapshot emphasis, cutout and bold-outline effects, background blur/dim, spotlight, masks and rotoscoping, subject/object tracking, tethered callouts, tracked stickers, parallax from a still, limited subject duplication, foreground occlusion.",
+      "failure": "A mask leaks or a tethered label jumps to the wrong object.",
+      "recovery": "Use confidence-aware gaps and manual anchors; change the effect if reliable tracking cannot be obtained."
+    },
+    {
+      "id": "social-camera-transitions",
+      "name": "Camera, Zoom & Transition Language",
+      "domain": "Social Media Editing",
+      "division": "Editorial ownership",
+      "inputs": "Direct viewer attention and connect scenes through comprehensible movement. Inputs come from the shared project contracts and connected technical owners.",
+      "decision": "Is movement serving a reveal, emphasis, spatial continuity, or scene change? Maintain focal continuity and avoid accidental crop of subjects/text.",
+      "mechanism": "Direct viewer attention and connect scenes through comprehensible movement.",
+      "tradeoff": "Camera movement cuts off protected text or produces an unintended spatial jump.",
+      "verification": "Inspect maximal crops and transition boundary frames while following the same subject.",
+      "output": "movement trajectories and shot transitions with entry/exit states.",
+      "shared": [
+        "intent",
+        "reference",
+        "time",
+        "perception",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "capabilities": "punch-in/out, digital crop/zoom, push/pull, pan, orbit, whip pan, crash zoom, zoom-through, parallax, camera-roll, subject reframe, transition matching by direction/shape/color/sound, restrained portal entry as a transition option.",
+      "failure": "Camera movement cuts off protected text or produces an unintended spatial jump.",
+      "recovery": "Modify framing and incoming/outgoing states together; rerun layout checks."
+    },
+    {
+      "id": "social-look-grading",
+      "name": "Color Grading & Visual Look",
+      "domain": "Social Media Editing",
+      "division": "Editorial ownership",
+      "inputs": "Preserve visible quality while giving footage and graphics a consistent emotional character. Inputs come from the shared project contracts and connected technical owners.",
+      "decision": "Is a requested mood achievable while retaining skin detail, readable text, and credible product colors?",
+      "mechanism": "Preserve visible quality while giving footage and graphics a consistent emotional character.",
+      "tradeoff": "An intended look crushes detail or makes graphics conflict with footage.",
+      "verification": "Compare representative skin/product colors, black levels and text contrast across adjacent shots.",
+      "output": "shot-matched correction and look parameters tested in the rendered output.",
+      "shared": [
+        "intent",
+        "reference",
+        "time",
+        "perception",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "capabilities": "exposure and white balance correction, matching sources, skin-tone preservation, contrast and tonal hierarchy, selective color, vibrant/soft/cinematic/horror/nostalgic looks, restrained grain/glow, light accents, intentional scene-to-scene look changes, display-safe output transforms.",
+      "failure": "An intended look crushes detail or makes graphics conflict with footage.",
+      "recovery": "Separate source correction from the creative look; retest the output conversion."
+    },
+    {
+      "id": "social-audio-editorial",
+      "name": "Sound, Voice & Musical Synchronization",
+      "domain": "Social Media Editing",
+      "division": "Editorial ownership",
+      "inputs": "Make speech understandable and audio support the visual timing. Inputs come from the shared project contracts and connected technical owners.",
+      "decision": "Prioritize understandable dialogue. Let music and SFX reinforce\u2014not obscure\u2014the content. Use permitted/licensed sources and avoid implied voice identity without authorization.",
+      "mechanism": "Make speech understandable and audio support the visual timing.",
+      "tradeoff": "Beat matching cuts a meaningful phrase or masks a key word.",
+      "verification": "Listen to speech over music/SFX at ordinary playback level and compare early/late sync cues.",
+      "output": "synchronized audio stems/cue map and monitored final mix.",
+      "shared": [
+        "intent",
+        "reference",
+        "time",
+        "perception",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "capabilities": "voice cleanup, leveling, ducking, noise reduction, narration/AI voice when available and authorized, music cut and beat mapping, Foley, whoosh/impact/riser design, silence, spatial impression, transition sounds, caption/voice timing, loudness and clipping inspection.",
+      "failure": "Beat matching cuts a meaningful phrase or masks a key word.",
+      "recovery": "Prioritize phrase semantics, reduce competing sound and move cues using the shared timebase."
+    },
+    {
+      "id": "social-social-vfx",
+      "name": "Social-Scale Creative VFX & 2.5D",
+      "domain": "Social Media Editing",
+      "division": "Editorial ownership",
+      "inputs": "Offer expressive transformations within an achievable short-form production budget. Inputs come from the shared project contracts and connected technical owners.",
+      "decision": "Prefer clear 2D/2.5D illusions over full photorealistic simulation when the latter does not improve the message. Require a visual reference and performance budget for complex sequences.",
+      "mechanism": "Offer expressive transformations within an achievable short-form production budget.",
+      "tradeoff": "A complex simulation is too slow or visually hides the concept.",
+      "verification": "Render the most expensive effect interval and inspect meaning, artifacts and measured cost.",
+      "output": "self-contained composited shot with an achievable renderer plan.",
+      "shared": [
+        "intent",
+        "reference",
+        "time",
+        "perception",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "capabilities": "particles, glow, glass and reflection accents, kaleidoscope/mirror scenes, simple portal transitions, planar perspective tricks, liquid/dissolve typography, object assembly/disassembly, collage depth, procedural patterns, motion trails, selective distortions.",
+      "failure": "A complex simulation is too slow or visually hides the concept.",
+      "recovery": "Replace it with an explicit 2D/2.5D construction or simplify the shot while preserving the meaning."
+    },
+    {
+      "id": "social-adaptive-layout",
+      "name": "Social Composition & Adaptive Safe Zones",
+      "domain": "Social Media Editing",
+      "division": "Editorial ownership",
+      "inputs": "Keep the design effective across Instagram/Facebook Reels and Stories, TikTok, YouTube Shorts, and supported ad placements. Inputs come from the shared project contracts and connected technical owners.",
+      "decision": "Classify elements as `protected`, `flexible`, `decorative`, or `full_bleed`. Protect information-bearing regions within flexible elements, not the entire container. Recompose layouts when the platform changes rather than blindly scaling.",
+      "mechanism": "Keep the design effective across Instagram/Facebook Reels and Stories, TikTok, YouTube Shorts, and supported ad placements.",
+      "tradeoff": "A caption fits one layout but is hidden in another surface.",
+      "verification": "Test protected content against time-varying UI masks at reading holds for every target placement.",
+      "output": "per-placement layout profile, time-dependent critical bounds, and preview QA results.",
+      "shared": [
+        "intent",
+        "reference",
+        "time",
+        "perception",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "capabilities": "subject-aware framing, UI-aware layout, safe-area envelopes, subtitle clearance, priority-based occlusion, portrait/landscape/square adaptation, optical alignment, negative space, intentional overflow, device previews, time-varying layout collision testing.",
+      "failure": "A caption fits one layout but is hidden in another surface.",
+      "recovery": "Recompose the placement variant; do not blindly shrink all scene contents."
+    },
+    {
+      "id": "social-opening-ending",
+      "name": "Opening, Ending & Cover Design",
+      "domain": "Social Media Editing",
+      "division": "Editorial ownership",
+      "inputs": "Establish a compelling first impression and meaningful conclusion. Inputs come from the shared project contracts and connected technical owners.",
+      "decision": "Choose an opening according to audience and story; avoid an intro that delays the content's purpose.",
+      "mechanism": "Establish a compelling first impression and meaningful conclusion.",
+      "tradeoff": "An intro delays the message or the cover promises content absent from the edit.",
+      "verification": "Review opening, ending and selected cover crops independently and in sequence.",
+      "output": "opening/ending sequences and cover candidates linked to the editorial timeline.",
+      "shared": [
+        "intent",
+        "reference",
+        "time",
+        "perception",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "capabilities": "cold opens, hook shots, title treatments, cinematic but short intros, contextual logo appearances, chapter reveals, visual punchline, outros, seamless loops, end cards, creator identity, cover/thumbnail frames, feed preview and crop.",
+      "failure": "An intro delays the message or the cover promises content absent from the edit.",
+      "recovery": "Move identity treatment into the content; choose a truthful cover and purposeful ending."
+    },
+    {
+      "id": "social-production-editorial",
+      "name": "Production, Platform Delivery & Quality",
+      "domain": "Social Media Editing",
+      "division": "Editorial ownership",
+      "inputs": "Deliver technically valid, visually legible social video and source materials. Inputs come from the shared project contracts and connected technical owners.",
+      "decision": "Generate platform-specific outputs only when the surface differs materially. Verify actual files and final frames before describing production as complete.",
+      "mechanism": "Deliver technically valid, visually legible social video and source materials.",
+      "tradeoff": "A valid encode contains stale frames, wrong captions or an unverified placement crop.",
+      "verification": "Fully decode exports, inspect A/V metadata and watch target-sized playback with the actual caption/audio mix.",
+      "output": "verified export variants and repeatable source-build package.",
+      "shared": [
+        "intent",
+        "reference",
+        "time",
+        "perception",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "capabilities": "reference manifest, code-based scene generation, timeline assembly, compositing, format profiles, bitrate/codec/frame-rate decisions, audio/video synchronization, MP4 validation, export variants, poster/cover, file naming, re-rendering, mobile QC, clipping/crop checks, source and license manifest.",
+      "failure": "A valid encode contains stale frames, wrong captions or an unverified placement crop.",
+      "recovery": "Invalidate the relevant build signature and regenerate affected ranges and variants."
+    }
+  ],
+  "handoffs": [
+    {
+      "source": "social-story-editing",
+      "target": "creative-brief",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "beat map, shot/cut plan, time-coded editorial decisions."
+    },
+    {
+      "source": "social-story-editing",
+      "target": "storyboard",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "beat map, shot/cut plan, time-coded editorial decisions."
+    },
+    {
+      "source": "social-story-editing",
+      "target": "editing-rhythm",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "beat map, shot/cut plan, time-coded editorial decisions."
+    },
+    {
+      "source": "social-story-editing",
+      "target": "timeline-design",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "beat map, shot/cut plan, time-coded editorial decisions."
+    },
+    {
+      "source": "quality-gates",
+      "target": "social-story-editing",
+      "relation": "revises",
+      "condition": "When a relevant acceptance criterion fails",
+      "payload": "A dramatic hook promises a different subject than the actual explanation. Rewrite the hook or reorder the first explanatory beat; preserve the intended claim."
+    },
+    {
+      "source": "social-animated-captions",
+      "target": "captions-and-overlays",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "timed caption cues and animated layout with collision constraints."
+    },
+    {
+      "source": "social-animated-captions",
+      "target": "typography",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "timed caption cues and animated layout with collision constraints."
+    },
+    {
+      "source": "social-animated-captions",
+      "target": "audio-synchronization",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "timed caption cues and animated layout with collision constraints."
+    },
+    {
+      "source": "social-animated-captions",
+      "target": "mobile-legibility",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "timed caption cues and animated layout with collision constraints."
+    },
+    {
+      "source": "quality-gates",
+      "target": "social-animated-captions",
+      "relation": "revises",
+      "condition": "When a relevant acceptance criterion fails",
+      "payload": "Captions are visually impressive but mistimed or incomplete. Correct transcript/alignment first; then recompute emphasis, layout and render ranges."
+    },
+    {
+      "source": "social-kinetic-typography",
+      "target": "typography",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "text-scene plan, references, compositional states, animation timelines."
+    },
+    {
+      "source": "social-kinetic-typography",
+      "target": "shape-morphing",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "text-scene plan, references, compositional states, animation timelines."
+    },
+    {
+      "source": "social-kinetic-typography",
+      "target": "transform-animation",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "text-scene plan, references, compositional states, animation timelines."
+    },
+    {
+      "source": "quality-gates",
+      "target": "social-kinetic-typography",
+      "relation": "revises",
+      "condition": "When a relevant acceptance criterion fails",
+      "payload": "The metaphor or deformation destroys readability before the phrase is understood. Hold a readable state, simplify deformation and re-evaluate the entry/exit."
+    },
+    {
+      "source": "social-motion-broll",
+      "target": "reconstruction-planning",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "self-contained visual shot with start/end editorial handoffs."
+    },
+    {
+      "source": "social-motion-broll",
+      "target": "styleframes",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "self-contained visual shot with start/end editorial handoffs."
+    },
+    {
+      "source": "social-motion-broll",
+      "target": "composition",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "self-contained visual shot with start/end editorial handoffs."
+    },
+    {
+      "source": "quality-gates",
+      "target": "social-motion-broll",
+      "relation": "revises",
+      "condition": "When a relevant acceptance criterion fails",
+      "payload": "The inserted shot is attractive but disconnects the speaker from the argument. Replace the metaphor or shorten the insert; hand the revised duration to the edit."
+    },
+    {
+      "source": "social-graphics-ui",
+      "target": "typography",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "responsive, parameterized, reusable visual components with critical-content bounds."
+    },
+    {
+      "source": "social-graphics-ui",
+      "target": "composition",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "responsive, parameterized, reusable visual components with critical-content bounds."
+    },
+    {
+      "source": "social-graphics-ui",
+      "target": "compositing",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "responsive, parameterized, reusable visual components with critical-content bounds."
+    },
+    {
+      "source": "quality-gates",
+      "target": "social-graphics-ui",
+      "relation": "revises",
+      "condition": "When a relevant acceptance criterion fails",
+      "payload": "A card obscures the subject or a simulated UI implies an unsupported feature. Recompose or use a standalone insert; correct UI content before animation."
+    },
+    {
+      "source": "social-character-editorial",
+      "target": "character-design",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "character shot/insertion with rig controls, cues, framing, and review conditions. **Preserve existing character-animation work in Motion; this domain is an editorial integration point, not a replacement.**"
+    },
+    {
+      "source": "social-character-editorial",
+      "target": "character-acting",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "character shot/insertion with rig controls, cues, framing, and review conditions. **Preserve existing character-animation work in Motion; this domain is an editorial integration point, not a replacement.**"
+    },
+    {
+      "source": "social-character-editorial",
+      "target": "character-continuity",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "character shot/insertion with rig controls, cues, framing, and review conditions. **Preserve existing character-animation work in Motion; this domain is an editorial integration point, not a replacement.**"
+    },
+    {
+      "source": "quality-gates",
+      "target": "social-character-editorial",
+      "relation": "revises",
+      "condition": "When a relevant acceptance criterion fails",
+      "payload": "The character competes with the speaker or changes identity across cuts. Restage the reaction and reuse the canonical character; recheck affected rig/performance tracks."
+    },
+    {
+      "source": "social-subject-effects",
+      "target": "compositing",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "keyed/tracked shot with stable masks and subject-safe placement."
+    },
+    {
+      "source": "social-subject-effects",
+      "target": "camera-projection",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "keyed/tracked shot with stable masks and subject-safe placement."
+    },
+    {
+      "source": "quality-gates",
+      "target": "social-subject-effects",
+      "relation": "revises",
+      "condition": "When a relevant acceptance criterion fails",
+      "payload": "A mask leaks or a tethered label jumps to the wrong object. Use confidence-aware gaps and manual anchors; change the effect if reliable tracking cannot be obtained."
+    },
+    {
+      "source": "social-camera-transitions",
+      "target": "camera-motion",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "movement trajectories and shot transitions with entry/exit states."
+    },
+    {
+      "source": "social-camera-transitions",
+      "target": "transitions",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "movement trajectories and shot transitions with entry/exit states."
+    },
+    {
+      "source": "social-camera-transitions",
+      "target": "composition",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "movement trajectories and shot transitions with entry/exit states."
+    },
+    {
+      "source": "quality-gates",
+      "target": "social-camera-transitions",
+      "relation": "revises",
+      "condition": "When a relevant acceptance criterion fails",
+      "payload": "Camera movement cuts off protected text or produces an unintended spatial jump. Modify framing and incoming/outgoing states together; rerun layout checks."
+    },
+    {
+      "source": "social-look-grading",
+      "target": "color-design",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "shot-matched correction and look parameters tested in the rendered output."
+    },
+    {
+      "source": "social-look-grading",
+      "target": "color-pipeline",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "shot-matched correction and look parameters tested in the rendered output."
+    },
+    {
+      "source": "social-look-grading",
+      "target": "lighting",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "shot-matched correction and look parameters tested in the rendered output."
+    },
+    {
+      "source": "quality-gates",
+      "target": "social-look-grading",
+      "relation": "revises",
+      "condition": "When a relevant acceptance criterion fails",
+      "payload": "An intended look crushes detail or makes graphics conflict with footage. Separate source correction from the creative look; retest the output conversion."
+    },
+    {
+      "source": "social-audio-editorial",
+      "target": "ai-voice-narration",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "synchronized audio stems/cue map and monitored final mix."
+    },
+    {
+      "source": "social-audio-editorial",
+      "target": "sound-design",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "synchronized audio stems/cue map and monitored final mix."
+    },
+    {
+      "source": "social-audio-editorial",
+      "target": "audio-synchronization",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "synchronized audio stems/cue map and monitored final mix."
+    },
+    {
+      "source": "quality-gates",
+      "target": "social-audio-editorial",
+      "relation": "revises",
+      "condition": "When a relevant acceptance criterion fails",
+      "payload": "Beat matching cuts a meaningful phrase or masks a key word. Prioritize phrase semantics, reduce competing sound and move cues using the shared timebase."
+    },
+    {
+      "source": "social-social-vfx",
+      "target": "particle-systems",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "self-contained composited shot with an achievable renderer plan."
+    },
+    {
+      "source": "social-social-vfx",
+      "target": "depth-layering",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "self-contained composited shot with an achievable renderer plan."
+    },
+    {
+      "source": "social-social-vfx",
+      "target": "renderer-selection",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "self-contained composited shot with an achievable renderer plan."
+    },
+    {
+      "source": "quality-gates",
+      "target": "social-social-vfx",
+      "relation": "revises",
+      "condition": "When a relevant acceptance criterion fails",
+      "payload": "A complex simulation is too slow or visually hides the concept. Replace it with an explicit 2D/2.5D construction or simplify the shot while preserving the meaning."
+    },
+    {
+      "source": "social-adaptive-layout",
+      "target": "composition",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "per-placement layout profile, time-dependent critical bounds, and preview QA results."
+    },
+    {
+      "source": "social-adaptive-layout",
+      "target": "mobile-legibility",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "per-placement layout profile, time-dependent critical bounds, and preview QA results."
+    },
+    {
+      "source": "social-adaptive-layout",
+      "target": "camera-motion",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "per-placement layout profile, time-dependent critical bounds, and preview QA results."
+    },
+    {
+      "source": "quality-gates",
+      "target": "social-adaptive-layout",
+      "relation": "revises",
+      "condition": "When a relevant acceptance criterion fails",
+      "payload": "A caption fits one layout but is hidden in another surface. Recompose the placement variant; do not blindly shrink all scene contents."
+    },
+    {
+      "source": "social-opening-ending",
+      "target": "storyboard",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "opening/ending sequences and cover candidates linked to the editorial timeline."
+    },
+    {
+      "source": "social-opening-ending",
+      "target": "shot-continuity",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "opening/ending sequences and cover candidates linked to the editorial timeline."
+    },
+    {
+      "source": "social-opening-ending",
+      "target": "editing-rhythm",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "opening/ending sequences and cover candidates linked to the editorial timeline."
+    },
+    {
+      "source": "quality-gates",
+      "target": "social-opening-ending",
+      "relation": "revises",
+      "condition": "When a relevant acceptance criterion fails",
+      "payload": "An intro delays the message or the cover promises content absent from the edit. Move identity treatment into the content; choose a truthful cover and purposeful ending."
+    },
+    {
+      "source": "social-production-editorial",
+      "target": "frame-rendering",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "verified export variants and repeatable source-build package."
+    },
+    {
+      "source": "social-production-editorial",
+      "target": "video-encoding",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "verified export variants and repeatable source-build package."
+    },
+    {
+      "source": "social-production-editorial",
+      "target": "quality-gates",
+      "relation": "hands_off",
+      "condition": "When this editorial responsibility activates the linked implementation",
+      "payload": "verified export variants and repeatable source-build package."
+    },
+    {
+      "source": "quality-gates",
+      "target": "social-production-editorial",
+      "relation": "revises",
+      "condition": "When a relevant acceptance criterion fails",
+      "payload": "A valid encode contains stale frames, wrong captions or an unverified placement crop. Invalidate the relevant build signature and regenerate affected ranges and variants."
+    }
+  ]
+}

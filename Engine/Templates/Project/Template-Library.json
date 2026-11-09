@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0",
+  "project_id": "_template",
+  "recipes": [
+    {
+      "id": "caption-emphasis",
+      "version": "0.1.0",
+      "status": "pattern_only",
+      "purpose": "Animated word / phrase subtitles",
+      "expertise_ids": [
+        "social-animated-captions",
+        "transcript-alignment"
+      ],
+      "contracts": [
+        "G01",
+        "G02",
+        "G04"
+      ],
+      "slots": [
+        "caption_text",
+        "speech_cues",
+        "font_token",
+        "protected_bounds",
+        "accent_rule",
+        "reading_hold"
+      ],
+      "decisions": [
+        "Readability beats animation",
+        "Invalidated by speech, copy, font or placement changes"
+      ],
+      "approved": false
+    },
+    {
+      "id": "explainer-card",
+      "version": "0.1.0",
+      "status": "pattern_only",
+      "purpose": "Contextual motion explainer card",
+      "expertise_ids": [
+        "social-graphics-ui",
+        "social-adaptive-layout"
+      ],
+      "contracts": [
+        "G03",
+        "G04",
+        "G06"
+      ],
+      "slots": [
+        "title",
+        "body",
+        "icon_asset",
+        "surface_token",
+        "anchored_region",
+        "protected_subregions",
+        "entrance_exit"
+      ],
+      "decisions": [
+        "Card decoration may overflow; critical text must remain readable"
+      ],
+      "approved": false
+    },
+    {
+      "id": "brand-icon-cue",
+      "version": "0.1.0",
+      "status": "pattern_only",
+      "purpose": "Mention-reactive brand icon",
+      "expertise_ids": [
+        "social-graphics-ui",
+        "social-story-editing"
+      ],
+      "contracts": [
+        "G02",
+        "G04",
+        "G06"
+      ],
+      "slots": [
+        "brand_asset_id",
+        "mention_cue",
+        "duration",
+        "anchor",
+        "display_context"
+      ],
+      "decisions": [
+        "Use documented brand mark and rights; never fabricate a platform identity"
+      ],
+      "approved": false
+    },
+    {
+      "id": "freeze-capture",
+      "version": "0.1.0",
+      "status": "pattern_only",
+      "purpose": "Freeze frame plus animated cutout or outline",
+      "expertise_ids": [
+        "social-subject-effects",
+        "social-camera-transitions"
+      ],
+      "contracts": [
+        "G01",
+        "G04",
+        "G07"
+      ],
+      "slots": [
+        "source_frame",
+        "subject_mask",
+        "track_range",
+        "outline_style",
+        "return_transition"
+      ],
+      "decisions": [
+        "Verify cutout edges and transition back to moving footage"
+      ],
+      "approved": false
+    },
+    {
+      "id": "original-motion-broll",
+      "version": "0.1.0",
+      "status": "pattern_only",
+      "purpose": "Self-contained original motion explainer B-roll",
+      "expertise_ids": [
+        "social-motion-broll",
+        "social-kinetic-typography"
+      ],
+      "contracts": [
+        "G01",
+        "G03",
+        "G05",
+        "G09"
+      ],
+      "slots": [
+        "narration_cues",
+        "visual_metaphor",
+        "styleframe_ids",
+        "scene_start_end",
+        "camera_plan",
+        "audio_cues"
+      ],
+      "decisions": [
+        "Design appearance with references before motion; do not reuse unapproved client visual styles"
+      ],
+      "approved": false
+    },
+    {
+      "id": "character-insert",
+      "version": "0.1.0",
+      "status": "pattern_only",
+      "purpose": "Character animation insert",
+      "expertise_ids": [
+        "social-character-editorial",
+        "character-asset-system"
+      ],
+      "contracts": [
+        "G01",
+        "G04",
+        "G05",
+        "G06",
+        "G08"
+      ],
+      "slots": [
+        "character_asset_id",
+        "action_cue",
+        "expression",
+        "gaze_target",
+        "audio_alignment",
+        "scene_position"
+      ],
+      "decisions": [
+        "Character identity stays project-specific; reuse Motion character rig and performance mechanisms"
+      ],
+      "approved": false
+    },
+    {
+      "id": "hook-opening",
+      "version": "0.1.0",
+      "status": "pattern_only",
+      "purpose": "Editorial hook and title opener",
+      "expertise_ids": [
+        "social-opening-ending",
+        "social-story-editing"
+      ],
+      "contracts": [
+        "G01",
+        "G03",
+        "G04"
+      ],
+      "slots": [
+        "hook_message",
+        "first_frame",
+        "key_visual",
+        "duration",
+        "exit_handoff"
+      ],
+      "decisions": [
+        "Prove narrative value; avoid delaying explanation with automatic intros"
+      ],
+      "approved": false
+    },
+    {
+      "id": "outro-loop",
+      "version": "0.1.0",
+      "status": "pattern_only",
+      "purpose": "Closing card, handoff or seamless loop",
+      "expertise_ids": [
+        "social-opening-ending",
+        "social-production-editorial"
+      ],
+      "contracts": [
+        "G01",
+        "G04",
+        "G09",
+        "G10"
+      ],
+      "slots": [
+        "final_message",
+        "loop_match",
+        "end_frame",
+        "placement_profile",
+        "audio_tail"
+      ],
+      "decisions": [
+        "Protect end text from UI overlap; verify actual encode and loop cut"
+      ],
+      "approved": false
+    }
+  ]
+}

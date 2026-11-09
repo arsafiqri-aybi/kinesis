@@ -1,0 +1,328 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://motion.local/schema/project-contract-1.0",
+  "title": "Motion Project Design System Contract",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "name",
+    "status",
+    "engine",
+    "purpose",
+    "design_system",
+    "components",
+    "assets",
+    "platform_profiles",
+    "quality",
+    "revisions"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "project_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{1,63}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "approved",
+        "production",
+        "archived"
+      ]
+    },
+    "engine": {
+      "type": "object",
+      "required": [
+        "motor",
+        "motion_graph",
+        "contracts",
+        "global_overrides"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "motor": {
+          "const": "Engine/Kinesis/Motor-System.md"
+        },
+        "motion_graph": {
+          "const": "Engine/Motion/System/Graph-Integrated.json"
+        },
+        "contracts": {
+          "const": "Engine/Motion/System/Contracts.json"
+        },
+        "global_overrides": {
+          "type": "array",
+          "maxItems": 0
+        }
+      }
+    },
+    "purpose": {
+      "type": "object",
+      "required": [
+        "audience",
+        "message",
+        "channels",
+        "content_format"
+      ],
+      "properties": {
+        "audience": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "message": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "channels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "content_format": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "design_system": {
+      "type": "object",
+      "required": [
+        "version",
+        "approved",
+        "references",
+        "styleframes",
+        "tokens",
+        "creative_policy"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "approved": {
+          "type": "boolean"
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "styleframes": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "tokens": {
+          "type": "object",
+          "required": [
+            "color",
+            "typography",
+            "spacing",
+            "surfaces",
+            "composition",
+            "motion",
+            "grading",
+            "audio"
+          ],
+          "properties": {
+            "color": {
+              "type": "object"
+            },
+            "typography": {
+              "type": "object"
+            },
+            "spacing": {
+              "type": "object"
+            },
+            "surfaces": {
+              "type": "object"
+            },
+            "composition": {
+              "type": "object"
+            },
+            "motion": {
+              "type": "object"
+            },
+            "grading": {
+              "type": "object"
+            },
+            "audio": {
+              "type": "object"
+            }
+          }
+        },
+        "creative_policy": {
+          "type": "object"
+        }
+      }
+    },
+    "components": {
+      "type": "object",
+      "required": [
+        "registry",
+        "approved_recipes"
+      ],
+      "properties": {
+        "registry": {
+          "const": "Template-Library.json"
+        },
+        "approved_recipes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "source",
+          "license_status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "license_status": {
+            "enum": [
+              "approved",
+              "pending",
+              "restricted",
+              "unknown"
+            ]
+          }
+        }
+      }
+    },
+    "platform_profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "platform",
+          "placement",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "platform": {
+            "type": "string"
+          },
+          "placement": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "unverified",
+              "reviewed",
+              "verified"
+            ]
+          },
+          "verified_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "required": [
+        "protected_content",
+        "overflow_policy",
+        "review_modes",
+        "release_gates",
+        "exceptions"
+      ],
+      "properties": {
+        "protected_content": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "overflow_policy": {
+          "const": "protect_information_not_container"
+        },
+        "review_modes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "release_gates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "revisions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "approved",
+              "production"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "design_system": {
+            "properties": {
+              "approved": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

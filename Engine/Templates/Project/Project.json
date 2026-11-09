@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "project_id": "_template",
+  "name": "New social-video project",
+  "status": "draft",
+  "engine": {
+    "motor": "Engine/Kinesis/Motor-System.md",
+    "motion_graph": "Engine/Motion/System/Graph-Integrated.json",
+    "contracts": "Engine/Motion/System/Contracts.json",
+    "global_overrides": []
+  },
+  "purpose": {
+    "audience": null,
+    "message": null,
+    "channels": [],
+    "content_format": null
+  },
+  "design_system": {
+    "version": "0.0.0",
+    "approved": false,
+    "references": [],
+    "styleframes": [],
+    "tokens": {
+      "color": {},
+      "typography": {},
+      "spacing": {},
+      "surfaces": {},
+      "composition": {},
+      "motion": {},
+      "grading": {},
+      "audio": {}
+    },
+    "creative_policy": {
+      "visual_density": "adaptive",
+      "motion_intensity": "meaning_driven",
+      "reuse_identity": true,
+      "allow_intentional_overflow": true,
+      "optical_alignment": true
+    }
+  },
+  "components": {
+    "registry": "Template-Library.json",
+    "approved_recipes": []
+  },
+  "assets": [],
+  "platform_profiles": [],
+  "quality": {
+    "protected_content": [
+      "subtitles",
+      "essential_labels",
+      "cta",
+      "critical_data"
+    ],
+    "overflow_policy": "protect_information_not_container",
+    "review_modes": [
+      "structural",
+      "measured",
+      "perceptual",
+      "contextual"
+    ],
+    "release_gates": [
+      "rendered_asset",
+      "encoded_media",
+      "video_playback_review",
+      "audio_review",
+      "mobile_readability",
+      "platform_placement_review",
+      "source_rights_review"
+    ],
+    "exceptions": []
+  },
+  "revisions": []
+}
