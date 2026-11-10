@@ -5,7 +5,8 @@
     "Rules-Voice.json",
     "Rules-Character.json",
     "Rules-Social.json",
-    "Rules-Support.json"
+    "Rules-Support.json",
+    "Rules-Craft.json"
   ],
   "contracts_file": "Contracts.json",
   "activation": {
@@ -92,6 +93,27 @@
       "G08",
       "G09",
       "G10"
+    ],
+    "product-film-direction": [
+      "G01",
+      "G03",
+      "G06"
+    ],
+    "ui-choreography": [
+      "G01",
+      "G04",
+      "G05",
+      "G06"
+    ],
+    "motion-choreography": [
+      "G01",
+      "G04",
+      "G05"
+    ],
+    "attention-direction": [
+      "G03",
+      "G04",
+      "G05"
     ]
   },
   "scope": "Expert social-media editing and coded 2D/2.5D/3D visuals; feature-film VFX is not a separate production domain."

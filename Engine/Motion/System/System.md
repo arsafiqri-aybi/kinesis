@@ -7,3 +7,7 @@ Read [the expertise index](Expertise-Index.md), [shared contracts](Contracts.md)
 Integration.json lists canonical rule sources. Graph-Integrated.json connects expertise owners, shared logic and production contracts. Project-Architecture-Graph.json extends those IDs with project and episode responsibilities. Neither graph is an implemented rendering service.
 
 Project-specific identity belongs in the root Projects directory. The generic template belongs in Engine/Templates/Project. Generated media belongs in the root Outputs directory. Keep the decision motor independent of any single project style, renderer or media source.
+
+## Continuing creative development
+
+Use [Creative Learning](Creative-Learning.md), [Editorial Reasoning](Editorial-Reasoning.md) and [Expressive Text](Expressive-Text.md) to learn transferable mechanisms and select techniques from current intent. References remain optional; exact source looks and private media remain outside shared knowledge. Static captions, quiet holds and unfamiliar styles are valid choices.

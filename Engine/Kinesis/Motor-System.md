@@ -17,7 +17,7 @@ Maintain explicit working knowledge of:
 
 1. **Align.** Interpret natural-language creative ideas by intended effect. Resolve the active project and its audience, platform, meaning, visual intention, and production scope. Preserve previous approved project decisions.
 2. **Route.** Identify only the relevant Motion expertise owners. Resolve their required shared contracts; do not copy or reimplement shared mechanisms inside the project.
-3. **Design.** Start new visual constructions from approved or purpose-built references and styleframes when helpful. Describe key visual states, editorial beats, and a feasible technique before building. Compare composition, shape, color, lighting and movement against the intended appearance.
+3. **Design.** Start from intent, project identity or an original exploration. Use optional references and project-owned styleframes when helpful. Learn transferable relationships from supplied lessons with Engine/Motion/System/Creative-Learning.md; preserve competing realizations and source uncertainty. Describe key visual states, editorial beats, and a feasible technique before building. Compare composition, shape, color, lighting and movement against the intended appearance.
 4. **Compose.** Merge the project design system, versioned templates, and episode-specific content. Keep visual grammar consistent but allow scoped creative exceptions with a reason and expiry or promotion decision.
 5. **Execute.** Use the tools actually available for editing, graphics, audio, rendering and export. Keep source identity, rational timebase and build dependencies. Do not claim a capability was executed merely because a specification exists.
 6. **Observe.** Inspect produced frames, motion intervals, audio, mobile readability, platform occlusion, final encoded output, and cross-variant consistency. Search for unexplained artifacts beyond enumerated checklists. Separate deliberate overflow, stylization, pauses and transformations from accidental defects.
@@ -33,12 +33,16 @@ Apply the minimum effective depth; steps may be revisited or skipped when not ap
 - **Project:** approved identity, reference roles, tokens, component choices, template configurations, platform targets, and local editorial policies.
 - **Episode:** script, footage, shots, exact time map, local exceptions, generated assets, output variants and review evidence.
 
-Precedence: confirmed user instruction and rights > platform/technical constraints > approved project contract > episode-specific decisions > generic production defaults. A project may customize allowed presentation parameters, not overwrite universal Motion algorithms. New generic discoveries are promoted only after cross-project review; a locally successful effect does not automatically become a global rule.
+Precedence: confirmed user instruction and rights > platform/technical constraints > approved project contract > episode-specific decisions > generic production defaults. A project may customize allowed presentation parameters, not overwrite universal Motion algorithms. Retain new transferable discoveries as provisional craft hypotheses with conditions, failures and alternatives. Review them across distinct contexts before claiming general validation. A locally successful effect does not become a required visual style.
 
 ## Interface
 
-Read `Engine/Motion/System/System.md`, `Engine/Motion/System/Contracts.md`, `Engine/Motion/System/Project-Architecture.md` and the active `Project.json`. For each episode, produce a traceable decision record: project/version, activated expertise and contracts, template versions, sources, timeline, expected effect, build status, observations, and invalidated evidence. Activate `Engine/Motion/System/Quality-Intelligence.md` at review and upon any revision.
+Read `Engine/Motion/System/System.md`, `Engine/Motion/System/Contracts.md`, `Engine/Motion/System/Project-Architecture.md` and the active `Project.json`. For each episode, produce a traceable decision record: project/version, activated expertise and contracts, template versions, sources, timeline, expected effect, build status, observations, and invalidated evidence. Use `Engine/Motion/System/Quality-Intelligence.md` at review and upon any revision.
 
 ## Completion standards
 
 Distinguish **planned**, **constructed**, **rendered**, **reviewed**, and **delivered**. A structural schema pass alone is not visual or audible approval. Repeated episodes inherit approved project identity without freezing legitimate creative variation.
+
+## Continuing learning
+
+Read Engine/Motion/System/Creative-Learning.md when a user supplies a lesson or requests engine improvement. Learn from observation and user corrections, update the responsible Motion knowledge and route effects through conditional handoffs. Preserve source-specific studies outside this engine. Keep original production possible without sources. Treat deliberate stillness, varied pacing and unfamiliar styles as valid creative choices.

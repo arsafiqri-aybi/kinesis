@@ -8,7 +8,7 @@
       "domain": "Social Media Editing",
       "division": "Editorial ownership",
       "inputs": "Convert subject matter into a coherent, engaging short-form viewing sequence. Inputs come from the shared project contracts and connected technical owners.",
-      "decision": "What must viewers understand, feel, or do at each moment? Should the shot cut, hold, replace with B-roll, or show an explanation?",
+      "decision": "Resolve what viewers must understand, feel or notice next. Choose to retain performance, show evidence/context, insert a metaphor, isolate text or change viewpoint from the narrative change. Use Editorial-Reasoning.md to connect those choices; no reference style, transition quota or fixed pacing is required.",
       "mechanism": "Convert subject matter into a coherent, engaging short-form viewing sequence.",
       "tradeoff": "A dramatic hook promises a different subject than the actual explanation.",
       "verification": "Play the cut without explanatory commentary and record the understood message, missed beats and redundant shots.",
@@ -22,10 +22,15 @@
         "provenance"
       ],
       "sources": [],
-      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.",
       "capabilities": "message hierarchy, audience and intent, hook selection, cold opens, cut selection, talking-head/podcast edit, J/L cuts, jump cuts, visual continuity, pacing, speed ramps where editorially justified, humor timing, retention-focused reveals, chapter beats, repeated motifs, loop design.",
       "failure": "A dramatic hook promises a different subject than the actual explanation.",
-      "recovery": "Rewrite the hook or reorder the first explanatory beat; preserve the intended claim."
+      "recovery": "Rewrite the hook or reorder the first explanatory beat; preserve the intended claim.",
+      "practice": [
+        "Assign inserts a role: evidence, context, illustration, counterpoint or atmosphere. Preserve provenance and do not imply that decorative footage proves a factual claim.",
+        "Let meaningful expression or gesture complete when appropriate; cutaways can carry a narrative change while the speaker remains a continuity anchor.",
+        "Choose a caption-led, performance-led or image-led beat deliberately. Coordinate changes in text, framing and treatment so their combined emphasis serves the same idea."
+      ]
     },
     {
       "id": "social-animated-captions",
@@ -33,11 +38,11 @@
       "domain": "Social Media Editing",
       "division": "Editorial ownership",
       "inputs": "Deliver accessible, synchronized, legible spoken content with optional expressive emphasis. Inputs come from the shared project contracts and connected technical owners.",
-      "decision": "When should words simply be readable, and when should a word or phrase be visually emphasized? Maintain semantics, spelling, timing, and mobile readability.",
+      "decision": "Resolve whether text is a complete caption, selected emphasis or an independent text scene. Group meaning before choosing replacement, accumulation or another reveal. Preserve exact language and timing provenance; choose hierarchy and emphasis from semantics rather than styling every word identically. Read Expressive-Text.md and route independent text scenes to Kinetic Typography.",
       "mechanism": "Deliver accessible, synchronized, legible spoken content with optional expressive emphasis.",
       "tradeoff": "Captions are visually impressive but mistimed or incomplete.",
-      "verification": "Compare each phrase with the actual speech and inspect word boundaries, line breaks and speaker changes.",
-      "output": "timed caption cues and animated layout with collision constraints.",
+      "verification": "Check approved text, qualifiers, speaker/phrase boundaries and actual speech alignment before claiming sync. Inspect final phrase layout, transient blur/scale, projected bounds and encoded mobile readability. Sampled frames leave timing and audiovisual quality unverified.",
+      "output": "Role-labeled caption groups with semantic spans, cue provenance, stable layout anchors and animated bounds",
       "shared": [
         "intent",
         "reference",
@@ -47,10 +52,17 @@
         "provenance"
       ],
       "sources": [],
-      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.",
       "capabilities": "transcript cleanup, speech segmentation, word-level cue timing, multi-speaker labels, word highlighting, karaoke timing, punch/scale accents, kinetic phrase captions, bilingual captions, readable line breaking, subtitle collisions and avoidance, intentional pauses.",
-      "failure": "Captions are visually impressive but mistimed or incomplete.",
-      "recovery": "Correct transcript/alignment first; then recompute emphasis, layout and render ranges."
+      "failure": "An expressive group loses a qualifier, moves its anchor accidentally, obscures a face or finishes revealing too late to read.",
+      "recovery": "Correct text/alignment first, then simplify or regroup the composition, restage the block and invalidate only affected cue/layout/render ranges.",
+      "practice": [
+        "Plan the final semantic group and its anchor before staged reveals when stable layout is desired. Allow intentional dynamic reflow with explicit bounds.",
+        "Use size, weight, color, spacing, placement or a held state as alternative emphasis channels. Preserve negation and small linking words; avoid effect stacking without a reason.",
+        "Keep captions separate from decorative keywords and provide complete captions when required. Use readable phrases when word-by-word replacement would obscure syntax.",
+        "Allocate entry, readable state and exit from actual reading and speech needs. Motion blur is not a substitute for a legible hold; do not invent word timestamps.",
+        "Keep a coherent local vocabulary while permitting new text roles. A source handwriting style, font, color accent or layout is not a universal preset."
+      ]
     },
     {
       "id": "social-kinetic-typography",
@@ -58,10 +70,10 @@
       "domain": "Social Media Editing",
       "division": "Editorial ownership",
       "inputs": "Turn language into visual scenes, not merely moving text. Inputs come from the shared project contracts and connected technical owners.",
-      "decision": "Is typography the primary scene or a support element? Choose only the structural complexity the shot warrants.",
+      "decision": "Choose whether language is supporting information or the visual scene. When it becomes the scene, construct relationships among words, space, imagery and meaning. A code-like interface, hand lettering, spatial phrase, diagram or another medium is available if it serves the project; retain the approved semantic mapping and role.",
       "mechanism": "Turn language into visual scenes, not merely moving text.",
       "tradeoff": "The metaphor or deformation destroys readability before the phrase is understood.",
-      "verification": "Inspect glyph correspondence and intermediate states at the actual reading speed.",
+      "verification": "Inspect the complete phrase, meaningful intermediate states, glyph correspondence and actual reading speed. Distinguish decorative syntax from verbatim text. Ensure representation changes do not alter qualifiers or imply a working product.",
       "output": "text-scene plan, references, compositional states, animation timelines.",
       "shared": [
         "intent",
@@ -72,10 +84,19 @@
         "provenance"
       ],
       "sources": [],
-      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.",
       "capabilities": "morphing glyphs, letter physics, word-to-object transformation, typography as environment, icon/text interplay, lyric sequences, metaphor-based letter behavior, 2D/2.5D/3D title choreography, audio-synchronized typographic transitions.",
       "failure": "The metaphor or deformation destroys readability before the phrase is understood.",
-      "recovery": "Hold a readable state, simplify deformation and re-evaluate the entry/exit."
+      "recovery": "Hold a readable state, simplify deformation and re-evaluate the entry/exit.",
+      "practice": [
+        "Choose the reading order and complete readable state before choosing letter behavior. Type-on should represent input or reveal intent rather than decorate every sentence.",
+        "Preserve correspondence across icon, path and word when it helps meaning; color, position, shape or rhythm may carry the link.",
+        "Separate text appearance from camera movement. Prefer a still reading interval when movement competes with understanding; check spacing and line breaks through the whole reveal.",
+        "Compose connector words and focal words as one phrase with deliberate scale and spacing; reserve readable states rather than treating all words as independent effects.",
+        "Text may alternate with footage or persist over a montage to bridge changing images. Choose continuity or reset by meaning, not a fixed sequence.",
+        "For code/interface metaphors, separate text/semantic layers, panel state, internal viewport motion and any filmed screen perspective. A creative visual representation need not be executable code.",
+        "Expressive irregularity should be controlled: keep useful local anchors and deterministic variation; do not add frame-random jitter solely to suggest handwriting."
+      ]
     },
     {
       "id": "social-motion-broll",
@@ -97,10 +118,14 @@
         "provenance"
       ],
       "sources": [],
-      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.",
       "capabilities": "concept-to-scene metaphors, animated diagrams, timelines, process visualization, comparison scenes, photo collage, map/abstract visualizations, procedural illustration, object deconstruction and exploded view, cutaway sequences, information-to-scene transformation.",
       "failure": "The inserted shot is attractive but disconnects the speaker from the argument.",
-      "recovery": "Replace the metaphor or shorten the insert; hand the revised duration to the edit."
+      "recovery": "Replace the metaphor or shorten the insert; hand the revised duration to the edit.",
+      "practice": [
+        "Declare the insert role and what new meaning it contributes; preserve its source status. Archival context, a metaphor and decorative atmosphere are different claims.",
+        "Use the shot, a phrase or another visual invariant to bridge a montage when useful. Do not copy the source montage order as a universal structure."
+      ]
     },
     {
       "id": "social-graphics-ui",
@@ -108,7 +133,7 @@
       "domain": "Social Media Editing",
       "division": "Editorial ownership",
       "inputs": "Supply concise context and explanations while preserving the main footage's identity. Inputs come from the shared project contracts and connected technical owners.",
-      "decision": "Which information is better shown as a momentary overlay rather than as standalone B-roll? Brand marks should be recognizable and used appropriately; do not invent product features in simulated UIs.",
+      "decision": "Choose whether information needs a card, a standalone product view or an interface interaction. Route interdependent UI states to UI Choreography. Preserve recognizable marks and accurate claims; distinguish a stylized demo from demonstrated product capability.",
       "mechanism": "Supply concise context and explanations while preserving the main footage's identity.",
       "tradeoff": "A card obscures the subject or a simulated UI implies an unsupported feature.",
       "verification": "Check each information-bearing bound and factual label in actual composited frames.",
@@ -122,10 +147,15 @@
         "provenance"
       ],
       "sources": [],
-      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "evidence": "Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project.",
       "capabilities": "explain cards, lower thirds, animated logos and service icons, brand icon motion (Instagram, Facebook, ChatGPT, Claude, etc.), callouts and labels, annotated arrows/doodles, interface simulations, app/browser panels, graphs, polls, lists, notifications, CTAs, comparisons.",
       "failure": "A card obscures the subject or a simulated UI implies an unsupported feature.",
-      "recovery": "Recompose or use a standalone insert; correct UI content before animation."
+      "recovery": "Recompose or use a standalone insert; correct UI content before animation.",
+      "practice": [
+        "Separate component structure, state, interaction and optical treatment; preserve stable IDs across panel changes.",
+        "Use measured text bounds, corner radius, stroke width and anchor relationships at final scale. Treat inner content and outer panel transforms separately.",
+        "Route focus priorities to Attention Direction and shared motion dependencies to Motion Choreography."
+      ]
     },
     {
       "id": "social-character-editorial",
@@ -172,10 +202,14 @@
         "provenance"
       ],
       "sources": [],
-      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.",
       "capabilities": "freeze-frame captures, snapshot emphasis, cutout and bold-outline effects, background blur/dim, spotlight, masks and rotoscoping, subject/object tracking, tethered callouts, tracked stickers, parallax from a still, limited subject duplication, foreground occlusion.",
       "failure": "A mask leaks or a tethered label jumps to the wrong object.",
-      "recovery": "Use confidence-aware gaps and manual anchors; change the effect if reliable tracking cannot be obtained."
+      "recovery": "Use confidence-aware gaps and manual anchors; change the effect if reliable tracking cannot be obtained.",
+      "practice": [
+        "For graphics attached to a filmed display, carry its source-to-output perspective and occlusion separately from motion inside the display. Keep tracking confidence explicit.",
+        "A picture may resemble projected type without establishing real 3D construction. Select a simpler native 2D/2.5D or tracked method when it provides the intended result."
+      ]
     },
     {
       "id": "social-camera-transitions",
@@ -197,10 +231,17 @@
         "provenance"
       ],
       "sources": [],
-      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.",
       "capabilities": "punch-in/out, digital crop/zoom, push/pull, pan, orbit, whip pan, crash zoom, zoom-through, parallax, camera-roll, subject reframe, transition matching by direction/shape/color/sound, restrained portal entry as a transition option.",
       "failure": "Camera movement cuts off protected text or produces an unintended spatial jump.",
-      "recovery": "Modify framing and incoming/outgoing states together; rerun layout checks."
+      "recovery": "Modify framing and incoming/outgoing states together; rerun layout checks.",
+      "practice": [
+        "Declare whether a visible change comes from a camera, a group transform or internal object motion; judge the screen result without pretending the source technique is known.",
+        "Choose a focal anchor and protect it across pan, scale and the next shot. Recompute text bounds during the full movement.",
+        "Coordinate the handoff with Attention Direction and Motion Choreography. Fast zoom, slow drift and a static view are equally valid when appropriate.",
+        "Separate outer frame, inset footage and text coordinates through aspect/crop changes. Caption anchors may remain in screen space or move with the footage by design.",
+        "Coordinate reframing with emphasis, gesture and readable states. A push-in is an option; rapid zooming or simulated depth is not required for impact."
+      ]
     },
     {
       "id": "social-look-grading",
@@ -208,10 +249,10 @@
       "domain": "Social Media Editing",
       "division": "Editorial ownership",
       "inputs": "Preserve visible quality while giving footage and graphics a consistent emotional character. Inputs come from the shared project contracts and connected technical owners.",
-      "decision": "Is a requested mood achievable while retaining skin detail, readable text, and credible product colors?",
+      "decision": "Interpret the source first, correct exposure/balance where needed, match only the relationships that need continuity, then choose the creative look and output treatment. Protect meaningful skin/product information and overlay contrast. Distinct footage roles may deliberately retain different looks; do not apply an inferred LUT from a finished example.",
       "mechanism": "Preserve visible quality while giving footage and graphics a consistent emotional character.",
       "tradeoff": "An intended look crushes detail or makes graphics conflict with footage.",
-      "verification": "Compare representative skin/product colors, black levels and text contrast across adjacent shots.",
+      "verification": "Compare adjacent shots, representative skin/product detail, shadow/highlight separation, saturation, gradients and actual caption/background combinations after output conversion. Record qualitative source observations separately from measured settings or a verified color pipeline.",
       "output": "shot-matched correction and look parameters tested in the rendered output.",
       "shared": [
         "intent",
@@ -222,10 +263,16 @@
         "provenance"
       ],
       "sources": [],
-      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.",
       "capabilities": "exposure and white balance correction, matching sources, skin-tone preservation, contrast and tonal hierarchy, selective color, vibrant/soft/cinematic/horror/nostalgic looks, restrained grain/glow, light accents, intentional scene-to-scene look changes, display-safe output transforms.",
       "failure": "An intended look crushes detail or makes graphics conflict with footage.",
-      "recovery": "Separate source correction from the creative look; retest the output conversion."
+      "recovery": "Separate source correction from the creative look; retest the output conversion.",
+      "practice": [
+        "Use value separation and warm/cool relationships as adjustable choices. Keep exact hues, contrast curves, saturation and texture in the project.",
+        "Separate overlay rendering from the footage grade; verify any global post-treatment also applied to text. Moving backgrounds can defeat a contrast check made on one still.",
+        "Declare scoped grayscale, wash, glow or archival differences when they serve a beat. Preserve context rather than making every source cosmetically identical.",
+        "Do not attribute a look to grading alone: lighting, capture, set, wardrobe and compression may contribute. The visible export cannot establish the original log profile or numeric correction."
+      ]
     },
     {
       "id": "social-audio-editorial",
@@ -233,7 +280,7 @@
       "domain": "Social Media Editing",
       "division": "Editorial ownership",
       "inputs": "Make speech understandable and audio support the visual timing. Inputs come from the shared project contracts and connected technical owners.",
-      "decision": "Prioritize understandable dialogue. Let music and SFX reinforce\u2014not obscure\u2014the content. Use permitted/licensed sources and avoid implied voice identity without authorization.",
+      "decision": "Prioritize understandable dialogue. Let music and SFX reinforce—not obscure—the content. Use permitted/licensed sources and avoid implied voice identity without authorization.",
       "mechanism": "Make speech understandable and audio support the visual timing.",
       "tradeoff": "Beat matching cuts a meaningful phrase or masks a key word.",
       "verification": "Listen to speech over music/SFX at ordinary playback level and compare early/late sync cues.",
@@ -272,10 +319,15 @@
         "provenance"
       ],
       "sources": [],
-      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "evidence": "Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project.",
       "capabilities": "particles, glow, glass and reflection accents, kaleidoscope/mirror scenes, simple portal transitions, planar perspective tricks, liquid/dissolve typography, object assembly/disassembly, collage depth, procedural patterns, motion trails, selective distortions.",
       "failure": "A complex simulation is too slow or visually hides the concept.",
-      "recovery": "Replace it with an explicit 2D/2.5D construction or simplify the shot while preserving the meaning."
+      "recovery": "Replace it with an explicit 2D/2.5D construction or simplify the shot while preserving the meaning.",
+      "practice": [
+        "Define the information carried by a trail, glow, mask or depth illusion before choosing its appearance.",
+        "For animated paths coordinate curve trim, taper, travel and emission through existing geometry, transform and compositing owners.",
+        "Separate source observations from renderer hypotheses; test an achievable interval before committing to an expensive effect."
+      ]
     },
     {
       "id": "social-adaptive-layout",
@@ -297,10 +349,14 @@
         "provenance"
       ],
       "sources": [],
-      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.",
       "capabilities": "subject-aware framing, UI-aware layout, safe-area envelopes, subtitle clearance, priority-based occlusion, portrait/landscape/square adaptation, optical alignment, negative space, intentional overflow, device previews, time-varying layout collision testing.",
       "failure": "A caption fits one layout but is hidden in another surface.",
-      "recovery": "Recompose the placement variant; do not blindly shrink all scene contents."
+      "recovery": "Recompose the placement variant; do not blindly shrink all scene contents.",
+      "practice": [
+        "Treat baked black margins, rounded picture windows and source framing as separate from platform UI clearance. Define protected text/face/action regions from the current output.",
+        "Evaluate actual background changes, phrase expansion and camera extremes. Recompose per variant and language rather than blindly transferring one word index or scaling a source layout."
+      ]
     },
     {
       "id": "social-opening-ending",
@@ -322,10 +378,15 @@
         "provenance"
       ],
       "sources": [],
-      "evidence": "Authored editorial mechanism; confirm against actual project footage, audio and playback.",
+      "evidence": "Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project.",
       "capabilities": "cold opens, hook shots, title treatments, cinematic but short intros, contextual logo appearances, chapter reveals, visual punchline, outros, seamless loops, end cards, creator identity, cover/thumbnail frames, feed preview and crop.",
       "failure": "An intro delays the message or the cover promises content absent from the edit.",
-      "recovery": "Move identity treatment into the content; choose a truthful cover and purposeful ending."
+      "recovery": "Move identity treatment into the content; choose a truthful cover and purposeful ending.",
+      "practice": [
+        "Use identity motion to establish or resolve the story when it serves the brief. Keep mark geometry and wordmark spacing recognizable through entry and settle.",
+        "Design the final relationship between mark, name and empty space; keep the end readable before any exit.",
+        "A point-to-symbol, draw-on, assembly, direct cut or quiet wordmark are options; do not impose a signature logo reveal on every project."
+      ]
     },
     {
       "id": "social-production-editorial",
@@ -394,35 +455,35 @@
       "target": "captions-and-overlays",
       "relation": "hands_off",
       "condition": "When this editorial responsibility activates the linked implementation",
-      "payload": "timed caption cues and animated layout with collision constraints."
+      "payload": "Role-labeled caption groups with semantic spans, cue provenance, stable layout anchors and animated bounds"
     },
     {
       "source": "social-animated-captions",
       "target": "typography",
       "relation": "hands_off",
       "condition": "When this editorial responsibility activates the linked implementation",
-      "payload": "timed caption cues and animated layout with collision constraints."
+      "payload": "Role-labeled caption groups with semantic spans, cue provenance, stable layout anchors and animated bounds"
     },
     {
       "source": "social-animated-captions",
       "target": "audio-synchronization",
       "relation": "hands_off",
       "condition": "When this editorial responsibility activates the linked implementation",
-      "payload": "timed caption cues and animated layout with collision constraints."
+      "payload": "Role-labeled caption groups with semantic spans, cue provenance, stable layout anchors and animated bounds"
     },
     {
       "source": "social-animated-captions",
       "target": "mobile-legibility",
       "relation": "hands_off",
       "condition": "When this editorial responsibility activates the linked implementation",
-      "payload": "timed caption cues and animated layout with collision constraints."
+      "payload": "Role-labeled caption groups with semantic spans, cue provenance, stable layout anchors and animated bounds"
     },
     {
       "source": "quality-gates",
       "target": "social-animated-captions",
       "relation": "revises",
       "condition": "When a relevant acceptance criterion fails",
-      "payload": "Captions are visually impressive but mistimed or incomplete. Correct transcript/alignment first; then recompute emphasis, layout and render ranges."
+      "payload": "An expressive group loses a qualifier, moves its anchor accidentally, obscures a face or finishes revealing too late to read. Correct text/alignment first, then simplify or regroup the composition, restage the block and invalidate only affected cue/layout/render ranges."
     },
     {
       "source": "social-kinetic-typography",
@@ -589,8 +650,8 @@
       "source": "social-look-grading",
       "target": "color-design",
       "relation": "hands_off",
-      "condition": "When this editorial responsibility activates the linked implementation",
-      "payload": "shot-matched correction and look parameters tested in the rendered output."
+      "condition": "When footage and text accents need coordinated tonal or chromatic roles",
+      "payload": "Subject/detail priorities, overlay roles and source-specific differences to preserve"
     },
     {
       "source": "social-look-grading",

@@ -44,9 +44,13 @@
         "provenance"
       ],
       "sources": [],
-      "evidence": "Authored operational contract; validate with actual project artifacts.",
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.",
       "failure": "Estimated timestamps can appear plausible while drifting from spoken audio.",
-      "recovery": "Re-align changed audio ranges; propagate offsets to captions, editorial cuts and lip sync."
+      "recovery": "Re-align changed audio ranges; propagate offsets to captions, editorial cuts and lip sync.",
+      "practice": [
+        "Keep approved utterance, semantic group, emphasis spans and visual representation as separate mappings. A decorative code-like or abbreviated display is not automatically a complete transcript.",
+        "Review negation, quantities, qualifications and speaker attribution when regrouping or translating. Copy changes invalidate semantic emphasis even when the audio duration is unchanged."
+      ]
     },
     {
       "id": "layout-collision",
@@ -54,10 +58,10 @@
       "domain": "Integration Support",
       "division": "Production contracts",
       "inputs": "Projected protected bounds, time intervals, placement masks and object priority",
-      "decision": "Evaluate collisions over relevant motion intervals; preserve critical text/face bounds and allow intentional decorative overflow.",
+      "decision": "Evaluate projected protected regions across relevant intervals and coordinate spaces. Keep final phrase bounds, per-word animated extremes, footage window/crop and placement UI explicit. Preserve important face/gesture/text regions and allow deliberate decorative overlap. A stable group anchor can prevent accidental word-to-word layout drift.",
       "mechanism": "Explicit mappings and ownership make downstream edits attributable and reproducible.",
       "tradeoff": "Static safe-frame checks miss transient overlaps and time-dependent interface occlusion.",
-      "verification": "Inspect holds plus maximum expansion/camera extremes and the first contact between bounds.",
+      "verification": "Inspect reading holds, entry/exit, maximum scale/blur extent, crop extremes, source changes and first contact between protected bounds. Use actual output size and changing backgrounds. Invalidate measured layout after font, copy, language, crop or anchor changes.",
       "output": "Timed layout findings and chosen priority resolutions",
       "shared": [
         "time",
@@ -67,7 +71,7 @@
         "provenance"
       ],
       "sources": [],
-      "evidence": "Authored operational contract; validate with actual project artifacts.",
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.",
       "failure": "Static safe-frame checks miss transient overlaps and time-dependent interface occlusion.",
       "recovery": "Reflow, restage or cut away; invalidate only affected layout variants and their rendered ranges."
     },

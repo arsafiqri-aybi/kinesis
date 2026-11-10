@@ -14,15 +14,15 @@ Maintain these mechanisms once. Specialized pages reference them by ID; apply th
 **Verification:** Watch once without explanation; record what was noticed and understood.
 
 <a id="reference"></a>
-## Reference contract
+## Source roles and creative learning
 
-**Decision:** Record which reference governs silhouette, layout, palette, surface and lighting; separate observations from guesses.
+**Decision:** When sources are supplied, distinguish learning, inspiration and explicit matching. Record the properties each source informs, observations and uncertainty. With no source, derive project decisions from intent and experiments; leave reference assignments empty.
 
-**Expected mechanism:** Explicit targets make comparison and revision actionable.
+**Expected mechanism:** Separating transferable relationships from source-specific appearance can expand creative choices while making requested comparisons actionable.
 
-**Tradeoff:** Conflicting references can imply incompatible cameras or materials.
+**Tradeoff:** Treating the latest source as a mandatory style or mistaking inferred technique for observed fact narrows creativity.
 
-**Verification:** Compare the render and references at equal crop and size; name each deviation.
+**Verification:** Check source roles against the actual request. For learning, propose a different realization of the relationship; for matching, compare only requested properties. Record what was inspected and what remains unverified.
 
 <a id="geometry"></a>
 ## Geometry and coordinates

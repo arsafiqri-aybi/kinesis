@@ -1,7 +1,8 @@
-# Motion — Production-Support
+# Motion — Production Support
 
-Connected operational knowledge. Select responsibilities according to actual project needs.
+Conditional operational knowledge. Select responsibilities according to the current task.
 
+<a id="media-ingest"></a>
 ## Media Ingest and Normalization
 
 **Inputs:** Footage/audio/image metadata, timecode, orientation, variable frame rate and source color tags
@@ -18,6 +19,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Recovery:** Rebuild the proxy and its mapping, then invalidate dependent track/caption/edit evidence.
 
+Authored operational contract; validate with actual project artifacts.
+
+<a id="transcript-alignment"></a>
 ## Transcript and Speech Alignment
 
 **Inputs:** Final decoded speech, approved transcript, speaker IDs and alignment provenance
@@ -34,22 +38,33 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Recovery:** Re-align changed audio ranges; propagate offsets to captions, editorial cuts and lip sync.
 
+### Craft practice
+
+- Keep approved utterance, semantic group, emphasis spans and visual representation as separate mappings. A decorative code-like or abbreviated display is not automatically a complete transcript.
+- Review negation, quantities, qualifications and speaker attribution when regrouping or translating. Copy changes invalidate semantic emphasis even when the audio duration is unchanged.
+
+Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.
+
+<a id="layout-collision"></a>
 ## Temporal Layout and Collision
 
 **Inputs:** Projected protected bounds, time intervals, placement masks and object priority
 
-**Decision:** Evaluate collisions over relevant motion intervals; preserve critical text/face bounds and allow intentional decorative overflow.
+**Decision:** Evaluate projected protected regions across relevant intervals and coordinate spaces. Keep final phrase bounds, per-word animated extremes, footage window/crop and placement UI explicit. Preserve important face/gesture/text regions and allow deliberate decorative overlap. A stable group anchor can prevent accidental word-to-word layout drift.
 
 **Expected mechanism:** Explicit mappings and ownership make downstream edits attributable and reproducible.
 
 **Tradeoff:** Static safe-frame checks miss transient overlaps and time-dependent interface occlusion.
 
-**Verification:** Inspect holds plus maximum expansion/camera extremes and the first contact between bounds.
+**Verification:** Inspect reading holds, entry/exit, maximum scale/blur extent, crop extremes, source changes and first contact between protected bounds. Use actual output size and changing backgrounds. Invalidate measured layout after font, copy, language, crop or anchor changes.
 
 **Output:** Timed layout findings and chosen priority resolutions
 
 **Recovery:** Reflow, restage or cut away; invalidate only affected layout variants and their rendered ranges.
 
+Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.
+
+<a id="track-recovery"></a>
 ## Tracking Confidence and Recovery
 
 **Inputs:** Anchor trajectories, coordinate transforms, confidence, masks and occlusion intervals
@@ -66,6 +81,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Recovery:** Stop extrapolating through uncertain ranges and change to a cut/crop if the effect cannot be stabilized.
 
+Authored operational contract; validate with actual project artifacts.
+
+<a id="editorial-retiming"></a>
 ## Editorial Retiming and Dependency Repair
 
 **Inputs:** Old/new shot ranges, cue precision, source maps and performance tracks
@@ -82,6 +100,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Recovery:** Rebuild dependent cues or re-perform narration; preserve intelligibility rather than forcing arbitrary speed.
 
+Authored operational contract; validate with actual project artifacts.
+
+<a id="audio-restoration"></a>
 ## Dialogue Restoration and Stem Balance
 
 **Inputs:** Speech/noise stems, sample rate, speech priority and mix context
@@ -98,6 +119,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Recovery:** Back off the damaging process and revise competing music/SFX before intensifying cleanup.
 
+Authored operational contract; validate with actual project artifacts.
+
+<a id="component-contracts"></a>
 ## Reusable Component Contracts
 
 **Inputs:** Component identity/version, editable parameters, bounds, cue channels and dependency IDs
@@ -114,6 +138,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Recovery:** Pin unaffected shots or migrate overrides explicitly; regenerate impacted frames and reviews.
 
+Authored operational contract; validate with actual project artifacts.
+
+<a id="variant-rendering"></a>
 ## Variant Rendering and Export Lineage
 
 **Inputs:** Master edit, placement requirements, caption language, aspect ratio and build signatures
@@ -129,3 +156,5 @@ Connected operational knowledge. Select responsibilities according to actual pro
 **Output:** Variant manifest and verified export set
 
 **Recovery:** Regenerate mismatched variants and report unverified ones separately.
+
+Authored operational contract; validate with actual project artifacts.

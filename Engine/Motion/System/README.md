@@ -16,3 +16,7 @@ Start with [System](System.md) for responsibility boundaries and [Project Archit
 | [Project Toolkit](Project-Toolkit.py) | Bootstrap projects and check structural relationships |
 
 Run `python kinesis.py check-graph` from the repository root. Follow [validation guidance](../../../docs/validation.md) for project and production checks.
+
+## Continuing creative development
+
+Use [Creative Learning](Creative-Learning.md), [Editorial Reasoning](Editorial-Reasoning.md) and [Expressive Text](Expressive-Text.md) to learn transferable mechanisms and select techniques from current intent. References remain optional; exact source looks and private media remain outside shared knowledge. Static captions, quiet holds and unfamiliar styles are valid choices.

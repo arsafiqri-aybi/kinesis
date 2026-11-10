@@ -1,7 +1,25 @@
-# Motion — Characters-and-Voice
+# Motion — Characters and Voice
 
-Connected operational knowledge. Select responsibilities according to actual project needs.
+Conditional operational knowledge. Select responsibilities according to the current task.
 
+<a id="ai-voice-narration"></a>
+## AI Voice Narration
+
+**Inputs:** Approved narration copy, intended audience and language, pronunciation notes, per-scene intent, desired voice character, licensed or consented voice choices, API budget, timeline and soundtrack constraints
+
+**Decision:** Produce an approved, scene-linked spoken performance through the OpenAI Speech API by default; define meaningful segments, voice, language, delivery instructions and revisions separately from mixing and synchronization.
+
+**Expected mechanism:** Segment-oriented synthesis and iterative listening can align intelligibility, narrative emphasis, pauses and character with the visual story while leaving the audio reproducible and editable.
+
+**Tradeoff:** Synthetic narration can mispronounce names or shift timing, emotion and voice identity across chunks; provider access, latency and API cost also constrain production. Speech output does not guarantee word timestamps.
+
+**Verification:** Listen to the entire generated voice track at actual speed, audit script coverage and pronunciation, measure the actual duration of every file, inspect segment joins, verify licensed provenance and AI disclosure, then check the combined video at beginning, middle and end.
+
+**Output:** Approved narration plan, generated voice stems, segment-level duration and provenance manifest, pronunciation review and handoff cues
+
+OpenAI API interface verified from official documentation on 2026-11-09; creative and audibility mechanisms require project-specific listening and checks.
+
+<a id="character-design"></a>
 ## Character Design & Identity
 
 **Inputs:** Approved styleframes, role, silhouette, personality cues, expression examples and allowed viewpoints
@@ -16,6 +34,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Character identity sheet, proportions, landmarks, permissible expression and pose range
 
+Operational animation hypothesis; confirm with actual project playback and frame/pose inspection.
+
+<a id="character-anatomy"></a>
 ## Character Anatomy & Construction
 
 **Inputs:** Character identity sheet, required action set, pose extremes, visible views and procedural boundary
@@ -30,6 +51,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Procedural anatomy map, controllable segments, joints and deformation envelope
 
+Operational animation hypothesis; confirm with actual project playback and frame/pose inspection.
+
+<a id="character-asset-system"></a>
 ## Character Asset System
 
 **Inputs:** Canonical character design, construction plan, scene requirements and versioned source parameters
@@ -44,6 +68,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Versioned reusable character definition, expression targets, part IDs and approved overrides
 
+Operational animation hypothesis; confirm with actual project playback and frame/pose inspection.
+
+<a id="character-rigging"></a>
 ## Advanced Rigging & Skinning
 
 **Inputs:** Character anatomy, rest pose, controllable parts, joint motion limits and intended shots
@@ -58,6 +85,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Evaluable rig, pose interface, weight maps or deformation rules, solver constraints
 
+Operational animation hypothesis; confirm with actual project playback and frame/pose inspection.
+
+<a id="body-mechanics"></a>
 ## Body Mechanics & Locomotion
 
 **Inputs:** Rig, mass/scale convention, action goals, path, environment contacts and rhythm
@@ -72,6 +102,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Reusable contact-aware body action with pose keyframes and cycle parameters
 
+Operational animation hypothesis; confirm with actual project playback and frame/pose inspection.
+
+<a id="facial-performance"></a>
 ## Facial Animation & Expressions
 
 **Inputs:** Facial construction, rig, emotional beats, eye target, design constraints and camera crop
@@ -86,6 +119,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Expression library, facial rig channels, emotional pose and gaze tracks
 
+Operational animation hypothesis; confirm with actual project playback and frame/pose inspection.
+
+<a id="dialogue-lip-sync"></a>
 ## Dialogue & Lip Synchronization
 
 **Inputs:** Approved dialogue, actually rendered or recorded speech, verified timing or phoneme alignment, viseme library and facial rig
@@ -100,6 +136,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Audio-bound viseme track, timing provenance and tested lip-sync shot
 
+Operational animation hypothesis; confirm with actual project playback and frame/pose inspection.
+
+<a id="character-acting"></a>
 ## Character Acting & Performance
 
 **Inputs:** Character role, scene objectives, storyboard beats, dialogue/emotion and shot/framing
@@ -114,6 +153,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Shot-based performance plan and synchronized body/face/gaze action tracks
 
+Operational animation hypothesis; confirm with actual project playback and frame/pose inspection.
+
+<a id="character-interaction"></a>
 ## Multi-Character Interaction & Contact
 
 **Inputs:** Two or more character rigs, shared scene coordinates, props, communication beats and blocking
@@ -128,6 +170,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Scene-level interaction constraints, actor tracks, handoff ownership and collision checks
 
+Operational animation hypothesis; confirm with actual project playback and frame/pose inspection.
+
+<a id="character-continuity"></a>
 ## Character Continuity & Performance Evaluation
 
 **Inputs:** Master character, approved styleframes, shots, rigs, animation tracks and final encoded footage
@@ -142,16 +187,4 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Character acceptance record and targeted correction list tied to the responsible owners
 
-## AI Voice Narration
-
-**Inputs:** Approved narration copy, intended audience and language, pronunciation notes, per-scene intent, desired voice character, licensed or consented voice choices, API budget, timeline and soundtrack constraints
-
-**Decision:** Produce an approved, scene-linked spoken performance through the OpenAI Speech API by default; define meaningful segments, voice, language, delivery instructions and revisions separately from mixing and synchronization.
-
-**Expected mechanism:** Segment-oriented synthesis and iterative listening can align intelligibility, narrative emphasis, pauses and character with the visual story while leaving the audio reproducible and editable.
-
-**Tradeoff:** Synthetic narration can mispronounce names or shift timing, emotion and voice identity across chunks; provider access, latency and API cost also constrain production. Speech output does not guarantee word timestamps.
-
-**Verification:** Listen to the entire generated voice track at actual speed, audit script coverage and pronunciation, measure the actual duration of every file, inspect segment joins, verify licensed provenance and AI disclosure, then check the combined video at beginning, middle and end.
-
-**Output:** Approved narration plan, generated voice stems, segment-level duration and provenance manifest, pronunciation review and handoff cues
+Operational animation hypothesis; confirm with actual project playback and frame/pose inspection.

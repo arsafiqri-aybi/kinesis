@@ -4,13 +4,13 @@
 
 Create polished, clear, expressive social videos from recorded footage, spoken dialogue, scripts, images, audio, and reference frames. Use [Foundations](Foundations.md) for image reconstruction, procedural construction, motion, rendering and evaluation. This document owns the **editorial and social-video specialization layer**; it does not duplicate the underlying 2D/2.5D/3D primitives.
 
-A creator may describe a visual idea using ordinary language rather than technical production vocabulary. Infer the visual intention, identify viable specialist mechanisms, design a reference-led sequence, and distinguish feasible implementation from visual aspiration. Use code to build and animate shots when required; use footage when it conveys the message better. The finished video must work on a phone, not merely look impressive on a large preview.
+A creator may describe a visual idea using ordinary language rather than technical production vocabulary. Infer the visual intention, identify viable specialist mechanisms, design a sequence from the current intent and optional source material, and distinguish feasible implementation from visual aspiration. Use code to build and animate shots when required; use footage when it conveys the message better. The finished video must work on a phone, not merely look impressive on a large preview.
 
 ## Operating principles
 
 1. **Meaning before effects.** Every visible or audible element has an editorial purpose: explain, emphasize, orient, entertain, or establish identity.
 2. **Creative intensity is conditional.** Silence, stillness, a clean cut, and unchanged footage are valid creative choices; do not add motion just because a capability exists.
-3. **Reference → styleframe → editable construction → animation → composite → review.** For a new visual scene, establish its appearance before implementing motion.
+3. **Develop from intent.** Use original key states, optional references and editable construction as useful; learning does not prescribe a fixed style or sequence.
 4. **Separate primitives from presentation specializations.** Reuse time, transforms, typography, animation curves, scene geometry, camera, color, audio, compositing, and encoding rather than reimplementing them for each effect.
 5. **Protect the message, not the entire shape.** Essential information stays readable; decoration may intentionally extend beyond conventional safe zones for balance and expression.
 6. **Adapt to actual platform and placement.** UI occlusion differs by app, feed surface, post type, device, caption length, and interactive elements. Profiles are revisable data with provenance and review dates, not eternal percentages.
@@ -26,7 +26,7 @@ Each domain has one editorial responsibility and may call shared mechanisms or o
 
 **Capabilities:** message hierarchy, audience and intent, hook selection, cold opens, cut selection, talking-head/podcast edit, J/L cuts, jump cuts, visual continuity, pacing, speed ramps where editorially justified, humor timing, retention-focused reveals, chapter beats, repeated motifs, loop design.
 
-**Decide:** What must viewers understand, feel, or do at each moment? Should the shot cut, hold, replace with B-roll, or show an explanation?
+**Decide:** Resolve what viewers must understand, feel or notice next. Choose to retain performance, show evidence/context, insert a metaphor, isolate text or change viewpoint from the narrative change. Use Editorial-Reasoning.md to connect those choices; no reference style, transition quota or fixed pacing is required.
 
 **Output:** beat map, shot/cut plan, time-coded editorial decisions.
 
@@ -36,7 +36,7 @@ Each domain has one editorial responsibility and may call shared mechanisms or o
 
 **Capabilities:** transcript cleanup, speech segmentation, word-level cue timing, multi-speaker labels, word highlighting, karaoke timing, punch/scale accents, kinetic phrase captions, bilingual captions, readable line breaking, subtitle collisions and avoidance, intentional pauses.
 
-**Decide:** When should words simply be readable, and when should a word or phrase be visually emphasized? Maintain semantics, spelling, timing, and mobile readability.
+**Decide:** Resolve whether text is a complete caption, selected emphasis or an independent text scene. Group meaning before choosing replacement, accumulation or another reveal. Preserve exact language and timing provenance; choose hierarchy and emphasis from semantics rather than styling every word identically. Read Expressive-Text.md and route independent text scenes to Kinetic Typography.
 
 **Output:** timed caption cues and animated layout with collision constraints.
 
@@ -46,7 +46,7 @@ Each domain has one editorial responsibility and may call shared mechanisms or o
 
 **Capabilities:** morphing glyphs, letter physics, word-to-object transformation, typography as environment, icon/text interplay, lyric sequences, metaphor-based letter behavior, 2D/2.5D/3D title choreography, audio-synchronized typographic transitions.
 
-**Decide:** Is typography the primary scene or a support element? Choose only the structural complexity the shot warrants.
+**Decide:** Choose whether language is supporting information or the visual scene. When it becomes the scene, construct relationships among words, space, imagery and meaning. A code-like interface, hand lettering, spatial phrase, diagram or another medium is available if it serves the project; retain the approved semantic mapping and role.
 
 **Output:** text-scene plan, references, compositional states, animation timelines.
 
@@ -66,7 +66,7 @@ Each domain has one editorial responsibility and may call shared mechanisms or o
 
 **Capabilities:** explain cards, lower thirds, animated logos and service icons, brand icon motion (Instagram, Facebook, ChatGPT, Claude, etc.), callouts and labels, annotated arrows/doodles, interface simulations, app/browser panels, graphs, polls, lists, notifications, CTAs, comparisons.
 
-**Decide:** Which information is better shown as a momentary overlay rather than as standalone B-roll? Brand marks should be recognizable and used appropriately; do not invent product features in simulated UIs.
+**Decide:** Choose whether information needs a card, a standalone product view or an interface interaction. Route interdependent UI states to UI Choreography. Preserve recognizable marks and accurate claims; distinguish a stylized demo from demonstrated product capability.
 
 **Output:** responsive, parameterized, reusable visual components with critical-content bounds.
 
@@ -106,7 +106,7 @@ Each domain has one editorial responsibility and may call shared mechanisms or o
 
 **Capabilities:** exposure and white balance correction, matching sources, skin-tone preservation, contrast and tonal hierarchy, selective color, vibrant/soft/cinematic/horror/nostalgic looks, restrained grain/glow, light accents, intentional scene-to-scene look changes, display-safe output transforms.
 
-**Decide:** Is a requested mood achievable while retaining skin detail, readable text, and credible product colors?
+**Decide:** Interpret the source first, correct exposure/balance where needed, match only the relationships that need continuity, then choose the creative look and output treatment. Protect meaningful skin/product information and overlay contrast. Distinct footage roles may deliberately retain different looks; do not apply an inferred LUT from a finished example.
 
 **Output:** shot-matched correction and look parameters tested in the rendered output.
 

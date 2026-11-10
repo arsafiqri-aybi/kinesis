@@ -14,11 +14,11 @@
     },
     {
       "id": "reference",
-      "name": "Reference contract",
-      "decision": "Record which reference governs silhouette, layout, palette, surface and lighting; separate observations from guesses.",
-      "mechanism": "Explicit targets make comparison and revision actionable.",
-      "tradeoff": "Conflicting references can imply incompatible cameras or materials.",
-      "verification": "Compare the render and references at equal crop and size; name each deviation.",
+      "name": "Source roles and creative learning",
+      "decision": "When sources are supplied, distinguish learning, inspiration and explicit matching. Record the properties each source informs, observations and uncertainty. With no source, derive project decisions from intent and experiments; leave reference assignments empty.",
+      "mechanism": "Separating transferable relationships from source-specific appearance can expand creative choices while making requested comparisons actionable.",
+      "tradeoff": "Treating the latest source as a mandatory style or mistaking inferred technique for observed fact narrows creativity.",
+      "verification": "Check source roles against the actual request. For learning, propose a different realization of the relationship; for matching, compare only requested properties. Record what was inspected and what remains unverified.",
       "evidence": "Authored operational heuristic; validate in the active project."
     },
     {
@@ -140,12 +140,12 @@
       "name": "Reference Curation",
       "domain": "Visual Development",
       "division": "Purpose and references",
-      "inputs": "Candidate images and intended visual priorities",
-      "decision": "Label each image by its role: composition, silhouette, surface, palette, lighting or mood; resolve conflicts before reconstruction.",
-      "mechanism": "Role-specific references provide usable targets without requiring one image to answer every question.",
-      "tradeoff": "Mixing lenses, light directions or styles blindly can create an incoherent scene.",
-      "verification": "Identify the governing reference for every major visual property and list conflicting cues.",
-      "output": "Reference manifest with roles and observations",
+      "inputs": "Optional images, video, sound, prior output or user lessons; current intent and source access",
+      "decision": "Resolve whether a source is for learning, inspiration or explicit matching. Inspect relevant intervals and label observed, inferred and invented properties. Read Creative-Learning.md when extracting a lesson. Keep original media and source-specific study records outside the main engine. If no reference is supplied, continue from the idea and project constraints.",
+      "mechanism": "Role-specific source handling can preserve evidence while allowing several independent realizations of a learned relationship.",
+      "tradeoff": "A single attractive example can become an accidental style requirement; contact sheets can suggest order without establishing smoothness or sound timing.",
+      "verification": "Record source identity, inspected intervals, method and uncertainty. Map each proposed lesson to an existing owner, show where it may fail and distinguish source observation from a generalization.",
+      "output": "Optional source-role manifest, scoped observations and transferable learning candidates",
       "shared": [
         "intent",
         "reference",
@@ -155,7 +155,7 @@
         "SVG",
         "CANVAS"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project."
     },
     {
       "id": "visual-direction",
@@ -163,7 +163,7 @@
       "domain": "Visual Development",
       "division": "Purpose and references",
       "inputs": "Brief and role-labelled references",
-      "decision": "Define a coherent visual grammar for proportions, type, palette, edge treatment, surface detail and camera; compare alternatives as stills.",
+      "decision": "Define a coherent visual grammar for proportions, type, palette, edge treatment, surface detail and camera; compare alternatives as stills. Select a visual language from the current message and project identity. Use learned mechanisms as optional choices; permit a new palette, medium, density and pacing. Compare alternatives only when a creative decision needs resolving. A reference or perpetual motion is not required.",
       "mechanism": "Shared visual rules can make separately built scenes feel related.",
       "tradeoff": "A rigid style rule can prevent an important scene from communicating clearly.",
       "verification": "Place representative frames side by side and inspect hierarchy and consistency.",
@@ -177,7 +177,7 @@
         "SVG",
         "CANVAS"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project."
     },
     {
       "id": "storyboard",
@@ -207,7 +207,7 @@
       "domain": "Visual Development",
       "division": "Sequence design",
       "inputs": "Shot list and reference targets",
-      "decision": "Resolve key stills for appearance; include motion extremes and transition boundaries when they alter composition.",
+      "decision": "Resolve key stills for appearance; include motion extremes and transition boundaries when they alter composition. For original work, develop project-owned key states from the idea. Select only the states needed to test composition and change; include a deliberate hold when it serves comprehension. Source matching is conditional on the brief.",
       "mechanism": "Defined visual endpoints make reconstruction and motion decisions reviewable.",
       "tradeoff": "Perfect endpoints do not guarantee good intermediate shapes or movement.",
       "verification": "Compare start, key event and end frames; flag properties that must remain invariant.",
@@ -221,7 +221,7 @@
       "sources": [
         "ANIM"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project."
     },
     {
       "id": "shot-continuity",
@@ -229,10 +229,10 @@
       "domain": "Visual Development",
       "division": "Sequence design",
       "inputs": "Adjacent styleframes and object identities",
-      "decision": "Track screen direction, scale, anchor positions, palette and visual motifs across shots; mark deliberate breaks.",
+      "decision": "Choose which identities, screen anchors, direction, scale, phrase or visual motifs should persist across a cut. Preserve the relationship serving the current idea and mark deliberate breaks. A repeated caption can link diverse footage; a new speaker or thought may require a reset. Do not force every source into identical framing or color.",
       "mechanism": "Selected continuity cues can help viewers connect changes across edits.",
       "tradeoff": "Preserving every cue may make scenes repetitive.",
-      "verification": "Inspect consecutive frames at each cut and follow the intended subject.",
+      "verification": "Inspect frames around each cut, caption carryover and the intended subject/eyeline. Review the sequence at target speed before judging continuity or rhythm; sparse samples cannot establish cut quality.",
       "output": "Continuity constraints and transition handoff",
       "shared": [
         "intent",
@@ -243,7 +243,7 @@
       "sources": [
         "ANIM"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization."
     },
     {
       "id": "shape-decomposition",
@@ -339,11 +339,11 @@
       "name": "Reference Matching",
       "domain": "Reference Reconstruction",
       "division": "Reconstruction strategy",
-      "inputs": "Target styleframe and rendered candidate",
-      "decision": "Compare equal-size, equal-crop images; diagnose silhouette, layout, value, color and material separately; fix dominant deviations first.",
+      "inputs": "Candidate output and explicitly selected comparison properties, if any",
+      "decision": "Activate comparison only for an agreed target or a useful learning question. Align crop, size and event phase before diagnosing differences. Compare silhouette, layout, value, color and material independently; compare motion using start, peak action and settle rather than unrelated absolute timestamps. For original work, judge intent and the project contract instead of similarity to a source.",
       "mechanism": "Structured comparison can make revisions more attributable.",
-      "tradeoff": "Pixel error can penalize harmless differences and ignore meaning.",
-      "verification": "Record one visible mismatch, its likely cause and the result of changing that cause.",
+      "tradeoff": "Pixel similarity can reward copying and penalize an intentional variation; static image agreement does not establish temporal quality.",
+      "verification": "Name a meaningful discrepancy, its likely cause and the evidence after revision. Retain an intentional deviation when it serves the brief. Mark inferred velocities, unavailable playback and unreviewed audio explicitly.",
       "output": "Ranked reconstruction revisions",
       "shared": [
         "reference",
@@ -355,7 +355,7 @@
         "CANVAS",
         "BLENDER"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project."
     },
     {
       "id": "ambiguity-resolution",
@@ -386,10 +386,10 @@
       "domain": "Visual Construction",
       "division": "Geometry",
       "inputs": "Silhouettes, handles, stroke targets and scale",
-      "decision": "Construct paths with controlled tangents and joins; choose tessellation from output scale and curvature.",
+      "decision": "Construct paths with controlled tangents, joins and sampling appropriate to output scale. For animated strokes distinguish path geometry, trim interval, width profile and emission. Parameterize travel by arc length when constant visual speed is intended; parameter-space interpolation can change speed on uneven curves. Keep tail length and taper independent from glow.",
       "mechanism": "Smooth curvature and stable stroke treatment can preserve intended contours.",
       "tradeoff": "Too few samples facet curves; too many increase cost without visible benefit.",
-      "verification": "Inspect inflections, corners and stroke joins at final size and during scaling.",
+      "verification": "Inspect inflections, corners, trim endpoints, joins and scale extremes. For moving paths inspect near-zero visible length, maximum curvature and rapid changes. Test trajectory and silhouette without glow; send time-varying controls to transform-animation and easing.",
       "output": "Reusable curve constructors and path parameters",
       "shared": [
         "geometry",
@@ -400,7 +400,7 @@
         "SVG",
         "BLENDER"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project."
     },
     {
       "id": "planar-geometry",
@@ -451,12 +451,12 @@
       "name": "Typography",
       "domain": "Visual Construction",
       "division": "Layout and type",
-      "inputs": "Copy, font files, emphasis and available frame area",
-      "decision": "Specify shaping, font metrics, line breaks, kerning and alignment through code; lock font availability before layout.",
+      "inputs": "Exact copy, semantic groups, font/shaping support, intended emphasis, viewing scale and available frame area",
+      "decision": "Separate complete text and phrase composition from reveal order. Measure actual glyphs and layout the intended readable state; choose line breaks, baseline anchors, hierarchy and local transforms deliberately. Stable block bounds can prevent accidental reflow as words appear; dynamic reflow is valid when explicitly designed. Protect connector words, negation, quantities, diacritics and unsupported-script handling.",
       "mechanism": "Stable text geometry supports predictable composition and animation anchors.",
       "tradeoff": "Substituted fonts or unsupported scripts can invalidate measured layout.",
-      "verification": "Render actual copy with target fonts; inspect glyphs, line breaks and clipping at phone size.",
-      "output": "Text layout and font manifest",
+      "verification": "Render actual copy and fonts at output size; inspect line breaks, first/last glyphs, descenders, diacritics, spacing and maximum animated bounds. Check both final phrase and intermediate reveals. A font or translation change invalidates measured layout.",
+      "output": "Measured text and phrase layout, semantic emphasis spans, anchors and font manifest",
       "shared": [
         "geometry",
         "perception",
@@ -466,7 +466,7 @@
         "SVG",
         "CANVAS"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization."
     },
     {
       "id": "composition",
@@ -474,7 +474,7 @@
       "domain": "Visual Construction",
       "division": "Layout and type",
       "inputs": "Subject hierarchy, frame ratio and projected bounds",
-      "decision": "Balance focal weight, alignment, negative space and grouping; evaluate composition at motion extremes as well as stills.",
+      "decision": "Balance focal weight, alignment, negative space and grouping; evaluate composition at motion extremes as well as stills. Separate output frame, any inset footage window and the text block. Stage captions around important face/gesture/action regions or intentional negative space. Baked borders are a source design choice, not verified platform clearance. Recompute protected regions through reframing rather than shrinking the entire scene.",
       "mechanism": "A controlled hierarchy can keep the message visible while objects change.",
       "tradeoff": "A balanced still can become crowded during movement.",
       "verification": "Inspect silhouettes and text bounds at the busiest and most expanded states.",
@@ -488,7 +488,7 @@
         "SVG",
         "CANVAS"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization."
     },
     {
       "id": "depth-layering",
@@ -518,10 +518,10 @@
       "domain": "Visual Construction",
       "division": "Surface and light",
       "inputs": "Visual direction, background and material palette",
-      "decision": "Define palette roles and interpolation space; compare colors under the intended output transform.",
+      "decision": "Define palette roles, value hierarchy, contrast and interpolation space. Coordinate footage and graphics while keeping source correction, creative look and output conversion distinct. Choose accent colors by current meaning and project identity; support associations through shape, position or type when color alone is insufficient. Keep exact palette and look values local.",
       "mechanism": "Controlled value and chromatic contrast can support visual hierarchy.",
       "tradeoff": "An appealing palette can lose separation under shading or encoding.",
-      "verification": "Inspect grayscale separation, gradients and key colors in the encoded frame.",
+      "verification": "Inspect grayscale separation, gradients, key colors and moving text/background contrast in the actual encoded result. Protect meaningful skin/product detail. Source appearance does not identify a specific LUT, camera profile or numerical grade.",
       "output": "Palette parameters and color roles",
       "shared": [
         "color",
@@ -534,7 +534,7 @@
         "BLENDER",
         "WEBGL"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization."
     },
     {
       "id": "materials",
@@ -638,10 +638,10 @@
       "domain": "Visual Construction",
       "division": "Surface and light",
       "inputs": "Layer outputs, masks, alpha and effect intent",
-      "decision": "Composite layers with an explicit alpha convention and color space; keep blur, glow and grading as adjustable operations.",
+      "decision": "Declare layer order, alpha convention and color space. Separate a readable structural core from adjustable broad glow, local highlights and directional or defocus blur. Keep optical effects independent of geometry and text layout. Composite in a renderer-supported working space; record the actual implementation instead of inferring a proprietary tool from appearance.",
       "mechanism": "Controlled compositing can integrate elements while preserving editability.",
       "tradeoff": "Premultiplication errors create fringes; excess glow hides structure.",
-      "verification": "Test transparent edges on light and dark backgrounds and compare effects enabled versus disabled.",
+      "verification": "Compare effects enabled/disabled, text at delivery size, transparent edges on dark/light backgrounds and bright overlaps. Inspect whether clipping, bloom or blur erases content. Tune structure before increasing effect strength; technical encoding alone does not validate appearance.",
       "output": "Compositing graph and effect parameters",
       "shared": [
         "color",
@@ -654,7 +654,7 @@
         "BLENDER",
         "WEBGL"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project."
     },
     {
       "id": "timeline-design",
@@ -683,10 +683,10 @@
       "domain": "Motion Design",
       "division": "Time and trajectories",
       "inputs": "Reading needs, action intent and beat structure",
-      "decision": "Allocate anticipation, action, settle and hold intervals where useful; adjust durations from playback observations.",
+      "decision": "Allocate anticipation, action, settle and reading holds from the message. Identify the primary event and offset supporting actions where the audience needs to follow a dependency. Allow anticipation or recovery to overlap the adjacent event when identity remains clear. Use beats as optional structure; neither constant movement nor a fixed duration is universal.",
       "mechanism": "Time allocated to comprehension can make a short sequence feel intentional.",
       "tradeoff": "Uniform pacing can feel mechanical; excessive speed can hide the message.",
-      "verification": "Watch once at target speed and record missed text or unresolved actions.",
+      "verification": "Review target-speed playback for the intended takeaway, missed actions, reading time and unresolved transitions. Inspect boundary frames for continuity. Change the smallest relevant delay or duration; a contact sheet alone leaves pacing unverified.",
       "output": "Event durations and hold intervals",
       "shared": [
         "time",
@@ -696,7 +696,7 @@
       "sources": [
         "ANIM"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project."
     },
     {
       "id": "easing",
@@ -704,10 +704,10 @@
       "domain": "Motion Design",
       "division": "Time and trajectories",
       "inputs": "Property endpoints and desired velocity behavior",
-      "decision": "Choose interpolation by movement character; inspect velocity and acceleration near endpoints and overshoot extrema.",
+      "decision": "Choose interpolation for each property from intended weight, precision and energy. Separate travel from settle; coordinate positional velocity with scale and rotation. Use normalized local time, explicit endpoints and pivots. A cubic Bezier, analytic spring or deliberate hard cut is a candidate, not a default. Reuse the secondary-motion owner for physical response instead of adding competing springs.",
       "mechanism": "Appropriate velocity change can suggest weight, precision or softness.",
       "tradeoff": "Applying the same easing everywhere can create synchronized artificial motion.",
-      "verification": "Plot or sample the curve and watch the resulting motion in context.",
+      "verification": "Sample or plot position, velocity and overshoot extrema, then inspect the result in context. Check travel-to-settle joins, bounds and the next action. Preserve a desired discontinuity only when deliberate; do not infer an exact curve from sparse source frames.",
       "output": "Parameter curves and endpoint behavior",
       "shared": [
         "time",
@@ -717,7 +717,7 @@
       "sources": [
         "ANIM"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project."
     },
     {
       "id": "transform-animation",
@@ -769,10 +769,10 @@
       "domain": "Motion Design",
       "division": "Deformation and relationships",
       "inputs": "Main action, attachment points and desired follow-through",
-      "decision": "Derive lag, spring response or overshoot from the primary action; use analytic solutions or reproducible simulation checkpoints.",
+      "decision": "Derive lag, spring response or overshoot from the primary action; use analytic solutions or reproducible simulation checkpoints. Assign one primary driver, attachment/pivot and lag relationship to each dependent part. Remove redundant bounce when precision or stillness better serves the object. Keep damping and initial conditions explicit.",
       "mechanism": "Delayed response can suggest elasticity and connected mass.",
       "tradeoff": "Unbounded oscillation or stateful stepping breaks stability and seeking.",
-      "verification": "Test rest, impulse, large time jumps and out-of-order frame access.",
+      "verification": "Test rest, impulse, large time jumps and out-of-order frame access. Also inspect the point where a new action interrupts settling; preserve continuity unless the cut is intentional.",
       "output": "Stable secondary-motion model",
       "shared": [
         "continuity",
@@ -784,7 +784,7 @@
         "ANIM",
         "BLENDER"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project."
     },
     {
       "id": "constraints-and-rigging",
@@ -861,10 +861,10 @@
       "domain": "Motion Design",
       "division": "Deformation and relationships",
       "inputs": "Adjacent scene meanings, identities and cut boundaries",
-      "decision": "Choose cuts, masks, matches or transformations from the relationship between shots; coordinate outgoing and incoming states.",
+      "decision": "Choose a cut, mask, match or transformation from the relationship between adjacent ideas. Declare what is preserved: identity, screen position, direction, color correspondence or a semantic handoff. Coordinate both endpoints and any overlap. A visible cut may be clearer than continuous interpolation. Do not claim two shapes morph when the observed construction only suggests a cut or occlusion.",
       "mechanism": "A transition linked to content can connect ideas while maintaining momentum.",
       "tradeoff": "Decorative transitions can obscure meaning and create boundary artifacts.",
-      "verification": "Play the transition alone and in context; inspect exact boundary frames.",
+      "verification": "Inspect just before, at and after the boundary and intermediate extremes. Review the transition alone and in context, following the intended focal element. Confirm that the incoming information is readable after the handoff and that blur does not hide a continuity error.",
       "output": "Transition construction and overlap rules",
       "shared": [
         "continuity",
@@ -876,7 +876,7 @@
         "ANIM",
         "BLENDER"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project."
     },
     {
       "id": "editing-rhythm",
@@ -884,10 +884,10 @@
       "domain": "Audiovisual Sequence",
       "division": "Editing and sound",
       "inputs": "Shot lengths, visual density and message structure",
-      "decision": "Place cuts and holds according to information changes; use contrast in duration when it supports the intended reading.",
+      "decision": "Place cuts, holds and visual density changes around information, gesture, reaction, contrast or resolution. Contrast a sustained performance with a meaningful insert when useful; reserve rapid montage or text-only intervals for their intended role. A beat grid, fixed cut frequency and constant movement are optional choices rather than quality rules.",
       "mechanism": "Deliberate temporal grouping can clarify sequence structure.",
       "tradeoff": "Cutting only to a fixed beat can interrupt reading or action completion.",
-      "verification": "Watch with and without sound and identify where comprehension changes.",
+      "verification": "Review actual playback with and without sound; identify missed meaning, interrupted gesture, premature caption exit and redundant inserts. Distinguish observed visual order from inferred pacing when only frames were inspected.",
       "output": "Edit decision list",
       "shared": [
         "intent",
@@ -898,7 +898,7 @@
         "ANIM",
         "FFMPEG"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization."
     },
     {
       "id": "sound-design",
@@ -950,10 +950,10 @@
       "domain": "Audiovisual Sequence",
       "division": "Editing and sound",
       "inputs": "Final copy, speech timing and viewing context",
-      "decision": "Time captions to meaningful phrases; keep layout and dwell time legible within project-specific interface clearance.",
+      "decision": "Preserve exact intended language, role and timing evidence. Distinguish a complete caption from a title, keyword emphasis or illustrative label; keep a full caption track/variant when required. Place the group in a legible region using actual protected bounds, and preserve or deliberately reset its anchor across shot changes. Use Expressive-Text.md for compositional phrases.",
       "mechanism": "Readable synchronized text can preserve meaning with sound off.",
       "tradeoff": "Dense text, short holds or platform overlays can hide content.",
-      "verification": "Review at phone size with sound muted and inspect every caption change.",
+      "verification": "Inspect text coverage, speaker changes, legibility over changing backgrounds, intermediate bounds and placement UI. Compare claimed speech cues with actual audio; authored visual timing must remain labeled. Do not mistake selected keywords for a verified complete transcript.",
       "output": "Caption geometry and timing",
       "shared": [
         "intent",
@@ -964,7 +964,7 @@
         "ANIM",
         "FFMPEG"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization."
     },
     {
       "id": "scene-state",
@@ -1136,7 +1136,7 @@
       "domain": "Video Production",
       "division": "Rendering",
       "inputs": "Motion speed, frame rate and shutter intent",
-      "decision": "Sample time consistently; add subframe integration or motion blur only when it improves the target appearance.",
+      "decision": "Sample time consistently; add subframe integration or motion blur only when it improves the target appearance. Distinguish movement-integrated motion blur from deliberate defocus and glow. Keep critical reading intervals legible and measure the cost of the busiest interval before selecting subframe count.",
       "mechanism": "Sufficient temporal sampling can reduce strobing in fast motion.",
       "tradeoff": "Blur can erase detail and subframes multiply render cost.",
       "verification": "Compare fast edges, fine patterns and readable text in encoded playback.",
@@ -1151,7 +1151,7 @@
         "BLENDER",
         "FFMPEG"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project."
     },
     {
       "id": "color-pipeline",
@@ -1251,10 +1251,10 @@
       "domain": "Evaluation and Revision",
       "division": "Visual and temporal review",
       "inputs": "Representative playback, extrema and transition frames",
-      "decision": "Inspect timing, velocity, identity, collisions, continuity and camera behavior in motion as well as stills.",
+      "decision": "Judge timing, velocity, identity, collisions, continuity and camera behavior against the intended effect. When a source comparison is requested, align equivalent event phases and compare relationships as well as silhouettes. Use actual playback for smoothness and pacing; use dense frame inspection to localize failures.",
       "mechanism": "Temporal review can reveal failures invisible in isolated frames.",
       "tradeoff": "A contact sheet cannot establish smoothness or correct audiovisual timing.",
-      "verification": "Watch a real clip at target speed and inspect suspect intervals frame by frame.",
+      "verification": "Watch the encoded clip at target speed and inspect suspect intervals frame by frame. Record the focal event, missed meaning and exact affected range. With only sampled frames, report visual states/order and keep smoothness, perceived pacing and audiovisual sync unverified. For expressive captions inspect readable-state duration, blur/scale extremes, phrase anchors and semantic carryover across cuts. Distinguish a visual subtitle reveal from verified speech synchronization.",
       "output": "Motion findings and timing corrections",
       "shared": [
         "reference",
@@ -1266,7 +1266,7 @@
         "CANVAS",
         "FFMPEG"
       ],
-      "evidence": "Design mechanism: operational hypothesis, not a universal aesthetic law."
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization."
     },
     {
       "id": "mobile-legibility",

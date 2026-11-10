@@ -1,6 +1,6 @@
 # Kinesis
 
-**A reference-led production system for social video.**
+**A creative production and continuous-learning system for motion and social video.**
 
 Kinesis connects creative decisions, Motion expertise and reusable project design systems. Plan an edit from footage or a script, build original 2D, 2.5D or 3D scenes through code, and keep each episode connected to its references, timing, assets and review evidence.
 
@@ -17,7 +17,7 @@ python kinesis.py new-episode Projects/my-series ep-001 --title 'First episode'
 python kinesis.py validate Projects/my-series
 ```
 
-The new project starts as a draft. Fill in its purpose, visual references and design tokens; choose or implement the recipes needed by its episodes. Record rendered outputs and actual review evidence before marking an episode delivered.
+The new project starts as a draft. Fill in its purpose, original design decisions, optional references and design tokens; choose or implement the recipes needed by its episodes. Record rendered outputs and actual review evidence before marking an episode delivered.
 
 For complete project JSON-schema checks, optionally install the validator:
 
@@ -45,13 +45,15 @@ Engine knowledge is shared. Project identity belongs to the project. Episode dec
 
 Fourteen editorial responsibilities connect to visual, character, narration and production expertise: story/editing; captions; kinetic typography; original B-roll; cards/icons/UI; character animation; subject effects/tracking; camera/transitions; color; sound/voice/music; social-scale VFX; adaptive composition; openings/endings/covers; and delivery/QA.
 
-The knowledge registry contains 87 expertise owners, 12 common reasoning mechanisms and 10 production contracts. Its base graph distinguishes 200 conditional handoffs from routing and shared-logic links. A separate project overlay connects the motor, project identity, episodes, rendering and evidence without copying the expertise registry.
+The knowledge registry contains 91 expertise owners, 12 common reasoning mechanisms and 10 production contracts. Its base graph distinguishes 240 conditional handoffs from routing and shared-logic links. A separate project overlay connects the motor, project identity, episodes, rendering and evidence without copying the expertise registry.
+
+Four connected creative-craft responsibilities deepen product film direction, UI choreography, motion choreography and attention direction. Use [Editorial Reasoning](Engine/Motion/System/Editorial-Reasoning.md), [Expressive Text](Engine/Motion/System/Expressive-Text.md) and [Creative Learning](Engine/Motion/System/Creative-Learning.md) for conditional decisions that preserve original styles.
 
 See [the workflow](docs/workflow.md), [the expertise index](Engine/Motion/System/Expertise-Index.md), and [the integration playbooks](Engine/Motion/System/Playbooks.md).
 
 ## Production principles
 
-- Establish a visual target, reconstruct its important properties through editable code, then develop its changes over time.
+- Begin from intent and project identity. Use optional references for learning, inspiration or explicit matching; original production can begin without them.
 - Use effects when they serve meaning. A clean cut, still frame or quiet hold is a valid decision.
 - Share capabilities and contracts; keep each project's identity and assets independent.
 - Inspect actual output. A valid configuration or successful encode cannot prove visual quality, natural narration or smooth character performance.

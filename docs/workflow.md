@@ -2,7 +2,7 @@
 
 ## Establish the project
 
-Define audience, message, media, output format and constraints. Assign roles to reference images and distinguish observed cues from inferred or invented structure. Select a coherent visual direction and keep project-specific decisions in Project.json.
+Define audience, message, media, output format and constraints. When references are supplied, assign their roles and distinguish observed cues from inferred or invented structure. Select a coherent visual direction and keep project-specific decisions in Project.json.
 
 ## Plan an episode
 
@@ -10,7 +10,7 @@ Create an episode through the toolkit. Map beats, source/output ranges, speech a
 
 ## Construct and render
 
-Match major silhouette, composition, camera and value relationships before fine detail. Evaluate motion from explicit time and parameters. Probe the intended rendering path with an expensive representative frame and short segment before full production. Keep assets and editable source in the project; write generated media to Outputs.
+Develop original key states from intent; match silhouette, composition, camera and value relationships only when comparison is requested. Evaluate motion from explicit time and parameters. Probe the intended rendering path with an expensive representative frame and short segment before full production. Keep assets and editable source in the project; write generated media to Outputs.
 
 ## Review and revise
 

@@ -612,13 +612,41 @@
       "division": "Production contracts"
     },
     {
+      "id": "product-film-direction",
+      "name": "Product Film Direction",
+      "kind": "expertise",
+      "domain": "Creative Motion",
+      "division": "Product narrative"
+    },
+    {
+      "id": "ui-choreography",
+      "name": "UI Choreography",
+      "kind": "expertise",
+      "domain": "Creative Motion",
+      "division": "Interface performance"
+    },
+    {
+      "id": "motion-choreography",
+      "name": "Motion Choreography",
+      "kind": "expertise",
+      "domain": "Creative Motion",
+      "division": "Action relationships"
+    },
+    {
+      "id": "attention-direction",
+      "name": "Attention Direction",
+      "kind": "expertise",
+      "domain": "Creative Motion",
+      "division": "Perceptual staging"
+    },
+    {
       "id": "logic:intent",
       "name": "Intent and attention",
       "kind": "shared_logic"
     },
     {
       "id": "logic:reference",
-      "name": "Reference contract",
+      "name": "Source roles and creative learning",
       "kind": "shared_logic"
     },
     {
@@ -1720,7 +1748,7 @@
       "target": "captions-and-overlays",
       "relation": "hands_off",
       "condition": "When this editorial responsibility activates the linked implementation",
-      "payload": "timed caption cues and animated layout with collision constraints.",
+      "payload": "Role-labeled caption groups with semantic spans, cue provenance, stable layout anchors and animated bounds",
       "kind": "conditional_handoff"
     },
     {
@@ -1728,7 +1756,7 @@
       "target": "typography",
       "relation": "hands_off",
       "condition": "When this editorial responsibility activates the linked implementation",
-      "payload": "timed caption cues and animated layout with collision constraints.",
+      "payload": "Role-labeled caption groups with semantic spans, cue provenance, stable layout anchors and animated bounds",
       "kind": "conditional_handoff"
     },
     {
@@ -1736,7 +1764,7 @@
       "target": "audio-synchronization",
       "relation": "hands_off",
       "condition": "When this editorial responsibility activates the linked implementation",
-      "payload": "timed caption cues and animated layout with collision constraints.",
+      "payload": "Role-labeled caption groups with semantic spans, cue provenance, stable layout anchors and animated bounds",
       "kind": "conditional_handoff"
     },
     {
@@ -1744,7 +1772,7 @@
       "target": "mobile-legibility",
       "relation": "hands_off",
       "condition": "When this editorial responsibility activates the linked implementation",
-      "payload": "timed caption cues and animated layout with collision constraints.",
+      "payload": "Role-labeled caption groups with semantic spans, cue provenance, stable layout anchors and animated bounds",
       "kind": "conditional_handoff"
     },
     {
@@ -1752,7 +1780,7 @@
       "target": "social-animated-captions",
       "relation": "revises",
       "condition": "When a relevant acceptance criterion fails",
-      "payload": "Captions are visually impressive but mistimed or incomplete. Correct transcript/alignment first; then recompute emphasis, layout and render ranges.",
+      "payload": "An expressive group loses a qualifier, moves its anchor accidentally, obscures a face or finishes revealing too late to read. Correct text/alignment first, then simplify or regroup the composition, restage the block and invalidate only affected cue/layout/render ranges.",
       "kind": "conditional_handoff"
     },
     {
@@ -1943,8 +1971,8 @@
       "source": "social-look-grading",
       "target": "color-design",
       "relation": "hands_off",
-      "condition": "When this editorial responsibility activates the linked implementation",
-      "payload": "shot-matched correction and look parameters tested in the rendered output.",
+      "condition": "When footage and text accents need coordinated tonal or chromatic roles",
+      "payload": "Subject/detail priorities, overlay roles and source-specific differences to preserve",
       "kind": "conditional_handoff"
     },
     {
@@ -2325,6 +2353,326 @@
     },
     {
       "source": "social-story-editing",
+      "target": "product-film-direction",
+      "relation": "hands_off",
+      "condition": "When a product benefit or interaction is the subject",
+      "payload": "Intended takeaway, accurate claims and editorial ranges",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "product-film-direction",
+      "target": "ui-choreography",
+      "relation": "hands_off",
+      "condition": "When product meaning depends on interface behavior",
+      "payload": "Supported UI states, causal actions and result claims",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "product-film-direction",
+      "target": "storyboard",
+      "relation": "hands_off",
+      "condition": "When a product sequence is planned",
+      "payload": "Beat intentions, readable states and permitted condensation",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "product-film-direction",
+      "target": "motion-choreography",
+      "relation": "hands_off",
+      "condition": "When product beats require coordinated movement",
+      "payload": "Meaningful changes, state dependencies and continuity invariants",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "social-graphics-ui",
+      "target": "ui-choreography",
+      "relation": "hands_off",
+      "condition": "When multiple interface events depend on each other",
+      "payload": "Component hierarchy, factual labels, states and anchors",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "motion-choreography",
+      "relation": "hands_off",
+      "condition": "When state changes need coordinated visible action",
+      "payload": "Action/state map, persistent IDs, trigger relationships and holds",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "layout-collision",
+      "relation": "hands_off",
+      "condition": "When panels or menus change over time",
+      "payload": "Timed component bounds, anchor relationships and protected text",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "scene-state",
+      "relation": "hands_off",
+      "condition": "When a UI sequence is constructed",
+      "payload": "Explicit state transitions, local times, component IDs and parameters",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "timing-and-pacing",
+      "relation": "hands_off",
+      "condition": "When action relationships need durations and overlaps",
+      "payload": "Primary/supporting actions, comprehension needs and boundary intent",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "transform-animation",
+      "relation": "hands_off",
+      "condition": "When action tracks need transform evaluation",
+      "payload": "Stable IDs, endpoints, coordinate spaces, pivots and intended trajectories",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "easing",
+      "relation": "hands_off",
+      "condition": "When a track needs a movement character",
+      "payload": "Travel and settle intent, joins and permissible overshoot",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "secondary-motion",
+      "relation": "hands_off",
+      "condition": "When a part follows a primary driver",
+      "payload": "Driver identity, attachment, lag intent and interruption constraints",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "transitions",
+      "relation": "hands_off",
+      "condition": "When a shared action bridges adjacent shots",
+      "payload": "Outgoing/incoming states, identity and overlap constraints",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "attention-direction",
+      "relation": "hands_off",
+      "condition": "When multiple actions compete or hand off focus",
+      "payload": "Intended primary action, supporting tracks and event ranges",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "attention-direction",
+      "target": "composition",
+      "relation": "constrains",
+      "condition": "When composition must stage the focal event",
+      "payload": "Focal anchor, protected reading region and competing visual priorities",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "attention-direction",
+      "target": "camera-motion",
+      "relation": "constrains",
+      "condition": "When framing changes are used to direct attention",
+      "payload": "Focal track, screen-space anchor and required readable intervals",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "attention-direction",
+      "target": "compositing",
+      "relation": "constrains",
+      "condition": "When contrast, glow or blur mediates emphasis",
+      "payload": "Required legibility, focus intent and permitted optical treatment",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "attention-direction",
+      "target": "temporal-sampling",
+      "relation": "constrains",
+      "condition": "When fast motion or blur threatens the focal content",
+      "payload": "Critical reading ranges, output scale and moving-edge needs",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "reference-curation",
+      "target": "motion-choreography",
+      "relation": "informs",
+      "condition": "When a supplied lesson reveals transferable action relationships",
+      "payload": "Observed dependencies, study scope, uncertainty and alternative realizations",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "reference-curation",
+      "target": "attention-direction",
+      "relation": "informs",
+      "condition": "When a supplied lesson suggests an attention handoff",
+      "payload": "Observed composition changes and untested perceptual explanation",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "reference-curation",
+      "target": "product-film-direction",
+      "relation": "informs",
+      "condition": "When a lesson concerns product storytelling",
+      "payload": "Observed sequence and claim limits, without importing source identity",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "motion-evaluation",
+      "target": "motion-choreography",
+      "relation": "revises",
+      "condition": "When coordination, interruption or continuity fails",
+      "payload": "Observed issue, affected interval and intended event relationship",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "motion-evaluation",
+      "target": "attention-direction",
+      "relation": "revises",
+      "condition": "When important information is missed or visual competition dominates",
+      "payload": "Scoped reviewer observations and competing cue range",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "quality-gates",
+      "target": "ui-choreography",
+      "relation": "revises",
+      "condition": "When a visual UI state is misleading or unreadable",
+      "payload": "Failed claim/layout condition and affected state transition",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "reference-matching",
+      "target": "reference-curation",
+      "relation": "revises",
+      "condition": "When a new comparison qualifies a learned relationship",
+      "payload": "Conflicting observation, comparison scope and revised conditions",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "social-animated-captions",
+      "target": "attention-direction",
+      "relation": "hands_off",
+      "condition": "When expressive caption emphasis competes with performance or framing",
+      "payload": "Caption role, intended semantic emphasis, protected subject events and reading ranges",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "social-animated-captions",
+      "target": "layout-collision",
+      "relation": "hands_off",
+      "condition": "When a caption group reveals, expands or spans reframing",
+      "payload": "Measured phrase/group bounds, local anchors, animated extremes and relevant time intervals",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "social-animated-captions",
+      "target": "social-kinetic-typography",
+      "relation": "hands_off",
+      "condition": "When language becomes an independent visual scene",
+      "payload": "Approved semantic groups, text role, emphasis spans and cue provenance",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "social-animated-captions",
+      "target": "color-design",
+      "relation": "informs",
+      "condition": "When an accent carries a semantic association",
+      "payload": "Meaningful spans, local accent role and required non-color correspondence",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "social-kinetic-typography",
+      "target": "ui-choreography",
+      "relation": "hands_off",
+      "condition": "When expressive language uses an interface with dependent states",
+      "payload": "Illustrative state map, semantic mapping and screen/panel hierarchy",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "social-kinetic-typography",
+      "target": "layout-collision",
+      "relation": "hands_off",
+      "condition": "When spatial type or phrase groups change over time",
+      "payload": "Phrase anchors, measured final layout and projected intermediate bounds",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "social-look-grading",
+      "target": "attention-direction",
+      "relation": "informs",
+      "condition": "When a scoped look change participates in an editorial emphasis",
+      "payload": "Intended focal event, treatment range and semantic purpose",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "social-look-grading",
+      "target": "shot-continuity",
+      "relation": "informs",
+      "condition": "When matching choices or deliberate look differences affect adjacent shots",
+      "payload": "Matched relationships, intended discontinuities and relevant source roles",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "social-story-editing",
+      "target": "attention-direction",
+      "relation": "hands_off",
+      "condition": "When performance, text and imagery must share a focal event",
+      "payload": "Meaning changes, lead/support roles and proposed emphasis ranges",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "social-motion-broll",
+      "target": "shot-continuity",
+      "relation": "hands_off",
+      "condition": "When an insert or montage bridges source changes",
+      "payload": "Insert role, provenance status, persistent phrase/motif and return anchor",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "social-camera-transitions",
+      "target": "layout-collision",
+      "relation": "hands_off",
+      "condition": "When framing or inset footage changes around captions",
+      "payload": "Coordinate-space transforms, protected regions and caption anchoring intent",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "typography",
+      "target": "layout-collision",
+      "relation": "hands_off",
+      "condition": "When measured phrase geometry is animated or reframed",
+      "payload": "Font/copy revision, semantic group, final bounds and local anchor",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "transcript-alignment",
+      "target": "social-animated-captions",
+      "relation": "informs",
+      "condition": "When text meaning, speaker or cue precision changes",
+      "payload": "Reviewed utterance, semantic span map and timing provenance",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "layout-collision",
+      "target": "social-animated-captions",
+      "relation": "revises",
+      "condition": "When a caption group collides or cannot reach a readable state",
+      "payload": "Affected group/time range, projected conflict and proposed reflow or restaging",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "motion-evaluation",
+      "target": "social-animated-captions",
+      "relation": "revises",
+      "condition": "When caption entry, carryover or exit hides meaning",
+      "payload": "Observed phrase issue, affected interval and actual inspection scope",
+      "kind": "conditional_handoff"
+    },
+    {
+      "source": "social-story-editing",
       "target": "G01",
       "relation": "uses_contract",
       "condition": "When this editorial responsibility is active",
@@ -2766,6 +3114,110 @@
     {
       "source": "social-production-editorial",
       "target": "G10",
+      "relation": "uses_contract",
+      "condition": "When this editorial responsibility is active",
+      "payload": "Resolve interface fields, precision, ownership and invalidation",
+      "kind": "contract_use"
+    },
+    {
+      "source": "product-film-direction",
+      "target": "G01",
+      "relation": "uses_contract",
+      "condition": "When this editorial responsibility is active",
+      "payload": "Resolve interface fields, precision, ownership and invalidation",
+      "kind": "contract_use"
+    },
+    {
+      "source": "product-film-direction",
+      "target": "G03",
+      "relation": "uses_contract",
+      "condition": "When this editorial responsibility is active",
+      "payload": "Resolve interface fields, precision, ownership and invalidation",
+      "kind": "contract_use"
+    },
+    {
+      "source": "product-film-direction",
+      "target": "G06",
+      "relation": "uses_contract",
+      "condition": "When this editorial responsibility is active",
+      "payload": "Resolve interface fields, precision, ownership and invalidation",
+      "kind": "contract_use"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "G01",
+      "relation": "uses_contract",
+      "condition": "When this editorial responsibility is active",
+      "payload": "Resolve interface fields, precision, ownership and invalidation",
+      "kind": "contract_use"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "G04",
+      "relation": "uses_contract",
+      "condition": "When this editorial responsibility is active",
+      "payload": "Resolve interface fields, precision, ownership and invalidation",
+      "kind": "contract_use"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "G05",
+      "relation": "uses_contract",
+      "condition": "When this editorial responsibility is active",
+      "payload": "Resolve interface fields, precision, ownership and invalidation",
+      "kind": "contract_use"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "G06",
+      "relation": "uses_contract",
+      "condition": "When this editorial responsibility is active",
+      "payload": "Resolve interface fields, precision, ownership and invalidation",
+      "kind": "contract_use"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "G01",
+      "relation": "uses_contract",
+      "condition": "When this editorial responsibility is active",
+      "payload": "Resolve interface fields, precision, ownership and invalidation",
+      "kind": "contract_use"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "G04",
+      "relation": "uses_contract",
+      "condition": "When this editorial responsibility is active",
+      "payload": "Resolve interface fields, precision, ownership and invalidation",
+      "kind": "contract_use"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "G05",
+      "relation": "uses_contract",
+      "condition": "When this editorial responsibility is active",
+      "payload": "Resolve interface fields, precision, ownership and invalidation",
+      "kind": "contract_use"
+    },
+    {
+      "source": "attention-direction",
+      "target": "G03",
+      "relation": "uses_contract",
+      "condition": "When this editorial responsibility is active",
+      "payload": "Resolve interface fields, precision, ownership and invalidation",
+      "kind": "contract_use"
+    },
+    {
+      "source": "attention-direction",
+      "target": "G04",
+      "relation": "uses_contract",
+      "condition": "When this editorial responsibility is active",
+      "payload": "Resolve interface fields, precision, ownership and invalidation",
+      "kind": "contract_use"
+    },
+    {
+      "source": "attention-direction",
+      "target": "G05",
       "relation": "uses_contract",
       "condition": "When this editorial responsibility is active",
       "payload": "Resolve interface fields, precision, ownership and invalidation",
@@ -5846,6 +6298,158 @@
     {
       "source": "variant-rendering",
       "target": "logic:provenance",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "product-film-direction",
+      "target": "logic:intent",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "product-film-direction",
+      "target": "logic:continuity",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "product-film-direction",
+      "target": "logic:evidence",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "product-film-direction",
+      "target": "logic:provenance",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "logic:intent",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "logic:time",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "logic:geometry",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "logic:continuity",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "logic:perception",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "logic:intent",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "logic:time",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "logic:continuity",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "logic:geometry",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "logic:evidence",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "attention-direction",
+      "target": "logic:intent",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "attention-direction",
+      "target": "logic:perception",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "attention-direction",
+      "target": "logic:continuity",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "attention-direction",
+      "target": "logic:sampling",
+      "relation": "requires_logic",
+      "condition": "When reasoning about this owner",
+      "payload": "Apply the shared conditional mechanism",
+      "kind": "shared_logic"
+    },
+    {
+      "source": "attention-direction",
+      "target": "logic:evidence",
       "relation": "requires_logic",
       "condition": "When reasoning about this owner",
       "payload": "Apply the shared conditional mechanism",

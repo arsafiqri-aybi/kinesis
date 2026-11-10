@@ -1,7 +1,8 @@
 # Motion — Foundations
 
-Connected operational knowledge. Select responsibilities according to actual project needs.
+Conditional operational knowledge. Select responsibilities according to the current task.
 
+<a id="creative-brief"></a>
 ## Creative Brief
 
 **Inputs:** Message, audience, duration, destination and constraints
@@ -16,25 +17,31 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Project purpose and acceptance criteria
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="reference-curation"></a>
 ## Reference Curation
 
-**Inputs:** Candidate images and intended visual priorities
+**Inputs:** Optional images, video, sound, prior output or user lessons; current intent and source access
 
-**Decision:** Label each image by its role: composition, silhouette, surface, palette, lighting or mood; resolve conflicts before reconstruction.
+**Decision:** Resolve whether a source is for learning, inspiration or explicit matching. Inspect relevant intervals and label observed, inferred and invented properties. Read Creative-Learning.md when extracting a lesson. Keep original media and source-specific study records outside the main engine. If no reference is supplied, continue from the idea and project constraints.
 
-**Expected mechanism:** Role-specific references provide usable targets without requiring one image to answer every question.
+**Expected mechanism:** Role-specific source handling can preserve evidence while allowing several independent realizations of a learned relationship.
 
-**Tradeoff:** Mixing lenses, light directions or styles blindly can create an incoherent scene.
+**Tradeoff:** A single attractive example can become an accidental style requirement; contact sheets can suggest order without establishing smoothness or sound timing.
 
-**Verification:** Identify the governing reference for every major visual property and list conflicting cues.
+**Verification:** Record source identity, inspected intervals, method and uncertainty. Map each proposed lesson to an existing owner, show where it may fail and distinguish source observation from a generalization.
 
-**Output:** Reference manifest with roles and observations
+**Output:** Optional source-role manifest, scoped observations and transferable learning candidates
 
+Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project.
+
+<a id="visual-direction"></a>
 ## Visual Direction
 
 **Inputs:** Brief and role-labelled references
 
-**Decision:** Define a coherent visual grammar for proportions, type, palette, edge treatment, surface detail and camera; compare alternatives as stills.
+**Decision:** Define a coherent visual grammar for proportions, type, palette, edge treatment, surface detail and camera; compare alternatives as stills. Select a visual language from the current message and project identity. Use learned mechanisms as optional choices; permit a new palette, medium, density and pacing. Compare alternatives only when a creative decision needs resolving. A reference or perpetual motion is not required.
 
 **Expected mechanism:** Shared visual rules can make separately built scenes feel related.
 
@@ -44,6 +51,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Visual system and permitted variation
 
+Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project.
+
+<a id="storyboard"></a>
 ## Storyboard
 
 **Inputs:** Message structure and visual system
@@ -58,11 +68,14 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Shot list and provisional beat timing
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="styleframes"></a>
 ## Styleframes
 
 **Inputs:** Shot list and reference targets
 
-**Decision:** Resolve key stills for appearance; include motion extremes and transition boundaries when they alter composition.
+**Decision:** Resolve key stills for appearance; include motion extremes and transition boundaries when they alter composition. For original work, develop project-owned key states from the idea. Select only the states needed to test composition and change; include a deliberate hold when it serves comprehension. Source matching is conditional on the brief.
 
 **Expected mechanism:** Defined visual endpoints make reconstruction and motion decisions reviewable.
 
@@ -72,20 +85,26 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Selected visual targets and invariants
 
+Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project.
+
+<a id="shot-continuity"></a>
 ## Shot Continuity
 
 **Inputs:** Adjacent styleframes and object identities
 
-**Decision:** Track screen direction, scale, anchor positions, palette and visual motifs across shots; mark deliberate breaks.
+**Decision:** Choose which identities, screen anchors, direction, scale, phrase or visual motifs should persist across a cut. Preserve the relationship serving the current idea and mark deliberate breaks. A repeated caption can link diverse footage; a new speaker or thought may require a reset. Do not force every source into identical framing or color.
 
 **Expected mechanism:** Selected continuity cues can help viewers connect changes across edits.
 
 **Tradeoff:** Preserving every cue may make scenes repetitive.
 
-**Verification:** Inspect consecutive frames at each cut and follow the intended subject.
+**Verification:** Inspect frames around each cut, caption carryover and the intended subject/eyeline. Review the sequence at target speed before judging continuity or rhythm; sparse samples cannot establish cut quality.
 
 **Output:** Continuity constraints and transition handoff
 
+Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.
+
+<a id="shape-decomposition"></a>
 ## Shape Decomposition
 
 **Inputs:** Reference image, crop and focal objects
@@ -100,6 +119,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Object hierarchy, shape measurements and construction plan
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="spatial-inference"></a>
 ## Spatial Inference
 
 **Inputs:** Perspective cues, overlaps and visible faces
@@ -114,6 +136,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Camera hypothesis, depth arrangement and uncertainty notes
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="appearance-inference"></a>
 ## Appearance Inference
 
 **Inputs:** Highlights, shadows, gradients and surface cues
@@ -128,6 +153,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Material and lighting hypotheses with confidence notes
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="reconstruction-planning"></a>
 ## Reconstruction Planning
 
 **Inputs:** Decomposition, shot movement and hardware observations
@@ -142,20 +170,26 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Representation plan and procedural asset boundary
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="reference-matching"></a>
 ## Reference Matching
 
-**Inputs:** Target styleframe and rendered candidate
+**Inputs:** Candidate output and explicitly selected comparison properties, if any
 
-**Decision:** Compare equal-size, equal-crop images; diagnose silhouette, layout, value, color and material separately; fix dominant deviations first.
+**Decision:** Activate comparison only for an agreed target or a useful learning question. Align crop, size and event phase before diagnosing differences. Compare silhouette, layout, value, color and material independently; compare motion using start, peak action and settle rather than unrelated absolute timestamps. For original work, judge intent and the project contract instead of similarity to a source.
 
 **Expected mechanism:** Structured comparison can make revisions more attributable.
 
-**Tradeoff:** Pixel error can penalize harmless differences and ignore meaning.
+**Tradeoff:** Pixel similarity can reward copying and penalize an intentional variation; static image agreement does not establish temporal quality.
 
-**Verification:** Record one visible mismatch, its likely cause and the result of changing that cause.
+**Verification:** Name a meaningful discrepancy, its likely cause and the evidence after revision. Retain an intentional deviation when it serves the brief. Mark inferred velocities, unavailable playback and unreviewed audio explicitly.
 
 **Output:** Ranked reconstruction revisions
 
+Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project.
+
+<a id="ambiguity-resolution"></a>
 ## Ambiguity Resolution
 
 **Inputs:** Unobserved regions and competing visual interpretations
@@ -170,20 +204,26 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Chosen interpretation and unresolved reference limits
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="curve-geometry"></a>
 ## Curve Geometry
 
 **Inputs:** Silhouettes, handles, stroke targets and scale
 
-**Decision:** Construct paths with controlled tangents and joins; choose tessellation from output scale and curvature.
+**Decision:** Construct paths with controlled tangents, joins and sampling appropriate to output scale. For animated strokes distinguish path geometry, trim interval, width profile and emission. Parameterize travel by arc length when constant visual speed is intended; parameter-space interpolation can change speed on uneven curves. Keep tail length and taper independent from glow.
 
 **Expected mechanism:** Smooth curvature and stable stroke treatment can preserve intended contours.
 
 **Tradeoff:** Too few samples facet curves; too many increase cost without visible benefit.
 
-**Verification:** Inspect inflections, corners and stroke joins at final size and during scaling.
+**Verification:** Inspect inflections, corners, trim endpoints, joins and scale extremes. For moving paths inspect near-zero visible length, maximum curvature and rapid changes. Test trajectory and silhouette without glow; send time-varying controls to transform-animation and easing.
 
 **Output:** Reusable curve constructors and path parameters
 
+Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project.
+
+<a id="planar-geometry"></a>
 ## Planar Geometry
 
 **Inputs:** Shape outlines, holes, overlaps and fill rules
@@ -198,6 +238,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Editable 2D shape definitions
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="procedural-modeling"></a>
 ## Procedural Modeling
 
 **Inputs:** Required views, silhouette and object dimensions
@@ -212,25 +255,31 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Parametric 3D object construction
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="typography"></a>
 ## Typography
 
-**Inputs:** Copy, font files, emphasis and available frame area
+**Inputs:** Exact copy, semantic groups, font/shaping support, intended emphasis, viewing scale and available frame area
 
-**Decision:** Specify shaping, font metrics, line breaks, kerning and alignment through code; lock font availability before layout.
+**Decision:** Separate complete text and phrase composition from reveal order. Measure actual glyphs and layout the intended readable state; choose line breaks, baseline anchors, hierarchy and local transforms deliberately. Stable block bounds can prevent accidental reflow as words appear; dynamic reflow is valid when explicitly designed. Protect connector words, negation, quantities, diacritics and unsupported-script handling.
 
 **Expected mechanism:** Stable text geometry supports predictable composition and animation anchors.
 
 **Tradeoff:** Substituted fonts or unsupported scripts can invalidate measured layout.
 
-**Verification:** Render actual copy with target fonts; inspect glyphs, line breaks and clipping at phone size.
+**Verification:** Render actual copy and fonts at output size; inspect line breaks, first/last glyphs, descenders, diacritics, spacing and maximum animated bounds. Check both final phrase and intermediate reveals. A font or translation change invalidates measured layout.
 
-**Output:** Text layout and font manifest
+**Output:** Measured text and phrase layout, semantic emphasis spans, anchors and font manifest
 
+Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.
+
+<a id="composition"></a>
 ## Composition
 
 **Inputs:** Subject hierarchy, frame ratio and projected bounds
 
-**Decision:** Balance focal weight, alignment, negative space and grouping; evaluate composition at motion extremes as well as stills.
+**Decision:** Balance focal weight, alignment, negative space and grouping; evaluate composition at motion extremes as well as stills. Separate output frame, any inset footage window and the text block. Stage captions around important face/gesture/action regions or intentional negative space. Baked borders are a source design choice, not verified platform clearance. Recompute protected regions through reframing rather than shrinking the entire scene.
 
 **Expected mechanism:** A controlled hierarchy can keep the message visible while objects change.
 
@@ -240,6 +289,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Layout constraints and composition anchors
 
+Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.
+
+<a id="depth-layering"></a>
 ## Depth Layering
 
 **Inputs:** Scene layers, intended depth and camera movement
@@ -254,20 +306,26 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Layer stack and depth parameters
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="color-design"></a>
 ## Color Design
 
 **Inputs:** Visual direction, background and material palette
 
-**Decision:** Define palette roles and interpolation space; compare colors under the intended output transform.
+**Decision:** Define palette roles, value hierarchy, contrast and interpolation space. Coordinate footage and graphics while keeping source correction, creative look and output conversion distinct. Choose accent colors by current meaning and project identity; support associations through shape, position or type when color alone is insufficient. Keep exact palette and look values local.
 
 **Expected mechanism:** Controlled value and chromatic contrast can support visual hierarchy.
 
 **Tradeoff:** An appealing palette can lose separation under shading or encoding.
 
-**Verification:** Inspect grayscale separation, gradients and key colors in the encoded frame.
+**Verification:** Inspect grayscale separation, gradients, key colors and moving text/background contrast in the actual encoded result. Protect meaningful skin/product detail. Source appearance does not identify a specific LUT, camera profile or numerical grade.
 
 **Output:** Palette parameters and color roles
 
+Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.
+
+<a id="materials"></a>
 ## Materials
 
 **Inputs:** Surface hypothesis, geometry and lighting
@@ -282,6 +340,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Parameterized material definitions
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="procedural-texture"></a>
 ## Procedural Texture
 
 **Inputs:** Surface scale, texture role and viewing distance
@@ -296,6 +357,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Seeded texture functions and scale settings
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="lighting"></a>
 ## Lighting
 
 **Inputs:** Surface response, depth cues and reference light direction
@@ -310,6 +374,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Lighting rig and exposure intent
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="camera-projection"></a>
 ## Camera Projection
 
 **Inputs:** Reference framing, perspective and reveal requirements
@@ -324,20 +391,26 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Camera model and framing parameters
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="compositing"></a>
 ## Compositing
 
 **Inputs:** Layer outputs, masks, alpha and effect intent
 
-**Decision:** Composite layers with an explicit alpha convention and color space; keep blur, glow and grading as adjustable operations.
+**Decision:** Declare layer order, alpha convention and color space. Separate a readable structural core from adjustable broad glow, local highlights and directional or defocus blur. Keep optical effects independent of geometry and text layout. Composite in a renderer-supported working space; record the actual implementation instead of inferring a proprietary tool from appearance.
 
 **Expected mechanism:** Controlled compositing can integrate elements while preserving editability.
 
 **Tradeoff:** Premultiplication errors create fringes; excess glow hides structure.
 
-**Verification:** Test transparent edges on light and dark backgrounds and compare effects enabled versus disabled.
+**Verification:** Compare effects enabled/disabled, text at delivery size, transparent edges on dark/light backgrounds and bright overlaps. Inspect whether clipping, bloom or blur erases content. Tune structure before increasing effect strength; technical encoding alone does not validate appearance.
 
 **Output:** Compositing graph and effect parameters
 
+Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project.
+
+<a id="timeline-design"></a>
 ## Timeline Design
 
 **Inputs:** Shot beats, frame rate and duration
@@ -352,34 +425,43 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Master timeline and local-time mapping
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="timing-and-pacing"></a>
 ## Timing and Pacing
 
 **Inputs:** Reading needs, action intent and beat structure
 
-**Decision:** Allocate anticipation, action, settle and hold intervals where useful; adjust durations from playback observations.
+**Decision:** Allocate anticipation, action, settle and reading holds from the message. Identify the primary event and offset supporting actions where the audience needs to follow a dependency. Allow anticipation or recovery to overlap the adjacent event when identity remains clear. Use beats as optional structure; neither constant movement nor a fixed duration is universal.
 
 **Expected mechanism:** Time allocated to comprehension can make a short sequence feel intentional.
 
 **Tradeoff:** Uniform pacing can feel mechanical; excessive speed can hide the message.
 
-**Verification:** Watch once at target speed and record missed text or unresolved actions.
+**Verification:** Review target-speed playback for the intended takeaway, missed actions, reading time and unresolved transitions. Inspect boundary frames for continuity. Change the smallest relevant delay or duration; a contact sheet alone leaves pacing unverified.
 
 **Output:** Event durations and hold intervals
 
+Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project.
+
+<a id="easing"></a>
 ## Easing
 
 **Inputs:** Property endpoints and desired velocity behavior
 
-**Decision:** Choose interpolation by movement character; inspect velocity and acceleration near endpoints and overshoot extrema.
+**Decision:** Choose interpolation for each property from intended weight, precision and energy. Separate travel from settle; coordinate positional velocity with scale and rotation. Use normalized local time, explicit endpoints and pivots. A cubic Bezier, analytic spring or deliberate hard cut is a candidate, not a default. Reuse the secondary-motion owner for physical response instead of adding competing springs.
 
 **Expected mechanism:** Appropriate velocity change can suggest weight, precision or softness.
 
 **Tradeoff:** Applying the same easing everywhere can create synchronized artificial motion.
 
-**Verification:** Plot or sample the curve and watch the resulting motion in context.
+**Verification:** Sample or plot position, velocity and overshoot extrema, then inspect the result in context. Check travel-to-settle joins, bounds and the next action. Preserve a desired discontinuity only when deliberate; do not infer an exact curve from sparse source frames.
 
 **Output:** Parameter curves and endpoint behavior
 
+Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project.
+
+<a id="transform-animation"></a>
 ## Transform Animation
 
 **Inputs:** Object hierarchy, pivots, trajectories and scale
@@ -394,6 +476,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Transform evaluators and motion paths
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="shape-morphing"></a>
 ## Shape Morphing
 
 **Inputs:** Source and destination shapes and semantic identity
@@ -408,20 +493,26 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Morph correspondence and deformation rules
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="secondary-motion"></a>
 ## Secondary Motion
 
 **Inputs:** Main action, attachment points and desired follow-through
 
-**Decision:** Derive lag, spring response or overshoot from the primary action; use analytic solutions or reproducible simulation checkpoints.
+**Decision:** Derive lag, spring response or overshoot from the primary action; use analytic solutions or reproducible simulation checkpoints. Assign one primary driver, attachment/pivot and lag relationship to each dependent part. Remove redundant bounce when precision or stillness better serves the object. Keep damping and initial conditions explicit.
 
 **Expected mechanism:** Delayed response can suggest elasticity and connected mass.
 
 **Tradeoff:** Unbounded oscillation or stateful stepping breaks stability and seeking.
 
-**Verification:** Test rest, impulse, large time jumps and out-of-order frame access.
+**Verification:** Test rest, impulse, large time jumps and out-of-order frame access. Also inspect the point where a new action interrupts settling; preserve continuity unless the cut is intentional.
 
 **Output:** Stable secondary-motion model
 
+Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project.
+
+<a id="constraints-and-rigging"></a>
 ## Constraints and Rigging
 
 **Inputs:** Object relationships, joints and permitted motion
@@ -436,6 +527,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Rig relationships and evaluation order
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="particle-systems"></a>
 ## Particle Systems
 
 **Inputs:** Emitter behavior, lifetime, distribution and scene budget
@@ -450,6 +544,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Seeded particle model and lifetime rules
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="camera-motion"></a>
 ## Camera Motion
 
 **Inputs:** Shot purpose, camera projection and subject trajectory
@@ -464,34 +561,43 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Camera path and framing constraints
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="transitions"></a>
 ## Transitions
 
 **Inputs:** Adjacent scene meanings, identities and cut boundaries
 
-**Decision:** Choose cuts, masks, matches or transformations from the relationship between shots; coordinate outgoing and incoming states.
+**Decision:** Choose a cut, mask, match or transformation from the relationship between adjacent ideas. Declare what is preserved: identity, screen position, direction, color correspondence or a semantic handoff. Coordinate both endpoints and any overlap. A visible cut may be clearer than continuous interpolation. Do not claim two shapes morph when the observed construction only suggests a cut or occlusion.
 
 **Expected mechanism:** A transition linked to content can connect ideas while maintaining momentum.
 
 **Tradeoff:** Decorative transitions can obscure meaning and create boundary artifacts.
 
-**Verification:** Play the transition alone and in context; inspect exact boundary frames.
+**Verification:** Inspect just before, at and after the boundary and intermediate extremes. Review the transition alone and in context, following the intended focal element. Confirm that the incoming information is readable after the handoff and that blur does not hide a continuity error.
 
 **Output:** Transition construction and overlap rules
 
+Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project.
+
+<a id="editing-rhythm"></a>
 ## Editing Rhythm
 
 **Inputs:** Shot lengths, visual density and message structure
 
-**Decision:** Place cuts and holds according to information changes; use contrast in duration when it supports the intended reading.
+**Decision:** Place cuts, holds and visual density changes around information, gesture, reaction, contrast or resolution. Contrast a sustained performance with a meaningful insert when useful; reserve rapid montage or text-only intervals for their intended role. A beat grid, fixed cut frequency and constant movement are optional choices rather than quality rules.
 
 **Expected mechanism:** Deliberate temporal grouping can clarify sequence structure.
 
 **Tradeoff:** Cutting only to a fixed beat can interrupt reading or action completion.
 
-**Verification:** Watch with and without sound and identify where comprehension changes.
+**Verification:** Review actual playback with and without sound; identify missed meaning, interrupted gesture, premature caption exit and redundant inserts. Distinguish observed visual order from inferred pacing when only frames were inspected.
 
 **Output:** Edit decision list
 
+Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.
+
+<a id="sound-design"></a>
 ## Sound Design
 
 **Inputs:** Intended mood, visible events and available audio sources
@@ -506,6 +612,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Audio layers, sources and level plan
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="audio-synchronization"></a>
 ## Audio Synchronization
 
 **Inputs:** Audio sample rate, event times and frame timeline
@@ -520,20 +629,26 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Cue map and audio timing
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="captions-and-overlays"></a>
 ## Captions and Overlays
 
 **Inputs:** Final copy, speech timing and viewing context
 
-**Decision:** Time captions to meaningful phrases; keep layout and dwell time legible within project-specific interface clearance.
+**Decision:** Preserve exact intended language, role and timing evidence. Distinguish a complete caption from a title, keyword emphasis or illustrative label; keep a full caption track/variant when required. Place the group in a legible region using actual protected bounds, and preserve or deliberately reset its anchor across shot changes. Use Expressive-Text.md for compositional phrases.
 
 **Expected mechanism:** Readable synchronized text can preserve meaning with sound off.
 
 **Tradeoff:** Dense text, short holds or platform overlays can hide content.
 
-**Verification:** Review at phone size with sound muted and inspect every caption change.
+**Verification:** Inspect text coverage, speaker changes, legibility over changing backgrounds, intermediate bounds and placement UI. Compare claimed speech cues with actual audio; authored visual timing must remain labeled. Do not mistake selected keywords for a verified complete transcript.
 
 **Output:** Caption geometry and timing
 
+Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.
+
+<a id="scene-state"></a>
 ## Scene State
 
 **Inputs:** Visual constructors, motion evaluators and project parameters
@@ -548,6 +663,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Scene interface and dependency structure
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="procedural-randomness"></a>
 ## Procedural Randomness
 
 **Inputs:** Variation purpose, object IDs and seed
@@ -562,6 +680,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Seed strategy and deterministic noise inputs
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="reproducible-build"></a>
 ## Reproducible Build
 
 **Inputs:** Scene code, fonts, dependency versions and configuration
@@ -576,6 +697,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Build manifest and dependency lock strategy
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="renderer-selection"></a>
 ## Renderer Selection
 
 **Inputs:** Representation requirements, effects and observed runtime capabilities
@@ -590,6 +714,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Renderer decision and verified capability notes
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="resource-budget"></a>
 ## Resource Budget
 
 **Inputs:** Probe frame timings, peak memory and output size
@@ -604,6 +731,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Resource estimate and quality fallback choices
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="execution-adapter"></a>
 ## Execution Adapter
 
 **Inputs:** Available local, chat or remote execution tools
@@ -618,6 +748,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Execution commands, locations and honest capability status
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="frame-rendering"></a>
 ## Frame Rendering
 
 **Inputs:** Exact timeline, renderer and output configuration
@@ -632,11 +765,14 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Complete frame sequence and render manifest
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="temporal-sampling"></a>
 ## Temporal Sampling
 
 **Inputs:** Motion speed, frame rate and shutter intent
 
-**Decision:** Sample time consistently; add subframe integration or motion blur only when it improves the target appearance.
+**Decision:** Sample time consistently; add subframe integration or motion blur only when it improves the target appearance. Distinguish movement-integrated motion blur from deliberate defocus and glow. Keep critical reading intervals legible and measure the cost of the busiest interval before selecting subframe count.
 
 **Expected mechanism:** Sufficient temporal sampling can reduce strobing in fast motion.
 
@@ -646,6 +782,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Sampling and shutter settings
 
+Authored craft hypothesis informed by visual study; source observations do not establish perceptual causality or validated rendering. Verify in the active project.
+
+<a id="color-pipeline"></a>
 ## Color Pipeline
 
 **Inputs:** Working-space frames, alpha and delivery target
@@ -660,6 +799,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Output conversion and color metadata
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="video-encoding"></a>
 ## Video Encoding
 
 **Inputs:** Verified frames, frame rate, audio and target format
@@ -674,6 +816,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Validated MP4 and encode settings
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="delivery-package"></a>
 ## Delivery Package
 
 **Inputs:** Validated video, editable source and intended audience
@@ -688,6 +833,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Final video, source entry point and handoff notes
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="still-evaluation"></a>
 ## Still Evaluation
 
 **Inputs:** Rendered styleframes and agreed references
@@ -702,20 +850,26 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Visual findings and reconstruction corrections
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="motion-evaluation"></a>
 ## Motion Evaluation
 
 **Inputs:** Representative playback, extrema and transition frames
 
-**Decision:** Inspect timing, velocity, identity, collisions, continuity and camera behavior in motion as well as stills.
+**Decision:** Judge timing, velocity, identity, collisions, continuity and camera behavior against the intended effect. When a source comparison is requested, align equivalent event phases and compare relationships as well as silhouettes. Use actual playback for smoothness and pacing; use dense frame inspection to localize failures.
 
 **Expected mechanism:** Temporal review can reveal failures invisible in isolated frames.
 
 **Tradeoff:** A contact sheet cannot establish smoothness or correct audiovisual timing.
 
-**Verification:** Watch a real clip at target speed and inspect suspect intervals frame by frame.
+**Verification:** Watch the encoded clip at target speed and inspect suspect intervals frame by frame. Record the focal event, missed meaning and exact affected range. With only sampled frames, report visual states/order and keep smoothness, perceived pacing and audiovisual sync unverified. For expressive captions inspect readable-state duration, blur/scale extremes, phrase anchors and semantic carryover across cuts. Distinguish a visual subtitle reveal from verified speech synchronization.
 
 **Output:** Motion findings and timing corrections
 
+Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization.
+
+<a id="mobile-legibility"></a>
 ## Mobile Legibility
 
 **Inputs:** Encoded video, small viewing size and interface clearance
@@ -730,6 +884,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Legibility corrections and delivery clearance
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="change-impact"></a>
 ## Change Impact
 
 **Inputs:** Requested revision, ownership graph and existing evidence
@@ -744,6 +901,9 @@ Connected operational knowledge. Select responsibilities according to actual pro
 
 **Output:** Revision scope and invalidated evidence
 
+Design mechanism: operational hypothesis, not a universal aesthetic law.
+
+<a id="quality-gates"></a>
 ## Quality Gates
 
 **Inputs:** Acceptance criteria and observed output evidence
@@ -757,3 +917,5 @@ Connected operational knowledge. Select responsibilities according to actual pro
 **Verification:** Check the delivered source and MP4 against each explicit criterion; retain unresolved observations.
 
 **Output:** Completion decision and evidence record
+
+Design mechanism: operational hypothesis, not a universal aesthetic law.

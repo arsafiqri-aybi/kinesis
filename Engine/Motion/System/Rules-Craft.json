@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "name": "Creative Craft Development",
+  "specializations": [
+    {
+      "id": "product-film-direction",
+      "name": "Product Film Direction",
+      "domain": "Creative Motion",
+      "division": "Product narrative",
+      "inputs": "Product purpose, supported capabilities, audience, intended takeaway and permitted source material",
+      "decision": "Choose the product change worth showing and the minimum sequence that makes it understandable. An input-process-result sequence is one option; a metaphor, direct comparison or quiet detail may fit better. Distinguish demonstrated behavior from illustrative condensation.",
+      "mechanism": "A visible relationship between an action and a result can make the product message concrete.",
+      "tradeoff": "An attractive simulation may imply an unsupported capability or spend its duration on interface detail instead of the benefit.",
+      "verification": "Review the sequence without explanation. Compare each visible claim with supplied evidence; distinguish an illustration from functional validation. Check that the intended result can be identified.",
+      "output": "Product beat plan with claim evidence, visual changes and editorial handoffs",
+      "practice": [
+        "Specify the desired audience understanding per beat and the change that communicates it; omit redundant navigation.",
+        "Choose which interactions need continuity and which may be condensed with a clear editorial cut. Do not use a loading animation as proof of actual speed.",
+        "Send UI behavior to UI Choreography and state-to-state motion to Motion Choreography. Keep exact product identity and screen content in the project."
+      ],
+      "shared": [
+        "intent",
+        "continuity",
+        "evidence",
+        "provenance"
+      ],
+      "sources": [],
+      "evidence": "Authored transferable craft hypothesis; validate through actual project output and audience-relevant review."
+    },
+    {
+      "id": "ui-choreography",
+      "name": "UI Choreography",
+      "domain": "Creative Motion",
+      "division": "Interface performance",
+      "inputs": "Component IDs and hierarchy, accurate UI content, action/state sequence and edit ranges",
+      "decision": "Define causal state transitions and visible feedback before animating. Coordinate cursor, input, selection, menu, progress and result only when present in the brief. Preserve component anchors and nested coordinate spaces; use the existing layout and transform owners for implementation.",
+      "mechanism": "Stable state relationships can let the viewer follow what changed and why.",
+      "tradeoff": "Simultaneous changes can hide causality; simulated UI may misrepresent the product; excessive realism can bury the key idea.",
+      "verification": "Check each state change against its trigger, panel anchors, text bounds, occlusion and reading interval. Inspect interruption and entry/exit boundaries; keep functional claims separate from the visual demo.",
+      "output": "UI state/action map, component anchors, cue dependencies and motion handoffs",
+      "practice": [
+        "Use states such as idle, input, selection, processing and result only when relevant; declare valid transitions and which parts persist.",
+        "Bind an event to the actual cue source. Use measured speech timing only when available; hand-authored editorial cues must be labeled.",
+        "Separate the panel transform from content reveals. Anchor menus to their control and preserve the connection through reframing.",
+        "Treat cursor blink, hover, focus, spinner and selection highlight as optional cues. Scope them to meaningful intervals rather than running every cue continuously."
+      ],
+      "shared": [
+        "intent",
+        "time",
+        "geometry",
+        "continuity",
+        "perception"
+      ],
+      "sources": [],
+      "evidence": "Authored transferable craft hypothesis; validate through actual project output and audience-relevant review."
+    },
+    {
+      "id": "motion-choreography",
+      "name": "Motion Choreography",
+      "domain": "Creative Motion",
+      "division": "Action relationships",
+      "inputs": "Intended change, stable object IDs, key states, hierarchy, timing constraints and optional cues",
+      "decision": "Choose the primary action and dependent responses. Describe their relative timing, preserved relationships and attention handoff. Permit overlap, sequential movement, independent motion or stillness according to meaning; delegate trajectory, easing, springs and camera algorithms to their existing owners.",
+      "mechanism": "Coordinating dependencies can make multiple moving parts read as one intentional action.",
+      "tradeoff": "Moving everything together feels mechanical; excessive offsets fragment a single event; a universal beat grid can obscure meaning.",
+      "verification": "Review whether the main action is identifiable and the next event begins with enough context. Inspect interrupted settling, pivots and handoffs. Use target-speed playback before claiming successful pacing.",
+      "output": "Action dependency map with primary/supporting tracks, overlaps, holds and invariants",
+      "practice": [
+        "Plan anticipation, travel, settle and reading states only where useful; specify which intervals may overlap.",
+        "Separate object, parent-group and camera changes so compounded transforms remain intentional.",
+        "Assign one owner to each driven property. Pass the motion endpoints and intended response to easing/secondary-motion; avoid competing drivers.",
+        "Re-evaluate relative timing after retiming or copy changes. Preserve deliberate silence and stillness as valid action choices."
+      ],
+      "shared": [
+        "intent",
+        "time",
+        "continuity",
+        "geometry",
+        "evidence"
+      ],
+      "sources": [],
+      "evidence": "Authored transferable craft hypothesis; validate through actual project output and audience-relevant review."
+    },
+    {
+      "id": "attention-direction",
+      "name": "Attention Direction",
+      "domain": "Creative Motion",
+      "division": "Perceptual staging",
+      "inputs": "Audience task, focal subjects, layout, motion tracks, reading needs and viewing scale",
+      "decision": "Choose the intended focal event and how attention passes to the next one. Allocate movement, scale, contrast, depth and detail around that purpose. Keep competing accents subordinate when clarity is needed; permit distributed attention when intentionally required.",
+      "mechanism": "Coordinated visual cues may help preserve an understandable sequence of attention.",
+      "tradeoff": "Glow, camera motion or decorative highlights can attract attention away from meaning; focal intent is not proof of actual viewer gaze.",
+      "verification": "At intended viewing size, review what can be understood on a first pass and inspect the busiest interval. Record reviewer observations as such; do not claim eye-tracking or audience retention without measurement.",
+      "output": "Focal-event plan, attention handoff anchors and competing-salience corrections",
+      "practice": [
+        "Declare an intended focus per relevant interval and an anchor connecting the next state; change the plan when the narrative needs a deliberate break.",
+        "Use empty space and stillness as available tools. Before adding blur, reduce competing contrast or motion if that solves the problem.",
+        "Keep defocus, motion blur and glow distinct; request the required operation from compositing/temporal-sampling instead of conflating them.",
+        "Try a different cue such as shape or position when a color correspondence is inaccessible, ambiguous or inconsistent with the project identity.",
+        "Coordinate caption hierarchy, framing and local look changes around the intended event. One salient layer may lead while the others hold; purposeful distributed attention is still allowed.",
+        "Use small-versus-large wording, negative space or a repeated phrase as possible attention relationships without adopting a source font or palette. Record intended focus as a design hypothesis, not measured gaze."
+      ],
+      "shared": [
+        "intent",
+        "perception",
+        "continuity",
+        "sampling",
+        "evidence"
+      ],
+      "sources": [],
+      "evidence": "Authored craft hypothesis informed by multiple visual studies; sampled frames establish visible states, not validated audience response, playback rhythm or audiovisual synchronization."
+    }
+  ],
+  "handoffs": [
+    {
+      "source": "social-story-editing",
+      "target": "product-film-direction",
+      "relation": "hands_off",
+      "condition": "When a product benefit or interaction is the subject",
+      "payload": "Intended takeaway, accurate claims and editorial ranges"
+    },
+    {
+      "source": "product-film-direction",
+      "target": "ui-choreography",
+      "relation": "hands_off",
+      "condition": "When product meaning depends on interface behavior",
+      "payload": "Supported UI states, causal actions and result claims"
+    },
+    {
+      "source": "product-film-direction",
+      "target": "storyboard",
+      "relation": "hands_off",
+      "condition": "When a product sequence is planned",
+      "payload": "Beat intentions, readable states and permitted condensation"
+    },
+    {
+      "source": "product-film-direction",
+      "target": "motion-choreography",
+      "relation": "hands_off",
+      "condition": "When product beats require coordinated movement",
+      "payload": "Meaningful changes, state dependencies and continuity invariants"
+    },
+    {
+      "source": "social-graphics-ui",
+      "target": "ui-choreography",
+      "relation": "hands_off",
+      "condition": "When multiple interface events depend on each other",
+      "payload": "Component hierarchy, factual labels, states and anchors"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "motion-choreography",
+      "relation": "hands_off",
+      "condition": "When state changes need coordinated visible action",
+      "payload": "Action/state map, persistent IDs, trigger relationships and holds"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "layout-collision",
+      "relation": "hands_off",
+      "condition": "When panels or menus change over time",
+      "payload": "Timed component bounds, anchor relationships and protected text"
+    },
+    {
+      "source": "ui-choreography",
+      "target": "scene-state",
+      "relation": "hands_off",
+      "condition": "When a UI sequence is constructed",
+      "payload": "Explicit state transitions, local times, component IDs and parameters"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "timing-and-pacing",
+      "relation": "hands_off",
+      "condition": "When action relationships need durations and overlaps",
+      "payload": "Primary/supporting actions, comprehension needs and boundary intent"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "transform-animation",
+      "relation": "hands_off",
+      "condition": "When action tracks need transform evaluation",
+      "payload": "Stable IDs, endpoints, coordinate spaces, pivots and intended trajectories"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "easing",
+      "relation": "hands_off",
+      "condition": "When a track needs a movement character",
+      "payload": "Travel and settle intent, joins and permissible overshoot"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "secondary-motion",
+      "relation": "hands_off",
+      "condition": "When a part follows a primary driver",
+      "payload": "Driver identity, attachment, lag intent and interruption constraints"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "transitions",
+      "relation": "hands_off",
+      "condition": "When a shared action bridges adjacent shots",
+      "payload": "Outgoing/incoming states, identity and overlap constraints"
+    },
+    {
+      "source": "motion-choreography",
+      "target": "attention-direction",
+      "relation": "hands_off",
+      "condition": "When multiple actions compete or hand off focus",
+      "payload": "Intended primary action, supporting tracks and event ranges"
+    },
+    {
+      "source": "attention-direction",
+      "target": "composition",
+      "relation": "constrains",
+      "condition": "When composition must stage the focal event",
+      "payload": "Focal anchor, protected reading region and competing visual priorities"
+    },
+    {
+      "source": "attention-direction",
+      "target": "camera-motion",
+      "relation": "constrains",
+      "condition": "When framing changes are used to direct attention",
+      "payload": "Focal track, screen-space anchor and required readable intervals"
+    },
+    {
+      "source": "attention-direction",
+      "target": "compositing",
+      "relation": "constrains",
+      "condition": "When contrast, glow or blur mediates emphasis",
+      "payload": "Required legibility, focus intent and permitted optical treatment"
+    },
+    {
+      "source": "attention-direction",
+      "target": "temporal-sampling",
+      "relation": "constrains",
+      "condition": "When fast motion or blur threatens the focal content",
+      "payload": "Critical reading ranges, output scale and moving-edge needs"
+    },
+    {
+      "source": "reference-curation",
+      "target": "motion-choreography",
+      "relation": "informs",
+      "condition": "When a supplied lesson reveals transferable action relationships",
+      "payload": "Observed dependencies, study scope, uncertainty and alternative realizations"
+    },
+    {
+      "source": "reference-curation",
+      "target": "attention-direction",
+      "relation": "informs",
+      "condition": "When a supplied lesson suggests an attention handoff",
+      "payload": "Observed composition changes and untested perceptual explanation"
+    },
+    {
+      "source": "reference-curation",
+      "target": "product-film-direction",
+      "relation": "informs",
+      "condition": "When a lesson concerns product storytelling",
+      "payload": "Observed sequence and claim limits, without importing source identity"
+    },
+    {
+      "source": "motion-evaluation",
+      "target": "motion-choreography",
+      "relation": "revises",
+      "condition": "When coordination, interruption or continuity fails",
+      "payload": "Observed issue, affected interval and intended event relationship"
+    },
+    {
+      "source": "motion-evaluation",
+      "target": "attention-direction",
+      "relation": "revises",
+      "condition": "When important information is missed or visual competition dominates",
+      "payload": "Scoped reviewer observations and competing cue range"
+    },
+    {
+      "source": "quality-gates",
+      "target": "ui-choreography",
+      "relation": "revises",
+      "condition": "When a visual UI state is misleading or unreadable",
+      "payload": "Failed claim/layout condition and affected state transition"
+    },
+    {
+      "source": "reference-matching",
+      "target": "reference-curation",
+      "relation": "revises",
+      "condition": "When a new comparison qualifies a learned relationship",
+      "payload": "Conflicting observation, comparison scope and revised conditions"
+    },
+    {
+      "source": "social-animated-captions",
+      "target": "attention-direction",
+      "relation": "hands_off",
+      "condition": "When expressive caption emphasis competes with performance or framing",
+      "payload": "Caption role, intended semantic emphasis, protected subject events and reading ranges"
+    },
+    {
+      "source": "social-animated-captions",
+      "target": "layout-collision",
+      "relation": "hands_off",
+      "condition": "When a caption group reveals, expands or spans reframing",
+      "payload": "Measured phrase/group bounds, local anchors, animated extremes and relevant time intervals"
+    },
+    {
+      "source": "social-animated-captions",
+      "target": "social-kinetic-typography",
+      "relation": "hands_off",
+      "condition": "When language becomes an independent visual scene",
+      "payload": "Approved semantic groups, text role, emphasis spans and cue provenance"
+    },
+    {
+      "source": "social-animated-captions",
+      "target": "color-design",
+      "relation": "informs",
+      "condition": "When an accent carries a semantic association",
+      "payload": "Meaningful spans, local accent role and required non-color correspondence"
+    },
+    {
+      "source": "social-kinetic-typography",
+      "target": "ui-choreography",
+      "relation": "hands_off",
+      "condition": "When expressive language uses an interface with dependent states",
+      "payload": "Illustrative state map, semantic mapping and screen/panel hierarchy"
+    },
+    {
+      "source": "social-kinetic-typography",
+      "target": "layout-collision",
+      "relation": "hands_off",
+      "condition": "When spatial type or phrase groups change over time",
+      "payload": "Phrase anchors, measured final layout and projected intermediate bounds"
+    },
+    {
+      "source": "social-look-grading",
+      "target": "attention-direction",
+      "relation": "informs",
+      "condition": "When a scoped look change participates in an editorial emphasis",
+      "payload": "Intended focal event, treatment range and semantic purpose"
+    },
+    {
+      "source": "social-look-grading",
+      "target": "shot-continuity",
+      "relation": "informs",
+      "condition": "When matching choices or deliberate look differences affect adjacent shots",
+      "payload": "Matched relationships, intended discontinuities and relevant source roles"
+    },
+    {
+      "source": "social-story-editing",
+      "target": "attention-direction",
+      "relation": "hands_off",
+      "condition": "When performance, text and imagery must share a focal event",
+      "payload": "Meaning changes, lead/support roles and proposed emphasis ranges"
+    },
+    {
+      "source": "social-motion-broll",
+      "target": "shot-continuity",
+      "relation": "hands_off",
+      "condition": "When an insert or montage bridges source changes",
+      "payload": "Insert role, provenance status, persistent phrase/motif and return anchor"
+    },
+    {
+      "source": "social-camera-transitions",
+      "target": "layout-collision",
+      "relation": "hands_off",
+      "condition": "When framing or inset footage changes around captions",
+      "payload": "Coordinate-space transforms, protected regions and caption anchoring intent"
+    },
+    {
+      "source": "typography",
+      "target": "layout-collision",
+      "relation": "hands_off",
+      "condition": "When measured phrase geometry is animated or reframed",
+      "payload": "Font/copy revision, semantic group, final bounds and local anchor"
+    },
+    {
+      "source": "transcript-alignment",
+      "target": "social-animated-captions",
+      "relation": "informs",
+      "condition": "When text meaning, speaker or cue precision changes",
+      "payload": "Reviewed utterance, semantic span map and timing provenance"
+    },
+    {
+      "source": "layout-collision",
+      "target": "social-animated-captions",
+      "relation": "revises",
+      "condition": "When a caption group collides or cannot reach a readable state",
+      "payload": "Affected group/time range, projected conflict and proposed reflow or restaging"
+    },
+    {
+      "source": "motion-evaluation",
+      "target": "social-animated-captions",
+      "relation": "revises",
+      "condition": "When caption entry, carryover or exit hides meaning",
+      "payload": "Observed phrase issue, affected interval and actual inspection scope"
+    }
+  ]
+}
