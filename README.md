@@ -1,67 +1,133 @@
 # Kinesis
 
-**A creative production and continuous-learning system for motion and social video.**
+**Kinesis is a code-first motion and video rendering engine.** Define a composition in React and TypeScript, evaluate it at exact frame times, and export H.264 MP4 using a headless renderer and FFmpeg.
 
-Kinesis connects creative decisions, Motion expertise and reusable project design systems. Plan an edit from footage or a script, build original 2D, 2.5D or 3D scenes through code, and keep each episode connected to its references, timing, assets and review evidence.
+Kinesis provides two rendering paths:
 
-The repository provides operational knowledge, dependency graphs, project templates and a Python toolkit. Rendering, media editing and optional narration use the tools available in the production environment. The toolkit creates and validates project structures; it is not a one-command video generator.
+- **SVG:** React-generated SVG rendered natively with resvg. No browser is needed.
+- **Chromium:** React, SVG, HTML, and CSS rendered in a headless browser through Playwright.
 
-## Start
+Both backends share the same project format and frame-indexed timeline. Source code remains editable; the renderer produces media rather than a locked editing project.
 
-Use Python 3.10 or later. Run commands from the repository root.
+## Requirements
+
+- **Node.js 22 or newer** and npm
+- **FFmpeg** available on `PATH`, with the `libx264` encoder
+- **Chromium**, only when using `--backend chromium` (install with Playwright or supply an executable path)
+
+The SVG backend works without Chromium. Windows, macOS, and Linux can use the Node.js project when compatible native dependencies and FFmpeg are installed.
+
+## Get started
+
+Clone the repository and install dependencies:
 
 ```bash
-python kinesis.py check-graph
-python kinesis.py init my-series --name 'My Series'
-python kinesis.py new-episode Projects/my-series ep-001 --title 'First episode'
-python kinesis.py validate Projects/my-series
+git clone https://github.com/arsafiqri-aybi/kinesis.git
+cd kinesis
+npm ci
 ```
 
-The new project starts as a draft. Fill in its purpose, original design decisions, optional references and design tokens; choose or implement the recipes needed by its episodes. Record rendered outputs and actual review evidence before marking an episode delivered.
-
-For complete project JSON-schema checks, optionally install the validator:
+Render the included composition:
 
 ```bash
-python -m pip install -r requirements.txt
+node bin/kinesis.mjs verify examples/basic --backend svg
+node bin/kinesis.mjs render examples/basic --out output/basic.mp4
 ```
 
-Without it, the toolkit still performs its built-in structural and relationship checks.
+Or create your own project:
 
-## Repository map
+```bash
+node bin/kinesis.mjs init my-video --width 1080 --height 1920 --fps 30 --frames 150
+# Edit my-video/src/scene.tsx
+node bin/kinesis.mjs verify my-video
+node bin/kinesis.mjs render my-video --out my-video/output/final.mp4
+```
 
-| Location | Purpose |
-| --- | --- |
-| [Engine/Kinesis](Engine/Kinesis/Motor-System.md) | Portable decision, routing and revision motor |
-| [Engine/Motion/Knowledge](Engine/Motion/Knowledge/README.md) | Visual construction, motion, editing, character, voice and production expertise |
-| [Engine/Motion/System](Engine/Motion/System/README.md) | Shared contracts, graphs, project architecture and quality rules |
-| [Engine/Templates/Project](Engine/Templates/Project/README.md) | Clean starting point for independent projects |
-| [Projects](Projects/README.md) | Project identity, episode content and editable production sources |
-| [Outputs](Outputs/README.md) | Rendered frames, audio, previews, covers and final video |
-| [docs](docs/architecture.md) | Architecture, workflow, validation and contribution guides |
+The `init` command creates an empty SVG composition ready for your design. It never overwrites an existing scene.
 
-Engine knowledge is shared. Project identity belongs to the project. Episode decisions belong to the episode. Generated media belongs in Outputs, alongside a manifest that identifies its source project and build.
+### Composition
 
-## What Motion covers
+Each project contains `src/scene.tsx`, exporting a configuration and React component:
 
-Fourteen editorial responsibilities connect to visual, character, narration and production expertise: story/editing; captions; kinetic typography; original B-roll; cards/icons/UI; character animation; subject effects/tracking; camera/transitions; color; sound/voice/music; social-scale VFX; adaptive composition; openings/endings/covers; and delivery/QA.
+```tsx
+import React from 'react';
 
-The knowledge registry contains 91 expertise owners, 12 common reasoning mechanisms and 10 production contracts. Its base graph distinguishes 240 conditional handoffs from routing and shared-logic links. A separate project overlay connects the motor, project identity, episodes, rendering and evidence without copying the expertise registry.
+export const config = {
+  width: 1080,
+  height: 1920,
+  fps: 30,
+  durationInFrames: 150,
+};
 
-Four connected creative-craft responsibilities deepen product film direction, UI choreography, motion choreography and attention direction. Use [Editorial Reasoning](Engine/Motion/System/Editorial-Reasoning.md), [Expressive Text](Engine/Motion/System/Expressive-Text.md) and [Creative Learning](Engine/Motion/System/Creative-Learning.md) for conditional decisions that preserve original styles.
+export default function Scene({frame, time, config}) {
+  const x = config.width / 2 + Math.sin(time * 2) * 140;
 
-See [the workflow](docs/workflow.md), [the expertise index](Engine/Motion/System/Expertise-Index.md), and [the integration playbooks](Engine/Motion/System/Playbooks.md).
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg"
+         width={config.width} height={config.height}
+         viewBox={[0, 0, config.width, config.height].join(' ')}>
+      <rect width={config.width} height={config.height} fill="#081321" />
+      <circle cx={x} cy={config.height / 2} r="72" fill="#A9F6DA" />
+    </svg>
+  );
+}
+```
 
-## Production principles
+`frame` starts at zero. `time = frame / fps`, in seconds. Motion derived from these inputs can be evaluated independently of render order. The optional `inspectFrame(frame, time)` export exposes state for verification.
 
-- Begin from intent and project identity. Use optional references for learning, inspiration or explicit matching; original production can begin without them.
-- Use effects when they serve meaning. A clean cut, still frame or quiet hold is a valid decision.
-- Share capabilities and contracts; keep each project's identity and assets independent.
-- Inspect actual output. A valid configuration or successful encode cannot prove visual quality, natural narration or smooth character performance.
+### Choose a renderer
 
-## Requirements and boundaries
+For SVG compositions, the default backend is `svg`:
 
-The project toolkit uses Python's standard library, with optional JSON-schema validation. Actual production may require a renderer, FFmpeg, fonts, editing tools or other dependencies selected for the shot. Optional OpenAI narration needs separately configured API access and billing; credentials and private assets do not belong in this repository.
+```bash
+node bin/kinesis.mjs render my-video --backend svg --out output/video.mp4
+```
 
-Recipe templates are planning patterns until their implementations and outputs have been reviewed. Platform/UI profiles require evidence for the actual placement. Kinesis supplies no hosted renderer, GPU, paid API entitlement or autonomous publishing service.
+For compositions that need browser layout, HTML, or CSS, use Chromium:
 
-Read [contribution guidance](CONTRIBUTING.md) before changing shared contracts or adding expertise.
+```bash
+npx playwright-core install chromium
+node bin/kinesis.mjs render my-video --backend chromium --out output/video.mp4
+```
+
+You can specify an installed browser with `--chromium /path/to/chrome` or the `KINESIS_CHROMIUM` environment variable.
+
+### Select frames and include sound
+
+```bash
+node bin/kinesis.mjs render my-video --start 30 --end 89 --out output/segment.mp4
+```
+
+The frame range is **inclusive**. For audio, add an in-project relative path to the configuration:
+
+```ts
+export const config = {
+  width: 1080, height: 1920, fps: 30, durationInFrames: 150,
+  audio: 'assets/music.wav',
+};
+```
+
+Audio is muxed as AAC and aligned with the requested starting frame. Keep rights to music and other media used in your compositions.
+
+## Development
+
+- CLI operations: `init`, `build`, `verify`, `render`
+- Library API: `execute()`, `initializeProject()`, mathematical helpers
+- Structured CLI results: `--json`
+- Source: `src/`; commands: `bin/`; independent examples: `examples/`
+
+See [API reference](docs/api.md) and [architecture](docs/architecture.md).
+
+```bash
+npm test
+npm run test:browser    # requires Playwright Chromium
+```
+
+Kinesis runs project-authored JavaScript. Run trusted compositions locally; executing third-party projects requires separate operating-system or container isolation. Browser network requests are blocked by default during Chromium rendering.
+
+## License
+
+Kinesis's original source is available under the [MIT License](LICENSE).
+
+React, esbuild, Playwright, resvg, Chromium, and FFmpeg have their own licenses. Kinesis does not redistribute Chromium or FFmpeg and does not change those licenses. See [contribution guidelines](CONTRIBUTING.md) and [security policy](SECURITY.md).
+

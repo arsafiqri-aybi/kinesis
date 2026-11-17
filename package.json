@@ -1,0 +1,54 @@
+{
+  "name": "kinesis",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Code-first React and TypeScript motion engine with SVG and Chromium video rendering",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "kinesis": "./bin/kinesis.mjs"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "esbuild": "^0.28.0",
+    "playwright-core": "^1.65.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arsafiqri-aybi/kinesis.git"
+  },
+  "homepage": "https://github.com/arsafiqri-aybi/kinesis#readme",
+  "bugs": {
+    "url": "https://github.com/arsafiqri-aybi/kinesis/issues"
+  },
+  "keywords": [
+    "motion",
+    "video",
+    "renderer",
+    "animation",
+    "typescript",
+    "react",
+    "svg",
+    "headless",
+    "ffmpeg"
+  ],
+  "exports": {
+    ".": "./src/index.mjs",
+    "./math": "./src/math.mjs"
+  },
+  "files": [
+    "src/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node --check src/index.mjs && node --check src/engine.mjs && node --check src/svg-engine.mjs && node --check src/math.mjs && node --check bin/kinesis.mjs",
+    "test": "node --test tests/math.test.mjs tests/svg.test.mjs",
+    "test:browser": "node --test tests/browser.test.mjs"
+  }
+}

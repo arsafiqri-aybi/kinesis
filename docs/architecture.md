@@ -1,27 +1,43 @@
 # Architecture
 
-```mermaid
-flowchart TD
-    K["Kinesis motor"] --> M["Motion expertise and contracts"]
-    K --> P["Project identity and recipes"]
-    M --> E["Episode construction"]
-    P --> E
-    E --> O["Outputs and build manifest"]
-    O --> Q["Quality evidence"]
-    Q -->|"scoped revision"| E
-    Q -->|"reviewed recurring choice"| P
+Kinesis separates composition source, timeline evaluation, rasterization, and encoding.
+
+```text
+Project
+  └── src/scene.tsx          React component + frame configuration
+            │
+            ▼
+       esbuild compiler
+            │
+       ┌────┴────┐
+       ▼         ▼
+   SVG backend   Chromium backend
+    React SSR    React DOM / Playwright
+       │         │
+       └────┬────┘
+            ▼
+      PNG frame stream
+            ▼
+           FFmpeg
+            ▼
+        H.264 MP4
 ```
 
-## Ownership
+## Project layout
 
-The motor coordinates intent, responsibility and evidence. Motion supplies reusable media expertise. A project selects its own references, design grammar and reusable recipe parameters. An episode supplies content, exact timing and scoped exceptions. Outputs contain the actual generated media.
+A project owns its own `src/scene.tsx` and optional assets. Generated bundles live under `<project>/.kinesis/`. Media is written to the caller's requested output path.
 
-The base knowledge graph and project overlay are separate data sources with shared endpoint IDs. Contract ownership is a routing relationship, not evidence that a software engine has been implemented. Handoff edges carry explicit conditions and payloads; taxonomy proximity does not establish dependency.
+## Frame-indexed motion
 
-## Revisions
+The scene receives an exact frame index, time in seconds, and normalized timeline progress. A composition maps these inputs to geometry, colors, positions, transforms, and other visible state.
 
-Change at the narrowest responsible layer. A new font invalidates affected text measurements and layout review. New speech invalidates alignment and dependent cues. A camera or crop change invalidates projected tracking and protected bounds. Keep unrelated approved decisions stable.
+The SVG backend compiles React/TSX into Node-compatible ESM and rasterizes SVG with resvg. The Chromium backend compiles a browser bundle, evaluates React DOM and captures frames. It supports bounded page concurrency while preserving output frame order.
 
-Record `pass`, `fail`, `stale` or `unverified` with actual observation scope. An intentional exception needs a reason and review. A non-applicable production gate needs an explicit reason; silent work need not invent an audio inspection.
+## Verification
 
-See [Project Architecture](../Engine/Motion/System/Project-Architecture.md) for detailed inheritance and [Quality Intelligence](../Engine/Motion/System/Quality-Intelligence.md) for fault discovery.
+`verify` builds and samples a composition and checks reproducible markup and numeric state. Frame-range exports allow targeted checks of an implementation. Automated checks do not replace a viewer's evaluation of creative results.
+
+## Execution boundary
+
+Kinesis runs project-authored JavaScript and is not a security sandbox. Environments accepting untrusted compositions must isolate processes and constrain CPU, memory, filesystem, network access, and execution time. Browser HTTP(S) requests are blocked at the page level by default, but that alone does not isolate Node.js code.
+
